@@ -1,6 +1,6 @@
 //Input: n, MOD
 //Output: C_n mod MOD
-//Order: O(n)
+//Time: O(n)
 long long modpow(long long a, long long b){
 	long long res = 1;
 	while (b > 0){
