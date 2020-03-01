@@ -1,5 +1,4 @@
 //Input: n, r, MOD
-//Restriction: MOD is a prime
 //Output: (nCr) mod MOD
 //Time: O(1)
 long long modpow(long long a, long long b){
