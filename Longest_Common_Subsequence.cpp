@@ -33,7 +33,7 @@ string longest_common_subsequence(string &S, string &T){
 		} else {
 			i--;
 			j--;
-			ans += S[i];
+			ans.push_back(S[i]);
 		}
 	}
 	reverse(ans.begin(), ans.end());
@@ -74,7 +74,7 @@ vector<int> longest_common_subsequence(vector<int> &A, vector<int> &B){
 		} else {
 			i--;
 			j--;
-			ans += A[i];
+			ans.push_back(A[i]);
 		}
 	}
 	reverse(ans.begin(), ans.end());
