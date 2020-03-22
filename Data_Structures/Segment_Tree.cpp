@@ -1,4 +1,4 @@
-vector<int> segtree(vector<int> &A){
+vector<int> segtree(vector<int> &A){D
 	int N = 1;
 	while (N < A.size()){
 		N = N * 2;
