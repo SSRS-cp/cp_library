@@ -27,7 +27,7 @@ long long modfact(long long n){
 		return res;
 	}
 }
-long long modcatalan(long long n){
+long long catalan_number(long long n){
 	long long res;
 	res = modfact(n * 2);
 	res = res * modinv(modfact(n + 1)) % MOD;
