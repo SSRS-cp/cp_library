@@ -1,4 +1,6 @@
 long long modsub(long long a, long long b){
+	a %= MOD;
+	b %= MOD;
 	if (a >= b){
 		return (a - b) % MOD;
 	} else {
@@ -6,6 +8,7 @@ long long modsub(long long a, long long b){
 	}
 }
 long long modpow(long long a, long long b){
+	a %= MOD;
 	long long res = 1;
 	while (b > 0){
 		if (b % 2 == 1) res = res * a % MOD;
