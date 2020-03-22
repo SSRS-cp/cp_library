@@ -45,6 +45,30 @@ bool detect_negative_cycles(vector<vector<pair<int, int>>> &E, int s){
 	}
 	return false;
 }
+bool detect_negative_cycles_2(vector<vector<pair<int, int>>> &E){
+	int V = E.size();
+	vector<long long> d(V, 0);
+	for (int i = 0; i < V; i++){
+		bool update = false;
+		for (int j = 0; j < V; j++){
+			for (int k = 0; k < E[j].size(); k++){
+				int c = E[j][k].first;
+				int v = E[j][k].second;
+				if (d[v] > d[j] + c && d[j] != INF){
+					d[v] = d[j] + c;
+					update = true;
+					if (i == V - 1){
+						return true;
+					}
+				}
+			}
+		}
+		if (!update){
+			break;
+		}
+	}
+	return false;
+}
 vector<bool> find_negative_cycles(vector<vector<pair<int, int>>> &E){
 	int V = E.size();
 	vector<long long> d(V, 0);
