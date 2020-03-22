@@ -72,4 +72,3 @@ vector<bool> find_negative_cycles(vector<vector<pair<int, int>>> &E){
 	}
 	return res;
 }
-	
