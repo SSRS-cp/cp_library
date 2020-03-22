@@ -1,6 +1,6 @@
 # Data_Structures
 ## UnionFind
-Union_Find木 (経路圧縮のみ) です。
+UnionFind木 (経路圧縮のみ) です。
 
 ```C++
 int unionfind_root(vector<int> &parent, int x)
@@ -13,7 +13,7 @@ bool unionfind_union(vector<int> &parent, int x, int y)
 UnionFind木parentの頂点xと頂点yの属するグループを併合します。頂点xと頂点yが同じグループに属していた場合trueを、そうでない場合はfalseを返します。
 
 ## UnionFind_2
-Union_Find木 (経路圧縮+rank)です。
+UnionFind木 (経路圧縮+rank)です。
 
 ## Segment_Tree
 セグメント木でRange Minimum Queryを行います。
