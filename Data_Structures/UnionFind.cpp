@@ -7,7 +7,7 @@ int unionfind_root(vector<int> &parent, int x){
 		return y;
 	}
 }
-bool unionfind_union(vector<int> &parent, int x, int y){
+bool unionfind_unite(vector<int> &parent, int x, int y){
 	x = unionfind_root(parent, x);
 	y = unionfind_root(parent, y);
 	if (x != y){
