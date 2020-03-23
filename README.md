@@ -8,7 +8,7 @@ int unionfind_root(vector<int> &parent, int x)
 UnionFind木parentの頂点xの根を求めます。
 
 ```C++
-bool unionfind_union(vector<int> &parent, int x, int y)
+bool unionfind_unite(vector<int> &parent, int x, int y)
 ```
 UnionFind木parentの頂点xと頂点yの属するグループを併合します。頂点xと頂点yが同じグループに属していた場合trueを、そうでない場合はfalseを返します。
 
