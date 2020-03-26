@@ -155,6 +155,24 @@ long long catalan_number(long long n)
 ```
 カタラン数C_nをMODで割った余りを求めます。
 
+## Prime
+素数や素因数分解を扱います。
+
+```C++
+bool is_prime(long long N)
+```
+2以上の整数Nが素数かどうか判定します。Nが素数である場合trueを、そうでない場合falseを返します。
+
+```C++
+vector<long long> prime_factorizarion(long long N)
+```
+Nを素因数分解します。
+
+```C++
+int factor_count(long long N)
+```
+Nの正の約数の個数を求めます。
+
 ## Cycle Decomposition
 置換を巡回置換に分解します。
 
