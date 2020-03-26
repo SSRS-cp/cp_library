@@ -42,7 +42,7 @@ vector<long long> dijkstra(vector<vector<pair<int, int>>> &E, int s)
 ```
 重み付きグラフEの頂点sを始点とする単一始点最短路を求めます。頂点sから到達できない頂点に対してはINFを返します。
 
-## Single Source Shortest Path (Bellman_Ford)
+## Single Source Shortest Path (Bellman Ford)
 ベルマンフォード法を利用して、単一始点最短路の長さを求めます。
 
 ```C++
