@@ -97,6 +97,14 @@ vector<int> longest_common_subsequence(vector<int> &A, vector<int> &B)
 ```
 配列Aと配列Bの最長共通部分列を求めます。
 
+## Longest_Increasing_Subsequence
+動的計画法を利用して、最長増加部分列を求めます。
+
+```C++
+int longest_increasing_subsequence_length(vector<int> &A)
+```
+配列Aの最長増加部分列の長さを求めます。
+
 ## Matrix_Chain_Multiplication
 動的計画法を利用して、連鎖行列積問題を解きます。
 
