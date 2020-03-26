@@ -1,4 +1,4 @@
-# Data_Structures
+# Data Structures
 ## UnionFind
 UnionFind木 (経路圧縮のみ) です。
 
@@ -12,10 +12,10 @@ bool unionfind_unite(vector<int> &parent, int x, int y)
 ```
 UnionFind木parentの頂点xと頂点yの属するグループを併合します。頂点xと頂点yが同じグループに属していた場合trueを、そうでない場合はfalseを返します。
 
-## UnionFind_2
+## UnionFind 2
 UnionFind木 (経路圧縮+rank)です。
 
-## Segment_Tree
+## Segment Tree
 セグメント木でRange Minimum Queryを行います。
 
 ```C++
@@ -34,7 +34,7 @@ int segtree_query(vector<int> &ST, int x, int y, int i, int L, int R)
 セグメント木STの[x,y)区間に対するクエリの結果を、区間[L,R)に対応するセグメント木STの要素iが求めます。
 
 # Graph
-## Single_Source_Shortest_Path_(Dijkstra)
+## Single Source Shortest Path (Dijkstra)
 ダイクストラ法を利用して、単一始点最短路の長さを求めます。
 
 ```C++
@@ -42,7 +42,7 @@ vector<long long> dijkstra(vector<vector<pair<int, int>>> &E, int s)
 ```
 重み付きグラフEの頂点sを始点とする単一始点最短路を求めます。頂点sから到達できない頂点に対してはINFを返します。
 
-## Single_Source_Shortest_Path_(Bellman_Ford)
+## Single Source Shortest Path (Bellman_Ford)
 ベルマンフォード法を利用して、単一始点最短路の長さを求めます。
 
 ```C++
@@ -65,7 +65,7 @@ vector<bool> find_negative_cycles(vector<vector<pair<int, int>>> &E)
 ```
 重み付きグラフEのすべての負の閉路を検出します。負の閉路に含まれる頂点に対してはtrue、そうでない頂点に対してはfalseを返します。
 
-## All_Pairs_Shortest_Path_(Warshall_Floyd)
+## All Pairs Shortest Path (Warshall Floyd)
 ワーシャルフロイド法を利用して、全点対間最短路の長さを求めます。
 
 ```C++
@@ -73,8 +73,8 @@ vector<vector<long long>> warshall_floyd(vector<vector<pair<int, int>>> &E)
 ```
 重み付きグラフEの全点対間最短路の長さを求めます。頂点sから頂点tに到達できない場合、その頂点対に対応する要素に対してはINFを返します。
 
-# Dynamic_Programming
-## Longest_Common_Subsequence
+# Dynamic Programming
+## Longest Common Subsequence
 動的計画法を利用して、最長共通部分列を求めます。
 
 ```C++
@@ -97,7 +97,7 @@ vector<int> longest_common_subsequence(vector<int> &A, vector<int> &B)
 ```
 配列Aと配列Bの最長共通部分列を求めます。
 
-## Longest_Increasing_Subsequence
+## Longest Increasing Subsequence
 動的計画法を利用して、最長増加部分列を求めます。
 
 ```C++
@@ -105,7 +105,7 @@ int longest_increasing_subsequence_length(vector<int> &A)
 ```
 配列Aの最長増加部分列の長さを求めます。
 
-## Matrix_Chain_Multiplication
+## Matrix Chain Multiplication
 動的計画法を利用して、連鎖行列積問題を解きます。
 
 ```C++
@@ -154,3 +154,11 @@ long long modbinom2(long long n, long long r)
 long long catalan_number(long long n)
 ```
 カタラン数C_nをMODで割った余りを求めます。
+
+## Cycle Decomposition
+置換を巡回置換に分解します。
+
+```C++
+vector<vector<int>> cycle_decomposition(vector<int> &P)
+```
+置換Pを巡回置換に分解します。それぞれの置換では最も大きい数が先頭になります。置換は先頭の数が大きい順に返されます。
