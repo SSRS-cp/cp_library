@@ -73,6 +73,19 @@ vector<vector<long long>> warshall_floyd(vector<vector<pair<int, int>>> &E)
 ```
 重み付きグラフEの全点対間最短路の長さを求めます。頂点sから頂点tに到達できない場合、その頂点対に対応する要素に対してはINFを返します。
 
+## Convert to Rooted Tree
+木を根付き木に変換します。
+
+```C++
+vector<int> parent(vector<vector<int>> &E, int r)
+```
+木Eを、頂点rを根とする根付き木に変換したときの、各頂点の親を求めます。
+
+```C++
+vector<vector<int>> child(vector<int> &p, int r)
+```
+頂点iの親がp[i]であり頂点rが根である根付き木の、各頂点の子を求めます。
+
 # Dynamic Programming
 ## Longest Common Subsequence
 動的計画法を利用して、最長共通部分列を求めます。
