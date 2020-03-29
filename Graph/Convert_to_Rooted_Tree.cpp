@@ -15,11 +15,13 @@ vector<int> parent(vector<vector<int>> &E, int r){
 	}
 	return p;
 }
-vector<vector<int>> child(vector<int> &p){
+vector<vector<int>> child(vector<int> &p, int r){
 	int N = p.size();
 	vector<vector<int>> c(N);
-	for (int i = 1; i < N; i++){
-		c[p[i]].push_back(i);
+	for (int i = 0; i < N; i++){
+		if (i != r){
+			c[p[i]].push_back(i);
+		}
 	}
 	return c;
 }
