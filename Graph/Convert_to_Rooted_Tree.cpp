@@ -1,8 +1,8 @@
-vector<int> parent(vector<vector<int>> &E){
+vector<int> parent(vector<vector<int>> &E, int u){
 	int N = E.size();
 	vector<int> p(N, -1);
 	queue<int> Q;
-	Q.push(0);
+	Q.push(u);
 	while (!Q.empty()){
 		int v = Q.front();
 		Q.pop();
