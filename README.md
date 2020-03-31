@@ -82,9 +82,21 @@ vector<int> parent(vector<vector<int>> &E, int r)
 木Eを、頂点rを根とする根付き木に変換したときの、各頂点の親を求めます。
 
 ```C++
+vector<vector<int>> child(vector<vector<int>> E, int r)
+```
+木Eを、頂点rを根とする根付き木に変換したときの、各頂点の子を求めます。
+
+```C++
 vector<vector<int>> child(vector<int> &p, int r)
 ```
 頂点iの親がp[i]であり頂点rが根である根付き木の、各頂点の子を求めます。
+
+## Rerooting 1
+全方位木DPを行います。関数add、root、subが定義されている必要があります。頂点iに対する答えはroot(dp[i])となります。
+
+## Rerooting 2
+全方位木DPを行います。関数add、rootが定義されている必要があります。頂点iに対する答えはroot(add(dp1[i], dp2[i]))となります。
+
 
 # Dynamic Programming
 ## Longest Common Subsequence
