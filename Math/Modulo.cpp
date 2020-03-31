@@ -4,7 +4,7 @@ long long modsub(long long a, long long b){
 	if (a >= b){
 		return (a - b) % MOD;
 	} else {
-		return p - (b - a) % MOD;
+		return MOD - (b - a) % MOD;
 	}
 }
 long long modpow(long long a, long long b){
