@@ -34,12 +34,12 @@ struct point{
 	point operator -(point P){
 		return point(x - P.x, y - P.y);
 	}
-	point operator +=(point P){
+	point &operator +=(point &P){
 		x += P.x;
 		y += P.y;
 		return *this;
 	}
-	point operator -=(point P){
+	point &operator -=(point &P){
 		x -= P.x;
 		y -= P.y;
 		return *this;
@@ -50,12 +50,12 @@ struct point{
 	point operator /(double k){
 		return point(x / k, y / k);
 	}
-	point operator *=(double k){
+	point &operator *=(double &k){
 		x *= k;
 		y *= k;
 		return *this;
 	}
-	point operator /=(double k){
+	point &operator /=(double &k){
 		x /= k;
 		y /= k;
 		return *this;
@@ -67,7 +67,7 @@ struct point{
 		return !(*this == P);
 	}
 	bool operator <(point P){
-		return sign(P.x - x) == 1 || (equals(x == P.x) && sign(P.y - y) == 1);
+		return sign(P.x - x) == 1 || (equals(x, P.x) && sign(P.y - y) == 1);
 	}
 	bool operator >(point P){
 		return (P < *this);
