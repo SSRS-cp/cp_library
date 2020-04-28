@@ -107,6 +107,12 @@ ostream& operator <<(ostream &os, point p){
 	os << p.x << ' ' << p.y;
 	return os;
 }
+double norm(point P){
+    return P.x * P.x + P.y * P.y;
+}
+double abs(point P){
+    return sqrt(norm(P)); 
+}
 point rotate(point P, double t){
     return point(P.x * cos(t) - P.y * sin(t), P.x * sin(t) + P.y * cos(t));
 }
@@ -121,4 +127,7 @@ double dot(point P, point Q){
 }
 double cross(point P, point Q){
     return P.x * Q.y - P.y * Q.x;
+}
+double dist(point P, point Q){
+    return abs(P - Q);
 }
