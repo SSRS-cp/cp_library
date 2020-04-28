@@ -208,7 +208,7 @@ vector<vector<int>> cycle_decomposition(vector<int> &P)
 
 # Geometry
 ## Point
-点を扱う構造体です。
+点を扱います。
 
 ```C++
 int sign(double x)
@@ -374,3 +374,26 @@ double arg(point P)
 int ccw(point P, point Q, point R)
 ```
 点P,Qに対する点Rの位置を求めます。点Rが線分PQの左側にあるとき1、右側にあるとき-1、後側にあるとき-2、前側にあるとき2、線分PQ上にあるとき0を返します。
+
+## Line
+直線・半直線・線分を扱います。
+
+```C++
+line(point P, point Q)
+```
+コンストラクタです。2点P,Qを通る直線を作ります。
+
+```C++
+line(double a, double b)
+```
+コンストラクタです。直線y=ax+bを作ります。
+
+```C++
+line(double a, double b, double c)
+```
+コンストラクタです。直線ax+by+c=0を作ります。
+
+```C++
+point vec()
+```
+ベクトルAB→を返します。
