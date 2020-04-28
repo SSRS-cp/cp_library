@@ -34,12 +34,12 @@ struct point{
 	point operator -(point P){
 		return point(x - P.x, y - P.y);
 	}
-	point &operator +=(point P){
+	point& operator +=(point P){
 		x += P.x;
 		y += P.y;
 		return *this;
 	}
-	point &operator -=(point P){
+	point& operator -=(point &P){
 		x -= P.x;
 		y -= P.y;
 		return *this;
@@ -50,12 +50,12 @@ struct point{
 	point operator /(double k){
 		return point(x / k, y / k);
 	}
-	point &operator *=(double k){
+	point& operator *=(double &k){
 		x *= k;
 		y *= k;
 		return *this;
 	}
-	point &operator /=(double k){
+	point& operator /=(double &k){
 		x /= k;
 		y /= k;
 		return *this;
@@ -72,14 +72,33 @@ struct point{
 	bool operator >(point P){
 		return (P < *this);
 	}
+	double norm(){
+	    return x * x + y * y;
+	}
+	double size(){
+	    return sqrt((*this).norm());
+	}
+	point& rotate(double t){
+	    double X = x * cos(t) - y * sin(t);
+	    double Y = x * sin(t) + y * cos(t);
+	    x = X;
+	    y = Y;
+	    return *this;
+	}
+	point& rotate(point P, double t){
+	    *this -= P;
+	    (*this).rotate(t);
+	    *this += P;
+	    return *this;
+	}
 };
-istream &operator >>(istream &is, point &p){
+istream& operator >>(istream &is, point &p){
 	double x, y;
 	is >> x >> y;
 	p = point(x, y);
 	return is;
 }
-ostream &operator <<(ostream &os, point p){
+ostream& operator <<(ostream &os, point p){
 	os << p.x << ' ' << p.y;
 	return os;
 }
