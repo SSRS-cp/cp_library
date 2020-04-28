@@ -251,12 +251,12 @@ point operator -(point P)
 点と点の差を求めます。(x1,y1)+(x2,y2)=(x1-x2,y1-y2)となります。
 
 ```C++
-point &operator +=(point P)
+point& operator +=(point P)
 ```
 点に点を加え、結果を代入します。
 
 ```C++
-point &operator -=(point P)
+point& operator -=(point P)
 ```
 点から点を引き、結果を代入します。
 
@@ -271,12 +271,12 @@ point operator /(double k)
 点を定数で割ります。(x,y)/k=(x/k,y/k)となります。
 
 ```C++
-point &operator *=(double k)
+point& operator *=(double k)
 ```
 点を定数倍し、結果を代入します。
 
 ```C++
-point &operator /=(double k)
+point& operator /=(double k)
 ```
 点を定数で割り、結果を代入します。
 
@@ -291,7 +291,7 @@ bool operator !=(point P)
 2つの点が異なる点であるかを調べます。
 
 ```C++
-bool oeprator <(point P)
+bool operator <(point P)
 ```
 2つの点を比較します。x座標が大きいほうが大きい点で、x座標が等しい場合y座標が大きいほうが大きい点となります。
 
@@ -301,11 +301,62 @@ bool operator >(point P)
 2つの点を比較します。
 
 ```C++
-istream &operator >>(istream &is, point &P)
+double norm()
+```
+点と原点の距離の二乗を求めます。
+
+```C++
+double size()
+```
+点と原点の距離の二乗を求めます。
+
+```C++
+point& rotate(double t)
+```
+点を原点を中心としてtラジアン回転させます。
+
+```C++
+point& rotate(point P, double t)
+```
+点を点Pを中心としてtラジアン回転させます。
+
+```C++
+point& rotate90(point P)
+```
+点を原点を中心として90°(π/4ラジアン)回転させます。
+
+```C++
+istream& operator >>(istream &is, point &P)
 ```
 点のx座標とy座標を入力から受け取ります。
 
 ```C++
-ostream &operator <<(ostream &os, point p)
+ostream& operator <<(ostream &os, point p)
 ```
 点のx座標とy座標をスペース区切りで出力します。
+
+
+```C++
+point rotate(point P, double t)
+```
+点Pを原点を中心としてtラジアン回転させた後の点を求めます。
+
+```C++
+point rotate(point P, point Q, double t)
+```
+点Pを点Qを中心としてtラジアン回転させた後の点を求めます。
+
+```C++
+point rotate90(point P)
+```
+点Pを原点を中心として90°(π/4ラジアン)回転させます。
+
+```C++
+double dot(point P, point Q)
+```
+点Pと点Qの内積P·Qを求めます。(x1,y1)·(x2,y2)=x1x2+y1y2となります。
+
+```C++
+double cross(point P, point Q)
+```
+点Pと点Qの外積P×Qを求めます。(x1,y1)×(x2,y2)=x1y2-x2y1となります。
