@@ -251,12 +251,12 @@ point operator -(point P)
 点と点の差を求めます。(x1,y1)+(x2,y2)=(x1-x2,y1-y2)となります。
 
 ```C++
-point operator +=(point P)
+point &operator +=(point P)
 ```
 点に点を加え、結果を代入します。
 
 ```C++
-point operator -=(point P)
+point &operator -=(point P)
 ```
 点から点を引き、結果を代入します。
 
@@ -271,12 +271,12 @@ point operator /(double k)
 点を定数で割ります。(x,y)/k=(x/k,y/k)となります。
 
 ```C++
-point operator *=(double k)
+point &operator *=(double k)
 ```
 点を定数倍し、結果を代入します。
 
 ```C++
-point operator /=(double k)
+point &operator /=(double k)
 ```
 点を定数で割り、結果を代入します。
 
