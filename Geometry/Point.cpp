@@ -91,6 +91,11 @@ struct point{
 	    *this += P;
 	    return *this;
 	}
+	point& rotate90(){
+	    swap(x, y);
+	    x = -x;
+	    return *this;
+	}
 };
 istream& operator >>(istream &is, point &p){
 	double x, y;
@@ -101,4 +106,19 @@ istream& operator >>(istream &is, point &p){
 ostream& operator <<(ostream &os, point p){
 	os << p.x << ' ' << p.y;
 	return os;
+}
+point rotate(point P, double t){
+    return point(P.x * cos(t) - P.y * sin(t), P.x * sin(t) + P.y * cos(t));
+}
+point rotate(point P, point Q, double t){
+    return rotate(P - Q, t) + Q;
+}
+point rotate90(point P){
+    return point(-P.y, P.x);
+}
+double dot(point P, point Q){
+    return P.x * Q.x + P.y * Q.y;
+}
+double cross(point P, point Q){
+    return P.x * Q.y - P.y * Q.x;
 }
