@@ -34,7 +34,7 @@ struct point{
 	point operator -(point P){
 		return point(x - P.x, y - P.y);
 	}
-	point& operator +=(point P){
+	point& operator +=(point &P){
 		x += P.x;
 		y += P.y;
 		return *this;
