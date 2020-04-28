@@ -131,3 +131,21 @@ double cross(point P, point Q){
 double dist(point P, point Q){
     return abs(P - Q);
 }
+double arg(point P){
+    return atan2(P.y, P.x);
+}
+int ccw(point P, point Q, point R){
+    Q -= P;
+    R -= P;
+    if (sign(cross(Q, R)) == 1){
+        return 1;
+    } else if (sign(cross(Q, R)) == -1){
+        return -1;
+    } else if (sign(dot(Q, R)) == -1){
+        return -2;
+    } else if (sign(abs(R) - abs(Q)) == 1){
+        return 2;
+    } else {
+        return 0;
+    }
+}
