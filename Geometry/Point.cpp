@@ -67,7 +67,7 @@ struct point{
 		return !(*this == P);
 	}
 	bool operator <(point P){
-		return (x < P.x) || (x == P.x && y < P.y);
+		return sign(P.x - x) == 1 || (equals(x == P.x) && sign(P.y - y) == 1);
 	}
 	bool operator >(point P){
 		return (P < *this);
@@ -82,40 +82,4 @@ istream &operator >>(istream &is, point &p){
 ostream &operator <<(ostream &os, point p){
 	os << p.x << ' ' << p.y;
 	return os;
-}
-
-//test
-int main(){
-	double k;
-	point P, Q;
-	cin >> k >> P >> Q;
-	cout << "P = " << P << endl;
-	cout << "Q = " << Q << endl;
-	cout << "-P = " << -P << endl;
-	cout << "P + Q = " << P + Q << endl;
-	cout << "P - Q = " << P - Q << endl;
-	cout << "P * k = " << P * k << endl;
-	cout << "P / k = " << P / k << endl;
-	cout << "P = " << P << endl;
-	cout << "Q = " << Q << endl;
-	P += Q;
-	cout << "P += Q -> P = " << P << endl;
-	P -= Q;
-	cout << "P -= Q -> P = " << P << endl;
-	P *= k;
-	cout << "P *= k -> P = " << P << endl;
-	P /= k;
-	cout << "P /= k -> P = " << P << endl;
-	cout << "P = " << P << endl;
-	cout << "Q = " << Q << endl;
-	if (P < Q){
-		cout << "P < Q" << endl;
-	} else if (P == Q){
-		cout << "P == Q" << endl;
-	} else {
-		cout << "P > Q" << endl;
-	}
-	if (P != Q){
-		cout << "P != Q" << endl;
-	}
 }
