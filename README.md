@@ -205,3 +205,107 @@ Nの正の約数の個数を求めます。
 vector<vector<int>> cycle_decomposition(vector<int> &P)
 ```
 置換Pを巡回置換に分解します。それぞれの置換では最も大きい数が先頭になります。置換は先頭の数が大きい順に返されます。
+
+# Geometry
+## Point
+点を扱う構造体です。
+
+```C++
+int sign(double x)
+```
+EPSを考慮して、xの符号を返します。xが正のとき1を、負のとき-1を、0のとき0を返します。
+
+```C++
+bool equals(double x, double y)
+```
+EPSを考慮して、xとyが等しいかどうかを調べます。
+
+```C++
+point()
+```
+コンストラクタです。引数に何も指定しない場合、点は原点(0,0)となります。
+
+```C++
+point(double X, double Y)
+```
+コンストラクタです。引数がXとYであるとき、点は点(X,Y)となります。
+
+```C++
+point operator +()
+```
+正号です。+(x,y)=(x,y)となります。
+
+```C++
+point operator -()
+```
+負号です。-(x,y)=(-x,-y)となります。
+
+```C++
+point operator +(point P)
+```
+点と点を加えます。(x1,y1)+(x2,y2)=(x1+x2,y1+y2)となります。
+
+```C++
+point operator -(point P)
+```
+点と点の差を求めます。(x1,y1)+(x2,y2)=(x1-x2,y1-y2)となります。
+
+```C++
+point operator +=(point P)
+```
+点に点を加え、結果を代入します。
+
+```C++
+point operator -=(point P)
+```
+点から点を引き、結果を代入します。
+
+```C++
+point operator *(double k)
+```
+点を定数倍します。(x,y)* k=(kx,ky)となります。
+
+```C++
+point operator /(double k)
+```
+点を定数で割ります。(x,y)/k=(x/k,y/k)となります。
+
+```C++
+point operator *=(double k)
+```
+点を定数倍し、結果を代入します。
+
+```C++
+point operator /=(double k)
+```
+点を定数で割り、結果を代入します。
+
+```C++
+bool operator ==(point P)
+```
+EPSを考慮して、2つの点が同じ点であるかを調べます。
+
+```C++
+bool operator !=(point P)
+```
+2つの点が異なる点であるかを調べます。
+
+```C++
+bool oeprator <(point P)
+```
+2つの点を比較します。x座標が大きいほうが大きい点で、x座標が等しい場合y座標が大きいほうが大きい点となります。
+
+```C++
+bool operator >(point P)
+```
+2つの点を比較します。
+
+```C++
+istream &operator >>(istream &is, point &P)
+```
+点のx座標とy座標を入力から受け取ります。
+
+```C++
+ostream &operator <<(ostream &os, point p)
+```
+点のx座標とy座標をスペース区切りで出力します。
