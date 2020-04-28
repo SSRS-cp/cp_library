@@ -335,7 +335,6 @@ ostream& operator <<(ostream &os, point p)
 ```
 点のx座標とy座標をスペース区切りで出力します。
 
-
 ```C++
 point rotate(point P, double t)
 ```
@@ -352,6 +351,11 @@ point rotate90(point P)
 点Pを原点を中心として90°(π/4ラジアン)回転させます。
 
 ```C++
+point midpoint(point P, point Q)
+```
+点Pと点Qの中点を求めます。
+
+```C++
 double dot(point P, point Q)
 ```
 点Pと点Qの内積P·Qを求めます。(x1,y1)·(x2,y2)=x1x2+y1y2となります。
@@ -360,3 +364,13 @@ double dot(point P, point Q)
 double cross(point P, point Q)
 ```
 点Pと点Qの外積P×Qを求めます。(x1,y1)×(x2,y2)=x1y2-x2y1となります。
+
+```C++
+double arg(point P)
+```
+点Pの偏角を求めます。
+
+```C++
+int ccw(point P, point Q, point R)
+```
+点P,Qに対する点Rの位置を求めます。点Rが線分PQの左側にあるとき1、右側にあるとき-1、後側にあるとき-2、前側にあるとき2、線分PQ上にあるとき0を返します。
