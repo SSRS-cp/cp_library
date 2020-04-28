@@ -108,44 +108,47 @@ ostream& operator <<(ostream &os, point p){
 	return os;
 }
 double norm(point P){
-    return P.x * P.x + P.y * P.y;
+	return P.x * P.x + P.y * P.y;
 }
 double abs(point P){
-    return sqrt(norm(P)); 
+	return sqrt(norm(P)); 
 }
 point rotate(point P, double t){
-    return point(P.x * cos(t) - P.y * sin(t), P.x * sin(t) + P.y * cos(t));
+	return point(P.x * cos(t) - P.y * sin(t), P.x * sin(t) + P.y * cos(t));
 }
 point rotate(point P, point Q, double t){
-    return rotate(P - Q, t) + Q;
+	return rotate(P - Q, t) + Q;
 }
 point rotate90(point P){
-    return point(-P.y, P.x);
+	return point(-P.y, P.x);
+}
+point midpoint(point P, point Q){
+	return (P + Q) / 2;
 }
 double dot(point P, point Q){
-    return P.x * Q.x + P.y * Q.y;
+	return P.x * Q.x + P.y * Q.y;
 }
 double cross(point P, point Q){
-    return P.x * Q.y - P.y * Q.x;
+	return P.x * Q.y - P.y * Q.x;
 }
 double dist(point P, point Q){
-    return abs(P - Q);
+	return abs(P - Q);
 }
 double arg(point P){
-    return atan2(P.y, P.x);
+	return atan2(P.y, P.x);
 }
 int ccw(point P, point Q, point R){
-    Q -= P;
-    R -= P;
-    if (sign(cross(Q, R)) == 1){
-        return 1;
-    } else if (sign(cross(Q, R)) == -1){
-        return -1;
-    } else if (sign(dot(Q, R)) == -1){
-        return -2;
-    } else if (sign(abs(R) - abs(Q)) == 1){
-        return 2;
-    } else {
-        return 0;
-    }
+	Q -= P;
+	R -= P;
+	if (sign(cross(Q, R)) == 1){
+		return 1;
+	} else if (sign(cross(Q, R)) == -1){
+		return -1;
+	} else if (sign(dot(Q, R)) == -1){
+		return -2;
+	} else if (sign(abs(R) - abs(Q)) == 1){
+		return 2;
+	} else {
+		return 0;
+	}
 }
