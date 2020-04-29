@@ -23,6 +23,22 @@ struct line{
 			B = piint(1, -(b + c) / a);
 		}
 	}
+	line operator +(point P){
+		return line(A + P, B + P);
+	}
+	line operator -(point P){
+		return line(A - P, B - P);
+	}
+	line& operator +=(point P){
+		A += P;
+		B += P;
+		return *this;
+	}
+	line& operator -=(point P){
+		A -= P;
+		B -= P;
+		return *this;
+	}
 	bool operator ==(line L){
 		return abs(ccw(A, B, L.A)) != 1 && abs(ccw(A, B, L.B)) != 1;
 	}
@@ -145,4 +161,10 @@ double segment_distance(segment S1, segment S2){
 		double ans2 = min(point_segment_distance(S2.A, S1), point_segment_distance(S2.B, S1));
 		return min(ans1, ans2);
 	}
+}
+line perpendicular_bisector(segment S){
+	return line(midpoint(S.A, S.B), midpoint(S.A, S.B) + rotate90(vec(S)));
+}
+line angle_bisector(point A, point B, point C){
+	return line(B, midpoint(B + (A - B) / abs(A - B), B + (C - B) / abs(C - B)));
 }
