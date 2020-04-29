@@ -81,12 +81,20 @@ bool is_intersecting_line(line a, line b){
 }
 pair<bool, point> line_intersection(line L1, line L2){
 	if (L1 == L2){
-		return make_pair(true, L1.A);
+		return make_pair(true, L2.A);
 	} else if (is_parallel(L1, L2)){
 		return make_pair(false, point());
 	} else {
 		point P = L1.A + vec(L1) * cross(vec(L2), L2.A - L1.A) / cross(vec(L2), vec(L1));
 		return make_pair(true, P);
+	}
+}
+pair<bool, point> line_segment_intersection(line L, segment S){
+	auto P = line_intersection(L, S);
+	if (P.first && is_on_segment(P.second, S)){
+		return make_pair(true, P.second);
+	} else {
+		return make_pair(false, point());
 	}
 }
 pair<bool, point> segment_intersection(segment S1, segment S2){
@@ -108,5 +116,33 @@ pair<bool, point> segment_intersection(segment S1, segment S2){
 		return P;
 	} else {
 		return make_pair(false, point());
+	}
+}
+double point_line_distance(point P, line L){
+	return abs(cross(P - L.A, vec(L))) / abs(vec(L));
+}
+double point_segment_distance(point P, segment S){
+	if (angle_type(P, S.A, S.B) == -1){
+		return dist(P, S.A);
+	} else if (angle_type(P, S.B, S.A) == -1){
+		return dist(P, S.B);
+	} else {
+		return point_line_distance(P, S);
+	}
+}
+double line_segment_distance(line L, segment S){
+	if (line_segment_intersection(L, S).first){
+		return 0;
+	} else {
+		return min(point_line_distance(S.A, L), point_line_distance(S.B, L));
+	}
+}
+double segment_distance(segment S1, segment S2){
+	if (segment_intersection(S1, S2).first){
+		return 0;
+	} else {
+		double ans1 = min(point_segment_distance(S1.A, S2), point_segment_distance(S1.B, S2));
+		double ans2 = min(point_segment_distance(S2.A, S1), point_segment_distance(S2.B, S1));
+		return min(ans1, ans2);
 	}
 }
