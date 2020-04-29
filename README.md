@@ -422,7 +422,6 @@ line& operator -=(point P)
 ```
 直線の始点と終点からPを引きます。
 
-
 ```C++
 bool operator ==(line L)
 ```
@@ -457,6 +456,16 @@ ostream& operator <<(ostream &os, point p)
 point vec(line L)
 ```
 ベクトルAB→を返します。
+
+```C++
+point unit(lint L)
+```
+直線Lの単位方向ベクトルを求めます。
+
+```C++
+point norm(line L)
+```
+直線Lの単位法線ベクトルを求めます。
 
 ```C++
 point projection(point P, line L)
@@ -542,3 +551,121 @@ line perpendicular_bisector(segment S)
 line angle_bisector(point A, point B, point C)
 ```
 ∠ABCの二等分線を求めます。
+
+## Circle
+円を扱います。
+
+```C++
+circle()
+```
+コンストラクタです。
+
+```C++
+circle(point C, double R)
+```
+コンストラクタです。中心C、半径Rの円を作ります。
+
+```C++
+circle(double x, double y, double R)
+```
+コンストラクタです。中心(x,y)、半径Rの円を作ります。
+
+```C++
+circle operator +(point P)
+```
+円をPだけ平行移動した円を求めます。
+
+```C++
+circle operator -(point P)
+```
+円を-Pだけ平行移動した円を求めます。
+
+```C++
+circle& operator +=(point P)
+```
+円をPだけ平行移動します。
+
+```C++
+circle& operator -=(point P)
+```
+円を-Pだけ平行移動します。
+
+```C++
+circle operator *(double k)
+```
+円をk倍に拡大した円を求めます。
+
+```C++
+circle operator /(double k)
+```
+円を1/k倍に拡大した円を求めます。
+
+```C++
+circle& operator *=(double k)
+```
+円をk倍に拡大します。
+
+```C++
+circle& operator /=(double k)
+```
+円を1/k倍に拡大します。
+
+```C++
+bool operator ==(circle C2)
+```
+2つの円が同じ円か判定します。
+
+```C++
+bool operator !=(circle C2)
+```
+2つの円が異なる円か判定します。
+
+```C++
+istream& operator >>(istream &is, circle &C)
+```
+円を入力します。
+
+```C++
+ostream& operator <<(ostream &os, circle C)
+```
+円を出力します。
+
+```C++
+double perimeter(circle C)
+```
+円Cの円周を求めます。
+
+```C++
+double area(circle C)
+```
+円Cの面積を求めます。
+
+```C++
+bool point_on_circle(point P, circle C)
+```
+点Pが円Cの円周上にあるか判定します。
+
+```C++
+bool point_in_circle(point P, circle C)
+```
+点Pが円Cの内部または周上にあるか判定します。
+
+```C++
+int circle_pos(circle C1, circle C2)
+```
+2円C1, C2の位置関係を調べます。円C1, C2が互いに外部にあるとき4、外接するとき3、2点で交わるとき2、内接するとき1、一方が他方の外部にあるとき0を返します。
+
+```C++
+int line_circle_intersection_count(line L, circle C)
+```
+直線Lと円Cの共有点の個数を求めます。
+
+```C++
+int segment_circle_intersection_count(segment S, circle C)
+```
+線分Sと円Cの共有点の個数を求めます。
+
+```C++
+vector<point> line_circle_intersection(line L, circle C)
+```
+直線Lと円Cの共有点の座標を求めます。
