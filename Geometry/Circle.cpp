@@ -120,9 +120,40 @@ vector<point> line_circle_intersection(line L, circle C){
 		return ans;
 	} else {
 		point P = projection(C.c, L);
-		double d = sqrt(pow(C.r, 2) - pow(point_line_distance(C.c, L), 2));
+		double d = sqrt(max(pow(C.r, 2) - pow(point_line_distance(C.c, L), 2), (double) 0));
 		ans.push_back(P + unit(L) * d);
 		ans.push_back(P - unit(L) * d);
+		return ans;
+	}
+}
+vector<point> segment_circle_intersection(segment S, circle C){
+	vector<point> tmp = line_circle_intersection(S, C);
+	vector<point> ans;
+	for (point P : tmp){
+		if (is_on_segment(P, S)){
+			ans.push_back(P);
+		}
+	}
+	return ans;
+}
+vector<point> circle_intersection(circle C1, circle C2){
+	int pos = circle_pos(C1, C2);
+	vector<point> ans;
+	if (pos == 4 || pos == 0){
+		return ans;
+	} else if (pos == 3){
+		ans.push_back(partition(line(C1.c, C2.c), C1.r, C2.r));
+		return ans;
+	} else if (pos == 1){
+		ans.push_back(partition(line(C1.c, C2.c), C1.r, -C2.r));
+		return ans;
+	} else {
+		line L(C1.c, C2.c);
+		double x = (norm(vec(L)) + pow(C1.r, 2) - pow(C2.r, 2)) / (2 * abs(vec(L)));
+		double h = sqrt(max(pow(C1.r, 2) - pow(x, 2), (double) 0));
+		cout << x << endl;
+		ans.push_back(C1.c + unit(L) * x + norm(L) * h);
+		ans.push_back(C1.c + unit(L) * x - norm(L) * h);
 		return ans;
 	}
 }
