@@ -301,16 +301,6 @@ bool operator >(point P)
 2つの点を比較します。
 
 ```C++
-double norm()
-```
-点と原点の距離の二乗を求めます。
-
-```C++
-double size()
-```
-点と原点の距離の二乗を求めます。
-
-```C++
 point& rotate(double t)
 ```
 点を原点を中心としてtラジアン回転させます。
@@ -379,6 +369,15 @@ int ccw(point P, point Q, point R)
 直線・半直線・線分を扱います。
 
 ```C++
+line()
+```
+コンストラクタです。
+
+```C++
+line(point P)
+```
+コンストラクタです。原点と点Pを通る直線を作ります。
+```C++
 line(point P, point Q)
 ```
 コンストラクタです。2点P,Qを通る直線を作ります。
@@ -394,6 +393,41 @@ line(double a, double b, double c)
 コンストラクタです。直線ax+by+c=0を作ります。
 
 ```C++
-point vec()
+istream& operator >>(istream &is, point &P)
+```
+直線を入力から受け取ります。
+
+```C++
+ostream& operator <<(ostream &os, point p)
+```
+直線を出力します。
+
+```C++
+point vec(line L)
 ```
 ベクトルAB→を返します。
+
+```C++
+point projection(point P, line L)
+```
+点Pから直線Lに下ろした垂線の足を求めます。
+
+```C++
+point reflection(point P, line L)
+```
+直線Lについて点Pと対称な点を求めます。
+
+```C++
+line perpendicular_line(point P, line L)
+```
+点Pから直線Lに垂線を下ろします。
+
+```C++
+bool is_orthogonal(line a, line b)
+```
+2直線a, bが直交するか判定します。
+
+```C++
+bool is_parallel(line a, line b)
+```
+2直線a, bが平行であるか判定します。
