@@ -146,3 +146,11 @@ int ccw(point P, point Q, point R){
 		return 0;
 	}
 }
+double angle(point A, point B, point C){
+	A -= B;
+	C -= B;
+	return acos(dot(A, C) / (abs(A) * abs(C)));
+}
+int angle_type(point A, point B, point C){
+	return sign(dot(A - B, C - B));
+}
