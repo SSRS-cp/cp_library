@@ -20,7 +20,7 @@ struct line{
 			B = point(-c / a, 1);
 		} else {
 			A = point(0, -c / a);
-			B = piint(1, -(b + c) / a);
+			B = point(1, -(b + c) / a);
 		}
 	}
 	line operator +(point P){
