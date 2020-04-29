@@ -23,7 +23,7 @@ struct line{
 			B = piint(1, -(b + c) / a);
 		}
 	}
-	bool operator == (line L){
+	bool operator ==(line L){
 		return abs(ccw(A, B, L.A)) != 1 && abs(ccw(A, B, L.B)) != 1;
 	}
 	bool operator !=(line L){
