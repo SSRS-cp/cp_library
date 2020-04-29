@@ -73,6 +73,9 @@ point unit(line L){
 point norm(line L){
 	return rotate90(unit(L));
 }
+point partition(segment S, double a, double b){
+	return (S.A * b + S.B * a) / (a + b);
+}
 point projection(point P, line L){
 	return L.A + vec(L) * dot(P - L.A, vec(L)) / norm(L);
 }
