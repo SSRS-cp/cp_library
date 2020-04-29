@@ -67,7 +67,7 @@ struct point{
 		return !(*this == P);
 	}
 	bool operator <(point P){
-		return sign(P.x - x) == 1 || (equals(x, P.x) && sign(P.y - y) == 1);
+		return sign(P.x - x) == 1 || equals(x, P.x) && sign(P.y - y) == 1;
 	}
 	bool operator >(point P){
 		return (P < *this);
