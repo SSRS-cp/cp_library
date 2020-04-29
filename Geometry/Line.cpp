@@ -67,8 +67,14 @@ ostream& operator <<(ostream &os, line L){
 point vec(line L){
 	return L.B - L.A;
 }
+point unit(line L){
+	return vec(L) / abs(vec(L));
+}
+point norm(line L){
+	return rotate90(unit(L));
+}
 point projection(point P, line L){
-	return L.A + vec(L) * dot(P - L.A, vec(L)) / norm(vec(L));
+	return L.A + unit(L) * dot(P - L.A, vec(L));
 }
 point reflection(point P, line L){
 	return projection(P, L) * 2 - P;
