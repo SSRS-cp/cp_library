@@ -10,15 +10,12 @@ struct line{
 		B = point(1, a + b);
 	}
 	line(double a, double b, double c){
-		if (a == 0){
-			A = point(1, -c/b);
+		if (sign(b) == 0){
+			A = point(-c / a, 0);
+			B = point(-c / a, 1);
 		} else {
-			A = point(-c/a, 0);
-		}
-		if (b == 0){
-			B = point(-c/a, 1);
-		} else {
-			B = point(0, -c/b);
+			A = point(0, -c / a);
+			B = piint(1, -(b + c) / a);
 		}
 	}
 	point vec(){
