@@ -72,12 +72,6 @@ struct point{
 	bool operator >(point P){
 		return (P < *this);
 	}
-	double norm(){
-	    return x * x + y * y;
-	}
-	double size(){
-	    return sqrt((*this).norm());
-	}
 	point& rotate(double t){
 	    double X = x * cos(t) - y * sin(t);
 	    double Y = x * sin(t) + y * cos(t);
