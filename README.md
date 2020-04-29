@@ -365,6 +365,16 @@ int ccw(point P, point Q, point R)
 ```
 点P,Qに対する点Rの位置を求めます。点Rが線分PQの左側にあるとき1、右側にあるとき-1、後側にあるとき-2、前側にあるとき2、線分PQ上にあるとき0を返します。
 
+```C++
+double angle(point A, point B, point C)
+```
+∠ABCの大きさを求めます。
+
+```C++
+int angle_type(point A, point B, point C)
+```
+∠ABCの種類を求めます。∠ABCが鋭角なら1, 直角なら0, 鈍角なら-1を返します。
+
 ## Line
 直線・半直線・線分を扱います。
 
@@ -391,6 +401,27 @@ line(double a, double b)
 line(double a, double b, double c)
 ```
 コンストラクタです。直線ax+by+c=0を作ります。
+
+```C++
+line operator +(point P)
+```
+直線の始点と終点にPを加えた直線を求めます。
+
+```C++
+line operator -(point P)
+```
+直線の始点と終点からPを引いた直線を求めます。
+
+```C++
+line& operator +=(point P)
+```
+直線の始点と終点にPを加えます。
+
+```C++
+line& operator -=(point P)
+```
+直線の始点と終点からPを引きます。
+
 
 ```C++
 bool operator ==(line L)
@@ -473,6 +504,41 @@ pair<bool, point> line_intersection(line L1, line L2)
 2直線L1, L2の共有点を求めます。2直線L1, L2が共有点を持つ場合、第1要素にtrue、第2要素に共有点の座標が入ります。そうでない場合、第1要素にfalseが入ります。
 
 ```C++
+pair<bool, point> line_segment_intersection(line L, segment S)
+```
+直線Lと線分Sの共有点を求めます。直線Lと線分Sが共有点を持つ場合、第1要素にtrue、第2要素に共有点の座標が入ります。そうでない場合、第1要素にfalseが入ります。
+
+```C++
 pair<bool, point> segment_intersection(segment S1, segment S2)
 ```
 2線分S1, S2の共有点を求めます。2直線S1, S2が共有点を持つ場合、第1要素にtrue、第2要素に共有点の座標が入ります。そうでない場合、第1要素にfalseが入ります。
+
+```C++
+double point_line_distance(point P, line L)
+```
+点Pと直線Lの距離を求めます。
+
+```C++
+double point_segment_distance(point P, segment S)
+```
+点Pと線分Sの距離を求めます。
+
+```C++
+double line_segment_distance(line L, segment S)
+```
+直線Lと線分Sの距離を求めます。
+
+```C++
+double segment_distance(segment S1, segment S2)
+```
+2線分S1, S2の距離を求めます。
+
+```C++
+line perpendicular_bisector(segment S)
+```
+線分Sの垂直二等分線を求めます。
+
+```C++
+line angle_bisector(point A, point B, point C)
+```
+∠ABCの二等分線を求めます。
