@@ -85,7 +85,7 @@ pair<bool, point> line_intersection(line L1, line L2){
 	} else if (is_parallel(L1, L2)){
 		return make_pair(false, point());
 	} else {
-	  point P = L1.A + vec(L1) * cross(vec(L2), L2.A - L1.A) / cross(vec(L2), vec(L1));
+		point P = L1.A + vec(L1) * cross(vec(L2), L2.A - L1.A) / cross(vec(L2), vec(L1));
 		return make_pair(true, P);
 	}
 }
