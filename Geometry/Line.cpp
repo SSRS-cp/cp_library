@@ -54,5 +54,5 @@ bool is_orthogonal(line a, line b){
 	return sign(dot(vec(a), vec(b))) == 0;
 }
 bool is_parallel(line a, line b){
-  return sign(cross(vec(a), vec(b))) == 0;
+	return sign(cross(vec(a), vec(b))) == 0;
 }
