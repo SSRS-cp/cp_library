@@ -74,7 +74,7 @@ point norm(line L){
 	return rotate90(unit(L));
 }
 point projection(point P, line L){
-	return L.A + unit(L) * dot(P - L.A, vec(L));
+	return L.A + vec(L) * dot(P - L.A, vec(L)) / norm(L);
 }
 point reflection(point P, line L){
 	return projection(P, L) * 2 - P;
