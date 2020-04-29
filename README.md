@@ -468,6 +468,11 @@ point norm(line L)
 直線Lの単位法線ベクトルを求めます。
 
 ```C++
+point partition(segment S, double a, double b)
+```
+線分Sをa:bに内分する点を求めます。
+
+```C++
 point projection(point P, line L)
 ```
 点Pから直線Lに下ろした垂線の足を求めます。
@@ -669,3 +674,13 @@ int segment_circle_intersection_count(segment S, circle C)
 vector<point> line_circle_intersection(line L, circle C)
 ```
 直線Lと円Cの共有点の座標を求めます。
+
+```C++
+vector<point> segment_circle_intersection(segment S, circle C)
+```
+線分Sと円Cの共有点の座標を求めます。
+
+```C++
+vector<point> circle_intersection(circle C1, circle C2)
+```
+2円C1, C2の共有点の座標を求めます。
