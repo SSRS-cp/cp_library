@@ -393,6 +393,26 @@ line(double a, double b, double c)
 コンストラクタです。直線ax+by+c=0を作ります。
 
 ```C++
+bool operator ==(line L)
+```
+2つの直線が同一の直線を表すか判定します。
+
+```C++
+bool operator !=(line L)
+```
+2つの直線が異なる直線を表すか判定します。
+
+```C++
+bool operator <(line L)
+```
+2つの直線を比較します。始点が大きいほうが大きい直線で、始点が等しい場合終点が大きいほうが大きい直線となります。
+
+```C++
+bool operator >(line L)
+```
+2つの直線を比較します。
+
+```C++
 istream& operator >>(istream &is, point &P)
 ```
 直線を入力から受け取ります。
@@ -430,4 +450,29 @@ bool is_orthogonal(line a, line b)
 ```C++
 bool is_parallel(line a, line b)
 ```
-2直線a, bが平行であるか判定します。
+2直線a, bが平行であるか判定します。2直線a, bが同じ直線を表す場合、平行であると判定されます。
+
+```C++
+bool is_on_line(point P, line L)
+```
+点Pが直線L上にあるか判定します。
+
+```C++
+bool is_on_segment(point P, segment L)
+```
+点Pが線分L上にあるか判定します。
+
+```C++
+bool is_intersecting_line(line a, line b)
+```
+2直線a, bが交点を持つか判定します。2直線a, bが同じ直線を表す場合、交点を持たないと判定されます。
+
+```C++
+pair<bool, point> line_intersection(line L1, line L2)
+```
+2直線L1, L2の共有点を求めます。2直線L1, L2が共有点を持つ場合、第1要素にtrue、第2要素に共有点の座標が入ります。そうでない場合、第1要素にfalseが入ります。
+
+```C++
+pair<bool, point> segment_intersection(segment S1, segment S2)
+```
+2線分S1, S2の共有点を求めます。2直線S1, S2が共有点を持つ場合、第1要素にtrue、第2要素に共有点の座標が入ります。そうでない場合、第1要素にfalseが入ります。
