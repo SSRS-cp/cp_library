@@ -53,4 +53,7 @@ struct segment_tree{
 	T query(int L, int R){
 		return val(L, R, 0, 0, N);
 	}
+	T all(){
+		return ST[0];
+	}
 };
