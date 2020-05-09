@@ -47,7 +47,7 @@ struct point_update_range_min{
 	T range_min(int L, int R){
 		return val(L, R, 0, 0, N);
 	}
-	T all(){
+	T all_min(){
 		return ST[0];
 	}
 };
