@@ -1,18 +1,27 @@
-int unionfind_root(vector<int> &parent, int x){
-	if (parent[x] == x){
-		return x;
-	} else {
-		int y = unionfind_root(parent, parent[x]);
-		parent[x] = y;
-		return y;
+struct unionfind{
+	vector<int> p;
+	unionfind(int n){
+		p = vector<int>(n, -1);
 	}
-}
-bool unionfind_unite(vector<int> &parent, int x, int y){
-	x = unionfind_root(parent, x);
-	y = unionfind_root(parent, y);
-	if (x != y){
-		parent[x] = y;
-		return false;
+	int root(int x){
+		if (p[x] == -1){
+			return x;
+		} else {
+			p[x] = root(p[x]);
+			return p[x];
+		}
 	}
-	return true;
-}
+	bool same(int x, int y){
+		x = root(x);
+		y = root(y);
+		return x == y;
+	}
+	void unite(int x, int y){
+		x = root(x);
+		y = root(y);
+		if (x != y){
+			p[x] = y;
+		}
+		return;
+	}
+};
