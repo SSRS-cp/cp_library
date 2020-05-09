@@ -27,4 +27,7 @@ struct binary_indexed_tree{
 	T query(int L, int R){
 		return sum(R) - sum(L);
 	}
+	T all(){
+		return BIT[0];
+	}
 };
