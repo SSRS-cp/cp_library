@@ -20,14 +20,14 @@ struct segment_tree{
 			N *= 2;
 		}
 		ST = vector<T>(N * 2 - 1, e);
+		f = F;
+		E = e;
 		for (int i = 0; i < n; i++){
 			ST[N - 1 + i] = A[i];
 		}
 		for (int i = N - 2; i >= 0; i--){
-			ST[i] = F(ST[i * 2 + 1], ST[i * 2 + 2]);
+			ST[i] = f(ST[i * 2 + 1], ST[i * 2 + 2]);
 		}
-		f = F;
-		E = e;
 	}
 	T operator [](int k){
 		return ST[N - 1 + k];
