@@ -28,6 +28,6 @@ struct point_add_range_sum{
 		return sum(R) - sum(L);
 	}
 	T all_sum(){
-		return BIT[0];
+		return BIT[N];
 	}
 };
