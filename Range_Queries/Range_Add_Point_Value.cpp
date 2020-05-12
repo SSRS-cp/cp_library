@@ -28,7 +28,7 @@ struct range_add_point_value{
 		}
 		return ans;
 	}
-	void add(int L, int R, T x, int i, int l, int r){
+	void range_add(int L, int R, T x, int i, int l, int r){
 		if (R <= l || r <= L){
 			return;
 		} else if (L <= l && r <= R){
@@ -36,12 +36,12 @@ struct range_add_point_value{
 			return;
 		} else {
 			int m = (l + r) / 2;
-			add(L, R, x, i * 2 + 1, l, m);
-			add(L, R, x, i * 2 + 2, m, r);
+			range_add(L, R, x, i * 2 + 1, l, m);
+			range_add(L, R, x, i * 2 + 2, m, r);
 			return;
 		}
 	}
 	void range_add(int L, int R, T x){
-		add(L, R, x, 0, 0, N);
+		range_add(L, R, x, 0, 0, N);
 	}
 };
