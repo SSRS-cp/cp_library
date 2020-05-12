@@ -47,19 +47,19 @@ struct range_update_point_value{
 		}
 		return ans;
 	}
-	void update(int L, int R, T x, int i, int l, int r){
+	void range_update(int L, int R, T x, int i, int l, int r){
 		if (R <= l || r <= L){
 			return;
 		} else if (L <= l && r <= R){
 			ST[i] = make_pair(x, t);
 		} else {
 			int m = (l + r) / 2;
-			update(L, R, x, i * 2 + 1, l, m);
-			update(L, R, x, i * 2 + 2, m, r);
+			range_update(L, R, x, i * 2 + 1, l, m);
+			range_update(L, R, x, i * 2 + 2, m, r);
 		}
 	}
 	void range_update(int L, int R, T x){
-		update(L, R, x, 0, 0, N);
+		range_update(L, R, x, 0, 0, N);
 		t++;
 	}
 };
