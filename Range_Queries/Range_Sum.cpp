@@ -9,10 +9,10 @@ struct range_sum{
 			S[i + 1] = S[i] + A[i];
 		}
 	}
-	query(int p, int q){
+	T query(int p, int q){
 		return S[q] - S[p];
 	}
-	all(){
+	T all(){
 		return S[N];
 	}
 };
