@@ -5,12 +5,14 @@ struct strongly_connected_components{
 	vector<int> t;
 	vector<bool> used;
 	vector<int> scc;
+	int count;
 	strongly_connected_components(vector<vector<int>> &G){
 		V = G.size();
 		E1 = vector<vector<int>>(V);
 		E2 = vector<vector<int>>(V);
 		used = vector<bool>(V, false);
 		scc = vector<int>(V, -1);
+		count = 0;
 		for (int i = 0; i < V; i++){
 			for (int j : G[i]){
 				E1[i].push_back(j);
@@ -43,7 +45,6 @@ struct strongly_connected_components{
 			}
 		}
 		reverse(t.begin(), t.end());
-		int count = 0;
 		for (int i = 0; i < V; i++){
 			if (scc[t[i]] == -1){
 				scc[t[i]] = count;
