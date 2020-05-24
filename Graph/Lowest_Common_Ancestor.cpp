@@ -43,8 +43,6 @@ struct lowest_common_ancestor{
 			if (p[u][k] != p[v][k]){
 				u = p[u][k];
 				v = p[v][k];
-				assert(u != -1);
-				assert(v != -1);
 			}
 		}
 		return p[u][0];
