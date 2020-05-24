@@ -4,24 +4,20 @@ struct segment_tree{
 	vector<T> ST;
 	function<T(T, T)> f;
 	T E;
-	segment_tree(int n, function<T(T, T)> F, T e){
+	segment_tree(int n, function<T(T, T)> f, T E): f(f), E(E){
 		N = 1;
 		while (N < n){
 			N *= 2;
 		}
-		ST = vector<T>(N * 2 - 1, e);
-		f = F;
-		E = e;
+		ST = vector<T>(N * 2 - 1, E);
 	}
-	segment_tree(vector<T> A, function<T(T, T)> F, T e){
+	segment_tree(vector<T> A, function<T(T, T)> f, T E): f(f), E(E){
 		int n = A.size();
 		N = 1;
 		while (N < n){
 			N *= 2;
 		}
-		ST = vector<T>(N * 2 - 1, e);
-		f = F;
-		E = e;
+		ST = vector<T>(N * 2 - 1, E);
 		for (int i = 0; i < n; i++){
 			ST[N - 1 + i] = A[i];
 		}
