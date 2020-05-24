@@ -14,12 +14,12 @@ struct euler_tour_subtree_query{
 		}
 		right[v] = A.size();
 	}
-	euler_tour_subtree_query(vector<vector<int>> &c, vector<T> &a, T E, function<T(T, T)> f): E(E), f(f){
+	euler_tour_subtree_query(vector<vector<int>> &c, vector<T> &a, function<T(T, T)> f, T E): f(f), E(E){
 		int N = c.size();
 		left = vector<int>(N);
 		right = vector<int>(N);
 		dfs(0, c, a);
-		ST = segment_tree<T>(A, E, f);
+		ST = segment_tree<T>(A, f, E);
 	}
 	void update(int v, T x){
 		ST.update(left[v], x);
