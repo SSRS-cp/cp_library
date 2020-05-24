@@ -40,18 +40,18 @@ struct segment_tree{
 			ST[k] = f(ST[k * 2 + 1], ST[k * 2 + 2]);
 		}
 	}
-	T val(int L, int R, int i, int l, int r){
+	T query(int L, int R, int i, int l, int r){
 		if (R <= l || r <= L){
 			return E;
 		} else if (L <= l && r <= R){
 			return ST[i];
 		} else {
 			int m = (l + r) / 2;
-			return f(val(L, R, i * 2 + 1, l, m), val(L, R, i * 2 + 2, m, r));
+			return f(query(L, R, i * 2 + 1, l, m), query(L, R, i * 2 + 2, m, r));
 		}
 	}
 	T query(int L, int R){
-		return val(L, R, 0, 0, N);
+		return query(L, R, 0, 0, N);
 	}
 	T all(){
 		return ST[0];
