@@ -1,9 +1,8 @@
 struct lowest_common_ancestor{
-	int N;
 	vector<int> d;
 	vector<vector<int>> p;
 	lowest_common_ancestor(vector<int> &P, vector<vector<int>> &C){
-		N = P.size();
+		int N = P.size();
 		d = vector<int>(N, 0);
 		queue<int> Q;
 		Q.push(0);
