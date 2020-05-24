@@ -1,8 +1,8 @@
 template <typename T>
 struct euler_tour_subtree_query{
-	vector<T> A;
 	vector<int> left;
 	vector<int> right;
+	vector<T> A;
 	T E;
 	function<T(T, T)> f;
 	segment_tree<T> ST;
@@ -14,9 +14,7 @@ struct euler_tour_subtree_query{
 		}
 		right[v] = A.size();
 	}
-	euler_tour_subtree_query(vector<vector<int>> &c, vector<T> &a, T e, function<T(T, T)> F){
-		E = e;
-		f = F;
+	euler_tour_subtree_query(vector<vector<int>> &c, vector<T> &a, T E, function<T(T, T)> f): E(E), f(f){
 		int N = c.size();
 		left = vector<int>(N);
 		right = vector<int>(N);
