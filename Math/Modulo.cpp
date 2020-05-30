@@ -1,4 +1,4 @@
-long long modsub(long long a, long long b){
+ long long modsub(long long a, long long b){
 	a %= MOD;
 	b %= MOD;
 	if (a >= b){
@@ -34,7 +34,7 @@ long long modfact(long long n){
 		return res;
 	}
 }
-long long modbinom1(long long n, long long r){
+long long modbinom(long long n, long long r){
 	long long res;
 	res = modfact(n);
 	res = res * modinv(modfact(r)) % MOD;
