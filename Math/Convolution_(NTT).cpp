@@ -17,7 +17,7 @@ vector<long long> ntt(vector<long long> A, bool inv){
 	}
 	for (int i = 1; i < N; i *= 2){
 		for (int j = 0; j < i; j++){
-			long long z = modpow(3, (MOD - 1) / (i * 2) * j % MOD);
+			long long z = modpow(3, (MOD - 1) / (i * 2) * j);
 			if (inv){
 				z = modinv(z);
 			}
@@ -30,8 +30,9 @@ vector<long long> ntt(vector<long long> A, bool inv){
 		}
 	}
 	if (inv){
+		int Ninv = modinv(N);
 		for (int i = 0; i < N; i++){
-			A[i] = A[i] * modinv(N) % MOD;
+			A[i] = A[i] * Ninv % MOD;
 		}
 	}
 	return A;
