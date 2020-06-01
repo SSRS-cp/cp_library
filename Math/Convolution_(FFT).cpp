@@ -53,7 +53,6 @@ vector<double> convolution(vector<double> A, vector<double> B){
 	while (B2.size() < N){
 		B2.push_back(0);
 	}
-	
 	vector<complex<double>> a = fft(A2, false);
 	vector<complex<double>> b = fft(B2, false);
 	vector<complex<double>> c(N);
