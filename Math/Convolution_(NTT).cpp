@@ -16,17 +16,19 @@ vector<long long> ntt(vector<long long> A, bool inv){
 		}
 	}
 	for (int i = 1; i < N; i *= 2){
+		long long z = modpow(3, (MOD - 1) / (i * 2));
+		if (inv){
+			z = modinv(z);
+		}
+		long long z2 = 1;
 		for (int j = 0; j < i; j++){
-			long long z = modpow(3, (MOD - 1) / (i * 2) * j);
-			if (inv){
-				z = modinv(z);
-			}
 			for (int k = 0; k < N; k += i * 2){
 				long long s = A[j + k];
-				long long t = A[j + k + i] * z % MOD;
+				long long t = A[j + k + i] * z2 % MOD;
 				A[j + k] = (s + t) % MOD;
 				A[j + k + i] = (s - t + MOD) % MOD;;
 			}
+			z2 = z2 * z % MOD;
 		}
 	}
 	if (inv){
