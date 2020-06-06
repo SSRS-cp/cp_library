@@ -1,13 +1,13 @@
 bool detect_cycle(vector<vector<int>> &E){
-	int N = E.size();
-	vector<int> deg(N, 0);
-	for (int i = 0; i < N; i++){
+	int V = E.size();
+	vector<int> deg(V, 0);
+	for (int i = 0; i < V; i++){
 		for (int j : E[i]){
 			deg[j]++;
 		}
 	}
 	queue<int> Q;
-	for (int i = 0; i < N; i++){
+	for (int i = 0; i < V; i++){
 		if (deg[i] == 0){
 			Q.push(i);
 		}
@@ -22,7 +22,7 @@ bool detect_cycle(vector<vector<int>> &E){
 			}
 		}
 	}
-	for (int i = 0; i < N; i++){
+	for (int i = 0; i < V; i++){
 		if (deg[i] != 0){
 			return true;
 		}
