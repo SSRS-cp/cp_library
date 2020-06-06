@@ -1,8 +1,7 @@
 struct unionfind{
 	vector<int> p;
-	unionfind(int n){
-		p = vector<int>(n, -1);
-	}
+	unionfind(int N): p(vector<int>(N, -1)){
+	};
 	int root(int x){
 		if (p[x] == -1){
 			return x;
@@ -12,9 +11,7 @@ struct unionfind{
 		}
 	}
 	bool same(int x, int y){
-		x = root(x);
-		y = root(y);
-		return x == y;
+		return root(x) == root(y);
 	}
 	void unite(int x, int y){
 		x = root(x);
@@ -22,6 +19,5 @@ struct unionfind{
 		if (x != y){
 			p[x] = y;
 		}
-		return;
 	}
 };
