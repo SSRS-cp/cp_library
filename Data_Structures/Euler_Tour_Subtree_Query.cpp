@@ -21,7 +21,11 @@ struct euler_tour_subtree_query{
 		dfs(0, c, a);
 		ST = segment_tree<T>(A, f, E);
 	}
+	T operator [](int v){
+		return A[left[v]];
+	}
 	void update(int v, T x){
+		A[left[v]] = x;
 		ST.update(left[v], x);
 	}
 	T query(int v){
