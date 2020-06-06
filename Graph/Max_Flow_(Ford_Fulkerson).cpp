@@ -1,10 +1,10 @@
 int ford_fulkerson(vector<unordered_map<int, int>> &E, int s, int t){
-	int N = E.size();
+	int V = E.size();
 	int F = 0;
 	while (1){
-		vector<int> d(N, INF);
-		vector<int> m(N, INF);
-		vector<int> prev(N, -1);
+		vector<int> d(V, INF);
+		vector<int> m(V, INF);
+		vector<int> prev(V, -1);
 		d[s] = 0;
 		queue<int> Q;
 		Q.push(s);
@@ -24,8 +24,8 @@ int ford_fulkerson(vector<unordered_map<int, int>> &E, int s, int t){
 		if (d[t] == INF){
 			break;
 		}
-		int f = m[N - 1];
-		int c = N - 1;
+		int f = m[t];
+		int c = t;
 		while (c != 0){
 			if (E[prev[c]][c] == f){
 				E[prev[c]].erase(c);
