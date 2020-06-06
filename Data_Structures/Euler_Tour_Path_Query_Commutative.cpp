@@ -25,6 +25,9 @@ struct euler_tour_path_query_commutative{
 		dfs(0, c, a);
 		ST = segment_tree<T>(A, f, E);
 	}
+	operator [](int v){
+		return A[left[v]];
+	}
 	void update(int v, T x){
 		A[left[v]] = x;
 		A[right[v]] = inv(x);
