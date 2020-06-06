@@ -1,4 +1,4 @@
-long long count_substrings(string &S){
+long long count_subsequences(string &S){
 	int N = S.size();
 	vector<vector<int>> next(N + 1, vector<int>(26, N));
 	for (int i = N - 1; i >= 0; i--){
