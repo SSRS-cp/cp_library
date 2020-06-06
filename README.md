@@ -1,22 +1,70 @@
 # Data Structures
 ## UnionFind
-UnionFind木 (経路圧縮のみ) です。
+Union-Find木 (経路圧縮のみ) です。
 
 ```C++
-int unionfind_root(vector<int> &parent, int x)
+unionfind(int N)
 ```
-UnionFind木parentの頂点xの根を求めます。
+要素数NのUnion-Find木を作ります。
 
 ```C++
-bool unionfind_unite(vector<int> &parent, int x, int y)
+int root(int x)
 ```
-UnionFind木parentの頂点xと頂点yの属するグループを併合します。頂点xと頂点yが同じグループに属していた場合trueを、そうでない場合はfalseを返します。
+頂点xの根を求めます。
 
-## UnionFind 2
-UnionFind木 (経路圧縮+rank)です。
+```C++
+bool same(int x, int y)
+```
+頂点xと頂点yが同じグループに属しているか調べます。
+
+```C++
+void unite(int x, int y)
+```
+頂点xの属するグループと頂点yの属するグループを併合します。
+
+## Binary Indexed Tree
+Binary Indexed Tree (Fenwick Tree)です。1点更新・区間総和のクエリを処理します。
+
+```C++
+binary_indexed_tree(int n)
+```
+要素数nで初期化します。
+
+```C++
+void add(int i, T x)
+```
+要素iにxを加えます。
+
+```C++
+T sum(int i)
+```
+区間[0,i)の和を求めます。
+
+```C++
+T query(int L, int R)
+```
+区間[L,R)の和を求めます。
+
+```C++
+T all()
+```
+全要素の和を求めます。
+
+## Inversion Number
+Binary Indexed Treeを使用して、反転数を求めます。
+
+```C++
+long long inversion_number(vector<int> &p)
+```
+(1,2,...,N)の順列pの転倒数を求めます。
+
+```C++
+long long inversion_number(vector<int> &A)
+```
+配列Aの転倒数を求めます。
 
 ## Segment Tree
-セグメント木でRange Minimum Queryを行います。
+セグメント木です。
 
 ```C++
 vector<int> segtree(vector<int> &A)
