@@ -1,6 +1,6 @@
 vector<long long> dijkstra(vector<vector<pair<int, int>>> &E, int s){
-	int N = E.size();
-	vector<long long> d(N, INF);
+	int V = E.size();
+	vector<long long> d(V, INF);
 	d[s] = 0;
 	priority_queue<pair<long long, int>, vector<pair<long long, int>>, greater<pair<long long, int>>> Q;
 	Q.push(make_pair(0, s));
@@ -21,10 +21,10 @@ vector<long long> dijkstra(vector<vector<pair<int, int>>> &E, int s){
 	return d;
 }
 pair<long long, vector<int>> dijkstra_path(vector<vector<pair<int, int>>> &E, int s, int t){
-	int N = E.size();
-	vector<long long> d(N, INF);
+	int V = E.size();
+	vector<long long> d(V, INF);
 	d[s] = 0;
-	vector<int> prev(N);
+	vector<int> prev(V);
 	priority_queue<pair<long long, int>, vector<pair<long long, int>>, greater<pair<long long, int>>> Q;
 	Q.push(make_pair(0, s));
 	while (!Q.empty()){
@@ -47,12 +47,8 @@ pair<long long, vector<int>> dijkstra_path(vector<vector<pair<int, int>>> &E, in
 	} else {
 		vector<int> path;
 		path.push_back(t);
-		while (1){
-			int v = path.back();
-			if (v == s){
-				break;
-			}
-			path.push_back(prev[v]);
+		while (path.back() != s){
+			path.push_back(prev[path.back()]);
 		}
 		reverse(path.begin(), path.end());
 		return make_pair(d[t], path);
