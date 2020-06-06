@@ -67,19 +67,67 @@ long long inversion_number(vector<int> &A)
 セグメント木です。
 
 ```C++
-vector<int> segtree(vector<int> &A)
+segment_tree(int n, function<T(T, T)> f, T E)
 ```
-配列Aからセグメント木を構築します。
+要素数n、関数f、単位元Eからセグメント木を構築します。
 
 ```C++
-void segtree_update(vector<int> &ST, int i, int x)
+segment_tree(vector<T> A, function<T(T, T)> f, T E)
 ```
-セグメント木STのA[i]にあたる要素をxに更新します。
+配列A、関数f、単位元Eからセグメント木を構築します。
 
 ```C++
-int segtree_query(vector<int> &ST, int x, int y, int i, int L, int R)
+T operator [](int k)
 ```
-セグメント木STの[x,y)区間に対するクエリの結果を、区間[L,R)に対応するセグメント木STの要素iが求めます。
+要素A_kの現在の値を求めます。
+
+```C++
+void update(int k, T x)
+```
+要素A_kをxに更新します。
+
+```C++
+T query(int L, int R, int i, int l, int r)
+```
+[L,R)区間に対するクエリの結果を、区間[l,r)に対応するセグメント木の要素iが求めます。
+
+```C++
+T query(int L, int R)
+```
+区間[L,R)に対する結果を求めます。
+
+```C++
+T all()
+```
+全要素に対する結果を求めます。
+
+## Bidirectional Segment Tree
+双方向セグメント木です。逆方向に演算をした結果も求めることができます。
+
+```C++
+bidirectional_segment_tree(vector<T> A, function<T(T, T)> f, T E)
+```
+配列A、関数f、単位元Eからセグメント木を構築します。
+
+```C++
+T operator [](int k)
+```
+要素A_kの現在の値を求めます。
+
+```C++
+void update(int k, T x)
+```
+要素A_kをxに更新します。
+
+```C++
+T query(int L, int R, int i, int l, int r, int d)
+```
+[L,R)区間に対するクエリの結果を、区間[l,r)に対応するセグメント木の要素iが求めます。
+
+```C++
+T query(int L, int R, int d)
+```
+区間[L,R)に対する結果を求めます。d=0の場合左から、d=1の場合右から演算をします。
 
 # Graph
 ## Single Source Shortest Path (Dijkstra)
