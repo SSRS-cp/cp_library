@@ -51,7 +51,7 @@ T all()
 全要素の和を求めます。
 
 ## Inversion Number
-Binary Indexed Treeを使用して、反転数を求めます。
+Binary Indexed Treeを使用して、転倒数(反転数)を求めます。
 
 ```C++
 long long inversion_number(vector<int> &p)
@@ -87,11 +87,6 @@ void update(int k, T x)
 要素A_kをxに更新します。
 
 ```C++
-T query(int L, int R, int i, int l, int r)
-```
-[L,R)区間に対するクエリの結果を、区間[l,r)に対応するセグメント木の要素iが求めます。
-
-```C++
 T query(int L, int R)
 ```
 区間[L,R)に対する結果を求めます。
@@ -120,14 +115,96 @@ void update(int k, T x)
 要素A_kをxに更新します。
 
 ```C++
-T query(int L, int R, int i, int l, int r, int d)
-```
-[L,R)区間に対するクエリの結果を、区間[l,r)に対応するセグメント木の要素iが求めます。
-
-```C++
 T query(int L, int R, int d)
 ```
 区間[L,R)に対する結果を求めます。d=0の場合左から、d=1の場合右から演算をします。
+
+## Euler Tour Path Query Commutative
+オイラーツアーを利用して、可換で逆演算が存在する演算に対する木上のクエリを処理します。
+
+```C++
+euler_tour_path_query_commutative(vector<int> &p, vector<vector<int>> &c, vector<T> &a, function<T(T, T)> f, T E, function<T(T)> inv)
+```
+頂点iの親がp[i]、子がc[i]、値がa[i]で、演算がf、単位元がE、逆演算がinvになるようにします。
+
+```C++
+operator [](int v)
+```
+頂点vの現在の値を求めます。
+
+```C++
+void update(int v, T x)
+```
+頂点vの値をxに更新します。
+
+```C++
+T query(int v, int w)
+```
+2頂点v,w間のパスに含まれる頂点全ての値に対する演算結果を求めます。
+
+## Euler Tour Path Query
+オイラーツアーを利用して、逆演算が存在する演算に対する木上のクエリを処理します。
+
+```C++
+euler_tour_path_query_commutative(vector<int> &p, vector<vector<int>> &c, vector<T> &a, function<T(T, T)> f, T E, function<T(T)> inv)
+```
+頂点iの親がp[i]、子がc[i]、値がa[i]で、演算がf、単位元がE、逆演算がinvになるようにします。
+
+```C++
+operator [](int v)
+```
+頂点vの現在の値を求めます。
+
+```C++
+void update(int v, T x)
+```
+頂点vの値をxに更新します。
+
+```C++
+T query(int v, int w)
+```
+2頂点v,w間のパスに含まれる頂点全ての値に対する演算結果を求めます。
+
+## Euler Tour Subtree Query
+オイラーツアーを利用して、逆演算が存在する演算に対する木上のクエリを処理します。
+
+```C++
+euler_tour_subtree_query(vector<vector<int>> &c, vector<T> &a, function<T(T, T)> f, T E)
+```
+頂点iの子がc[i]、値がa[i]で、演算がf、単位元がEになるようにします。
+
+```C++
+operator [](int v)
+```
+頂点vの現在の値を求めます。
+
+```C++
+void update(int v, T x)
+```
+頂点vの値をxに更新します。
+
+```C++
+T query(int v)
+```
+頂点v以下の部分木に含まれる頂点全ての値に対する演算結果を求めます。
+
+## Trie
+トライ木です。文字列の集合を高速に処理します。
+
+```C++
+trie()
+```
+文字列の空集合で初期化します。
+
+```C++
+void insert(string s)
+```
+文字列sを集合に追加します。
+
+```C++
+vector<bool> query(string s)
+```
+sの各文字に対し、sからその文字までの部分文字列が集合に含まれるか求めます。
 
 # Graph
 ## Single Source Shortest Path (Dijkstra)
