@@ -208,15 +208,20 @@ sの各文字に対し、sからその文字までの部分文字列が集合に
 
 # Graph
 ## Single Source Shortest Path (Dijkstra)
-ダイクストラ法を利用して、単一始点最短路の長さを求めます。
+ダイクストラ法を使って、単一始点最短路を求めます。
 
 ```C++
 vector<long long> dijkstra(vector<vector<pair<int, int>>> &E, int s)
 ```
-重み付きグラフEの頂点sを始点とする単一始点最短路を求めます。頂点sから到達できない頂点に対してはINFを返します。
+重み付きグラフEの頂点sを始点とする単一始点最短路の長さを求めます。頂点sから到達できない頂点に対してはINFを返します。
+
+```C++
+pair<long long, vector<int>> dijkstra_path(vector<vector<pair<int, int>>> &E, int s, int t)
+```
+重み付きグラフEの頂点sを始点とし頂点tを終点とする最短経路の長さと通る頂点を求めます。
 
 ## Single Source Shortest Path (Bellman Ford)
-ベルマンフォード法を利用して、単一始点最短路の長さを求めます。
+ベルマンフォード法を使って、単一始点最短路の長さを求めます。
 
 ```C++
 vector<long long> bellman_ford(vector<vector<pair<int, int>>> &E, int s)
@@ -239,12 +244,44 @@ vector<bool> find_negative_cycles(vector<vector<pair<int, int>>> &E)
 重み付きグラフEのすべての負の閉路を検出します。負の閉路に含まれる頂点に対してはtrue、そうでない頂点に対してはfalseを返します。
 
 ## All Pairs Shortest Path (Warshall Floyd)
-ワーシャルフロイド法を利用して、全点対間最短路の長さを求めます。
+ワーシャルフロイド法を使って、全点対間の最短路の長さを求めます。
 
 ```C++
 vector<vector<long long>> warshall_floyd(vector<vector<pair<int, int>>> &E)
 ```
-重み付きグラフEの全点対間最短路の長さを求めます。頂点sから頂点tに到達できない場合、その頂点対に対応する要素に対してはINFを返します。
+重み付きグラフEの全点対間の最短路の長さを求めます。頂点sから頂点tに到達できない場合、その頂点対に対応する要素に対してはINFを返します。
+
+## Detect Cycle
+グラフに閉路が存在するか調べます。
+
+```C++
+bool detect_cycle(vector<vector<int>> &E)
+```
+グラフEに閉路が存在するか求めます。
+
+### Topological Sort
+トポロジカルソートを行います。
+
+```C++
+vector<int> topological_sort(vector<vector<int>> &E)
+```
+有向非巡回グラフ(DAG)Eをトポロジカルソートした結果を求めます。
+
+## Minimum Spanning Tree (Kruskal)
+クラスカル法を使って、最小全域木の辺の重みの和を求めます。
+
+```C++
+long long kruskal(vector<vector<pair<int, int>>> &E)
+```
+重み付き無向グラフEの最小全域木の辺の重みの和を求めます。
+
+## Strongly Connected Component Decomposition
+強連結成分分解を行います。
+
+```C++
+strongly_connected_components(vector<vector<int>> &G)
+```
+有向グラフGを強連結成分分解します。配列ansにそれぞれの強連結成分に含まれる頂点が入ります。
 
 ## Convert to Rooted Tree
 木を根付き木に変換します。
@@ -268,8 +305,52 @@ vector<vector<int>> child(vector<int> &p, int r)
 全方位木DPを行います。関数add、root、subが定義されている必要があります。頂点iに対する答えはroot(dp[i])となります。
 
 ## Rerooting 2
-全方位木DPを行います。関数add、rootが定義されている必要があります。頂点iに対する答えはroot(add(dp1[i], dp2[i]))となります。
+全方位木DPを行います。関数add、rootが定義されている必要があります。頂点iに対する答えはadd(dp1[i], dp2[i]))となります。
 
+## Lowest Common Ancestor
+最近共通祖先を求めます。
+
+```C++
+lowest_common_ancestor(vector<int> &P, vector<vector<int>> &C)
+```
+各頂点の親がP[i]、子がC[i]であるような木を作ります。
+
+```C++
+int query(int u, int v)
+```
+頂点uとvの最近共通祖先(LCA)を求めます。
+
+## Tree Diameter
+木の直径を求めます。
+
+```C++
+long long tree_diameter(vector<vector<pair<int, int>>> &E)
+```
+重み付き木Eの直径を求めます。
+
+## Max Flow (Ford Fulkerson)
+Ford-Fulkerson法を利用して、最大流を求めます。
+
+```C++
+int ford_fulkerson(vector<unordered_map<int, int>> &E, int s, int t)
+```
+グラフE上の頂点sを始点、頂点tを終点とする最大流を求めます。
+
+## Min Cost Flow (Primal Dual)
+Primal-Dual法を利用して、最小費用流を求めます。
+
+```C++
+long long primal_dual(vector<map<int, pair<long long, int>>> &E, int s, int t, long long F)
+```
+グラフE上で頂点sを始点、頂点tを終点としてFのフローを流すときの費用の最小値を求めます。
+
+## Bipartite Matching
+二部マッチングを求めます。
+
+```C++
+int bipartite_matching(vector<pair<int, int>> &E, int X, int Y)
+```
+二部グラフEの最大マッチングの個数を求めます。
 
 # Dynamic Programming
 ## Longest Common Subsequence
@@ -311,6 +392,14 @@ long long matrix_chain_multiplication(vector<long long> &A)
 ```
 行列M_0, M_1, ..., M_{n-2}があり、M_iがA_i×A_{i+1}行列である(0≦i≦n-1)とき、積M_0M_1...M_{n-2}を計算するのに必要なスカラーの乗算回数の最小値を求めます。
 
+## Count Subsequences
+文字列の部分列(連続とは限らない)の個数を求めます。
+
+```C++
+long long count_subsequences(string &S)
+```
+文字列Sの部分列(連続とは限らない)の個数を求めます。
+
 # Math
 ## Modulo
 MODで割った余りを扱います。MODの値はグローバル変数として与えられる必要があります。MODは素数である必要があります。
@@ -336,7 +425,7 @@ long long modfact(long long n)
 nの階乗をMODで割った余りを求めます。値は配列mfに記録され、再利用されます。
 
 ```C++
-long long modbinom1(long long n, long long r)
+long long modbinom(long long n, long long r)
 ```
 二項係数nCrをMODで割った余りを求めます。それぞれのクエリに対しO(1)で値を返しますが、O(n)の前計算が必要になります。
 
@@ -378,6 +467,22 @@ Nの正の約数の個数を求めます。
 vector<vector<int>> cycle_decomposition(vector<int> &P)
 ```
 置換Pを巡回置換に分解します。それぞれの置換では最も大きい数が先頭になります。置換は先頭の数が大きい順に返されます。
+
+## Convolution (FFT)
+高速フーリエ変換(FFT)を使って、畳み込みを求めます。
+
+```C++
+vector<double> convolution(vector<double> A, vector<double> B)
+```
+配列A、Bの畳み込みを求めます。
+
+## Convolution (NTT)
+数論変換(NTT)を使って、mod 998244353での畳み込みを求めます。
+
+```C++
+vector<long long> convolution(vector<long long> A, vector<long long> B)
+```
+配列A、Bの畳み込みの各要素を998244353で割った余りを求めます。
 
 # Geometry
 ## Point
