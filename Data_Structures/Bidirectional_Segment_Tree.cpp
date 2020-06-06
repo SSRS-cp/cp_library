@@ -20,14 +20,17 @@ struct bidirectional_segment_tree{
 			ST[i][1] = f(ST[i * 2 + 2][1], ST[i * 2 + 1][1]);
 		}
 	}
-	void update(int i, T x){
-		i += N - 1;
-		ST[i][0] = x;
-		ST[i][1] = x;
-		while (i > 0){
-			i = (i - 1) / 2;
-			ST[i][0] = f(ST[i * 2 + 1][0], ST[i * 2 + 2][0]);
-			ST[i][1] = f(ST[i * 2 + 2][1], ST[i * 2 + 1][1]);
+	T operator [](int k){
+		return ST[N - 1 + k][0];
+	}
+	void update(int k, T x){
+		k += N - 1;
+		ST[k][0] = x;
+		ST[k][1] = x;
+		while (k > 0){
+			k = (k - 1) / 2;
+			ST[k][0] = f(ST[k * 2 + 1][0], ST[k * 2 + 2][0]);
+			ST[k][1] = f(ST[k * 2 + 2][1], ST[k * 2 + 1][1]);
 		}
 	}
 	T query(int L, int R, int i, int l, int r, int d){
