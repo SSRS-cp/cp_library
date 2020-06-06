@@ -26,7 +26,7 @@ int ford_fulkerson(vector<unordered_map<int, int>> &E, int s, int t){
 		}
 		int f = m[t];
 		int c = t;
-		while (c != 0){
+		while (c != s){
 			if (E[prev[c]][c] == f){
 				E[prev[c]].erase(c);
 			} else {
