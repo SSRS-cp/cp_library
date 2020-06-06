@@ -25,6 +25,9 @@ struct euler_tour_path_query{
 		dfs(0, c, a);
 		ST = bidirectional_segment_tree<T>(A, f, E);
 	}
+	operator [](int v){
+		return A[left[v]];
+	}
 	void update(int v, T x){
 		ST.update(left[v], x);
 		ST.update(right[v], inv(x));
