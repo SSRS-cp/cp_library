@@ -22,10 +22,10 @@ struct rolling_hash{
 		}
 	}
 	void push_front(char c){
+		sz++;
 		for (int i = 0; i < rh_cnt; i++){
 			hash[i] = (hash[i] + (int) c * rh_pow[i][sz]) % rh_mod[i];
 		}
-		sz++;
 	}
 	void pop_back(char c){
 		sz--;
