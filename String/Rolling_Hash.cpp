@@ -9,7 +9,7 @@ struct rolling_hash{
 	rolling_hash(){
 		sz = 0;
 		for (int i = 0; i < rh_cnt; i++){
-		  hash.push_back(i);
+			hash.push_back(i);
 		}
 	}
 	int size(){
