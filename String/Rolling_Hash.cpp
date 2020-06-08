@@ -1,8 +1,8 @@
+int rh_cnt;
 vector<long long> rh_base;
 vector<long long> rh_mod;
 vector<long long> rh_inv;
 vector<vector<long long>> rh_pow;
-int rh_cnt;
 struct rolling_hash{
 	int sz;
 	vector<long long> hash;
