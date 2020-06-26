@@ -1,4 +1,3 @@
-0000000000;
 template <typename T>
 struct range_edges{
 	int N;
