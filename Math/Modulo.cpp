@@ -1,51 +1,56 @@
- long long modsub(long long a, long long b){
-	a %= MOD;
-	b %= MOD;
-	if (a >= b){
-		return (a - b) % MOD;
-	} else {
-		return MOD - (b - a) % MOD;
-	}
+const long long MOD = 1000000007;
+long long modsub(long long a, long long b){
+	return (a % MOD - b % MOD + MOD) % MOD;
 }
 long long modpow(long long a, long long b){
-	a %= MOD;
-	long long res = 1;
-	while (b > 0){
-		if (b % 2 == 1) res = res * a % MOD;
-		a = a * a % MOD;
-		b = b / 2;
-	}
-	return res;
+  long long ans = 1;
+  while (b > 0){
+    if (b % 2 == 1){
+      ans *= a;
+      ans %= MOD;
+    }
+    a *= a;
+    a %= MOD;
+    b /= 2;
+  }
+  return ans;
 }
 long long modinv(long long a){
-	return modpow(a, MOD - 2);
+  return modpow(a, MOD - 2);
 }
-vector<long long> mf;
-long long modfact(long long n){
-	if (n < mf.size()){
-		return mf[n];
-	} else {
-		if (mf.empty()) mf.push_back(1);
-		long long res = mf.back();
-		for (int i = mf.size(); i <= n; i++){
-			res = res * i % MOD;
-			mf.push_back(res);
-		}
-		return res;
-	}
+vector<long long> mf = {1};
+vector<long long> mfi = {1};
+long long modfact(int n){
+  if (mf.size() > n){
+    return mf[n];
+  } else {
+    for (int i = mf.size(); i <= n; i++){
+      long long next = mf.back() * i % MOD;
+      mf.push_back(next);
+      mfi.push_back(modinv(next));
+    }
+    return mf[n];
+  }
 }
-long long modbinom(long long n, long long r){
-	long long res;
-	res = modfact(n);
-	res = res * modinv(modfact(r)) % MOD;
-	res = res * modinv(modfact(n - r)) % MOD ;
-	return res;
+long long modfactinv(int n){
+  if (mfi.size() > n){
+    return mfi[n];
+  } else {
+    return modinv(modfact(n));
+  }
 }
-long long modbinom2(long long n, long long r){
-	long long res = 1;
+long long modbinom(int n, int k){
+  if (n < 0 || k < 0 || k > n){
+    return 0;
+  } else {
+    return modfact(n) * modfactinv(k) % MOD * modfactinv(n - k) % MOD;
+  }
+}
+long long modbinom2(long long n, int r){
+	long long ans = 1;
 	for (int i = 0; i < r; i++){
-		res = res * (n - i) % MOD;
-		res = res * modinv(i + 1) % MOD;
+		ans = ans * ((n - i) % MOD) % MOD;
+		ans = ans * modinv(i + 1) % MOD;
 	}
-	return res;
+	return ans;
 }
