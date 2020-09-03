@@ -1,15 +1,15 @@
 template <typename T>
-struct point_add_range_sum{
+struct RSQ{
 	int N;
 	vector<T> BIT;
-	point_add_range_sum(int n){
+	RSQ(int n){
 		N = 1;
 		while (N < n){
 			N *= 2;
 		}
 		BIT = vector<T>(N + 1, 0);
 	}
-	void point_add(int i, T x){
+	void add(int i, T x){
 		i++;
 		while (i <= N){
 			BIT[i] += x;
@@ -24,10 +24,10 @@ struct point_add_range_sum{
 		}
 		return ans;
 	}
-	T range_sum(int L, int R){
+	T sum(int L, int R){
 		return sum(R) - sum(L);
 	}
-	T all_sum(){
+	T all(){
 		return BIT[N];
 	}
 };
