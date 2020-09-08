@@ -45,6 +45,6 @@ vector<long long> convolution(vector<long long> A, vector<long long> B, int d = 
 	if (d != -1){
 		deg = d;
 	}
-	ans.resize(d);
+	ans.resize(deg);
 	return ans;
 }
