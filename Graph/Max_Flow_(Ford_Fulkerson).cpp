@@ -1,93 +1,58 @@
-int ford_fulkerson(vector<unordered_map<int, int>> &E, int s, int t){
-	int V = E.size();
-	int F = 0;
-	while (1){
-		vector<int> d(V, INF);
-		vector<int> m(V, INF);
-		vector<int> prev(V, -1);
-		d[s] = 0;
-		queue<int> Q;
-		Q.push(s);
-		while (!Q.empty()){
-			int v = Q.front();
-			Q.pop();
-			for (auto P : E[v]){
-				int w = P.first;
-				if (d[w] == INF){
-					prev[w] = v;
-					d[w] = d[v] + 1;
-					m[w] = min(m[v], P.second);
-					Q.push(w);
-				}
-			}
-		}
-		if (d[t] == INF){
-			break;
-		}
-		int f = m[t];
-		int c = t;
-		while (c != s){
-			if (E[prev[c]][c] == f){
-				E[prev[c]].erase(c);
-			} else {
-				E[prev[c]][c] -= f;
-			}
-			E[c][prev[c]] += f;
-			c = prev[c];
-		}
-		F += f;
-	}
-	return F;
-}
+template <typename Cap>
 struct ford_fulkerson{
-	vector<unordered_map<int, int>> E;
-	int V;
-	int F;
-	ford_fulkerson(vector<unordered_map<int, int>> &E): E(E), V(E.size()), F(0){
+	struct edge{
+		int to, rev;
+		Cap cap;
+		edge(int to, int rev, Cap cap): to(to), rev(rev), cap(cap){
+		}
+	};
+	int N;
+	vector<vector<edge>> G;
+	ford_fulkerson(){
 	}
-	int max_flow(){
+	ford_fulkerson(int N): N(N), G(N){
+	}
+	void add_edge(int from, int to, Cap cap){
+		int id1 = G[from].size();
+		int id2 = G[to].size();
+		G[from].push_back(edge(to, id2, cap));
+		G[to].push_back(edge(from, id1, 0));
+	}
+	Cap max_flow(int s, int t){
+		Cap flow = 0;
 		while (1){
-			vector<int> d(V, INF);
-			vector<int> m(V, INF);
-			vector<int> prev(V, -1);
-			d[0] = 0;
+			vector<Cap> m(N, INF);
+			vector<int> pv(N, -1);
+			vector<int> pe(N, -1);
+			vector<bool> used(N, false);
 			queue<int> Q;
-			Q.push(0);
+			Q.push(s);
+			used[s] = true;
 			while (!Q.empty()){
 				int v = Q.front();
 				Q.pop();
-				for (auto P : E[v]){
-					int w = P.first;
-					if (d[w] == INF){
-						prev[w] = v;
-						d[w] = d[v] + 1;
-						m[w] = min(m[v], P.second);
+				int cnt = G[v].size();
+				for (int i = 0; i < cnt; i++){
+					int w = G[v][i].to;
+					if (!used[w] && G[v][i].cap > 0){
+						used[w] = true;
+						m[w] = min(m[v], G[v][i].cap);
+						pv[w] = v;
+						pe[w] = i;
 						Q.push(w);
 					}
 				}
 			}
-			if (d[V - 1] == INF){
+			if (!used[t]){
 				break;
 			}
-			int f = m[V - 1];
-			int c = V - 1;
-			while (1){
-				if (E[prev[c]][c] == f){
-					E[prev[c]].erase(c);
-				} else {
-					E[prev[c]][c] -= f;
-				}
-				E[c][prev[c]] += f;
-				c = prev[c];
-				if (c == 0){
-					break;
-				}
+			Cap f = m[t];
+			for (int i = t; i != s; i = pv[i]){
+				G[pv[i]][pe[i]].cap -= f;
+				G[i][G[pv[i]][pe[i]].rev].cap += f;
 			}
-			F += f;
+			flow += f;
 		}
-		return F;
-	}
-	void add_edge(int v, int w, int cap){
-		E[v][w] = cap;
+		return flow;
 	}
 };
