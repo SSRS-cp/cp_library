@@ -1,9 +1,10 @@
+//range add range sum
 template <typename T>
-struct range_add_range_sum{
+struct lazy_segment_tree{
 	int N;
 	vector<T> ST;
 	vector<T> lazy;
-	range_add_range_sum(int n){
+	lazy_segment_tree(int n){
 		N = 1;
 		while (N < n){
 			N *= 2;
@@ -11,7 +12,7 @@ struct range_add_range_sum{
 		ST = vector<T>(N * 2 - 1, 0);
 		lazy = vector<T>(N * 2 - 1, 0);
 	}
-	range_add_range_sum(vector<T> &a){
+	lazy_segment_tree(vector<T> &a){
 		int n = a.size();
 		N = 1;
 		while (N < n){
@@ -64,5 +65,9 @@ struct range_add_range_sum{
 	}
 	T range_sum(int L, int R){
 		return range_sum(L, R, 0, 0, N);
+	}
+	T all(){
+		eval(0);
+		return ST[0];
 	}
 };
