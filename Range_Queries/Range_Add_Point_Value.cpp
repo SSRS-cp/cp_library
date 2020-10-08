@@ -1,14 +1,16 @@
-struct range_add_point_value{
+//range add point value
+template <typename T>
+struct dual_segment_tree{
 	int N;
 	vector<T> ST;
-	range_add_point_value(int n){
+	dual_segment_tree(int n){
 		N = 1;
 		while (N < n){
 			N *= 2;
 		}
 		ST = vector<T>(N * 2 - 1, 0);
 	}
-	range_add_point_value(vector<T> A){
+	dual_segment_tree(vector<T> A){
 		int n = A.size();
 		N = 1;
 		while (N < n){
@@ -43,5 +45,8 @@ struct range_add_point_value{
 	}
 	void range_add(int L, int R, T x){
 		range_add(L, R, x, 0, 0, N);
+	}
+	void all_add(T x){
+		ST[0] += x;
 	}
 };
