@@ -1,5 +1,6 @@
+//Range Min
 template <typename T>
-struct range_min{
+struct segment_tree{
 	int N;
 	vector<T> ST;
 	range_min(int n){
@@ -9,7 +10,7 @@ struct range_min{
 		}
 		ST = vector<T>(N * 2 - 1, INF);
 	}
-	range_min(vector<T> a){
+	segment_tree(vector<T> a){
 		int n = a.size();
 		N = 1;
 		while (N < n){
@@ -23,17 +24,20 @@ struct range_min{
 			ST[i] = min(ST[i * 2 + 1], ST[i * 2 + 2]);
 		}
 	}
-	T query(int L, int R, int i, int l, int r){
+	T range_min(int L, int R, int i, int l, int r){
 		if (R <= l || r <= L){
 			return INF;
 		} else if (L <= l && r <= R){
 			return ST[i];
 		} else {
 			int m = (l + r) / 2;
-			return min(query(L, R, i * 2 + 1, l, m), query(L, R, i * 2 + 2, m, r));
+			return min(range_min(L, R, i * 2 + 1, l, m), range_min(L, R, i * 2 + 2, m, r));
 		}
 	}
-	T query(int L, int R){
-		return query(L, R, 0, 0, N);
+	T range_min(int L, int R){
+		return range_min(L, R, 0, 0, N);
+	}
+	T all(){
+		return ST[0];
 	}
 };
