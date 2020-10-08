@@ -1,3 +1,4 @@
+//Range Chmin Range Min
 template <typename T>
 struct lazy_segment_tree{
 	int N;
@@ -36,7 +37,7 @@ struct lazy_segment_tree{
 	void range_chmin(int L, int R, T x){
 		return range_chmin(L, R, x, 0, 0, N);
 	}
-	void point_chmin(int k, T x){
+	void chmin(int k, T x){
 		return range_chmin(k, k + 1, x);
 	}
 	T range_min(int L, int R, int i, int l, int r){
@@ -53,7 +54,7 @@ struct lazy_segment_tree{
 	T range_min(int L, int R){
 		return range_min(L, R, 0, 0, N);
 	}
-	T point_value(int k){
+	T operator [](int k){
 		return range_min(k, k + 1);
 	}
 };
