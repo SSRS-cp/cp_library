@@ -1,9 +1,10 @@
+//range add range min
 template <typename T>
-struct range_add_range_min{
+struct lazy_segment_tree{
 	int N;
 	vector<T> ST;
 	vector<T> lazy;
-	range_add_range_min(int n){
+	lazy_segment_tree(int n){
 		N = 1;
 		while (N < n){
 			N *= 2;
@@ -11,7 +12,7 @@ struct range_add_range_min{
 		ST = vector<T>(N * 2 - 1, 0);
 		lazy = vector<T>(N * 2 - 1, 0);
 	}
-	range_add_range_min(vector<int> &A){
+	lazy_segment_tree(vector<int> &A){
 		int n = A.size();
 		N = 1;
 		while (N < n){
@@ -64,5 +65,9 @@ struct range_add_range_min{
 	}
 	T range_min(int L, int R){
 		return range_min(L, R, 0, 0, N);
+	}
+	T all(){
+		eval(0);
+		return ST[0];
 	}
 };
