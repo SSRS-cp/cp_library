@@ -1,9 +1,10 @@
+//Range Update Point Value
 template <typename T>
-struct range_update_point_value{
+struct dual_segment_tree{
 	int N;
 	vector<pair<T, int>> ST;
 	int t;
-	range_update_point_value(int n){
+	dual_segment_tree(int n){
 		N = 1;
 		while (N < n){
 			N *= 2;
@@ -11,18 +12,7 @@ struct range_update_point_value{
 		ST = vector<pair<T, int>>(N * 2 - 1, make_pair(0, 0));
 		t = 1;
 	}
-	range_update_point_value(int n, T x){
-		N = 1;
-		while (N < n){
-			N *= 2;
-		}
-		ST = vector<pair<T, int>>(N * 2 - 1, make_pair(0, 0));
-		for (int i = 0; i < n; i++){
-			ST[N - 1 + i] = make_pair(x, 1);
-		}
-		t = 2;
-	}
-	range_update_point_value(vector<T> A){
+	dual_segment_tree(vector<T> A){
 		int n = A.size();
 		N = 1;
 		while (N < n){
