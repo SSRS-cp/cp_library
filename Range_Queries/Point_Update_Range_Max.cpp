@@ -42,11 +42,11 @@ struct segment_tree{
 			return ST[i];
 		} else {
 			int m = (l + r) / 2;
-			return max(val(L, R, i * 2 + 1, l, m), val(L, R, i * 2 + 2, m, r));
+			return max(range_max(L, R, i * 2 + 1, l, m), range_max(L, R, i * 2 + 2, m, r));
 		}
 	}
 	T range_max(int L, int R){
-		return val(L, R, 0, 0, N);
+		return range_max(L, R, 0, 0, N);
 	}
 	T all(){
 		return ST[0];
