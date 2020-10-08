@@ -1,15 +1,16 @@
+//point update range max
 template <typename T>
-struct point_update_range_max{
+struct segment_tree{
 	int N;
 	vector<T> ST;
-	point_update_range_max(int n){
+	segment_tree(int n){
 		N = 1;
 		while (N < n){
 			N *= 2;
 		}
-		ST = vector<T>(N * 2 - 1, INF);
+		ST = vector<T>(N * 2 - 1, -INF);
 	}
-	point_update_range_max(vector<T> A){
+	segment_tree(vector<T> A){
 		int n = A.size();
 		N = 1;
 		while (N < n){
@@ -26,7 +27,7 @@ struct point_update_range_max{
 	T operator [](int k){
 		return ST[N - 1 + k];
 	}
-	void point_update(int k, T x){
+	void update(int k, T x){
 		k += N - 1;
 		ST[k] = x;
 		while (k > 0){
@@ -34,7 +35,7 @@ struct point_update_range_max{
 			ST[k] = max(ST[k * 2 + 1], ST[k * 2 + 2]);
 		}
 	}
-	T val(int L, int R, int i, int l, int r){
+	T range_max(int L, int R, int i, int l, int r){
 		if (R <= l || r <= L){
 			return -INF;
 		} else if (L <= l && r <= R){
@@ -47,7 +48,7 @@ struct point_update_range_max{
 	T range_max(int L, int R){
 		return val(L, R, 0, 0, N);
 	}
-	T all_max(){
+	T all(){
 		return ST[0];
 	}
 };
