@@ -1,10 +1,10 @@
 //Range Update Range Min
 template <typename T>
-struct segment_tree{
+struct lazy_segment_tree{
 	int N;
 	vector<T> ST;
 	vector<T> lazy;
-	segment_tree(int n){
+	lazy_segment_tree(int n){
 		N = 1;
 		while (N < n){
 			N *= 2;
@@ -12,7 +12,7 @@ struct segment_tree{
 		ST = vector<T>(N * 2 - 1, INF);
 		lazy = vector<T>(N * 2 - 1, -1);
 	}
-	segment_tree(vector<T> A){
+	lazy_segment_tree(vector<T> A){
 		int n = A.size();
 		N = 1;
 		while (N < n){
