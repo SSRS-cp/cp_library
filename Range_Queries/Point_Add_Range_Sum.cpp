@@ -1,8 +1,9 @@
+//point add range sum
 template <typename T>
-struct RSQ{
+struct binary_indexed_tree{
 	int N;
 	vector<T> BIT;
-	RSQ(int n){
+	binary_indexed_tree(int n){
 		N = 1;
 		while (N < n){
 			N *= 2;
