@@ -1,3 +1,19 @@
+long long modpow(long long a, long long b){
+	long long ans = 1;
+	while (b > 0){
+		if (b % 2 == 1){
+			ans *= a;
+			ans %= MOD;
+		}
+		a *= a;
+		a %= MOD;
+		b /= 2;
+	}
+	return ans;
+}
+long long modinv(long long a){
+	return modpow(a, MOD - 2);
+}
 vector<long long> ntt(vector<long long> A, bool inv){
 	int N = A.size();
 	long long r = 3;
