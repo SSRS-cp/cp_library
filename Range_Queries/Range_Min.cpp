@@ -1,43 +1,21 @@
-//Range Min
 template <typename T>
-struct segment_tree{
-	int N;
-	vector<T> ST;
-	range_min(int n){
-		N = 1;
-		while (N < n){
-			N *= 2;
+struct sparse_table{
+	vector<vector<T>> ST;
+	sparse_table(vector<T> &A){
+		int N = A.size();
+		int LOG = 32 - __builtin_clz(N);
+		ST = vector<vector<int>>(LOG, vector<int>(N));
+		for (int i = 0; i < N; i++){
+			ST[0][i] = A[i];
 		}
-		ST = vector<T>(N * 2 - 1, INF);
-	}
-	segment_tree(vector<T> a){
-		int n = a.size();
-		N = 1;
-		while (N < n){
-			N *= 2;
-		}
-		ST = vector<T>(N * 2 - 1, INF);
-		for (int i = 0; i < n; i++){
-			ST[N - 1 + i] = a[i];
-		}
-		for (int i = N - 2; i >= 0; i--){
-			ST[i] = min(ST[i * 2 + 1], ST[i * 2 + 2]);
+		for (int i = 0; i < LOG - 1; i++){
+			for (int j = 0; j < N - (1 << i); j++){
+				ST[i + 1][j] = min(ST[i][j], ST[i][j + (1 << i)]);
+			}
 		}
 	}
-	T range_min(int L, int R, int i, int l, int r){
-		if (R <= l || r <= L){
-			return INF;
-		} else if (L <= l && r <= R){
-			return ST[i];
-		} else {
-			int m = (l + r) / 2;
-			return min(range_min(L, R, i * 2 + 1, l, m), range_min(L, R, i * 2 + 2, m, r));
-		}
-	}
-	T range_min(int L, int R){
-		return range_min(L, R, 0, 0, N);
-	}
-	T all(){
-		return ST[0];
+	int range_min(int L, int R){
+		int d = 31 - __builtin_clz(R - L);
+		return min(ST[d][L], ST[d][R - (1 << d)]);
 	}
 };
