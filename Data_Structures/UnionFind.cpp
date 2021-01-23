@@ -1,9 +1,10 @@
 struct unionfind{
 	vector<int> p;
-	unionfind(int N): p(vector<int>(N, -1)){
-	};
+	unionfind(int N){
+		p = vector<int>(N, -1);
+	}
 	int root(int x){
-		if (p[x] == -1){
+		if (p[x] < 0){
 			return x;
 		} else {
 			p[x] = root(p[x]);
@@ -17,6 +18,10 @@ struct unionfind{
 		x = root(x);
 		y = root(y);
 		if (x != y){
+			if (p[x] < p[y]){
+				swap(x, y);
+			}
+			p[y] += p[x];
 			p[x] = y;
 		}
 	}
