@@ -167,7 +167,7 @@ struct treap{
     }
     int w = v;
     size[w] = 0;
-    prod[w] = INF;
+    prod[w] = E;
     while (parent[w] != -1){
       w = parent[w];
       eval(w);
