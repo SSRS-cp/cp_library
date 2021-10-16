@@ -1,159 +1,65 @@
 struct circle{
-	point c;
-	double r;
-	circle(){
-	}
-	circle(point C, double R){
-		c = C;
-		r = R;
-	}
-	circle(double x, double y, double R){
-		c = point(x, y);
-		r = R;
-	}
-	circle operator +(point P){
-		return circle(c + P, r);
-	}
-	circle operator -(point P){
-		return circle(c - P, r);
-	}
-	circle& operator +=(point P){
-		c += P;
-		return *this;
-	}
-	circle& operator -=(point P){
-		c -= P;
-		return *this;
-	}
-	circle operator *(double k){
-		return circle(c, r * k);
-	}
-	circle operator /(double k){
-		return circle(c, r / k);
-	}
-	circle& operator *=(double k){
-		r *= k;
-		return *this;
-	}
-	circle& operator /=(double k){
-		r /= k;
-		return *this;
-	}
-	bool operator ==(circle C2){
-		return c == C2.c && equals(r, C2.r);
-	}
-	bool operator !=(circle C2){
-		return !(*this == C2);
-	}
+  point C;
+  double r;
+  circle(){
+  }
+  circle(point C, double r): C(C), r(r){
+  }
 };
-istream& operator >>(istream &is, circle &C){
-	point P;
-	double r;
-	cin >> P >> r;
-	C = circle(P, r);
-	return is;
+pair<point, point> line_circle_intersection(line L, circle C){
+  point P = projection(C.C, L);
+  double d = point_line_distance(C.C, L);
+  double h = sqrt(C.r * C.r - d * d);
+  point A = P + vec(L) / abs(vec(L)) * h;
+  point B = P - vec(L) / abs(vec(L)) * h;
+  return make_pair(A, B);
 }
-ostream& operator <<(ostream &os, circle C){
-	cout << C.c << ' ' << C.r << endl;
-	return os;
+pair<point, point> circle_intersection(circle C1, circle C2){
+  double d = dist(C1.C, C2.C);
+  double m = (C1.r * C1.r - C2.r * C2.r + d * d) / (d * 2);
+  point M = C1.C + (C2.C - C1.C) / d * m;
+  double h = sqrt(C1.r * C1.r - m * m);
+  point H = rotate90(C2.C - C1.C) / d * h;
+  return make_pair(M - H, M + H);
 }
-double perimeter(circle C){
-	return 2 * M_PI * C.r;
+pair<point, point> circle_tangent(point P, circle C){
+  double d = dist(P, C.C);
+  double r = sqrt(d * d - C.r * C.r);
+  return circle_intersection(C, circle(P, r));
 }
-double area(circle C){
-	return M_PI * pow(C.r, 2);
-}
-bool point_on_circle(point P, circle C){
-	return equals(r, dist(C.c, P));
-}
-bool point_in_circle(point P, circle C){
-	return sign(r - dist(C.c, P)) >= 0;
-}
-int circle_pos(circle C1, circle C2){
-	double d = dist(C1.c, C2.c);
-	if (sign(d - (C1.r + C2.r)) == 1){
-		return 4;
-	} else if (sign(d - (C1.r + C2.r)) == 0){
-		return 3;
-	} else if (sign(d - abs(C1.r - C2.r)) == 1){
-		return 2;
-	} else if (sign(d - abs(C1.r - C2.r)) == 0){
-		return 1;
-	} else {
-		return 0;
-	}
-}
-int line_circle_intersection_count(line L, circle C){
-	return sign(C.r - point_line_distance(C.c, L)) + 1;
-}
-int segment_circle_intersection_count(segment S, circle C){
-	int ans = line_circle_intersection_count(S, C);
-	if (ans == 0){
-		return 0;
-	} else if (ans == 1){
-		if (equals(point_segment_distance(C.c, S), r)){
-			return 1;
-		} else {
-			return 0;
-		}
-	} else {
-		if (!point_in_circle(S.A, C) && !point_in_circle(S.B, C)){
-			if (equals(r - point_segment_distance(C.c, S))){
-				return 2;
-			} else {
-				return 0;
-			}
-		} else if (point_in_circle(S.A, C) && point_in_circle(S.B, C)){
-			return 0;
-		} else {
-			return 1;
-		}
-	}
-}
-vector<point> line_circle_intersection(line L, circle C){
-	int count = line_circle_intersection_count(L, C);
-	vector<point> ans;
-	if (count == 0){
-		return ans;
-	} else if (count == 1) {
-		ans.push_back(projection(C.c, L));
-		return ans;
-	} else {
-		point P = projection(C.c, L);
-		double d = sqrt(max(pow(C.r, 2) - pow(point_line_distance(C.c, L), 2), (double) 0));
-		ans.push_back(P + unit(L) * d);
-		ans.push_back(P - unit(L) * d);
-		return ans;
-	}
-}
-vector<point> segment_circle_intersection(segment S, circle C){
-	vector<point> tmp = line_circle_intersection(S, C);
-	vector<point> ans;
-	for (point P : tmp){
-		if (is_on_segment(P, S)){
-			ans.push_back(P);
-		}
-	}
-	return ans;
-}
-vector<point> circle_intersection(circle C1, circle C2){
-	int pos = circle_pos(C1, C2);
-	vector<point> ans;
-	if (pos == 4 || pos == 0){
-		return ans;
-	} else if (pos == 3){
-		ans.push_back(partition(line(C1.c, C2.c), C1.r, C2.r));
-		return ans;
-	} else if (pos == 1){
-		ans.push_back(partition(line(C1.c, C2.c), C1.r, -C2.r));
-		return ans;
-	} else {
-		line L(C1.c, C2.c);
-		double x = (norm(vec(L)) + pow(C1.r, 2) - pow(C2.r, 2)) / (2 * abs(vec(L)));
-		double h = sqrt(max(pow(C1.r, 2) - pow(x, 2), (double) 0));
-		cout << x << endl;
-		ans.push_back(C1.c + unit(L) * x + norm(L) * h);
-		ans.push_back(C1.c + unit(L) * x - norm(L) * h);
-		return ans;
-	}
+vector<line> common_tangent(circle C1, circle C2){
+  if (C1.r < C2.r){
+    swap(C1, C2);
+  }
+  double d = dist(C1.C, C2.C);
+  vector<line> L;
+  if (C1.r - C2.r <= d + eps){
+    if (C1.r - C2.r <= eps){
+      point D = rotate90(C2.C - C1.C) / d * C1.r;
+      L.push_back(line(C1.C + D, C2.C + D));
+      L.push_back(line(C1.C - D, C2.C - D));
+    } else {
+      double m = (C1.r - C2.r) * (C1.r - C2.r) / d;
+      point M = C1.C + (C2.C - C1.C) / d * m;
+      double h = sqrt((C1.r - C2.r) * (C1.r - C2.r) - m * m);
+      point H1 = M + rotate90(C2.C - C1.C) / d * h;
+      point D1 = (H1 - C1.C) / dist(H1, C1.C) * C2.r;
+      L.push_back(line(H1 + D1, C2.C + D1));
+      point H2 = M - rotate90(C2.C - C1.C) / d * h;
+      point D2 = (H2 - C1.C) / dist(H2, C1.C) * C2.r;
+      L.push_back(line(H2 + D2, C2.C + D2));
+    }
+  }
+  if (C1.r + C2.r <= d + eps){
+    double m = (C1.r + C2.r) * (C1.r + C2.r) / d;
+    point M = C1.C + (C2.C - C1.C) / d * m;
+    double h = sqrt((C1.r + C2.r) * (C1.r + C2.r) - m * m);
+    point H1 = M + rotate90(C2.C - C1.C) / d * h;
+    point D1 = (H1 - C1.C) / dist(H1, C1.C) * C2.r;
+    L.push_back(line(H1 - D1, C2.C - D1));
+    point H2 = M - rotate90(C2.C - C1.C) / d * h;
+    point D2 = (H2 - C1.C) / dist(H2, C1.C) * C2.r;
+    L.push_back(line(H2 - D2, C2.C - D2));
+  }
+  return L;
 }
