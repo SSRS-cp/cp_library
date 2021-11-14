@@ -4,7 +4,7 @@ struct sparse_table{
 	sparse_table(vector<T> &A){
 		int N = A.size();
 		int LOG = 32 - __builtin_clz(N);
-		ST = vector<vector<int>>(LOG, vector<int>(N));
+		ST = vector<vector<T>>(LOG, vector<T>(N));
 		for (int i = 0; i < N; i++){
 			ST[0][i] = A[i];
 		}
@@ -14,7 +14,10 @@ struct sparse_table{
 			}
 		}
 	}
-	int range_min(int L, int R){
+	T range_min(int L, int R){
+		if (L == R){
+			retun INF;
+		}
 		int d = 31 - __builtin_clz(R - L);
 		return min(ST[d][L], ST[d][R - (1 << d)]);
 	}
