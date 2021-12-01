@@ -1,49 +1,55 @@
 vector<int> suffix_array(string S){
+  S.push_back(0);
   int N = S.size();
-  vector<int> sa(N + 1), rank(N + 1);
-  for (int i = 0; i <= N; i++){
-    sa[i] = i;
-    if (i < N){
-      rank[i] = S[i];
-    } else {
-      rank[i] = -1;
+  vector<int> cnt(128, 0);
+  for (int i = 0; i < N; i++){
+    cnt[S[i]]++;
+  }
+  for (int i = 0; i < 127; i++){
+    cnt[i + 1] += cnt[i];
+  }
+  vector<int> SA(N), rank(N);
+  for (int i = 0; i < N; i++){
+    cnt[S[i]]--;
+    SA[cnt[S[i]]] = i;
+  }
+  rank[SA[0]] = 0;
+  for (int i = 0; i < N - 1; i++){
+    rank[SA[i + 1]] = rank[SA[i]];
+    if (S[SA[i]] != S[SA[i + 1]]){
+      rank[SA[i + 1]]++;
     }
   }
-  for (int i = 1; i <= N; i *= 2){
-    vector<pair<pair<int, int>, int>> P(N + 1);
-    for (int j = 0; j <= N; j++){
-      if (sa[j] + i <= N){
-        P[j] = make_pair(make_pair(rank[sa[j]], rank[sa[j] + i]), sa[j]);
-      } else {
-        P[j] = make_pair(make_pair(rank[sa[j]], -1), sa[j]);
+  int L = 1;
+  while (L < N){
+    vector<int> SA2(N), rank2(N);
+    for (int i = 0; i < N; i++){
+      SA2[i] = SA[i] - L;
+      if (SA2[i] < 0){
+        SA2[i] += N;
       }
     }
-    sort(P.begin(), P.end());
-    for (int j = 0; j <= N; j++){
-      sa[j] = P[j].second;
+    cnt = vector<int>(N, 0);
+    for (int i = 0; i < N; i++){
+      cnt[rank[SA2[i]]]++;
     }
-    vector<int> tmp(N + 1);
-    tmp[sa[0]] = 0;
-    for (int j = 1; j <= N; j++){
-      tmp[sa[j]] = tmp[sa[j - 1]];
-      pair<int, int> P1;
-      if (sa[j - 1] + i <= N){
-        P1 = make_pair(rank[sa[j - 1]], rank[sa[j - 1] + i]);
-      } else {
-        P1 = make_pair(rank[sa[j - 1]], -1);
-      }
-      pair<int, int> P2;
-      if (sa[j] + i <= N){
-        P2 = make_pair(rank[sa[j]], rank[sa[j] + i]);
-      } else {
-        P2 = make_pair(rank[sa[j]], -1);
-      }
-      if (P1 < P2){
-        tmp[sa[j]]++;
+    for (int i = 0; i < N - 1; i++){
+      cnt[i + 1] += cnt[i];
+    }
+    for (int i = N - 1; i >= 0; i--){
+      cnt[rank[SA2[i]]]--;
+      SA[cnt[rank[SA2[i]]]] = SA2[i];
+    }
+    rank2[SA[0]] = 0;
+    for (int i = 0; i < N - 1; i++){
+      rank2[SA[i + 1]] = rank2[SA[i]];
+      if (rank[SA[i]] != rank[SA[i + 1]] || rank[(SA[i] + L) % N] != rank[(SA[i + 1] + L) % N]){
+        rank2[SA[i + 1]]++;
       }
     }
-    rank = tmp;
+    rank = rank2;
+    L *= 2;
   }
-  sa.erase(sa.begin());
-  return sa;
-}
+  SA.erase(SA.begin());
+  return SA;
+};
