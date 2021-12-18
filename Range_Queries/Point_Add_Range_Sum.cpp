@@ -13,7 +13,9 @@ struct binary_indexed_tree{
       BIT[i + 1] = A[i];
     }
     for (int i = 1; i < N; i++){
-      BIT[i + (i & -i)] += BIT[i];
+      if (i + (i & -i) <= N){
+        BIT[i + (i & -i)] += BIT[i];
+      }
     }
   }
   void add(int i, T x){
