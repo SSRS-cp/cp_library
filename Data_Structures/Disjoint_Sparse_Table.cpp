@@ -10,18 +10,16 @@ struct disjoint_sparse_table{
     int LOG = 32 - __builtin_clz(N - 1);
     D = vector<vector<T>>(LOG, vector<T>(N));
     for (int i = 0; i < LOG; i++){
-      for (int j = 0; j < N; j += 1 << (i + 1)){
+      for (int j = 0; j + (1 << i) < N; j += 1 << (i + 1)){
         int d = 1 << i;
         int x = min(j + d - 1, N - 1);
         D[i][x] = A[x];
         for (int k = x - 1; k >= j; k--){
           D[i][k] = f(A[k], D[i][k + 1]);
         }
-        if (j + d < N){
-          D[i][j + d] = A[j + d];
-          for (int k = j + d + 1; k < min(j + d * 2, N); k++){
-            D[i][k] = f(D[i][k - 1], A[k]);
-          }
+        D[i][j + d] = A[j + d];
+        for (int k = j + d + 1; k < min(j + d * 2, N); k++){
+          D[i][k] = f(D[i][k - 1], A[k]);
         }
       }
     }
