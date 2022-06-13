@@ -1,5 +1,5 @@
 struct strongly_connected_components{
-	vector<vector<int>> ans;
+	int cnt = 0;
 	vector<int> scc;
 	void dfs1(vector<vector<int>> &E, vector<int> &t, vector<bool> &used, int v){
 		for (int w : E[v]){
@@ -11,7 +11,7 @@ struct strongly_connected_components{
 		t.push_back(v);
 	}
 	void dfs2(vector<vector<int>> &E2, vector<bool> &used2, int v){
-		ans.back().push_back(v);
+		scc[v] = cnt;
 		for (int w : E2[v]){
 			if (!used2[w]){
 				used2[w] = true;
@@ -38,15 +38,10 @@ struct strongly_connected_components{
 		reverse(t.begin(), t.end());
 		vector<bool> used2(N, false);
 		scc = vector<int>(N);
-		int cnt = 0;
 		for (int i = 0; i < N; i++){
 			if (!used2[t[i]]){
 				used2[t[i]] = true;
-				ans.push_back(vector<int>());
 				dfs2(E2, used2, t[i]);
-				for (int j : ans.back()){
-					scc[j] = cnt;
-				}
 				cnt++;
 			}
 		}
@@ -55,6 +50,6 @@ struct strongly_connected_components{
 		return scc[k];
 	}
 	int size(){
-		return ans.size();
+		return cnt;
 	}
 };
