@@ -1,4 +1,4 @@
-#define PROBLEM "https://judge.yosupo.jp/problem/static_rmq"
+#define PROBLEM "https://judge.yosupo.jp/problem/staticrmq"
 #include <bits/stdc++.h>
 using namespace std;
 #include "../../data_structure/sequence/disjoint_sparse_table.cpp"
