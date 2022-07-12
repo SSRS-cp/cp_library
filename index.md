@@ -263,13 +263,13 @@ data:
       title: String/Z-algorithm.cpp
   - name: data_structure
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: data_structure/unionfind.cpp
       title: data_structure/unionfind.cpp
   verificationCategories:
   - name: test/library_checker
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/unionfind.test.cpp
       title: test/library_checker/unionfind.test.cpp
 layout: toppage
