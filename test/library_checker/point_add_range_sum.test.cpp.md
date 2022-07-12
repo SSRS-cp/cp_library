@@ -1,14 +1,14 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: data_structure/sequence/binary_indexed_tree.cpp
     title: data_structure/sequence/binary_indexed_tree.cpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.yosupo.jp/problem/point_add_range_sum
@@ -19,8 +19,8 @@ data:
     using namespace std;\n#line 1 \"data_structure/sequence/binary_indexed_tree.cpp\"\
     \ntemplate <typename T>\nstruct binary_indexed_tree{\n  int N;\n  vector<T> BIT;\n\
     \  binary_indexed_tree(){\n  }\n  binary_indexed_tree(int N): N(N), BIT(N + 1,\
-    \ 0){\n  }\n  binary_indexed_tree(vector<T> &A): N(A.size()), BIT(N + 1):{\n \
-    \   for (int i = 0; i < N; i++){\n      BIT[i + 1] = A[i];\n    }\n    for (int\
+    \ 0){\n  }\n  binary_indexed_tree(vector<T> &A): N(A.size()), BIT(N + 1){\n  \
+    \  for (int i = 0; i < N; i++){\n      BIT[i + 1] = A[i];\n    }\n    for (int\
     \ i = 1; i < N; i++){\n      BIT[i + (i & -i)] += BIT[i];\n    }\n  }\n  void\
     \ add(int i, T x){\n    i++;\n    while (i <= N){\n      BIT[i] += x;\n      i\
     \ += i & -i;\n    }\n  }\n  T sum(int i){\n    T ans = 0;\n    while (i > 0){\n\
@@ -45,8 +45,8 @@ data:
   isVerificationFile: true
   path: test/library_checker/point_add_range_sum.test.cpp
   requiredBy: []
-  timestamp: '2022-07-13 03:31:49+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2022-07-13 03:36:42+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/point_add_range_sum.test.cpp
 layout: document
