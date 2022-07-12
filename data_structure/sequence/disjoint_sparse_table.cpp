@@ -7,6 +7,9 @@ struct disjoint_sparse_table{
   }
   disjoint_sparse_table(vector<T> &A, function<T(T, T)> f): A(A), f(f){
     int N = A.size();
+    if (N == 1){
+      return;
+    }
     int LOG = 32 - __builtin_clz(N - 1);
     D = vector<vector<T>>(LOG, vector<T>(N));
     for (int i = 0; i < LOG; i++){
