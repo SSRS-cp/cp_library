@@ -2,10 +2,13 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _extendedVerifiedWith:
+  - icon: ':x:'
+    path: test/library_checker/point_add_range_sum.test.cpp
+    title: test/library_checker/point_add_range_sum.test.cpp
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links: []
   bundledCode: "#line 1 \"data_structure/sequence/binary_indexed_tree.cpp\"\ntemplate\
@@ -32,8 +35,9 @@ data:
   path: data_structure/sequence/binary_indexed_tree.cpp
   requiredBy: []
   timestamp: '2022-07-13 03:11:42+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_WA
+  verifiedWith:
+  - test/library_checker/point_add_range_sum.test.cpp
 documentation_of: data_structure/sequence/binary_indexed_tree.cpp
 layout: document
 redirect_from:

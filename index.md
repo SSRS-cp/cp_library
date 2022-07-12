@@ -263,7 +263,7 @@ data:
       title: String/Z-algorithm.cpp
   - name: data_structure/sequence
     pages:
-    - icon: ':warning:'
+    - icon: ':x:'
       path: data_structure/sequence/binary_indexed_tree.cpp
       title: data_structure/sequence/binary_indexed_tree.cpp
   - name: data_structure/unionfind
@@ -279,6 +279,9 @@ data:
       title: test/aoj/dsl_1_a.test.cpp
   - name: test/library_checker
     pages:
+    - icon: ':x:'
+      path: test/library_checker/point_add_range_sum.test.cpp
+      title: test/library_checker/point_add_range_sum.test.cpp
     - icon: ':heavy_check_mark:'
       path: test/library_checker/unionfind.test.cpp
       title: test/library_checker/unionfind.test.cpp
