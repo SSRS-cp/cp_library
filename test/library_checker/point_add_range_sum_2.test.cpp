@@ -9,7 +9,7 @@ int main(){
   for (int i = 0; i < N; i++){
     cin >> a[i];
   }
-  invertible_binary_indexed_tree<long long> BIT(a, plus<long long>(), negate<long long>() 0);
+  invertible_binary_indexed_tree<long long> BIT(a, plus<long long>(), negate<long long>(), 0);
   for (int i = 0; i < Q; i++){
     int t;
     cin >> t;
