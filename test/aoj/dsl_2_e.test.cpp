@@ -5,7 +5,7 @@ using namespace std;
 int main(){
   int n, q;
   cin >> n >> q;
-  dual_binary_indexed_tree<int> BIT(n, plus<int>, 0);
+  dual_binary_indexed_tree<int> BIT(n, plus<int>(), 0);
   for (int i = 0; i < q; i++){
     int c;
     cin >> c;
