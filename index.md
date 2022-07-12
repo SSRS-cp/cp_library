@@ -261,6 +261,11 @@ data:
     - icon: ':warning:'
       path: String/Z-algorithm.cpp
       title: String/Z-algorithm.cpp
+  - name: data_structure
+    pages:
+    - icon: ':x:'
+      path: data_structure/unionfind.cpp
+      title: data_structure/unionfind.cpp
   verificationCategories:
   - name: test/library_checker
     pages:
