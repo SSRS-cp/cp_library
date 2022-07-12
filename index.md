@@ -263,6 +263,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: data_structure/sequence/binary_indexed_tree.cpp
       title: data_structure/sequence/binary_indexed_tree.cpp
+    - icon: ':warning:'
+      path: data_structure/sequence/cumulative_sum.cpp
+      title: data_structure/sequence/cumulative_sum.cpp
     - icon: ':heavy_check_mark:'
       path: data_structure/sequence/dual_binary_indexed_tree.cpp
       title: data_structure/sequence/dual_binary_indexed_tree.cpp
