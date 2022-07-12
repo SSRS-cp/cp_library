@@ -15,7 +15,7 @@ int main(){
     }
     if (com == 1){
       x--;
-      cout << BIT.sum(x, y) <<endl;
+      cout << BIT.sum(y) - BIT.sum(x) << endl;
     }
   }
 }
