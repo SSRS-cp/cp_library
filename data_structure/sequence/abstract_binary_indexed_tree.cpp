@@ -4,7 +4,7 @@ struct binary_indexed_tree{
   vector<T> BIT;
   function<T(T, T)> f;
   T E;
-  binary_indexed_tree(function<T(T, T)> f, T E): f(f), E(E){
+  binary_indexed_tree(){
   }
   binary_indexed_tree(int N, function<T(T, T)> f, T E): f(f), E(E), N(N), BIT(N + 1, 0){
   }
