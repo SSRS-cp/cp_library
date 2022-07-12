@@ -11,11 +11,11 @@ data:
   _verificationStatusIcon: ':x:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
-    PROBLEM: https://judge.yosupo.jp/problem/static_rmq
+    PROBLEM: https://judge.yosupo.jp/problem/staticrmq
     links:
-    - https://judge.yosupo.jp/problem/static_rmq
+    - https://judge.yosupo.jp/problem/staticrmq
   bundledCode: "#line 1 \"test/library_checker/static_rmq.test.cpp\"\n#define PROBLEM\
-    \ \"https://judge.yosupo.jp/problem/static_rmq\"\n#include <bits/stdc++.h>\nusing\
+    \ \"https://judge.yosupo.jp/problem/staticrmq\"\n#include <bits/stdc++.h>\nusing\
     \ namespace std;\n#line 1 \"data_structure/sequence/disjoint_sparse_table.cpp\"\
     \ntemplate <typename T>\nstruct disjoint_sparse_table{\n  vector<T> A;\n  vector<vector<T>>\
     \ D;\n  function<T(T, T)> f;\n  disjoint_sparse_table(){\n  }\n  disjoint_sparse_table(vector<T>\
@@ -33,8 +33,8 @@ data:
     \ i = 0; i < N; i++){\n    cin >> a[i];\n  }\n  disjoint_sparse_table<int> DST(a,\
     \ [](int a, int b){return min(a, b);});\n  for (int i = 0; i < Q; i++){\n    int\
     \ l, r;\n    cin >> l >> r;\n    cout << DST.query(l, r) << endl;\n  }\n}\n"
-  code: "#define PROBLEM \"https://judge.yosupo.jp/problem/static_rmq\"\n#include\
-    \ <bits/stdc++.h>\nusing namespace std;\n#include \"../../data_structure/sequence/disjoint_sparse_table.cpp\"\
+  code: "#define PROBLEM \"https://judge.yosupo.jp/problem/staticrmq\"\n#include <bits/stdc++.h>\n\
+    using namespace std;\n#include \"../../data_structure/sequence/disjoint_sparse_table.cpp\"\
     \nint main(){\n  int N, Q;\n  cin >> N >> Q;\n  vector<int> a(N);\n  for (int\
     \ i = 0; i < N; i++){\n    cin >> a[i];\n  }\n  disjoint_sparse_table<int> DST(a,\
     \ [](int a, int b){return min(a, b);});\n  for (int i = 0; i < Q; i++){\n    int\
@@ -44,7 +44,7 @@ data:
   isVerificationFile: true
   path: test/library_checker/static_rmq.test.cpp
   requiredBy: []
-  timestamp: '2022-07-13 04:55:50+09:00'
+  timestamp: '2022-07-13 04:59:58+09:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/library_checker/static_rmq.test.cpp
