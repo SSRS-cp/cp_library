@@ -263,12 +263,15 @@ data:
     - icon: ':heavy_check_mark:'
       path: data_structure/sequence/binary_indexed_tree.cpp
       title: data_structure/sequence/binary_indexed_tree.cpp
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: data_structure/sequence/cumulative_sum.cpp
       title: data_structure/sequence/cumulative_sum.cpp
     - icon: ':heavy_check_mark:'
       path: data_structure/sequence/dual_binary_indexed_tree.cpp
       title: data_structure/sequence/dual_binary_indexed_tree.cpp
+    - icon: ':warning:'
+      path: data_structure/sequence/invertible_cumulative_sum.cpp
+      title: data_structure/sequence/invertible_cumulative_sum.cpp
   - name: data_structure/unionfind
     pages:
     - icon: ':heavy_check_mark:'
@@ -294,6 +297,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/point_add_range_sum_2.test.cpp
       title: test/library_checker/point_add_range_sum_2.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/library_checker/static_range_sum.test.cpp
+      title: test/library_checker/static_range_sum.test.cpp
     - icon: ':heavy_check_mark:'
       path: test/library_checker/unionfind.test.cpp
       title: test/library_checker/unionfind.test.cpp
