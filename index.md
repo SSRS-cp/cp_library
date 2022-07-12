@@ -261,6 +261,11 @@ data:
     - icon: ':warning:'
       path: String/Z-algorithm.cpp
       title: String/Z-algorithm.cpp
+  - name: data_structure/sequence
+    pages:
+    - icon: ':warning:'
+      path: data_structure/sequence/binary_indexed_tree.cpp
+      title: data_structure/sequence/binary_indexed_tree.cpp
   - name: data_structure
     pages:
     - icon: ':heavy_check_mark:'
