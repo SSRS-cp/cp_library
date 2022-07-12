@@ -266,7 +266,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: data_structure/sequence/cumulative_sum.cpp
       title: data_structure/sequence/cumulative_sum.cpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: data_structure/sequence/disjoint_sparse_table.cpp
       title: data_structure/sequence/disjoint_sparse_table.cpp
     - icon: ':heavy_check_mark:'
@@ -306,10 +306,10 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/static_range_sum_2.test.cpp
       title: test/library_checker/static_range_sum_2.test.cpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/library_checker/static_range_sum_3.test.cpp
       title: test/library_checker/static_range_sum_3.test.cpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/library_checker/static_rmq.test.cpp
       title: test/library_checker/static_rmq.test.cpp
     - icon: ':heavy_check_mark:'
