@@ -1,7 +1,7 @@
 #define PROBLEM "https://judge.yosupo.jp/problem/unionfind"
 #include <bits/stdc++.h>
 using namespace std;
-#include "../../data_structure/unionfind.cpp"
+#include "../../data_structure/unionfind/unionfind.cpp"
 int main(){
   int N, Q;
   cin >> N >> Q;
