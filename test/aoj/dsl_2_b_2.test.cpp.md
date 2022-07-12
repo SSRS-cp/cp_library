@@ -1,14 +1,14 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':question:'
     path: data_structure/sequence/invertible_binary_indexed_tree.cpp
     title: data_structure/sequence/invertible_binary_indexed_tree.cpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_B
@@ -28,24 +28,24 @@ data:
     \ = E;\n    while (i > 0){\n      ans = f(ans, BIT[i]);\n      i -= i & -i;\n\
     \    }\n    return ans;\n  }\n  T sum(int l, int r){\n    return f(sum(r), inv(sum(l)));\n\
     \  }\n};\n#line 5 \"test/aoj/dsl_2_b_2.test.cpp\"\nint main(){\n  int n, q;\n\
-    \  cin >> n >> q;\n  invertible_binary_indexed_tree<int> BIT(n, plus<int>(), negate<int>,\
+    \  cin >> n >> q;\n  invertible_binary_indexed_tree<int> BIT(n, plus<int>(), negate<int>(),\
     \ 0);\n  for (int i = 0; i < q; i++){\n    int com, x, y;\n    cin >> com >> x\
     \ >> y;\n    if (com == 0){\n      x--;\n      BIT.add(x, y);\n    }\n    if (com\
     \ == 1){\n      x--;\n      cout << BIT.sum(x, y) << endl;\n    }\n  }\n}\n"
   code: "#define PROBLEM \"https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_B\"\
     \n#include <bits/stdc++.h>\nusing namespace std;\n#include \"../../data_structure/sequence/invertible_binary_indexed_tree.cpp\"\
     \nint main(){\n  int n, q;\n  cin >> n >> q;\n  invertible_binary_indexed_tree<int>\
-    \ BIT(n, plus<int>(), negate<int>, 0);\n  for (int i = 0; i < q; i++){\n    int\
-    \ com, x, y;\n    cin >> com >> x >> y;\n    if (com == 0){\n      x--;\n    \
-    \  BIT.add(x, y);\n    }\n    if (com == 1){\n      x--;\n      cout << BIT.sum(x,\
+    \ BIT(n, plus<int>(), negate<int>(), 0);\n  for (int i = 0; i < q; i++){\n   \
+    \ int com, x, y;\n    cin >> com >> x >> y;\n    if (com == 0){\n      x--;\n\
+    \      BIT.add(x, y);\n    }\n    if (com == 1){\n      x--;\n      cout << BIT.sum(x,\
     \ y) << endl;\n    }\n  }\n}\n"
   dependsOn:
   - data_structure/sequence/invertible_binary_indexed_tree.cpp
   isVerificationFile: true
   path: test/aoj/dsl_2_b_2.test.cpp
   requiredBy: []
-  timestamp: '2022-07-13 08:16:15+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2022-07-13 08:19:09+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/aoj/dsl_2_b_2.test.cpp
 layout: document

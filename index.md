@@ -269,7 +269,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: data_structure/sequence/dual_binary_indexed_tree.cpp
       title: data_structure/sequence/dual_binary_indexed_tree.cpp
-    - icon: ':x:'
+    - icon: ':question:'
       path: data_structure/sequence/invertible_binary_indexed_tree.cpp
       title: data_structure/sequence/invertible_binary_indexed_tree.cpp
     - icon: ':heavy_check_mark:'
@@ -289,7 +289,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/aoj/dsl_2_b.test.cpp
       title: test/aoj/dsl_2_b.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/aoj/dsl_2_b_2.test.cpp
       title: test/aoj/dsl_2_b_2.test.cpp
     - icon: ':heavy_check_mark:'

@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':question:'
     path: data_structure/sequence/invertible_binary_indexed_tree.cpp
     title: data_structure/sequence/invertible_binary_indexed_tree.cpp
   _extendedRequiredBy: []
