@@ -46,7 +46,7 @@ data:
   isVerificationFile: true
   path: test/library_checker/point_add_range_sum.test.cpp
   requiredBy: []
-  timestamp: '2022-07-13 07:39:54+09:00'
+  timestamp: '2022-07-13 03:36:42+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/point_add_range_sum.test.cpp
