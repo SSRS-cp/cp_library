@@ -17,8 +17,8 @@ data:
   bundledCode: "#line 1 \"data_structure/sequence/binary_indexed_tree.cpp\"\ntemplate\
     \ <typename T>\nstruct binary_indexed_tree{\n  int N;\n  vector<T> BIT;\n  function<T(T,\
     \ T)> f;\n  T E;\n  binary_indexed_tree(){\n  }\n  binary_indexed_tree(int N,\
-    \ function<T(T, T)> f, T E): f(f), E(E), N(N), BIT(N + 1, 0){\n  }\n  binary_indexed_tree(vector<T>\
-    \ &A, function<T(T, T)> f, T E): f(f), E(E), N(A.size()), BIT(N + 1){\n    for\
+    \ function<T(T, T)> f, T E): N(N), BIT(N + 1, E), f(f), E(E){\n  }\n  binary_indexed_tree(vector<T>\
+    \ &A, function<T(T, T)> f, T E): N(A.size()), BIT(N + 1), f(f), E(E){\n    for\
     \ (int i = 0; i < N; i++){\n      BIT[i + 1] = A[i];\n    }\n    for (int i =\
     \ 1; i < N; i++){\n      BIT[i + (i & -i)] = f(BIT[i + (i & -i)], BIT[i]);\n \
     \   }\n  }\n  void add(int i, T x){\n    i++;\n    while (i <= N){\n      BIT[i]\
@@ -27,8 +27,8 @@ data:
     \    }\n    return ans;\n  }\n};\n"
   code: "template <typename T>\nstruct binary_indexed_tree{\n  int N;\n  vector<T>\
     \ BIT;\n  function<T(T, T)> f;\n  T E;\n  binary_indexed_tree(){\n  }\n  binary_indexed_tree(int\
-    \ N, function<T(T, T)> f, T E): f(f), E(E), N(N), BIT(N + 1, 0){\n  }\n  binary_indexed_tree(vector<T>\
-    \ &A, function<T(T, T)> f, T E): f(f), E(E), N(A.size()), BIT(N + 1){\n    for\
+    \ N, function<T(T, T)> f, T E): N(N), BIT(N + 1, E), f(f), E(E){\n  }\n  binary_indexed_tree(vector<T>\
+    \ &A, function<T(T, T)> f, T E): N(A.size()), BIT(N + 1), f(f), E(E){\n    for\
     \ (int i = 0; i < N; i++){\n      BIT[i + 1] = A[i];\n    }\n    for (int i =\
     \ 1; i < N; i++){\n      BIT[i + (i & -i)] = f(BIT[i + (i & -i)], BIT[i]);\n \
     \   }\n  }\n  void add(int i, T x){\n    i++;\n    while (i <= N){\n      BIT[i]\
@@ -39,7 +39,7 @@ data:
   isVerificationFile: false
   path: data_structure/sequence/binary_indexed_tree.cpp
   requiredBy: []
-  timestamp: '2022-07-13 07:37:42+09:00'
+  timestamp: '2022-07-13 08:11:57+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/library_checker/point_add_range_sum.test.cpp
