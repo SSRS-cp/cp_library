@@ -3,5 +3,6 @@
 "test/aoj/dsl_2_b.test.cpp": "2022-07-13 03:35:56 +0900",
 "test/aoj/dsl_2_e.test.cpp": "2022-07-13 03:46:54 +0900",
 "test/library_checker/point_add_range_sum.test.cpp": "2022-07-13 03:36:42 +0900",
+"test/library_checker/point_add_range_sum_2.test.cpp": "2022-07-13 04:11:45 +0900",
 "test/library_checker/unionfind.test.cpp": "2022-07-13 03:17:37 +0900"
 }
