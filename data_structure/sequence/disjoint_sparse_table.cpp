@@ -6,7 +6,7 @@ struct disjoint_sparse_table{
   T E;
   disjoint_sparse_table(){
   }
-  disjoint_sparse_table(vector<T> &A, function<T(T, T)> f, T E), E(E): A(A), f(f), E(E){
+  disjoint_sparse_table(vector<T> &A, function<T(T, T)> f, T E): A(A), f(f), E(E){
     int N = A.size();
     if (N == 1){
       return;
