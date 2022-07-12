@@ -41,7 +41,7 @@ data:
   isVerificationFile: true
   path: test/library_checker/static_range_sum_2.test.cpp
   requiredBy: []
-  timestamp: '2022-07-13 07:56:11+09:00'
+  timestamp: '2022-07-13 07:56:49+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/static_range_sum_2.test.cpp
