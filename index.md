@@ -262,10 +262,10 @@ data:
       path: String/Z-algorithm.cpp
       title: String/Z-algorithm.cpp
   verificationCategories:
-  - name: .
+  - name: test/library_checker
     pages:
-    - icon: ':heavy_check_mark:'
-      path: unionfind.test.cpp
-      title: unionfind.test.cpp
+    - icon: ':x:'
+      path: test/library_checker/unionfind.test.cpp
+      title: test/library_checker/unionfind.test.cpp
 layout: toppage
 ---
