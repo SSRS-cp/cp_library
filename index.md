@@ -266,7 +266,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: data_structure/sequence/binary_indexed_tree.cpp
       title: data_structure/sequence/binary_indexed_tree.cpp
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: data_structure/sequence/dual_binary_indexed_tree.cpp
       title: data_structure/sequence/dual_binary_indexed_tree.cpp
   - name: data_structure/unionfind
@@ -283,6 +283,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/aoj/dsl_2_b.test.cpp
       title: test/aoj/dsl_2_b.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/dsl_2_e.test.cpp
+      title: test/aoj/dsl_2_e.test.cpp
   - name: test/library_checker
     pages:
     - icon: ':heavy_check_mark:'
