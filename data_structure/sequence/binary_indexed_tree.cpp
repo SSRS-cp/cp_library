@@ -6,7 +6,7 @@ struct binary_indexed_tree{
   }
   binary_indexed_tree(int N): N(N), BIT(N + 1, 0){
   }
-  binary_indexed_tree(vector<T> &A): N(A.size()), BIT(N + 1):{
+  binary_indexed_tree(vector<T> &A): N(A.size()), BIT(N + 1){
     for (int i = 0; i < N; i++){
       BIT[i + 1] = A[i];
     }
