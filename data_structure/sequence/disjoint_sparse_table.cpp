@@ -3,9 +3,10 @@ struct disjoint_sparse_table{
   vector<T> A;
   vector<vector<T>> D;
   function<T(T, T)> f;
+  T E;
   disjoint_sparse_table(){
   }
-  disjoint_sparse_table(vector<T> &A, function<T(T, T)> f): A(A), f(f){
+  disjoint_sparse_table(vector<T> &A, function<T(T, T)> f, T E), E(E): A(A), f(f), E(E){
     int N = A.size();
     if (N == 1){
       return;
@@ -27,7 +28,9 @@ struct disjoint_sparse_table{
     }
   }
   T query(int L, int R){
-    if (R - L == 1){
+    if (R == L){
+      return E;
+    } else if (R - L == 1){
       return A[L];
     } else {
       R--;
