@@ -1,12 +1,12 @@
 template <typename T>
-struct cumulative_sum{
+struct invertible_cumulative_sum{
   vector<T> S;
   function<T(T, T)> f;
   function<T(T)> inv;
   T E;
-  cumulative_sum(){
+  invertible_cumulative_sum(){
   }
-  cumulative_sum(vector<T> A, function<T(T, T)> f, function<T(T)> inv, T E): f(f), inv(inv), E(E){
+  invertible_cumulative_sum(vector<T> A, function<T(T, T)> f, function<T(T)> inv, T E): f(f), inv(inv), E(E){
     int N = A.size();
     S = vector<T>(N + 1);
     S[0] = E;
