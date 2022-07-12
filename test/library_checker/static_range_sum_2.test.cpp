@@ -9,7 +9,7 @@ int main(){
   for (int i = 0; i < N; i++){
     cin >> a[i];
   }
-  cumulative_sum<long long> S(a, plus<long long>(), negate<long long>(), 0);
+  invertible_cumulative_sum<long long> S(a, plus<long long>(), negate<long long>(), 0);
   for (int i = 0; i < Q; i++){
     int l, r;
     cin >> l >> r;
