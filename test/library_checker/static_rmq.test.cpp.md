@@ -16,7 +16,7 @@ data:
     - https://judge.yosupo.jp/problem/staticrmq
   bundledCode: "#line 1 \"test/library_checker/static_rmq.test.cpp\"\n#define PROBLEM\
     \ \"https://judge.yosupo.jp/problem/staticrmq\"\n#include <bits/stdc++.h>\nusing\
-    \ namespace std;\n#line 1 \"data_structure/sequence/disjoint_sparse_table.cpp\"\
+    \ namespace std;\nconst int INF = 1000000000;\n#line 1 \"data_structure/sequence/disjoint_sparse_table.cpp\"\
     \ntemplate <typename T>\nstruct disjoint_sparse_table{\n  vector<T> A;\n  vector<vector<T>>\
     \ D;\n  function<T(T, T)> f;\n  T E;\n  disjoint_sparse_table(){\n  }\n  disjoint_sparse_table(vector<T>\
     \ &A, function<T(T, T)> f, T E), E(E): A(A), f(f), E(E){\n    int N = A.size();\n\
@@ -30,23 +30,24 @@ data:
     \   }\n  }\n  T query(int L, int R){\n    if (R == L){\n      return E;\n    }\
     \ else if (R - L == 1){\n      return A[L];\n    } else {\n      R--;\n      int\
     \ b = 31 - __builtin_clz(R ^ L);\n      return f(D[b][L], D[b][R]);\n    }\n \
-    \ }\n};\n#line 5 \"test/library_checker/static_rmq.test.cpp\"\nint main(){\n \
+    \ }\n};\n#line 6 \"test/library_checker/static_rmq.test.cpp\"\nint main(){\n \
     \ int N, Q;\n  cin >> N >> Q;\n  vector<int> a(N);\n  for (int i = 0; i < N; i++){\n\
     \    cin >> a[i];\n  }\n  disjoint_sparse_table<int> DST(a, [](int a, int b){return\
-    \ min(a, b);});\n  for (int i = 0; i < Q; i++){\n    int l, r;\n    cin >> l >>\
-    \ r;\n    cout << DST.query(l, r) << endl;\n  }\n}\n"
+    \ min(a, b);}, INF);\n  for (int i = 0; i < Q; i++){\n    int l, r;\n    cin >>\
+    \ l >> r;\n    cout << DST.query(l, r) << endl;\n  }\n}\n"
   code: "#define PROBLEM \"https://judge.yosupo.jp/problem/staticrmq\"\n#include <bits/stdc++.h>\n\
-    using namespace std;\n#include \"../../data_structure/sequence/disjoint_sparse_table.cpp\"\
+    using namespace std;\nconst int INF = 1000000000;\n#include \"../../data_structure/sequence/disjoint_sparse_table.cpp\"\
     \nint main(){\n  int N, Q;\n  cin >> N >> Q;\n  vector<int> a(N);\n  for (int\
     \ i = 0; i < N; i++){\n    cin >> a[i];\n  }\n  disjoint_sparse_table<int> DST(a,\
-    \ [](int a, int b){return min(a, b);});\n  for (int i = 0; i < Q; i++){\n    int\
-    \ l, r;\n    cin >> l >> r;\n    cout << DST.query(l, r) << endl;\n  }\n}\n"
+    \ [](int a, int b){return min(a, b);}, INF);\n  for (int i = 0; i < Q; i++){\n\
+    \    int l, r;\n    cin >> l >> r;\n    cout << DST.query(l, r) << endl;\n  }\n\
+    }\n"
   dependsOn:
   - data_structure/sequence/disjoint_sparse_table.cpp
   isVerificationFile: true
   path: test/library_checker/static_rmq.test.cpp
   requiredBy: []
-  timestamp: '2022-07-13 07:27:57+09:00'
+  timestamp: '2022-07-13 07:29:23+09:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/library_checker/static_rmq.test.cpp
