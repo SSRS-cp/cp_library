@@ -1,33 +1,47 @@
 ---
 data:
-  _extendedDependsOn: []
+  _extendedDependsOn:
+  - icon: ':heavy_check_mark:'
+    path: data_structure/unionfind/unionfind.cpp
+    title: data_structure/unionfind/unionfind.cpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
-  attributes: {}
-  bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
-    , line 71, in _render_source_code_stat\n    bundled_code = language.bundle(stat.path,\
-    \ basedir=basedir, options={'include_paths': [basedir]}).decode()\n  File \"/opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages/onlinejudge_verify/languages/cplusplus.py\"\
-    , line 187, in bundle\n    bundler.update(path)\n  File \"/opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages/onlinejudge_verify/languages/cplusplus_bundle.py\"\
-    , line 401, in update\n    self.update(self._resolve(pathlib.Path(included), included_from=path))\n\
-    \  File \"/opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages/onlinejudge_verify/languages/cplusplus_bundle.py\"\
-    , line 260, in _resolve\n    raise BundleErrorAt(path, -1, \"no such header\"\
-    )\nonlinejudge_verify.languages.cplusplus_bundle.BundleErrorAt: ../../data_structure/unionfind.cpp:\
-    \ line -1: no such header\n"
+  _verificationStatusIcon: ':heavy_check_mark:'
+  attributes:
+    '*NOT_SPECIAL_COMMENTS*': ''
+    PROBLEM: https://judge.yosupo.jp/problem/unionfind
+    links:
+    - https://judge.yosupo.jp/problem/unionfind
+  bundledCode: "#line 1 \"test/library_checker/unionfind.test.cpp\"\n#define PROBLEM\
+    \ \"https://judge.yosupo.jp/problem/unionfind\"\n#include <bits/stdc++.h>\nusing\
+    \ namespace std;\n#line 1 \"data_structure/unionfind/unionfind.cpp\"\nstruct unionfind{\n\
+    \  vector<int> p;\n  unionfind(int N){\n    p = vector<int>(N, -1);\n  }\n  int\
+    \ root(int x){\n    if (p[x] < 0){\n      return x;\n    } else {\n      p[x]\
+    \ = root(p[x]);\n      return p[x];\n    }\n  }\n  bool same(int x, int y){\n\
+    \    return root(x) == root(y);\n  }\n  void unite(int x, int y){\n    x = root(x);\n\
+    \    y = root(y);\n    if (x != y){\n      if (p[x] < p[y]){\n        swap(x,\
+    \ y);\n      }\n      p[y] += p[x];\n      p[x] = y;\n    }\n  }\n};\n#line 5\
+    \ \"test/library_checker/unionfind.test.cpp\"\nint main(){\n  int N, Q;\n  cin\
+    \ >> N >> Q;\n  unionfind UF(N);\n  for (int i = 0; i < Q; i++){\n    int t, u,\
+    \ v;\n    cin >> t >> u >> v;\n    if (t == 0){\n      UF.unite(u, v);\n    }\n\
+    \    if (t == 1){\n      if (UF.same(u, v)){\n        cout << 1 << endl;\n   \
+    \   } else {\n        cout << 0 << endl;\n      }\n    }\n  }\n}\n"
   code: "#define PROBLEM \"https://judge.yosupo.jp/problem/unionfind\"\n#include <bits/stdc++.h>\n\
-    using namespace std;\n#include \"../../data_structure/unionfind.cpp\"\nint main(){\n\
-    \  int N, Q;\n  cin >> N >> Q;\n  unionfind UF(N);\n  for (int i = 0; i < Q; i++){\n\
-    \    int t, u, v;\n    cin >> t >> u >> v;\n    if (t == 0){\n      UF.unite(u,\
-    \ v);\n    }\n    if (t == 1){\n      if (UF.same(u, v)){\n        cout << 1 <<\
-    \ endl;\n      } else {\n        cout << 0 << endl;\n      }\n    }\n  }\n}\n"
-  dependsOn: []
+    using namespace std;\n#include \"../../data_structure/unionfind/unionfind.cpp\"\
+    \nint main(){\n  int N, Q;\n  cin >> N >> Q;\n  unionfind UF(N);\n  for (int i\
+    \ = 0; i < Q; i++){\n    int t, u, v;\n    cin >> t >> u >> v;\n    if (t == 0){\n\
+    \      UF.unite(u, v);\n    }\n    if (t == 1){\n      if (UF.same(u, v)){\n \
+    \       cout << 1 << endl;\n      } else {\n        cout << 0 << endl;\n     \
+    \ }\n    }\n  }\n}\n"
+  dependsOn:
+  - data_structure/unionfind/unionfind.cpp
   isVerificationFile: true
   path: test/library_checker/unionfind.test.cpp
   requiredBy: []
-  timestamp: '1970-01-01 00:00:00+00:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2022-07-13 03:17:37+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/unionfind.test.cpp
 layout: document
