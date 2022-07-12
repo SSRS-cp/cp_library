@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: data_structure/sequence/disjoint_sparse_table.cpp
     title: data_structure/sequence/disjoint_sparse_table.cpp
   _extendedRequiredBy: []

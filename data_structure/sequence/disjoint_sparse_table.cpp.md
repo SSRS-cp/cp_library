@@ -6,9 +6,12 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/library_checker/static_range_sum_3.test.cpp
     title: test/library_checker/static_range_sum_3.test.cpp
-  _isVerificationFailed: false
+  - icon: ':x:'
+    path: test/library_checker/static_rmq.test.cpp
+    title: test/library_checker/static_rmq.test.cpp
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':question:'
   attributes:
     links: []
   bundledCode: "#line 1 \"data_structure/sequence/disjoint_sparse_table.cpp\"\ntemplate\
@@ -41,9 +44,10 @@ data:
   path: data_structure/sequence/disjoint_sparse_table.cpp
   requiredBy: []
   timestamp: '2022-07-13 04:35:43+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
   - test/library_checker/static_range_sum_3.test.cpp
+  - test/library_checker/static_rmq.test.cpp
 documentation_of: data_structure/sequence/disjoint_sparse_table.cpp
 layout: document
 redirect_from:
