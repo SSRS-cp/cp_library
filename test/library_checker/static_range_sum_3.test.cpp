@@ -9,7 +9,7 @@ int main(){
   for (int i = 0; i < N; i++){
     cin >> a[i];
   }
-  disjoint_sparse_table<long long> DST(a, plus<long long>());
+  disjoint_sparse_table<long long> DST(a, plus<long long>(), 0);
   for (int i = 0; i < Q; i++){
     int l, r;
     cin >> l >> r;
