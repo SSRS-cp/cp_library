@@ -1,14 +1,14 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: data_structure/sequence/binary_indexed_tree.cpp
     title: data_structure/sequence/binary_indexed_tree.cpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_B
@@ -29,21 +29,22 @@ data:
     \  int n, q;\n  cin >> n >> q;\n  binary_indexed_tree<int> BIT(n, plus<int>(),\
     \ 0);\n  for (int i = 0; i < q; i++){\n    int com, x, y;\n    cin >> com >> x\
     \ >> y;\n    if (com == 0){\n      x--;\n      BIT.add(x, y);\n    }\n    if (com\
-    \ == 1){\n      x--;\n      cout << BIT.sum(x, y) <<endl;\n    }\n  }\n}\n"
+    \ == 1){\n      x--;\n      cout << BIT.sum(y) - BIT.sum(x) << endl;\n    }\n\
+    \  }\n}\n"
   code: "#define PROBLEM \"https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_B\"\
     \n#include <bits/stdc++.h>\nusing namespace std;\n#include \"../../data_structure/sequence/binary_indexed_tree.cpp\"\
     \nint main(){\n  int n, q;\n  cin >> n >> q;\n  binary_indexed_tree<int> BIT(n,\
     \ plus<int>(), 0);\n  for (int i = 0; i < q; i++){\n    int com, x, y;\n    cin\
     \ >> com >> x >> y;\n    if (com == 0){\n      x--;\n      BIT.add(x, y);\n  \
-    \  }\n    if (com == 1){\n      x--;\n      cout << BIT.sum(x, y) <<endl;\n  \
-    \  }\n  }\n}\n"
+    \  }\n    if (com == 1){\n      x--;\n      cout << BIT.sum(y) - BIT.sum(x) <<\
+    \ endl;\n    }\n  }\n}\n"
   dependsOn:
   - data_structure/sequence/binary_indexed_tree.cpp
   isVerificationFile: true
   path: test/aoj/dsl_2_b.test.cpp
   requiredBy: []
-  timestamp: '2022-07-13 07:45:23+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2022-07-13 07:46:28+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/aoj/dsl_2_b.test.cpp
 layout: document

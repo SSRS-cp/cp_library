@@ -257,7 +257,7 @@ data:
       title: String/Z-algorithm.cpp
   - name: data_structure/sequence
     pages:
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: data_structure/sequence/binary_indexed_tree.cpp
       title: data_structure/sequence/binary_indexed_tree.cpp
     - icon: ':heavy_check_mark:'
@@ -283,7 +283,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/aoj/dsl_1_a.test.cpp
       title: test/aoj/dsl_1_a.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/aoj/dsl_2_b.test.cpp
       title: test/aoj/dsl_2_b.test.cpp
     - icon: ':heavy_check_mark:'
