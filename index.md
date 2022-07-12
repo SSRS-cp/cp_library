@@ -7,9 +7,6 @@ data:
       path: Data_Structures/Bidirectional_Segment_Tree.cpp
       title: Data_Structures/Bidirectional_Segment_Tree.cpp
     - icon: ':warning:'
-      path: Data_Structures/Binary_Indexed_Tree.cpp
-      title: Data_Structures/Binary_Indexed_Tree.cpp
-    - icon: ':warning:'
       path: Data_Structures/Disjoint_Sparse_Table.cpp
       title: Data_Structures/Disjoint_Sparse_Table.cpp
     - icon: ':warning:'
@@ -51,9 +48,6 @@ data:
     - icon: ':warning:'
       path: Data_Structures/Trie.cpp
       title: Data_Structures/Trie.cpp
-    - icon: ':warning:'
-      path: Data_Structures/UnionFind.cpp
-      title: Data_Structures/UnionFind.cpp
   - name: Dynamic_Programming
     pages:
     - icon: ':warning:'
