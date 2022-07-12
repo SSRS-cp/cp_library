@@ -267,6 +267,11 @@ data:
       path: data_structure/unionfind.cpp
       title: data_structure/unionfind.cpp
   verificationCategories:
+  - name: test/aoj
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/dsl_1_a.test.cpp
+      title: test/aoj/dsl_1_a.test.cpp
   - name: test/library_checker
     pages:
     - icon: ':heavy_check_mark:'
