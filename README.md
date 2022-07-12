@@ -5,3 +5,5 @@
 verification-helper の導入のため、大規模改装中です。
 
 ドキュメントを生成しようとしています
+
+verify:failing になる　なんで
