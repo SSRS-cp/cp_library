@@ -266,20 +266,20 @@ data:
     - icon: ':warning:'
       path: data_structure/sequence/binary_indexed_tree.cpp
       title: data_structure/sequence/binary_indexed_tree.cpp
-  - name: data_structure
+  - name: data_structure/unionfind
     pages:
-    - icon: ':heavy_check_mark:'
-      path: data_structure/unionfind.cpp
-      title: data_structure/unionfind.cpp
+    - icon: ':warning:'
+      path: data_structure/unionfind/unionfind.cpp
+      title: data_structure/unionfind/unionfind.cpp
   verificationCategories:
   - name: test/aoj
     pages:
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/aoj/dsl_1_a.test.cpp
       title: test/aoj/dsl_1_a.test.cpp
   - name: test/library_checker
     pages:
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/library_checker/unionfind.test.cpp
       title: test/library_checker/unionfind.test.cpp
 layout: toppage
