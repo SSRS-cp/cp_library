@@ -6,6 +6,9 @@ data:
   - icon: ':x:'
     path: test/aoj/dsl_2_b_2.test.cpp
     title: test/aoj/dsl_2_b_2.test.cpp
+  - icon: ':x:'
+    path: test/library_checker/point_add_range_sum_2.test.cpp
+    title: test/library_checker/point_add_range_sum_2.test.cpp
   _isVerificationFailed: true
   _pathExtension: cpp
   _verificationStatusIcon: ':x:'
@@ -43,6 +46,7 @@ data:
   timestamp: '2022-07-13 08:10:38+09:00'
   verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
+  - test/library_checker/point_add_range_sum_2.test.cpp
   - test/aoj/dsl_2_b_2.test.cpp
 documentation_of: data_structure/sequence/invertible_binary_indexed_tree.cpp
 layout: document

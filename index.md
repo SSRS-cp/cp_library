@@ -300,6 +300,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/point_add_range_sum.test.cpp
       title: test/library_checker/point_add_range_sum.test.cpp
+    - icon: ':x:'
+      path: test/library_checker/point_add_range_sum_2.test.cpp
+      title: test/library_checker/point_add_range_sum_2.test.cpp
     - icon: ':heavy_check_mark:'
       path: test/library_checker/static_range_sum.test.cpp
       title: test/library_checker/static_range_sum.test.cpp
