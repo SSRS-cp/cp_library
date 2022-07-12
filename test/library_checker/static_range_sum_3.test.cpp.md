@@ -33,14 +33,14 @@ data:
     \ }\n};\n#line 5 \"test/library_checker/static_range_sum_3.test.cpp\"\nint main(){\n\
     \  int N, Q;\n  cin >> N >> Q;\n  vector<long long> a(N);\n  for (int i = 0; i\
     \ < N; i++){\n    cin >> a[i];\n  }\n  disjoint_sparse_table<long long> DST(a,\
-    \ plus<long long>());\n  for (int i = 0; i < Q; i++){\n    int l, r;\n    cin\
+    \ plus<long long>(), 0);\n  for (int i = 0; i < Q; i++){\n    int l, r;\n    cin\
     \ >> l >> r;\n    cout << DST.query(l, r) << endl;\n  }\n}\n"
   code: "#define PROBLEM \"https://judge.yosupo.jp/problem/static_range_sum\"\n#include\
     \ <bits/stdc++.h>\nusing namespace std;\n#include \"../../data_structure/sequence/disjoint_sparse_table.cpp\"\
     \nint main(){\n  int N, Q;\n  cin >> N >> Q;\n  vector<long long> a(N);\n  for\
     \ (int i = 0; i < N; i++){\n    cin >> a[i];\n  }\n  disjoint_sparse_table<long\
-    \ long> DST(a, plus<long long>());\n  for (int i = 0; i < Q; i++){\n    int l,\
-    \ r;\n    cin >> l >> r;\n    cout << DST.query(l, r) << endl;\n  }\n}\n"
+    \ long> DST(a, plus<long long>(), 0);\n  for (int i = 0; i < Q; i++){\n    int\
+    \ l, r;\n    cin >> l >> r;\n    cout << DST.query(l, r) << endl;\n  }\n}\n"
   dependsOn:
   - data_structure/sequence/disjoint_sparse_table.cpp
   isVerificationFile: true

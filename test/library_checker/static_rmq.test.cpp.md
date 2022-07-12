@@ -47,7 +47,7 @@ data:
   isVerificationFile: true
   path: test/library_checker/static_rmq.test.cpp
   requiredBy: []
-  timestamp: '2022-07-13 07:29:23+09:00'
+  timestamp: '2022-07-13 07:27:57+09:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/library_checker/static_rmq.test.cpp
