@@ -42,6 +42,9 @@ data:
     - icon: ':warning:'
       path: Data_Structures/Trie.cpp
       title: Data_Structures/Trie.cpp
+    - icon: ':warning:'
+      path: Data_Structures/xor_segment_tree.cpp
+      title: "XOR Segment Tree (XOR \u30BB\u30B0\u30E1\u30F3\u30C8\u6728)"
   - name: Dynamic_Programming
     pages:
     - icon: ':warning:'
