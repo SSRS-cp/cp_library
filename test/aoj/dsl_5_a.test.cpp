@@ -11,7 +11,6 @@ int main(){
     cin >> l >> r;
     BIT.add(l, -1);
     BIT.add(r, 1);
-    BIT.add(l, r, 1);
   }
   vector<int> S = BIT.get();
   int ans = 0;
