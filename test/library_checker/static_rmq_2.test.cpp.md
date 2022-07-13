@@ -1,14 +1,14 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: data_structure/sequence/sparse_table.cpp
     title: data_structure/sequence/sparse_table.cpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.yosupo.jp/problem/staticrmq
@@ -23,26 +23,26 @@ data:
     \ vector<vector<int>>(LOG, vector<int>(N));\n    for (int i = 0; i < N; i++){\n\
     \      ST[0][i] = A[i];\n    }\n    for (int i = 0; i < LOG - 1; i++){\n     \
     \ for (int j = 0; j < N - (1 << i); j++){\n        ST[i + 1][j] = f(ST[i][j],\
-    \ ST[i][j + (1 << i)]);\n      }\n    }\n  }\n  int range_min(int L, int R){\n\
-    \    if (L == R){\n      return E;\n    }\n    int d = 31 - __builtin_clz(R -\
-    \ L);\n    return f(ST[d][L], ST[d][R - (1 << d)]);\n  }\n};\n#line 6 \"test/library_checker/static_rmq_2.test.cpp\"\
+    \ ST[i][j + (1 << i)]);\n      }\n    }\n  }\n  int query(int L, int R){\n   \
+    \ if (L == R){\n      return E;\n    }\n    int d = 31 - __builtin_clz(R - L);\n\
+    \    return f(ST[d][L], ST[d][R - (1 << d)]);\n  }\n};\n#line 6 \"test/library_checker/static_rmq_2.test.cpp\"\
     \nint main(){\n  int N, Q;\n  cin >> N >> Q;\n  vector<int> a(N);\n  for (int\
-    \ i = 0; i < N; i++){\n    cin >> a[i];\n  }\n  sparse_table<int> DST(a, [](int\
+    \ i = 0; i < N; i++){\n    cin >> a[i];\n  }\n  sparse_table<int> ST(a, [](int\
     \ a, int b){return min(a, b);}, INF);\n  for (int i = 0; i < Q; i++){\n    int\
-    \ l, r;\n    cin >> l >> r;\n    cout << DST.query(l, r) << endl;\n  }\n}\n"
+    \ l, r;\n    cin >> l >> r;\n    cout << ST.query(l, r) << endl;\n  }\n}\n"
   code: "#define PROBLEM \"https://judge.yosupo.jp/problem/staticrmq\"\n#include <bits/stdc++.h>\n\
     using namespace std;\nconst int INF = 1000000000;\n#include \"../../data_structure/sequence/sparse_table.cpp\"\
     \nint main(){\n  int N, Q;\n  cin >> N >> Q;\n  vector<int> a(N);\n  for (int\
-    \ i = 0; i < N; i++){\n    cin >> a[i];\n  }\n  sparse_table<int> DST(a, [](int\
+    \ i = 0; i < N; i++){\n    cin >> a[i];\n  }\n  sparse_table<int> ST(a, [](int\
     \ a, int b){return min(a, b);}, INF);\n  for (int i = 0; i < Q; i++){\n    int\
-    \ l, r;\n    cin >> l >> r;\n    cout << DST.query(l, r) << endl;\n  }\n}\n"
+    \ l, r;\n    cin >> l >> r;\n    cout << ST.query(l, r) << endl;\n  }\n}\n"
   dependsOn:
   - data_structure/sequence/sparse_table.cpp
   isVerificationFile: true
   path: test/library_checker/static_rmq_2.test.cpp
   requiredBy: []
-  timestamp: '2022-07-13 10:13:07+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2022-07-13 10:15:29+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/static_rmq_2.test.cpp
 layout: document

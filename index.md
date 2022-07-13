@@ -278,7 +278,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: data_structure/sequence/invertible_dual_binary_indexed_tree.cpp
       title: data_structure/sequence/invertible_dual_binary_indexed_tree.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: data_structure/sequence/sparse_table.cpp
       title: data_structure/sequence/sparse_table.cpp
   - name: data_structure/unionfind
@@ -324,7 +324,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/static_rmq.test.cpp
       title: test/library_checker/static_rmq.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/static_rmq_2.test.cpp
       title: test/library_checker/static_rmq_2.test.cpp
     - icon: ':heavy_check_mark:'
