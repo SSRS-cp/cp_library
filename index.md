@@ -266,7 +266,7 @@ data:
     - icon: ':warning:'
       path: data_structure/sequence/dual_disjoint_sparse_table.cpp
       title: data_structure/sequence/dual_disjoint_sparse_table.cpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: data_structure/sequence/dual_invertible_binary_indexed_tree.cpp
       title: data_structure/sequence/dual_invertible_binary_indexed_tree.cpp
     - icon: ':heavy_check_mark:'
@@ -307,6 +307,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/aoj/dsl_5_a_2.test.cpp
       title: test/aoj/dsl_5_a_2.test.cpp
+    - icon: ':x:'
+      path: test/aoj/dsl_5_a_3.test.cpp
+      title: test/aoj/dsl_5_a_3.test.cpp
   - name: test/library_checker
     pages:
     - icon: ':heavy_check_mark:'

@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: data_structure/sequence/dual_invertible_binary_indexed_tree.cpp
     title: data_structure/sequence/dual_invertible_binary_indexed_tree.cpp
   _extendedRequiredBy: []

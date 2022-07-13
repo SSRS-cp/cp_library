@@ -9,9 +9,12 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/aoj/dsl_5_a_2.test.cpp
     title: test/aoj/dsl_5_a_2.test.cpp
-  _isVerificationFailed: false
+  - icon: ':x:'
+    path: test/aoj/dsl_5_a_3.test.cpp
+    title: test/aoj/dsl_5_a_3.test.cpp
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':question:'
   attributes:
     links: []
   bundledCode: "#line 1 \"data_structure/sequence/dual_invertible_binary_indexed_tree.cpp\"\
@@ -49,9 +52,10 @@ data:
   path: data_structure/sequence/dual_invertible_binary_indexed_tree.cpp
   requiredBy: []
   timestamp: '2022-07-13 14:43:09+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
   - test/aoj/dsl_5_a_2.test.cpp
+  - test/aoj/dsl_5_a_3.test.cpp
   - test/aoj/dsl_2_e_2.test.cpp
 documentation_of: data_structure/sequence/dual_invertible_binary_indexed_tree.cpp
 layout: document

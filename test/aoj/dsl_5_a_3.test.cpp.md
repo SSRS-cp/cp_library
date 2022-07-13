@@ -6,15 +6,15 @@ data:
     title: data_structure/sequence/dual_invertible_binary_indexed_tree.cpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_5_A
     links:
     - https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_5_A
-  bundledCode: "#line 1 \"test/aoj/dsl_5_a_2.test.cpp\"\n#define PROBLEM \"https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_5_A\"\
+  bundledCode: "#line 1 \"test/aoj/dsl_5_a_3.test.cpp\"\n#define PROBLEM \"https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_5_A\"\
     \n#include <bits/stdc++.h>\nusing namespace std;\n#line 1 \"data_structure/sequence/dual_invertible_binary_indexed_tree.cpp\"\
     \ntemplate <typename T>\nstruct dual_invertible_binary_indexed_tree{\n  int N;\n\
     \  vector<T> BIT;\n  function<T(T, T)> f;\n  function<T(T)> inv;\n  T E;\n  dual_invertible_binary_indexed_tree(){\n\
@@ -29,31 +29,31 @@ data:
     \   i += i & -i;\n    }\n    return ans;\n  }\n  vector<T> get(){\n    vector<T>\
     \ ans = BIT;\n    for (int i = N - 1; i >= 1; i--){\n      if (i + (i & -i) <=\
     \ N){\n        ans[i] = f(ans[i + (i & -i)], ans[i]);\n      }\n    }\n    ans.erase(ans.begin());\n\
-    \    return ans;\n  }\n};\n#line 5 \"test/aoj/dsl_5_a_2.test.cpp\"\nint main(){\n\
-    \  int N, T;\n  cin >> N >> T;\n  dual_invertible_binary_indexed_tree<int> BIT(T,\
-    \ plus<int>(), negate<int>(), 0);\n  for (int i = 0; i < N; i++){\n    int l,\
-    \ r;\n    cin >> l >> r;\n    BIT.add(l, r, 1);\n  }\n  vector<int> S = BIT.get();\n\
-    \  int ans = 0;\n  for (int i = 0; i < T; i++){\n    ans = max(ans, S[i]);\n \
-    \ }\n  cout << ans << endl;\n}\n"
+    \    return ans;\n  }\n};\n#line 5 \"test/aoj/dsl_5_a_3.test.cpp\"\n int main(){\n\
+    \  int N, T;\n  cin >> N >> T;\n  dual_disjoint_sparse_table<int> DST(T, plus<int>(),\
+    \ 0);\n  for (int i = 0; i < N; i++){\n    int l, r;\n    cin >> l >> r;\n   \
+    \ DST.apply(l, r, 1);\n  }\n  vector<int> S = DST.get();\n  int ans = 0;\n  for\
+    \ (int i = 0; i < T; i++){\n    ans = max(ans, S[i]);\n  }\n  cout << ans << endl;\n\
+    }\n"
   code: "#define PROBLEM \"https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_5_A\"\
     \n#include <bits/stdc++.h>\nusing namespace std;\n#include \"../../data_structure/sequence/dual_invertible_binary_indexed_tree.cpp\"\
-    \nint main(){\n  int N, T;\n  cin >> N >> T;\n  dual_invertible_binary_indexed_tree<int>\
-    \ BIT(T, plus<int>(), negate<int>(), 0);\n  for (int i = 0; i < N; i++){\n   \
-    \ int l, r;\n    cin >> l >> r;\n    BIT.add(l, r, 1);\n  }\n  vector<int> S =\
-    \ BIT.get();\n  int ans = 0;\n  for (int i = 0; i < T; i++){\n    ans = max(ans,\
-    \ S[i]);\n  }\n  cout << ans << endl;\n}\n"
+    \n int main(){\n  int N, T;\n  cin >> N >> T;\n  dual_disjoint_sparse_table<int>\
+    \ DST(T, plus<int>(), 0);\n  for (int i = 0; i < N; i++){\n    int l, r;\n   \
+    \ cin >> l >> r;\n    DST.apply(l, r, 1);\n  }\n  vector<int> S = DST.get();\n\
+    \  int ans = 0;\n  for (int i = 0; i < T; i++){\n    ans = max(ans, S[i]);\n \
+    \ }\n  cout << ans << endl;\n}\n"
   dependsOn:
   - data_structure/sequence/dual_invertible_binary_indexed_tree.cpp
   isVerificationFile: true
-  path: test/aoj/dsl_5_a_2.test.cpp
+  path: test/aoj/dsl_5_a_3.test.cpp
   requiredBy: []
-  timestamp: '2022-07-13 14:47:36+09:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2022-07-13 14:59:28+09:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
-documentation_of: test/aoj/dsl_5_a_2.test.cpp
+documentation_of: test/aoj/dsl_5_a_3.test.cpp
 layout: document
 redirect_from:
-- /verify/test/aoj/dsl_5_a_2.test.cpp
-- /verify/test/aoj/dsl_5_a_2.test.cpp.html
-title: test/aoj/dsl_5_a_2.test.cpp
+- /verify/test/aoj/dsl_5_a_3.test.cpp
+- /verify/test/aoj/dsl_5_a_3.test.cpp.html
+title: test/aoj/dsl_5_a_3.test.cpp
 ---
