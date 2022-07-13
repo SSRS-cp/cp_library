@@ -21,9 +21,6 @@ struct commutative_dual_segment_tree{
     for (int i = 0; i < n; i++){
       ST[N - 1 + i] = A[i];
     }
-    for (int i = N - 2; i >= 0; i--){
-      ST[i] = f(ST[i * 2 + 1], ST[i * 2 + 2]);
-    }
   }
   T operator [](int k){
     k += N - 1;
