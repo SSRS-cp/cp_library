@@ -52,3 +52,6 @@ struct dual_disjoint_sparse_table{
     return A;
   }
 };
+/**
+ * @brief Dual Disjoint Sparse Table (双対 Disjoint Sparse Table)
+*/
