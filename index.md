@@ -263,15 +263,15 @@ data:
     - icon: ':heavy_check_mark:'
       path: data_structure/sequence/dual_binary_indexed_tree.cpp
       title: data_structure/sequence/dual_binary_indexed_tree.cpp
+    - icon: ':x:'
+      path: data_structure/sequence/dual_invertible_binary_indexed_tree.cpp
+      title: data_structure/sequence/dual_invertible_binary_indexed_tree.cpp
     - icon: ':heavy_check_mark:'
       path: data_structure/sequence/invertible_binary_indexed_tree.cpp
       title: data_structure/sequence/invertible_binary_indexed_tree.cpp
     - icon: ':heavy_check_mark:'
       path: data_structure/sequence/invertible_cumulative_sum.cpp
       title: data_structure/sequence/invertible_cumulative_sum.cpp
-    - icon: ':heavy_check_mark:'
-      path: data_structure/sequence/invertible_dual_binary_indexed_tree.cpp
-      title: data_structure/sequence/invertible_dual_binary_indexed_tree.cpp
     - icon: ':heavy_check_mark:'
       path: data_structure/sequence/sparse_table.cpp
       title: data_structure/sequence/sparse_table.cpp
@@ -295,9 +295,12 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/aoj/dsl_2_e.test.cpp
       title: test/aoj/dsl_2_e.test.cpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/aoj/dsl_2_e_2.test.cpp
       title: test/aoj/dsl_2_e_2.test.cpp
+    - icon: ':x:'
+      path: test/aoj/dsl_5_a.test.cpp
+      title: test/aoj/dsl_5_a.test.cpp
   - name: test/library_checker
     pages:
     - icon: ':heavy_check_mark:'
