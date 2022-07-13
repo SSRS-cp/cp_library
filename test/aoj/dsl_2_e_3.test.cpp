@@ -1,7 +1,7 @@
 #define PROBLEM "https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_E"
 #include <bits/stdc++.h>
 using namespace std;
-#include "../../data_structures/sequence/commutative_dual_segment_tree"
+#include "../../data_structure/sequence/commutative_dual_segment_tree"
 int main(){
   int n, q;
   cin >> n >> q;
