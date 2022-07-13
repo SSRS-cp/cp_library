@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: data_structure/sequence/segment_tree.cpp
-    title: data_structure/sequence/segment_tree.cpp
+    title: "Segment Tree (\u30BB\u30B0\u30E1\u30F3\u30C8\u6728)"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -32,7 +32,7 @@ data:
     \ (L <= l && r <= R){\n      return ST[i];\n    } else {\n      int m = (l + r)\
     \ / 2;\n      return f(query(L, R, i * 2 + 1, l, m), query(L, R, i * 2 + 2, m,\
     \ r));\n    }\n  }\n  T query(int L, int R){\n    return query(L, R, 0, 0, N);\n\
-    \  }\n  T all(){\n    return ST[0];\n  }\n};\n/**\n * @breif Segment Tree (\u30BB\
+    \  }\n  T all(){\n    return ST[0];\n  }\n};\n/**\n * @brief Segment Tree (\u30BB\
     \u30B0\u30E1\u30F3\u30C8\u6728)\n*/\n#line 6 \"test/library_checker/static_rmq_3.test.cpp\"\
     \nint main(){\n  int N, Q;\n  cin >> N >> Q;\n  vector<int> a(N);\n  for (int\
     \ i = 0; i < N; i++){\n    cin >> a[i];\n  }\n  segment_tree<int> ST(a, [](int\
@@ -49,7 +49,7 @@ data:
   isVerificationFile: true
   path: test/library_checker/static_rmq_3.test.cpp
   requiredBy: []
-  timestamp: '2022-07-13 19:53:18+09:00'
+  timestamp: '2022-07-13 20:08:03+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/static_rmq_3.test.cpp

@@ -10,6 +10,7 @@ data:
   _pathExtension: cpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
+    document_title: "Segment Tree (\u30BB\u30B0\u30E1\u30F3\u30C8\u6728)"
     links: []
   bundledCode: "#line 1 \"data_structure/sequence/segment_tree.cpp\"\ntemplate <typename\
     \ T>\nstruct segment_tree{\n  int N;\n  vector<T> ST;\n  function<T(T, T)> f;\n\
@@ -27,7 +28,7 @@ data:
     \ && r <= R){\n      return ST[i];\n    } else {\n      int m = (l + r) / 2;\n\
     \      return f(query(L, R, i * 2 + 1, l, m), query(L, R, i * 2 + 2, m, r));\n\
     \    }\n  }\n  T query(int L, int R){\n    return query(L, R, 0, 0, N);\n  }\n\
-    \  T all(){\n    return ST[0];\n  }\n};\n/**\n * @breif Segment Tree (\u30BB\u30B0\
+    \  T all(){\n    return ST[0];\n  }\n};\n/**\n * @brief Segment Tree (\u30BB\u30B0\
     \u30E1\u30F3\u30C8\u6728)\n*/\n"
   code: "template <typename T>\nstruct segment_tree{\n  int N;\n  vector<T> ST;\n\
     \  function<T(T, T)> f;\n  T E;\n  segment_tree(int n, function<T(T, T)> f, T\
@@ -44,13 +45,13 @@ data:
     \    } else if (L <= l && r <= R){\n      return ST[i];\n    } else {\n      int\
     \ m = (l + r) / 2;\n      return f(query(L, R, i * 2 + 1, l, m), query(L, R, i\
     \ * 2 + 2, m, r));\n    }\n  }\n  T query(int L, int R){\n    return query(L,\
-    \ R, 0, 0, N);\n  }\n  T all(){\n    return ST[0];\n  }\n};\n/**\n * @breif Segment\
+    \ R, 0, 0, N);\n  }\n  T all(){\n    return ST[0];\n  }\n};\n/**\n * @brief Segment\
     \ Tree (\u30BB\u30B0\u30E1\u30F3\u30C8\u6728)\n*/\n"
   dependsOn: []
   isVerificationFile: false
   path: data_structure/sequence/segment_tree.cpp
   requiredBy: []
-  timestamp: '2022-07-13 19:49:55+09:00'
+  timestamp: '2022-07-13 20:08:03+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/library_checker/static_rmq_3.test.cpp
@@ -59,5 +60,5 @@ layout: document
 redirect_from:
 - /library/data_structure/sequence/segment_tree.cpp
 - /library/data_structure/sequence/segment_tree.cpp.html
-title: data_structure/sequence/segment_tree.cpp
+title: "Segment Tree (\u30BB\u30B0\u30E1\u30F3\u30C8\u6728)"
 ---
