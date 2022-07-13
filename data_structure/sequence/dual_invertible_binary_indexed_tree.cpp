@@ -13,11 +13,6 @@ struct dual_invertible_binary_indexed_tree{
     for (int i = 0; i < N; i++){
       BIT[i + 1] = A[i];
     }
-    for (int i = 1; i < N; i++){
-      if (i + (i & -i) <= N){
-        BIT[i + (i & -i)] = f(BIT[i + (i & -i)], BIT[i]);
-      }
-    }
   }
   void add(int i, T x){
     while (i > 0){
@@ -42,7 +37,7 @@ struct dual_invertible_binary_indexed_tree{
     vector<T> ans = BIT;
     for (int i = N - 1; i >= 1; i--){
       if (i + (i & -i) <= N){
-        ans[i + (i & -i)] = f(ans[i + (i & -i)], inv(ans[i]));
+        ans[i] = f(ans[i + (i & -i)], ans[i]);
       }
     }
     ans.erase(ans.begin());
