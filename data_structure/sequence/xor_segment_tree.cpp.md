@@ -2,10 +2,13 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: test/yukicoder/yuki_1891.test.cpp
+    title: test/yukicoder/yuki_1891.test.cpp
   _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     document_title: "XOR Segment Tree (XOR \u30BB\u30B0\u30E1\u30F3\u30C8\u6728)"
     links: []
@@ -55,8 +58,9 @@ data:
   path: data_structure/sequence/xor_segment_tree.cpp
   requiredBy: []
   timestamp: '2022-07-14 02:19:07+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - test/yukicoder/yuki_1891.test.cpp
 documentation_of: data_structure/sequence/xor_segment_tree.cpp
 layout: document
 redirect_from:

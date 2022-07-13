@@ -294,7 +294,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: data_structure/sequence/sparse_table.cpp
       title: "Sparse Table (\u30B9\u30D1\u30FC\u30B9\u30C6\u30FC\u30D6\u30EB)"
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: data_structure/sequence/xor_segment_tree.cpp
       title: "XOR Segment Tree (XOR \u30BB\u30B0\u30E1\u30F3\u30C8\u6728)"
   - name: data_structure/unionfind
@@ -387,7 +387,10 @@ data:
   - name: test/yukicoder
     pages:
     - icon: ':heavy_check_mark:'
-      path: test/yukicoder/yuki_945_1.test.cpp
-      title: test/yukicoder/yuki_945_1.test.cpp
+      path: test/yukicoder/yuki_1891.test.cpp
+      title: test/yukicoder/yuki_1891.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/yukicoder/yuki_945.test.cpp
+      title: test/yukicoder/yuki_945.test.cpp
 layout: toppage
 ---

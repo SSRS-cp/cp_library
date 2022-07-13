@@ -4,8 +4,8 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: test/yukicoder/yuki_945_1.test.cpp
-    title: test/yukicoder/yuki_945_1.test.cpp
+    path: test/yukicoder/yuki_945.test.cpp
+    title: test/yukicoder/yuki_945.test.cpp
   _isVerificationFailed: false
   _pathExtension: cpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -50,7 +50,7 @@ data:
   timestamp: '2022-07-13 19:22:32+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/yukicoder/yuki_945_1.test.cpp
+  - test/yukicoder/yuki_945.test.cpp
 documentation_of: data_structure/sequence/dual_sparse_table.cpp
 layout: document
 redirect_from:
