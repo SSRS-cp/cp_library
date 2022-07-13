@@ -1,54 +1,58 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
-    path: data_structure/sequence/dual_invertible_binary_indexed_tree.cpp
-    title: data_structure/sequence/dual_invertible_binary_indexed_tree.cpp
+  - icon: ':heavy_check_mark:'
+    path: data_structure/sequence/dual_disjoint_sparse_table.cpp
+    title: data_structure/sequence/dual_disjoint_sparse_table.cpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_5_A
     links:
     - https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_5_A
   bundledCode: "#line 1 \"test/aoj/dsl_5_a_3.test.cpp\"\n#define PROBLEM \"https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_5_A\"\
-    \n#include <bits/stdc++.h>\nusing namespace std;\n#line 1 \"data_structure/sequence/dual_invertible_binary_indexed_tree.cpp\"\
-    \ntemplate <typename T>\nstruct dual_invertible_binary_indexed_tree{\n  int N;\n\
-    \  vector<T> BIT;\n  function<T(T, T)> f;\n  function<T(T)> inv;\n  T E;\n  dual_invertible_binary_indexed_tree(){\n\
-    \  }\n  dual_invertible_binary_indexed_tree(int N, function<T(T, T)> f, function<T(T)>\
-    \ inv, T E): N(N), BIT(N + 1, E), f(f), inv(inv), E(E){\n  }\n  dual_invertible_binary_indexed_tree(vector<T>\
-    \ &A, function<T(T, T)> f, function<T(T)> inv, T E): N(A.size()), BIT(N + 1),\
-    \ f(f), inv(inv), E(E){\n    for (int i = 0; i < N; i++){\n      BIT[i + 1] =\
-    \ A[i];\n    }\n  }\n  void add(int i, T x){\n    while (i > 0){\n      BIT[i]\
-    \ = f(BIT[i], x);\n      i -= i & -i;\n    }\n  }\n  void add(int l, int r, T\
-    \ x){\n    add(l, inv(x));\n    add(r, x);\n  }\n  T operator [](int i){\n   \
-    \ i++;\n    T ans = E;\n    while (i <= N){\n      ans = f(ans, BIT[i]);\n   \
-    \   i += i & -i;\n    }\n    return ans;\n  }\n  vector<T> get(){\n    vector<T>\
-    \ ans = BIT;\n    for (int i = N - 1; i >= 1; i--){\n      if (i + (i & -i) <=\
-    \ N){\n        ans[i] = f(ans[i + (i & -i)], ans[i]);\n      }\n    }\n    ans.erase(ans.begin());\n\
-    \    return ans;\n  }\n};\n#line 5 \"test/aoj/dsl_5_a_3.test.cpp\"\n int main(){\n\
-    \  int N, T;\n  cin >> N >> T;\n  dual_disjoint_sparse_table<int> DST(T, plus<int>(),\
+    \n#include <bits/stdc++.h>\nusing namespace std;\n#line 1 \"data_structure/sequence/dual_disjoint_sparse_table.cpp\"\
+    \ntemplate <typename T>\nstruct dual_disjoint_sparse_table{\n  vector<T> A;\n\
+    \  vector<vector<T>> D;\n  function<T(T, T)> f;\n  T E;\n  dual_disjoint_sparse_table(){\n\
+    \  }\n  dual_disjoint_sparse_table(int N, function<T(T, T)> f, T E): A(N, E),\
+    \ f(f), E(E){\n    if (N > 1){\n      int LOG = 32 - __builtin_clz(N - 1);\n \
+    \     D = vector<vector<T>>(LOG, vector<T>(N, E));\n    }\n  }\n  dual_disjoint_sparse_table(vector<T>\
+    \ &A, function<T(T, T)> f, T E): A(A), f(f), E(E){\n    int N = A.size();\n  \
+    \  if (N > 1){\n      int LOG = 32 - __builtin_clz(N - 1);\n      D = vector<vector<T>>(LOG,\
+    \ vector<T>(N, E));\n    }\n  }\n  void apply(int L, int R, T x){\n    if (L ==\
+    \ R){\n      return;\n    } else if (R - L == 1){\n      A[L] = f(A[L], x);\n\
+    \    } else {\n      R--;\n      int b = 31 - __builtin_clz(R ^ L);\n      D[b][L]\
+    \ = f(D[b][L], x);\n      D[b][R] = f(D[b][R], x);\n    }\n  }\n  vector<T> get(){\n\
+    \    int LOG = D.size();\n    int N = A.size();\n    for (int i = 0; i < LOG;\
+    \ i++){\n      int d = 1 << i;\n      for (int j = 0; j + d < N; j += d * 2){\n\
+    \        T L = E;\n        for (int k = j; k < j + d; k++){\n          L = f(L,\
+    \ D[i][k]);\n          A[k] = f(A[k], L);\n        }\n        T R = E;\n     \
+    \   for (int k = min(j + d * 2, N) - 1; k >= j + d; k--){\n          R = f(R,\
+    \ D[i][k]);\n          A[k] = f(A[k], R);\n        }\n      }\n    }\n    return\
+    \ A;\n  }\n};\n#line 5 \"test/aoj/dsl_5_a_3.test.cpp\"\n int main(){\n  int N,\
+    \ T;\n  cin >> N >> T;\n  dual_disjoint_sparse_table<int> DST(T, plus<int>(),\
     \ 0);\n  for (int i = 0; i < N; i++){\n    int l, r;\n    cin >> l >> r;\n   \
     \ DST.apply(l, r, 1);\n  }\n  vector<int> S = DST.get();\n  int ans = 0;\n  for\
     \ (int i = 0; i < T; i++){\n    ans = max(ans, S[i]);\n  }\n  cout << ans << endl;\n\
     }\n"
   code: "#define PROBLEM \"https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_5_A\"\
-    \n#include <bits/stdc++.h>\nusing namespace std;\n#include \"../../data_structure/sequence/dual_invertible_binary_indexed_tree.cpp\"\
+    \n#include <bits/stdc++.h>\nusing namespace std;\n#include \"../../data_structure/sequence/dual_disjoint_sparse_table.cpp\"\
     \n int main(){\n  int N, T;\n  cin >> N >> T;\n  dual_disjoint_sparse_table<int>\
     \ DST(T, plus<int>(), 0);\n  for (int i = 0; i < N; i++){\n    int l, r;\n   \
     \ cin >> l >> r;\n    DST.apply(l, r, 1);\n  }\n  vector<int> S = DST.get();\n\
     \  int ans = 0;\n  for (int i = 0; i < T; i++){\n    ans = max(ans, S[i]);\n \
     \ }\n  cout << ans << endl;\n}\n"
   dependsOn:
-  - data_structure/sequence/dual_invertible_binary_indexed_tree.cpp
+  - data_structure/sequence/dual_disjoint_sparse_table.cpp
   isVerificationFile: true
   path: test/aoj/dsl_5_a_3.test.cpp
   requiredBy: []
-  timestamp: '2022-07-13 14:59:28+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2022-07-13 15:01:17+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/aoj/dsl_5_a_3.test.cpp
 layout: document
