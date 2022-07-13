@@ -33,7 +33,7 @@ data:
     \ D[i][k]);\n          A[k] = f(A[k], L);\n        }\n        T R = E;\n     \
     \   for (int k = min(j + d * 2, N) - 1; k >= j + d; k--){\n          R = f(R,\
     \ D[i][k]);\n          A[k] = f(A[k], R);\n        }\n      }\n    }\n    return\
-    \ A;\n  }\n};\n#line 5 \"test/aoj/dsl_5_a_3.test.cpp\"\n int main(){\n  int N,\
+    \ A;\n  }\n};\n#line 5 \"test/aoj/dsl_5_a_3.test.cpp\"\nint main(){\n  int N,\
     \ T;\n  cin >> N >> T;\n  dual_disjoint_sparse_table<int> DST(T, plus<int>(),\
     \ 0);\n  for (int i = 0; i < N; i++){\n    int l, r;\n    cin >> l >> r;\n   \
     \ DST.apply(l, r, 1);\n  }\n  vector<int> S = DST.get();\n  int ans = 0;\n  for\
@@ -41,7 +41,7 @@ data:
     }\n"
   code: "#define PROBLEM \"https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_5_A\"\
     \n#include <bits/stdc++.h>\nusing namespace std;\n#include \"../../data_structure/sequence/dual_disjoint_sparse_table.cpp\"\
-    \n int main(){\n  int N, T;\n  cin >> N >> T;\n  dual_disjoint_sparse_table<int>\
+    \nint main(){\n  int N, T;\n  cin >> N >> T;\n  dual_disjoint_sparse_table<int>\
     \ DST(T, plus<int>(), 0);\n  for (int i = 0; i < N; i++){\n    int l, r;\n   \
     \ cin >> l >> r;\n    DST.apply(l, r, 1);\n  }\n  vector<int> S = DST.get();\n\
     \  int ans = 0;\n  for (int i = 0; i < T; i++){\n    ans = max(ans, S[i]);\n \
@@ -51,7 +51,7 @@ data:
   isVerificationFile: true
   path: test/aoj/dsl_5_a_3.test.cpp
   requiredBy: []
-  timestamp: '2022-07-13 15:01:17+09:00'
+  timestamp: '2022-07-13 16:40:20+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/aoj/dsl_5_a_3.test.cpp

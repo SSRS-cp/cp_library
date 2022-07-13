@@ -269,7 +269,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: data_structure/sequence/dual_invertible_binary_indexed_tree.cpp
       title: data_structure/sequence/dual_invertible_binary_indexed_tree.cpp
-    - icon: ':warning:'
+    - icon: ':x:'
       path: data_structure/sequence/dual_sparse_table.cpp
       title: data_structure/sequence/dual_sparse_table.cpp
     - icon: ':heavy_check_mark:'
@@ -339,5 +339,10 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/unionfind.test.cpp
       title: test/library_checker/unionfind.test.cpp
+  - name: test/yukicoder
+    pages:
+    - icon: ':x:'
+      path: test/yukicoder/yuki_945_1.test.cpp
+      title: test/yukicoder/yuki_945_1.test.cpp
 layout: toppage
 ---
