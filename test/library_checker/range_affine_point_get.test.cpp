@@ -2,7 +2,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 const long long MOD = 998244353;
-#include "../../data_structures/sequence/dual_segment_tree.cpp"
+#include "../../data_structure/sequence/dual_segment_tree.cpp"
 #include "../../other/monoids/linear.cpp"
 int main(){
   int N, Q;
