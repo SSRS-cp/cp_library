@@ -18,7 +18,6 @@ int main(){
     if (c == 1){
       int t;
       cin >> t;
-      t--;
       cout << ST[t].second << endl;
     }
   }
