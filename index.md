@@ -280,7 +280,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: data_structure/sequence/invertible_cumulative_sum.cpp
       title: "Invertible Cumulative Sum (\u53EF\u9006\u7D2F\u7A4D\u548C)"
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: data_structure/sequence/segment_tree.cpp
       title: "Segment Tree (\u30BB\u30B0\u30E1\u30F3\u30C8\u6728)"
     - icon: ':heavy_check_mark:'
@@ -306,6 +306,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/aoj/dsl_2_b_2.test.cpp
       title: test/aoj/dsl_2_b_2.test.cpp
+    - icon: ':x:'
+      path: test/aoj/dsl_2_b_3.test.cpp
+      title: test/aoj/dsl_2_b_3.test.cpp
     - icon: ':heavy_check_mark:'
       path: test/aoj/dsl_2_e.test.cpp
       title: test/aoj/dsl_2_e.test.cpp
