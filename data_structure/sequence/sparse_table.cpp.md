@@ -2,10 +2,13 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _extendedVerifiedWith:
+  - icon: ':x:'
+    path: test/library_checker/static_rmq_2.test.cpp
+    title: test/library_checker/static_rmq_2.test.cpp
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links: []
   bundledCode: "#line 1 \"data_structure/sequence/sparse_table.cpp\"\ntemplate <typename\
@@ -32,8 +35,9 @@ data:
   path: data_structure/sequence/sparse_table.cpp
   requiredBy: []
   timestamp: '2022-07-13 10:11:52+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_WA
+  verifiedWith:
+  - test/library_checker/static_rmq_2.test.cpp
 documentation_of: data_structure/sequence/sparse_table.cpp
 layout: document
 redirect_from:
