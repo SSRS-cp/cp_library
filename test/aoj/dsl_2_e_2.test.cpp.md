@@ -22,15 +22,16 @@ data:
     \ inv, T E): N(N), BIT(N + 1, E), f(f), inv(inv), E(E){\n  }\n  dual_invertible_binary_indexed_tree(vector<T>\
     \ &A, function<T(T, T)> f, function<T(T)> inv, T E): N(A.size()), BIT(N + 1),\
     \ f(f), inv(inv), E(E){\n    for (int i = 0; i < N; i++){\n      BIT[i + 1] =\
-    \ A[i];\n    }\n    for (int i = 1; i < N; i++){\n      BIT[i + (i & -i)] = f(BIT[i\
-    \ + (i & -i)], BIT[i]);\n    }\n  }\n  void add(int i, T x){\n    while (i > 0){\n\
-    \      BIT[i] = f(BIT[i], x);\n      i -= i & -i;\n    }\n  }\n  void add(int\
-    \ l, int r, T x){\n    add(l, inv(x));\n    add(r, x);\n  }\n  T operator [](int\
-    \ i){\n    i++;\n    T ans = E;\n    while (i <= N){\n      ans = f(ans, BIT[i]);\n\
-    \      i += i & -i;\n    }\n    return ans;\n  }\n  vector<T> get(){\n    vector<T>\
-    \ ans = BIT;\n    for (int i = N - 1; i >= 1; i--){\n      ans[i + (i & -i)] =\
-    \ f(ans[i + (i & -i)], inv(ans[i]));\n    }\n    ans.erase(ans.begin());\n   \
-    \ return ans;\n  }\n};\n#line 5 \"test/aoj/dsl_2_e_2.test.cpp\"\nint main(){\n\
+    \ A[i];\n    }\n    for (int i = 1; i < N; i++){\n      if (i + (i & -i) <= N){\n\
+    \        BIT[i + (i & -i)] = f(BIT[i + (i & -i)], BIT[i]);\n      }\n    }\n \
+    \ }\n  void add(int i, T x){\n    while (i > 0){\n      BIT[i] = f(BIT[i], x);\n\
+    \      i -= i & -i;\n    }\n  }\n  void add(int l, int r, T x){\n    add(l, inv(x));\n\
+    \    add(r, x);\n  }\n  T operator [](int i){\n    i++;\n    T ans = E;\n    while\
+    \ (i <= N){\n      ans = f(ans, BIT[i]);\n      i += i & -i;\n    }\n    return\
+    \ ans;\n  }\n  vector<T> get(){\n    vector<T> ans = BIT;\n    for (int i = N\
+    \ - 1; i >= 1; i--){\n      if (i + (i & -i) <= N){\n        ans[i + (i & -i)]\
+    \ = f(ans[i + (i & -i)], inv(ans[i]));\n      }\n    }\n    ans.erase(ans.begin());\n\
+    \    return ans;\n  }\n};\n#line 5 \"test/aoj/dsl_2_e_2.test.cpp\"\nint main(){\n\
     \  int n, q;\n  cin >> n >> q;\n  dual_invertible_binary_indexed_tree<int> BIT(n,\
     \ plus<int>(), negate<int>(), 0);\n  for (int i = 0; i < q; i++){\n    int c;\n\
     \    cin >> c;\n    if (c == 0){\n      int s, t, x;\n      cin >> s >> t >> x;\n\
@@ -49,7 +50,7 @@ data:
   isVerificationFile: true
   path: test/aoj/dsl_2_e_2.test.cpp
   requiredBy: []
-  timestamp: '2022-07-13 14:22:16+09:00'
+  timestamp: '2022-07-13 14:26:13+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/aoj/dsl_2_e_2.test.cpp
