@@ -271,7 +271,8 @@ data:
       title: data_structure/sequence/dual_invertible_binary_indexed_tree.cpp
     - icon: ':heavy_check_mark:'
       path: data_structure/sequence/dual_sparse_table.cpp
-      title: data_structure/sequence/dual_sparse_table.cpp
+      title: "Dual Sparse Table (\u53CC\u5BFE\u30B9\u30D1\u30FC\u30B9\u30C6\u30FC\u30D6\
+        \u30EB)"
     - icon: ':heavy_check_mark:'
       path: data_structure/sequence/invertible_binary_indexed_tree.cpp
       title: data_structure/sequence/invertible_binary_indexed_tree.cpp
@@ -280,7 +281,7 @@ data:
       title: "Invertible Cumulative Sum (\u53EF\u9006\u7D2F\u7A4D\u548C)"
     - icon: ':heavy_check_mark:'
       path: data_structure/sequence/sparse_table.cpp
-      title: data_structure/sequence/sparse_table.cpp
+      title: "Sparse Table (\u30B9\u30D1\u30FC\u30B9\u30C6\u30FC\u30D6\u30EB)"
   - name: data_structure/unionfind
     pages:
     - icon: ':heavy_check_mark:'
