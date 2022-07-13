@@ -288,7 +288,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: data_structure/sequence/invertible_cumulative_sum.cpp
       title: "Invertible Cumulative Sum (\u53EF\u9006\u7D2F\u7A4D\u548C)"
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: data_structure/sequence/lazy_segment_tree.cpp
       title: "Lazy Segment Tree (\u9045\u5EF6\u30BB\u30B0\u30E1\u30F3\u30C8\u6728)"
     - icon: ':heavy_check_mark:'
@@ -307,6 +307,9 @@ data:
       title: UnionFind
   - name: other/monoids
     pages:
+    - icon: ':heavy_check_mark:'
+      path: other/monoids/affine_sum.cpp
+      title: other/monoids/affine_sum.cpp
     - icon: ':heavy_check_mark:'
       path: other/monoids/linear.cpp
       title: other/monoids/linear.cpp
@@ -366,6 +369,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/range_affine_point_get.test.cpp
       title: test/library_checker/range_affine_point_get.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/library_checker/range_affine_range_sum.test.cpp
+      title: test/library_checker/range_affine_range_sum.test.cpp
     - icon: ':heavy_check_mark:'
       path: test/library_checker/static_range_sum.test.cpp
       title: test/library_checker/static_range_sum.test.cpp

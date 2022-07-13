@@ -2,10 +2,13 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: test/library_checker/range_affine_range_sum.test.cpp
+    title: test/library_checker/range_affine_range_sum.test.cpp
   _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     document_title: "Lazy Segment Tree (\u9045\u5EF6\u30BB\u30B0\u30E1\u30F3\u30C8\
       \u6728)"
@@ -75,8 +78,9 @@ data:
   path: data_structure/sequence/lazy_segment_tree.cpp
   requiredBy: []
   timestamp: '2022-07-14 02:35:57+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - test/library_checker/range_affine_range_sum.test.cpp
 documentation_of: data_structure/sequence/lazy_segment_tree.cpp
 layout: document
 redirect_from:
