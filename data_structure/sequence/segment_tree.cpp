@@ -54,5 +54,6 @@ struct segment_tree{
   }
 };
 /**
- * @breif Segment Tree (セグメント木)
+ * @brief Segment Tree (セグメント木)
 */
+l
