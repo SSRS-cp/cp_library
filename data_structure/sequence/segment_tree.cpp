@@ -56,4 +56,3 @@ struct segment_tree{
 /**
  * @brief Segment Tree (セグメント木)
 */
-l
