@@ -4,6 +4,9 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
+    path: test/aoj/dsl_2_a.test.cpp
+    title: test/aoj/dsl_2_a.test.cpp
+  - icon: ':heavy_check_mark:'
     path: test/library_checker/point_add_range_sum_3.test.cpp
     title: test/library_checker/point_add_range_sum_3.test.cpp
   - icon: ':heavy_check_mark:'
@@ -59,6 +62,7 @@ data:
   verifiedWith:
   - test/library_checker/point_add_range_sum_3.test.cpp
   - test/library_checker/static_rmq_3.test.cpp
+  - test/aoj/dsl_2_a.test.cpp
 documentation_of: data_structure/sequence/segment_tree.cpp
 layout: document
 redirect_from:

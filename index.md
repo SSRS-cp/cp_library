@@ -298,6 +298,9 @@ data:
       path: test/aoj/dsl_1_a.test.cpp
       title: test/aoj/dsl_1_a.test.cpp
     - icon: ':heavy_check_mark:'
+      path: test/aoj/dsl_2_a.test.cpp
+      title: test/aoj/dsl_2_a.test.cpp
+    - icon: ':heavy_check_mark:'
       path: test/aoj/dsl_2_b.test.cpp
       title: test/aoj/dsl_2_b.test.cpp
     - icon: ':heavy_check_mark:'
