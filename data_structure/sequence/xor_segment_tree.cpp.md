@@ -9,12 +9,12 @@ data:
   attributes:
     document_title: "XOR Segment Tree (XOR \u30BB\u30B0\u30E1\u30F3\u30C8\u6728)"
     links: []
-  bundledCode: "#line 1 \"Data_Structures/xor_segment_tree.cpp\"\ntemplate <typename\
-    \ T>\nstruct xor_segment_tree{\n  int N;\n  vector<vector<T>> ST;\n  function<T(T,\
-    \ T)> f;\n  T E;\n  xor_segment_tree(vector<T> &A, function<T(T, T)> f, T E):\
-    \ f(f), E(E){\n    N = A.size();\n    ST = vector<vector<T>>(N * 2 - 1);\n   \
-    \ for (int i = 0; i < N; i++){\n      ST[N - 1 + i].push_back(A[i]);\n    }\n\
-    \    for (int i = N - 2; i >= 0; i--){\n      int cnt = ST[i * 2 + 1].size();\n\
+  bundledCode: "#line 1 \"data_structure/sequence/xor_segment_tree.cpp\"\ntemplate\
+    \ <typename T>\nstruct xor_segment_tree{\n  int N;\n  vector<vector<T>> ST;\n\
+    \  function<T(T, T)> f;\n  T E;\n  xor_segment_tree(vector<T> &A, function<T(T,\
+    \ T)> f, T E): f(f), E(E){\n    N = A.size();\n    ST = vector<vector<T>>(N *\
+    \ 2 - 1);\n    for (int i = 0; i < N; i++){\n      ST[N - 1 + i].push_back(A[i]);\n\
+    \    }\n    for (int i = N - 2; i >= 0; i--){\n      int cnt = ST[i * 2 + 1].size();\n\
     \      for (int j = 0; j < cnt; j++){\n        ST[i].push_back(f(ST[i * 2 + 1][j],\
     \ ST[i * 2 + 2][j]));\n      }\n      for (int j = 0; j < cnt; j++){\n       \
     \ ST[i].push_back(f(ST[i * 2 + 2][j], ST[i * 2 + 1][j]));\n      }\n    }\n  }\n\
@@ -52,15 +52,15 @@ data:
     \u30F3\u30C8\u6728)\n*/\n"
   dependsOn: []
   isVerificationFile: false
-  path: Data_Structures/xor_segment_tree.cpp
+  path: data_structure/sequence/xor_segment_tree.cpp
   requiredBy: []
-  timestamp: '2022-07-14 02:18:30+09:00'
+  timestamp: '2022-07-14 02:19:07+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
-documentation_of: Data_Structures/xor_segment_tree.cpp
+documentation_of: data_structure/sequence/xor_segment_tree.cpp
 layout: document
 redirect_from:
-- /library/Data_Structures/xor_segment_tree.cpp
-- /library/Data_Structures/xor_segment_tree.cpp.html
+- /library/data_structure/sequence/xor_segment_tree.cpp
+- /library/data_structure/sequence/xor_segment_tree.cpp.html
 title: "XOR Segment Tree (XOR \u30BB\u30B0\u30E1\u30F3\u30C8\u6728)"
 ---
