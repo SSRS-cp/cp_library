@@ -253,29 +253,30 @@ data:
     pages:
     - icon: ':heavy_check_mark:'
       path: data_structure/sequence/binary_indexed_tree.cpp
-      title: data_structure/sequence/binary_indexed_tree.cpp
+      title: Binary Indexed Tree
     - icon: ':heavy_check_mark:'
       path: data_structure/sequence/cumulative_sum.cpp
       title: "Cumulative Sum (\u7D2F\u7A4D\u548C)"
     - icon: ':heavy_check_mark:'
       path: data_structure/sequence/disjoint_sparse_table.cpp
-      title: data_structure/sequence/disjoint_sparse_table.cpp
+      title: Disjoint Sparse Table
     - icon: ':heavy_check_mark:'
       path: data_structure/sequence/dual_binary_indexed_tree.cpp
-      title: data_structure/sequence/dual_binary_indexed_tree.cpp
+      title: "Dual Binary Indexed Tree (\u53CC\u5BFE Binary Indexed Tree)"
     - icon: ':heavy_check_mark:'
       path: data_structure/sequence/dual_disjoint_sparse_table.cpp
-      title: data_structure/sequence/dual_disjoint_sparse_table.cpp
+      title: "Dual Disjoint Sparse Table (\u53CC\u5BFE Disjoint Sparse Table)"
     - icon: ':heavy_check_mark:'
       path: data_structure/sequence/dual_invertible_binary_indexed_tree.cpp
-      title: data_structure/sequence/dual_invertible_binary_indexed_tree.cpp
+      title: "Dual Invertible Binary Indexed Tree (\u53CC\u5BFE\u53EF\u9006 Binary\
+        \ Indexed Tree)"
     - icon: ':heavy_check_mark:'
       path: data_structure/sequence/dual_sparse_table.cpp
       title: "Dual Sparse Table (\u53CC\u5BFE\u30B9\u30D1\u30FC\u30B9\u30C6\u30FC\u30D6\
         \u30EB)"
     - icon: ':heavy_check_mark:'
       path: data_structure/sequence/invertible_binary_indexed_tree.cpp
-      title: data_structure/sequence/invertible_binary_indexed_tree.cpp
+      title: "Invertible Binary Indexed Tree (\u53EF\u9006 Binary Indexed Tree)"
     - icon: ':heavy_check_mark:'
       path: data_structure/sequence/invertible_cumulative_sum.cpp
       title: "Invertible Cumulative Sum (\u53EF\u9006\u7D2F\u7A4D\u548C)"

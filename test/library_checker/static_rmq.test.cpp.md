@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: data_structure/sequence/disjoint_sparse_table.cpp
-    title: data_structure/sequence/disjoint_sparse_table.cpp
+    title: Disjoint Sparse Table
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -32,9 +32,10 @@ data:
     \ - 1], A[k]);\n          }\n        }\n      }\n    }\n  }\n  T query(int L,\
     \ int R){\n    if (R == L){\n      return E;\n    } else if (R - L == 1){\n  \
     \    return A[L];\n    } else {\n      R--;\n      int b = 31 - __builtin_clz(R\
-    \ ^ L);\n      return f(D[b][L], D[b][R]);\n    }\n  }\n};\n#line 6 \"test/library_checker/static_rmq.test.cpp\"\
-    \nint main(){\n  int N, Q;\n  cin >> N >> Q;\n  vector<int> a(N);\n  for (int\
-    \ i = 0; i < N; i++){\n    cin >> a[i];\n  }\n  disjoint_sparse_table<int> DST(a,\
+    \ ^ L);\n      return f(D[b][L], D[b][R]);\n    }\n  }\n};\n/**\n * @brief Disjoint\
+    \ Sparse Table\n*/\n#line 6 \"test/library_checker/static_rmq.test.cpp\"\nint\
+    \ main(){\n  int N, Q;\n  cin >> N >> Q;\n  vector<int> a(N);\n  for (int i =\
+    \ 0; i < N; i++){\n    cin >> a[i];\n  }\n  disjoint_sparse_table<int> DST(a,\
     \ [](int a, int b){return min(a, b);}, INF);\n  for (int i = 0; i < Q; i++){\n\
     \    int l, r;\n    cin >> l >> r;\n    cout << DST.query(l, r) << endl;\n  }\n\
     }\n"
@@ -50,7 +51,7 @@ data:
   isVerificationFile: true
   path: test/library_checker/static_rmq.test.cpp
   requiredBy: []
-  timestamp: '2022-07-13 13:34:48+09:00'
+  timestamp: '2022-07-13 19:25:02+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/static_rmq.test.cpp

@@ -13,6 +13,7 @@ data:
   _pathExtension: cpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
+    document_title: "Dual Binary Indexed Tree (\u53CC\u5BFE Binary Indexed Tree)"
     links: []
   bundledCode: "#line 1 \"data_structure/sequence/dual_binary_indexed_tree.cpp\"\n\
     template <typename T>\nstruct dual_binary_indexed_tree{\n  int N;\n  vector<T>\
@@ -26,7 +27,8 @@ data:
     \ = f(ans, BIT[i]);\n      i += i & -i;\n    }\n    return ans;\n  }\n  vector<T>\
     \ get(){\n    vector<T> ans = BIT;\n    for (int i = N - 1; i >= 1; i--){\n  \
     \    if (i + (i & -i) <= N){\n        ans[i] = f(ans[i + (i & -i)], ans[i]);\n\
-    \      }\n    }\n    ans.erase(ans.begin());\n    return ans;\n  }\n};\n"
+    \      }\n    }\n    ans.erase(ans.begin());\n    return ans;\n  }\n};\n/**\n\
+    \ * @brief Dual Binary Indexed Tree (\u53CC\u5BFE Binary Indexed Tree)\n*/\n"
   code: "template <typename T>\nstruct dual_binary_indexed_tree{\n  int N;\n  vector<T>\
     \ BIT;\n  function<T(T, T)> f;\n  T E;\n  dual_binary_indexed_tree(){\n  }\n \
     \ dual_binary_indexed_tree(int N, function<T(T, T)> f, T E): N(N), BIT(N + 1,\
@@ -38,12 +40,13 @@ data:
     \ = f(ans, BIT[i]);\n      i += i & -i;\n    }\n    return ans;\n  }\n  vector<T>\
     \ get(){\n    vector<T> ans = BIT;\n    for (int i = N - 1; i >= 1; i--){\n  \
     \    if (i + (i & -i) <= N){\n        ans[i] = f(ans[i + (i & -i)], ans[i]);\n\
-    \      }\n    }\n    ans.erase(ans.begin());\n    return ans;\n  }\n};\n"
+    \      }\n    }\n    ans.erase(ans.begin());\n    return ans;\n  }\n};\n/**\n\
+    \ * @brief Dual Binary Indexed Tree (\u53CC\u5BFE Binary Indexed Tree)\n*/\n"
   dependsOn: []
   isVerificationFile: false
   path: data_structure/sequence/dual_binary_indexed_tree.cpp
   requiredBy: []
-  timestamp: '2022-07-13 14:40:47+09:00'
+  timestamp: '2022-07-13 19:28:32+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/aoj/dsl_2_e.test.cpp
@@ -53,5 +56,5 @@ layout: document
 redirect_from:
 - /library/data_structure/sequence/dual_binary_indexed_tree.cpp
 - /library/data_structure/sequence/dual_binary_indexed_tree.cpp.html
-title: data_structure/sequence/dual_binary_indexed_tree.cpp
+title: "Dual Binary Indexed Tree (\u53CC\u5BFE Binary Indexed Tree)"
 ---

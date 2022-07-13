@@ -3,7 +3,8 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: data_structure/sequence/dual_invertible_binary_indexed_tree.cpp
-    title: data_structure/sequence/dual_invertible_binary_indexed_tree.cpp
+    title: "Dual Invertible Binary Indexed Tree (\u53CC\u5BFE\u53EF\u9006 Binary Indexed\
+      \ Tree)"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -29,12 +30,14 @@ data:
     \   i += i & -i;\n    }\n    return ans;\n  }\n  vector<T> get(){\n    vector<T>\
     \ ans = BIT;\n    for (int i = N - 1; i >= 1; i--){\n      if (i + (i & -i) <=\
     \ N){\n        ans[i] = f(ans[i + (i & -i)], ans[i]);\n      }\n    }\n    ans.erase(ans.begin());\n\
-    \    return ans;\n  }\n};\n#line 5 \"test/aoj/dsl_2_e_2.test.cpp\"\nint main(){\n\
-    \  int n, q;\n  cin >> n >> q;\n  dual_invertible_binary_indexed_tree<int> BIT(n,\
-    \ plus<int>(), negate<int>(), 0);\n  for (int i = 0; i < q; i++){\n    int c;\n\
-    \    cin >> c;\n    if (c == 0){\n      int s, t, x;\n      cin >> s >> t >> x;\n\
-    \      s--;\n      BIT.add(s, t, x);\n    }\n    if (c == 1){\n      int t;\n\
-    \      cin >> t;\n      t--;\n      cout << BIT[t] << endl;\n    }\n  }\n}\n"
+    \    return ans;\n  }\n};\n/**\n * @brief Dual Invertible Binary Indexed Tree\
+    \ (\u53CC\u5BFE\u53EF\u9006 Binary Indexed Tree)\n*/\n#line 5 \"test/aoj/dsl_2_e_2.test.cpp\"\
+    \nint main(){\n  int n, q;\n  cin >> n >> q;\n  dual_invertible_binary_indexed_tree<int>\
+    \ BIT(n, plus<int>(), negate<int>(), 0);\n  for (int i = 0; i < q; i++){\n   \
+    \ int c;\n    cin >> c;\n    if (c == 0){\n      int s, t, x;\n      cin >> s\
+    \ >> t >> x;\n      s--;\n      BIT.add(s, t, x);\n    }\n    if (c == 1){\n \
+    \     int t;\n      cin >> t;\n      t--;\n      cout << BIT[t] << endl;\n   \
+    \ }\n  }\n}\n"
   code: "#define PROBLEM \"https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_E\"\
     \n#include <bits/stdc++.h>\nusing namespace std;\n#include \"../../data_structure/sequence/dual_invertible_binary_indexed_tree.cpp\"\
     \nint main(){\n  int n, q;\n  cin >> n >> q;\n  dual_invertible_binary_indexed_tree<int>\
@@ -48,7 +51,7 @@ data:
   isVerificationFile: true
   path: test/aoj/dsl_2_e_2.test.cpp
   requiredBy: []
-  timestamp: '2022-07-13 14:43:09+09:00'
+  timestamp: '2022-07-13 19:29:34+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/aoj/dsl_2_e_2.test.cpp

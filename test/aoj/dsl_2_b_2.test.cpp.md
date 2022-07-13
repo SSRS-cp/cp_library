@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: data_structure/sequence/invertible_binary_indexed_tree.cpp
-    title: data_structure/sequence/invertible_binary_indexed_tree.cpp
+    title: "Invertible Binary Indexed Tree (\u53EF\u9006 Binary Indexed Tree)"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -28,8 +28,9 @@ data:
     \ x);\n      i += i & -i;\n    }\n  }\n  T sum(int i){\n    T ans = E;\n    while\
     \ (i > 0){\n      ans = f(ans, BIT[i]);\n      i -= i & -i;\n    }\n    return\
     \ ans;\n  }\n  T sum(int l, int r){\n    return f(sum(r), inv(sum(l)));\n  }\n\
-    };\n#line 5 \"test/aoj/dsl_2_b_2.test.cpp\"\nint main(){\n  int n, q;\n  cin >>\
-    \ n >> q;\n  invertible_binary_indexed_tree<int> BIT(n, plus<int>(), negate<int>(),\
+    };\n/**\n * @brief Invertible Binary Indexed Tree (\u53EF\u9006 Binary Indexed\
+    \ Tree)\n*/\n#line 5 \"test/aoj/dsl_2_b_2.test.cpp\"\nint main(){\n  int n, q;\n\
+    \  cin >> n >> q;\n  invertible_binary_indexed_tree<int> BIT(n, plus<int>(), negate<int>(),\
     \ 0);\n  for (int i = 0; i < q; i++){\n    int com, x, y;\n    cin >> com >> x\
     \ >> y;\n    if (com == 0){\n      x--;\n      BIT.add(x, y);\n    }\n    if (com\
     \ == 1){\n      x--;\n      cout << BIT.sum(x, y) << endl;\n    }\n  }\n}\n"
@@ -45,7 +46,7 @@ data:
   isVerificationFile: true
   path: test/aoj/dsl_2_b_2.test.cpp
   requiredBy: []
-  timestamp: '2022-07-13 14:25:22+09:00'
+  timestamp: '2022-07-13 19:27:46+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/aoj/dsl_2_b_2.test.cpp

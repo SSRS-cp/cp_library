@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: data_structure/sequence/dual_disjoint_sparse_table.cpp
-    title: data_structure/sequence/dual_disjoint_sparse_table.cpp
+    title: "Dual Disjoint Sparse Table (\u53CC\u5BFE Disjoint Sparse Table)"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -33,8 +33,9 @@ data:
     \ D[i][k]);\n          A[k] = f(A[k], L);\n        }\n        T R = E;\n     \
     \   for (int k = min(j + d * 2, N) - 1; k >= j + d; k--){\n          R = f(R,\
     \ D[i][k]);\n          A[k] = f(A[k], R);\n        }\n      }\n    }\n    return\
-    \ A;\n  }\n};\n#line 5 \"test/aoj/dsl_5_a_3.test.cpp\"\nint main(){\n  int N,\
-    \ T;\n  cin >> N >> T;\n  dual_disjoint_sparse_table<int> DST(T, plus<int>(),\
+    \ A;\n  }\n};\n/**\n * @brief Dual Disjoint Sparse Table (\u53CC\u5BFE Disjoint\
+    \ Sparse Table)\n*/\n#line 5 \"test/aoj/dsl_5_a_3.test.cpp\"\nint main(){\n  int\
+    \ N, T;\n  cin >> N >> T;\n  dual_disjoint_sparse_table<int> DST(T, plus<int>(),\
     \ 0);\n  for (int i = 0; i < N; i++){\n    int l, r;\n    cin >> l >> r;\n   \
     \ DST.apply(l, r, 1);\n  }\n  vector<int> S = DST.get();\n  int ans = 0;\n  for\
     \ (int i = 0; i < T; i++){\n    ans = max(ans, S[i]);\n  }\n  cout << ans << endl;\n\
@@ -51,7 +52,7 @@ data:
   isVerificationFile: true
   path: test/aoj/dsl_5_a_3.test.cpp
   requiredBy: []
-  timestamp: '2022-07-13 16:40:20+09:00'
+  timestamp: '2022-07-13 19:25:51+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/aoj/dsl_5_a_3.test.cpp

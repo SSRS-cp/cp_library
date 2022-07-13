@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: data_structure/sequence/binary_indexed_tree.cpp
-    title: data_structure/sequence/binary_indexed_tree.cpp
+    title: Binary Indexed Tree
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -26,14 +26,14 @@ data:
     \ f(BIT[i + (i & -i)], BIT[i]);\n      }\n    }\n  }\n  void add(int i, T x){\n\
     \    i++;\n    while (i <= N){\n      BIT[i] = f(BIT[i], x);\n      i += i & -i;\n\
     \    }\n  }\n  T sum(int i){\n    T ans = E;\n    while (i > 0){\n      ans =\
-    \ f(ans, BIT[i]);\n      i -= i & -i;\n    }\n    return ans;\n  }\n};\n#line\
-    \ 5 \"test/library_checker/point_add_range_sum.test.cpp\"\nint main(){\n  int\
-    \ N, Q;\n  cin >> N >> Q;\n  vector<long long> a(N);\n  for (int i = 0; i < N;\
-    \ i++){\n    cin >> a[i];\n  }\n  binary_indexed_tree<long long> BIT(a, plus<long\
-    \ long>(), 0);\n  for (int i = 0; i < Q; i++){\n    int t;\n    cin >> t;\n  \
-    \  if (t == 0){\n      int p, x;\n      cin >> p >> x;\n      BIT.add(p, x);\n\
-    \    }\n    if (t == 1){\n      int l, r;\n      cin >> l >> r;\n      cout <<\
-    \ BIT.sum(r) - BIT.sum(l) << endl;\n    }\n  }\n}\n"
+    \ f(ans, BIT[i]);\n      i -= i & -i;\n    }\n    return ans;\n  }\n};\n/**\n\
+    \ * @brief Binary Indexed Tree\n*/\n#line 5 \"test/library_checker/point_add_range_sum.test.cpp\"\
+    \nint main(){\n  int N, Q;\n  cin >> N >> Q;\n  vector<long long> a(N);\n  for\
+    \ (int i = 0; i < N; i++){\n    cin >> a[i];\n  }\n  binary_indexed_tree<long\
+    \ long> BIT(a, plus<long long>(), 0);\n  for (int i = 0; i < Q; i++){\n    int\
+    \ t;\n    cin >> t;\n    if (t == 0){\n      int p, x;\n      cin >> p >> x;\n\
+    \      BIT.add(p, x);\n    }\n    if (t == 1){\n      int l, r;\n      cin >>\
+    \ l >> r;\n      cout << BIT.sum(r) - BIT.sum(l) << endl;\n    }\n  }\n}\n"
   code: "#define PROBLEM \"https://judge.yosupo.jp/problem/point_add_range_sum\"\n\
     #include <bits/stdc++.h>\nusing namespace std;\n#include \"../../data_structure/sequence/binary_indexed_tree.cpp\"\
     \nint main(){\n  int N, Q;\n  cin >> N >> Q;\n  vector<long long> a(N);\n  for\
@@ -47,7 +47,7 @@ data:
   isVerificationFile: true
   path: test/library_checker/point_add_range_sum.test.cpp
   requiredBy: []
-  timestamp: '2022-07-13 14:24:58+09:00'
+  timestamp: '2022-07-13 19:27:04+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/point_add_range_sum.test.cpp
