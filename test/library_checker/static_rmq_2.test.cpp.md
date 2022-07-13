@@ -18,9 +18,11 @@ data:
     \ \"https://judge.yosupo.jp/problem/staticrmq\"\n#include <bits/stdc++.h>\nusing\
     \ namespace std;\nconst int INF = 1000000000;\n#line 1 \"data_structure/sequence/sparse_table.cpp\"\
     \ntemplate <typename T>\nstruct sparse_table{\n  vector<vector<T>> ST;\n  function<T(T,\
-    \ T)> f;\n  T E;\n  sparse_table(vector<T> &A, function<T(T, T)> f, T E): f(f),\
-    \ E(E){\n    int N = A.size();\n    int LOG = 32 - __builtin_clz(N);\n    ST =\
-    \ vector<vector<int>>(LOG, vector<int>(N));\n    for (int i = 0; i < N; i++){\n\
+    \ T)> f;\n  T E;\n  sparse_table(){\n  }\n  sparse_table(int N, function<T(T,\
+    \ T)> f, T E): f(f), E(E){\n    int LOG = 32 - __builtin_clz(N);\n    ST = vector<vector<T>>(LOG,\
+    \ vector<T>(N, E));\n  }\n  sparse_table(vector<T> &A, function<T(T, T)> f, T\
+    \ E): f(f), E(E){\n    int N = A.size();\n    int LOG = 32 - __builtin_clz(N);\n\
+    \    ST = vector<vector<T>>(LOG, vector<T>(N));\n    for (int i = 0; i < N; i++){\n\
     \      ST[0][i] = A[i];\n    }\n    for (int i = 0; i < LOG - 1; i++){\n     \
     \ for (int j = 0; j < N - (1 << i); j++){\n        ST[i + 1][j] = f(ST[i][j],\
     \ ST[i][j + (1 << i)]);\n      }\n    }\n  }\n  int query(int L, int R){\n   \
@@ -41,7 +43,7 @@ data:
   isVerificationFile: true
   path: test/library_checker/static_rmq_2.test.cpp
   requiredBy: []
-  timestamp: '2022-07-13 10:15:29+09:00'
+  timestamp: '2022-07-13 13:32:09+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/static_rmq_2.test.cpp
