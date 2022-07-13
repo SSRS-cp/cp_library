@@ -14,17 +14,18 @@ data:
     , line 401, in update\n    self.update(self._resolve(pathlib.Path(included), included_from=path))\n\
     \  File \"/opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages/onlinejudge_verify/languages/cplusplus_bundle.py\"\
     , line 260, in _resolve\n    raise BundleErrorAt(path, -1, \"no such header\"\
-    )\nonlinejudge_verify.languages.cplusplus_bundle.BundleErrorAt: ../../data_structures/sequence/dual_segment_tree:\
+    )\nonlinejudge_verify.languages.cplusplus_bundle.BundleErrorAt: ../../data_structures/sequence/dual_segment_tree.cpp:\
     \ line -1: no such header\n"
   code: "#define PROBLEM \"https://judge.yosupo.jp/problem/range_affine_point_get\"\
     \n#include <bits/stdc++.h>\nusing namespace std;\nconst long long MOD = 998244353;\n\
-    #include \"../../data_structures/sequence/dual_segment_tree\"\n#include \"../../other/monoids/linear.cpp\"\
-    \nint main(){\n  int N, Q;\n  cin >> N >> Q;\n  vector<linear> a(N);\n  for (int\
-    \ i = 0; i < N; i++){\n    a[i].a = 0;\n    cin >> a[i].b;\n  }\n  dual_segment_tree<linear>\
-    \ ST(a, composite, linear());\n  for (int i = 0; i < Q; i++){\n    int t;\n  \
-    \  cin >> t;\n    if (t == 0){\n      int l, r, b, c;\n      cin >> l >> r >>\
-    \ b >> c;\n      ST.range_apply(l, r, linear(b, c));\n    }\n    if (t == 1){\n\
-    \      int p;\n      cin >> p;\n      cout << ST[p].b << endl;\n    }\n  }\n}\n"
+    #include \"../../data_structures/sequence/dual_segment_tree.cpp\"\n#include \"\
+    ../../other/monoids/linear.cpp\"\nint main(){\n  int N, Q;\n  cin >> N >> Q;\n\
+    \  vector<linear> a(N);\n  for (int i = 0; i < N; i++){\n    a[i].a = 0;\n   \
+    \ cin >> a[i].b;\n  }\n  dual_segment_tree<linear> ST(a, composite, linear());\n\
+    \  for (int i = 0; i < Q; i++){\n    int t;\n    cin >> t;\n    if (t == 0){\n\
+    \      int l, r, b, c;\n      cin >> l >> r >> b >> c;\n      ST.range_apply(l,\
+    \ r, linear(b, c));\n    }\n    if (t == 1){\n      int p;\n      cin >> p;\n\
+    \      cout << ST[p].b << endl;\n    }\n  }\n}\n"
   dependsOn: []
   isVerificationFile: true
   path: test/library_checker/range_affine_point_get.test.cpp
