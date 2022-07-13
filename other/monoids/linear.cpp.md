@@ -2,10 +2,13 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: test/library_checker/point_set_range_composite.test.cpp
+    title: test/library_checker/point_set_range_composite.test.cpp
   _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 1 \"other/monoids/linear.cpp\"\nstruct linear{\n  long long\
@@ -22,8 +25,9 @@ data:
   path: other/monoids/linear.cpp
   requiredBy: []
   timestamp: '2022-07-14 01:12:04+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - test/library_checker/point_set_range_composite.test.cpp
 documentation_of: other/monoids/linear.cpp
 layout: document
 redirect_from:

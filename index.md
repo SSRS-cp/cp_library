@@ -293,7 +293,7 @@ data:
       title: UnionFind
   - name: other/monoids
     pages:
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: other/monoids/linear.cpp
       title: other/monoids/linear.cpp
   verificationCategories:
@@ -340,6 +340,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/point_add_range_sum_3.test.cpp
       title: test/library_checker/point_add_range_sum_3.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/library_checker/point_set_range_composite.test.cpp
+      title: test/library_checker/point_set_range_composite.test.cpp
     - icon: ':heavy_check_mark:'
       path: test/library_checker/static_range_sum.test.cpp
       title: test/library_checker/static_range_sum.test.cpp
