@@ -39,3 +39,6 @@ struct dual_binary_indexed_tree{
     return ans;
   }
 };
+/**
+ * @brief Dual Binary Indexed Tree (双対 Binary Indexed Tree)
+*/
