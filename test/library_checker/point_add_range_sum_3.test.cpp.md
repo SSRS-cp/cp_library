@@ -1,14 +1,14 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: data_structure/sequence/segment_tree.cpp
     title: "Segment Tree (\u30BB\u30B0\u30E1\u30F3\u30C8\u6728)"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.yosupo.jp/problem/point_add_range_sum
@@ -35,7 +35,7 @@ data:
     \  }\n  T all(){\n    return ST[0];\n  }\n};\n/**\n * @brief Segment Tree (\u30BB\
     \u30B0\u30E1\u30F3\u30C8\u6728)\n*/\n#line 5 \"test/library_checker/point_add_range_sum_3.test.cpp\"\
     \nint main(){\n  int N, Q;\n  cin >> N >> Q;\n  vector<long long> a(N);\n  for\
-    \ (int i = 0; i < N; i++){\n    cin >> a[i];\n  }\n  segment_tree<long long> BIT(a,\
+    \ (int i = 0; i < N; i++){\n    cin >> a[i];\n  }\n  segment_tree<long long> ST(a,\
     \ plus<long long>(), 0);\n  for (int i = 0; i < Q; i++){\n    int t;\n    cin\
     \ >> t;\n    if (t == 0){\n      int p, x;\n      cin >> p >> x;\n      a[p] +=\
     \ x;\n      ST.update(p, a[p]);\n    }\n    if (t == 1){\n      int l, r;\n  \
@@ -43,7 +43,7 @@ data:
   code: "#define PROBLEM \"https://judge.yosupo.jp/problem/point_add_range_sum\"\n\
     #include <bits/stdc++.h>\nusing namespace std;\n#include \"../../data_structure/sequence/segment_tree.cpp\"\
     \nint main(){\n  int N, Q;\n  cin >> N >> Q;\n  vector<long long> a(N);\n  for\
-    \ (int i = 0; i < N; i++){\n    cin >> a[i];\n  }\n  segment_tree<long long> BIT(a,\
+    \ (int i = 0; i < N; i++){\n    cin >> a[i];\n  }\n  segment_tree<long long> ST(a,\
     \ plus<long long>(), 0);\n  for (int i = 0; i < Q; i++){\n    int t;\n    cin\
     \ >> t;\n    if (t == 0){\n      int p, x;\n      cin >> p >> x;\n      a[p] +=\
     \ x;\n      ST.update(p, a[p]);\n    }\n    if (t == 1){\n      int l, r;\n  \
@@ -53,8 +53,8 @@ data:
   isVerificationFile: true
   path: test/library_checker/point_add_range_sum_3.test.cpp
   requiredBy: []
-  timestamp: '2022-07-13 20:16:55+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2022-07-13 20:36:28+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/point_add_range_sum_3.test.cpp
 layout: document

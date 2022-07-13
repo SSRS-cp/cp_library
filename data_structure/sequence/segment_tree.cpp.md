@@ -3,15 +3,15 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/library_checker/point_add_range_sum_3.test.cpp
     title: test/library_checker/point_add_range_sum_3.test.cpp
   - icon: ':heavy_check_mark:'
     path: test/library_checker/static_rmq_3.test.cpp
     title: test/library_checker/static_rmq_3.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     document_title: "Segment Tree (\u30BB\u30B0\u30E1\u30F3\u30C8\u6728)"
     links: []
@@ -55,7 +55,7 @@ data:
   path: data_structure/sequence/segment_tree.cpp
   requiredBy: []
   timestamp: '2022-07-13 20:08:03+09:00'
-  verificationStatus: LIBRARY_SOME_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/library_checker/point_add_range_sum_3.test.cpp
   - test/library_checker/static_rmq_3.test.cpp
