@@ -10,5 +10,6 @@
 "test/library_checker/static_range_sum_2.test.cpp": "2022-07-13 07:56:49 +0900",
 "test/library_checker/static_range_sum_3.test.cpp": "2022-07-13 07:38:10 +0900",
 "test/library_checker/static_rmq.test.cpp": "2022-07-13 07:38:10 +0900",
+"test/library_checker/static_rmq_2.test.cpp": "2022-07-13 10:15:29 +0900",
 "test/library_checker/unionfind.test.cpp": "2022-07-13 03:17:37 +0900"
 }
