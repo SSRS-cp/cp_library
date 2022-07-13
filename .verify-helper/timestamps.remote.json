@@ -14,6 +14,7 @@
 "test/library_checker/static_range_sum_3.test.cpp": "2022-07-13 19:25:02 +0900",
 "test/library_checker/static_rmq.test.cpp": "2022-07-13 19:25:02 +0900",
 "test/library_checker/static_rmq_2.test.cpp": "2022-07-13 19:21:49 +0900",
+"test/library_checker/static_rmq_3.test.cpp": "2022-07-13 19:53:18 +0900",
 "test/library_checker/unionfind.test.cpp": "2022-07-13 17:02:58 +0900",
 "test/yukicoder/yuki_945_1.test.cpp": "2022-07-13 19:22:32 +0900"
 }
