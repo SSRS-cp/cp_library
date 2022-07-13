@@ -44,3 +44,6 @@ struct disjoint_sparse_table{
     }
   }
 };
+/**
+ * @brief Disjoint Sparse Table
+*/
