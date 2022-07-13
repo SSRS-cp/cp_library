@@ -6,6 +6,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/library_checker/point_set_range_composite.test.cpp
     title: test/library_checker/point_set_range_composite.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/library_checker/range_affine_point_get.test.cpp
+    title: test/library_checker/range_affine_point_get.test.cpp
   _isVerificationFailed: false
   _pathExtension: cpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -28,6 +31,7 @@ data:
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/library_checker/point_set_range_composite.test.cpp
+  - test/library_checker/range_affine_point_get.test.cpp
 documentation_of: other/monoids/linear.cpp
 layout: document
 redirect_from:

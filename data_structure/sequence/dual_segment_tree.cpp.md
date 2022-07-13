@@ -2,10 +2,13 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: test/library_checker/range_affine_point_get.test.cpp
+    title: test/library_checker/range_affine_point_get.test.cpp
   _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     document_title: "Dual Segment Tree (\u53CC\u5BFE\u30BB\u30B0\u30E1\u30F3\u30C8\
       \u6728\u3001\u3073\u30FC\u3068\u6728)"
@@ -54,8 +57,9 @@ data:
   path: data_structure/sequence/dual_segment_tree.cpp
   requiredBy: []
   timestamp: '2022-07-14 02:03:08+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - test/library_checker/range_affine_point_get.test.cpp
 documentation_of: data_structure/sequence/dual_segment_tree.cpp
 layout: document
 redirect_from:
