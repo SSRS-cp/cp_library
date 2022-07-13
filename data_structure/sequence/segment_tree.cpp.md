@@ -36,7 +36,7 @@ data:
     \  return ST[N - 1 + k];\n  }\n  void update(int k, T x){\n    k += N - 1;\n \
     \   ST[k] = x;\n    while (k > 0){\n      k = (k - 1) / 2;\n      ST[k] = f(ST[k\
     \ * 2 + 1], ST[k * 2 + 2]);\n    }\n  }\n  T query(int L, int R, int i, int l,\
-    \ int r){\n    if (R <= l || r <= L){\n      return E;\n    } else if (L <= l\
+    \ int r){\n    if (r <= L || R <= l){\n      return E;\n    } else if (L <= l\
     \ && r <= R){\n      return ST[i];\n    } else {\n      int m = (l + r) / 2;\n\
     \      return f(query(L, R, i * 2 + 1, l, m), query(L, R, i * 2 + 2, m, r));\n\
     \    }\n  }\n  T query(int L, int R){\n    return query(L, R, 0, 0, N);\n  }\n\
@@ -53,7 +53,7 @@ data:
     \ operator [](int k){\n    return ST[N - 1 + k];\n  }\n  void update(int k, T\
     \ x){\n    k += N - 1;\n    ST[k] = x;\n    while (k > 0){\n      k = (k - 1)\
     \ / 2;\n      ST[k] = f(ST[k * 2 + 1], ST[k * 2 + 2]);\n    }\n  }\n  T query(int\
-    \ L, int R, int i, int l, int r){\n    if (R <= l || r <= L){\n      return E;\n\
+    \ L, int R, int i, int l, int r){\n    if (r <= L || R <= l){\n      return E;\n\
     \    } else if (L <= l && r <= R){\n      return ST[i];\n    } else {\n      int\
     \ m = (l + r) / 2;\n      return f(query(L, R, i * 2 + 1, l, m), query(L, R, i\
     \ * 2 + 2, m, r));\n    }\n  }\n  T query(int L, int R){\n    return query(L,\
@@ -63,7 +63,7 @@ data:
   isVerificationFile: false
   path: data_structure/sequence/segment_tree.cpp
   requiredBy: []
-  timestamp: '2022-07-13 20:08:03+09:00'
+  timestamp: '2022-07-14 02:11:13+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/library_checker/point_set_range_composite.test.cpp
