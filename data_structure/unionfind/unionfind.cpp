@@ -26,3 +26,6 @@ struct unionfind{
     }
   }
 };
+/**
+ * @brief UnionFind
+*/
