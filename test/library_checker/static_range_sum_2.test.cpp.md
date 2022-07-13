@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: data_structure/sequence/invertible_cumulative_sum.cpp
-    title: data_structure/sequence/invertible_cumulative_sum.cpp
+    title: "Invertible Cumulative Sum (\u53EF\u9006\u7D2F\u7A4D\u548C)"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -23,7 +23,8 @@ data:
     \ inv, T E): f(f), inv(inv), E(E){\n    int N = A.size();\n    S = vector<T>(N\
     \ + 1);\n    S[0] = E;\n    for (int i = 0; i < N; i++){\n      S[i + 1] = f(S[i],\
     \ A[i]);\n    }\n  }\n  T get(int i){\n    return S[i];\n  }\n  T get(int l, int\
-    \ r){\n    return f(S[r], inv(S[l]));\n  }\n};\n#line 5 \"test/library_checker/static_range_sum_2.test.cpp\"\
+    \ r){\n    return f(S[r], inv(S[l]));\n  }\n};\n/**\n * @brief Invertible Cumulative\
+    \ Sum (\u53EF\u9006\u7D2F\u7A4D\u548C)\n*/\n#line 5 \"test/library_checker/static_range_sum_2.test.cpp\"\
     \nint main(){\n  int N, Q;\n  cin >> N >> Q;\n  vector<long long> a(N);\n  for\
     \ (int i = 0; i < N; i++){\n    cin >> a[i];\n  }\n  invertible_cumulative_sum<long\
     \ long> S(a, plus<long long>(), negate<long long>(), 0);\n  for (int i = 0; i\
@@ -41,7 +42,7 @@ data:
   isVerificationFile: true
   path: test/library_checker/static_range_sum_2.test.cpp
   requiredBy: []
-  timestamp: '2022-07-13 07:56:49+09:00'
+  timestamp: '2022-07-13 17:05:03+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/static_range_sum_2.test.cpp

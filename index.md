@@ -256,7 +256,7 @@ data:
       title: data_structure/sequence/binary_indexed_tree.cpp
     - icon: ':heavy_check_mark:'
       path: data_structure/sequence/cumulative_sum.cpp
-      title: data_structure/sequence/cumulative_sum.cpp
+      title: "Cumulative Sum (\u7D2F\u7A4D\u548C)"
     - icon: ':heavy_check_mark:'
       path: data_structure/sequence/disjoint_sparse_table.cpp
       title: data_structure/sequence/disjoint_sparse_table.cpp
@@ -277,7 +277,7 @@ data:
       title: data_structure/sequence/invertible_binary_indexed_tree.cpp
     - icon: ':heavy_check_mark:'
       path: data_structure/sequence/invertible_cumulative_sum.cpp
-      title: data_structure/sequence/invertible_cumulative_sum.cpp
+      title: "Invertible Cumulative Sum (\u53EF\u9006\u7D2F\u7A4D\u548C)"
     - icon: ':heavy_check_mark:'
       path: data_structure/sequence/sparse_table.cpp
       title: data_structure/sequence/sparse_table.cpp
@@ -285,7 +285,7 @@ data:
     pages:
     - icon: ':heavy_check_mark:'
       path: data_structure/unionfind/unionfind.cpp
-      title: data_structure/unionfind/unionfind.cpp
+      title: UnionFind
   verificationCategories:
   - name: test/aoj
     pages:

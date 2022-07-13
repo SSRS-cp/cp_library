@@ -13,6 +13,7 @@ data:
   _pathExtension: cpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
+    document_title: UnionFind
     links: []
   bundledCode: "#line 1 \"data_structure/unionfind/unionfind.cpp\"\nstruct unionfind{\n\
     \  vector<int> p;\n  unionfind(int N){\n    p = vector<int>(N, -1);\n  }\n  int\
@@ -20,19 +21,20 @@ data:
     \ = root(p[x]);\n      return p[x];\n    }\n  }\n  bool same(int x, int y){\n\
     \    return root(x) == root(y);\n  }\n  void unite(int x, int y){\n    x = root(x);\n\
     \    y = root(y);\n    if (x != y){\n      if (p[x] < p[y]){\n        swap(x,\
-    \ y);\n      }\n      p[y] += p[x];\n      p[x] = y;\n    }\n  }\n};\n"
+    \ y);\n      }\n      p[y] += p[x];\n      p[x] = y;\n    }\n  }\n};\n/**\n *\
+    \ @brief UnionFind\n*/\n"
   code: "struct unionfind{\n  vector<int> p;\n  unionfind(int N){\n    p = vector<int>(N,\
     \ -1);\n  }\n  int root(int x){\n    if (p[x] < 0){\n      return x;\n    } else\
     \ {\n      p[x] = root(p[x]);\n      return p[x];\n    }\n  }\n  bool same(int\
     \ x, int y){\n    return root(x) == root(y);\n  }\n  void unite(int x, int y){\n\
     \    x = root(x);\n    y = root(y);\n    if (x != y){\n      if (p[x] < p[y]){\n\
     \        swap(x, y);\n      }\n      p[y] += p[x];\n      p[x] = y;\n    }\n \
-    \ }\n};\n"
+    \ }\n};\n/**\n * @brief UnionFind\n*/\n"
   dependsOn: []
   isVerificationFile: false
   path: data_structure/unionfind/unionfind.cpp
   requiredBy: []
-  timestamp: '2022-07-13 03:15:35+09:00'
+  timestamp: '2022-07-13 17:02:58+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/library_checker/unionfind.test.cpp
@@ -42,5 +44,5 @@ layout: document
 redirect_from:
 - /library/data_structure/unionfind/unionfind.cpp
 - /library/data_structure/unionfind/unionfind.cpp.html
-title: data_structure/unionfind/unionfind.cpp
+title: UnionFind
 ---
