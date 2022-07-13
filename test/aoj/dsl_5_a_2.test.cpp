@@ -1,11 +1,11 @@
 #define PROBLEM "https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_5_A"
 #include <bits/stdc++.h>
 using namespace std;
-#include "../../data_structure/sequence/invertible_dual_binary_indexed_tree.cpp"
+#include "../../data_structure/sequence/dual_invertible_binary_indexed_tree.cpp"
 int main(){
   int N, T;
   cin >> N >> T;
-  invertible_dual_binary_indexed_tree<int> BIT(T, plus<int>(), negate<int>(), 0);
+  dual_invertible_binary_indexed_tree<int> BIT(T, plus<int>(), negate<int>(), 0);
   for (int i = 0; i < N; i++){
     int l, r;
     cin >> l >> r;
