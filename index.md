@@ -7,9 +7,6 @@ data:
       path: Data_Structures/Bidirectional_Segment_Tree.cpp
       title: Data_Structures/Bidirectional_Segment_Tree.cpp
     - icon: ':warning:'
-      path: Data_Structures/Disjoint_Sparse_Table.cpp
-      title: Data_Structures/Disjoint_Sparse_Table.cpp
-    - icon: ':warning:'
       path: Data_Structures/Euler_Tour_Path_Query.cpp
       title: Data_Structures/Euler_Tour_Path_Query.cpp
     - icon: ':warning:'
@@ -39,9 +36,6 @@ data:
     - icon: ':warning:'
       path: Data_Structures/Sliding_Window_Aggregation.cpp
       title: Data_Structures/Sliding_Window_Aggregation.cpp
-    - icon: ':warning:'
-      path: Data_Structures/Sparse_Table.cpp
-      title: Data_Structures/Sparse_Table.cpp
     - icon: ':warning:'
       path: Data_Structures/Treap.cpp
       title: Data_Structures/Treap.cpp
