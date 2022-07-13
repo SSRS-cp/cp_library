@@ -280,7 +280,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: data_structure/sequence/invertible_cumulative_sum.cpp
       title: "Invertible Cumulative Sum (\u53EF\u9006\u7D2F\u7A4D\u548C)"
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: data_structure/sequence/segment_tree.cpp
       title: data_structure/sequence/segment_tree.cpp
     - icon: ':heavy_check_mark:'
@@ -341,6 +341,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/static_rmq_2.test.cpp
       title: test/library_checker/static_rmq_2.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/library_checker/static_rmq_3.test.cpp
+      title: test/library_checker/static_rmq_3.test.cpp
     - icon: ':heavy_check_mark:'
       path: test/library_checker/unionfind.test.cpp
       title: test/library_checker/unionfind.test.cpp
