@@ -254,7 +254,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: data_structure/sequence/binary_indexed_tree.cpp
       title: Binary Indexed Tree
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: data_structure/sequence/commutative_dual_segment_tree.cpp
       title: "Commutative Dual Segment Tree (\u53EF\u63DB\u53CC\u5BFE\u30BB\u30B0\u30E1\
         \u30F3\u30C8\u6728\u3001\u3089\u3066\u6728)"
@@ -318,7 +318,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/aoj/dsl_2_b_3.test.cpp
       title: test/aoj/dsl_2_b_3.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/aoj/dsl_2_d.test.cpp
       title: test/aoj/dsl_2_d.test.cpp
     - icon: ':heavy_check_mark:'

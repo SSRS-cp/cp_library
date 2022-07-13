@@ -1,15 +1,15 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: data_structure/sequence/commutative_dual_segment_tree.cpp
     title: "Commutative Dual Segment Tree (\u53EF\u63DB\u53CC\u5BFE\u30BB\u30B0\u30E1\
       \u30F3\u30C8\u6728\u3001\u3089\u3066\u6728)"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_D
@@ -39,8 +39,7 @@ data:
     \ 2147483647));\n  for (int i = 0; i < q; i++){\n    int c;\n    cin >> c;\n \
     \   if (c == 0){\n      int s, t, x;\n      cin >> s >> t >> x;\n      t++;\n\
     \      ST.range_apply(s, t, make_pair(i, x));\n    }\n    if (c == 1){\n     \
-    \ int t;\n      cin >> t;\n      t--;\n      cout << ST[t].second << endl;\n \
-    \   }\n  }\n}\n"
+    \ int t;\n      cin >> t;\n      cout << ST[t].second << endl;\n    }\n  }\n}\n"
   code: "#define PROBLEM \"https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_D\"\
     \n#include <bits/stdc++.h>\nusing namespace std;\n#include \"../../data_structure/sequence/commutative_dual_segment_tree.cpp\"\
     \nint main(){\n  int n, q;\n  cin >> n >> q;\n  commutative_dual_segment_tree<pair<int,\
@@ -48,15 +47,14 @@ data:
     \ 2147483647));\n  for (int i = 0; i < q; i++){\n    int c;\n    cin >> c;\n \
     \   if (c == 0){\n      int s, t, x;\n      cin >> s >> t >> x;\n      t++;\n\
     \      ST.range_apply(s, t, make_pair(i, x));\n    }\n    if (c == 1){\n     \
-    \ int t;\n      cin >> t;\n      t--;\n      cout << ST[t].second << endl;\n \
-    \   }\n  }\n}\n"
+    \ int t;\n      cin >> t;\n      cout << ST[t].second << endl;\n    }\n  }\n}\n"
   dependsOn:
   - data_structure/sequence/commutative_dual_segment_tree.cpp
   isVerificationFile: true
   path: test/aoj/dsl_2_d.test.cpp
   requiredBy: []
-  timestamp: '2022-07-14 01:42:59+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2022-07-14 01:44:48+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/aoj/dsl_2_d.test.cpp
 layout: document
