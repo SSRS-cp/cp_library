@@ -3,10 +3,16 @@ struct sparse_table{
   vector<vector<T>> ST;
   function<T(T, T)> f;
   T E;
+  sparse_table(){
+  }
+  sparse_table(int N, function<T(T, T)> f, T E): f(f), E(E){
+    int LOG = 32 - __builtin_clz(N);
+    ST = vector<vector<T>>(LOG, vector<T>(N, E));
+  }
   sparse_table(vector<T> &A, function<T(T, T)> f, T E): f(f), E(E){
     int N = A.size();
     int LOG = 32 - __builtin_clz(N);
-    ST = vector<vector<int>>(LOG, vector<int>(N));
+    ST = vector<vector<T>>(LOG, vector<T>(N));
     for (int i = 0; i < N; i++){
       ST[0][i] = A[i];
     }
