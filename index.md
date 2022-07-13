@@ -274,6 +274,10 @@ data:
       path: data_structure/sequence/dual_invertible_binary_indexed_tree.cpp
       title: "Dual Invertible Binary Indexed Tree (\u53CC\u5BFE\u53EF\u9006 Binary\
         \ Indexed Tree)"
+    - icon: ':warning:'
+      path: data_structure/sequence/dual_segment_tree.cpp
+      title: "Dual Segment Tree (\u53CC\u5BFE\u30BB\u30B0\u30E1\u30F3\u30C8\u6728\u3001\
+        \u3073\u30FC\u3068\u6728)"
     - icon: ':heavy_check_mark:'
       path: data_structure/sequence/dual_sparse_table.cpp
       title: "Dual Sparse Table (\u53CC\u5BFE\u30B9\u30D1\u30FC\u30B9\u30C6\u30FC\u30D6\
