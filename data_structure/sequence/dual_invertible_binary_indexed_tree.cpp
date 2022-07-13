@@ -44,3 +44,6 @@ struct dual_invertible_binary_indexed_tree{
     return ans;
   }
 };
+/**
+ * @brief Dual Invertible Binary Indexed Tree (双対可逆 Binary Indexed Tree)
+*/
