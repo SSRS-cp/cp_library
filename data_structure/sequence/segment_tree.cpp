@@ -37,7 +37,7 @@ struct segment_tree{
     }
   }
   T query(int L, int R, int i, int l, int r){
-    if (R <= l || r <= L){
+    if (r <= L || R <= l){
       return E;
     } else if (L <= l && r <= R){
       return ST[i];
