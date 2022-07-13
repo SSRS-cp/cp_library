@@ -14,10 +14,10 @@ data:
     , line 401, in update\n    self.update(self._resolve(pathlib.Path(included), included_from=path))\n\
     \  File \"/opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages/onlinejudge_verify/languages/cplusplus_bundle.py\"\
     , line 260, in _resolve\n    raise BundleErrorAt(path, -1, \"no such header\"\
-    )\nonlinejudge_verify.languages.cplusplus_bundle.BundleErrorAt: ../../data_structures/sequence/commutative_dual_segment_tree:\
+    )\nonlinejudge_verify.languages.cplusplus_bundle.BundleErrorAt: ../../data_structure/sequence/commutative_dual_segment_tree:\
     \ line -1: no such header\n"
   code: "#define PROBLEM \"https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_E\"\
-    \n#include <bits/stdc++.h>\nusing namespace std;\n#include \"../../data_structures/sequence/commutative_dual_segment_tree\"\
+    \n#include <bits/stdc++.h>\nusing namespace std;\n#include \"../../data_structure/sequence/commutative_dual_segment_tree\"\
     \nint main(){\n  int n, q;\n  cin >> n >> q;\n  commutative_dual_segment_tree<int>\
     \ ST(n, plus<int>(), 0);\n  for (int i = 0; i < q; i++){\n    int c;\n    cin\
     \ >> c;\n    if (c == 0){\n      int s, t, x;\n      cin >> s >> t >> x;\n   \
