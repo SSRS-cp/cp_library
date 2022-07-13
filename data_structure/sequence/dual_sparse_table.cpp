@@ -35,3 +35,6 @@ struct dual_sparse_table{
     return ST[0];
   }
 };
+/**
+ * @brief Dual Sparse Table (双対スパーステーブル)
+*/
