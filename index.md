@@ -260,7 +260,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: data_structure/sequence/disjoint_sparse_table.cpp
       title: data_structure/sequence/disjoint_sparse_table.cpp
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: data_structure/sequence/dual_binary_indexed_tree.cpp
       title: data_structure/sequence/dual_binary_indexed_tree.cpp
     - icon: ':heavy_check_mark:'
@@ -298,9 +298,12 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/aoj/dsl_2_e_2.test.cpp
       title: test/aoj/dsl_2_e_2.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/aoj/dsl_5_a.test.cpp
       title: test/aoj/dsl_5_a.test.cpp
+    - icon: ':x:'
+      path: test/aoj/dsl_5_a_2.test.cpp
+      title: test/aoj/dsl_5_a_2.test.cpp
   - name: test/library_checker
     pages:
     - icon: ':heavy_check_mark:'
