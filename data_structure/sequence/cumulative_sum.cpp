@@ -17,3 +17,6 @@ struct cumulative_sum{
     return S[i];
   }
 };
+/**
+ * @brief 累積和
+*/
