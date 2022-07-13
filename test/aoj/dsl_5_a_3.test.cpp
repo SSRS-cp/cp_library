@@ -2,7 +2,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 #include "../../data_structure/sequence/dual_disjoint_sparse_table.cpp"
- int main(){
+int main(){
   int N, T;
   cin >> N >> T;
   dual_disjoint_sparse_table<int> DST(T, plus<int>(), 0);
