@@ -18,5 +18,5 @@ struct cumulative_sum{
   }
 };
 /**
- * @brief 累積和
+ * @brief Cumulative Sum (累積和)
 */
