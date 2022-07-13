@@ -34,3 +34,6 @@ struct binary_indexed_tree{
     return ans;
   }
 };
+/**
+ * @brief Binary Indexed Tree
+*/
