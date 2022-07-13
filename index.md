@@ -291,6 +291,11 @@ data:
     - icon: ':heavy_check_mark:'
       path: data_structure/unionfind/unionfind.cpp
       title: UnionFind
+  - name: other/monoids
+    pages:
+    - icon: ':warning:'
+      path: other/monoids/linear.cpp
+      title: other/monoids/linear.cpp
   verificationCategories:
   - name: test/aoj
     pages:
