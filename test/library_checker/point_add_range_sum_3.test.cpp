@@ -9,7 +9,7 @@ int main(){
   for (int i = 0; i < N; i++){
     cin >> a[i];
   }
-  segment_tree<long long> BIT(a, plus<long long>(), 0);
+  segment_tree<long long> ST(a, plus<long long>(), 0);
   for (int i = 0; i < Q; i++){
     int t;
     cin >> t;
