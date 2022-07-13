@@ -30,3 +30,6 @@ struct sparse_table{
     return f(ST[d][L], ST[d][R - (1 << d)]);
   }
 };
+/**
+ * @brief Sparse Table (スパーステーブル)
+*/
