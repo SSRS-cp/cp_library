@@ -21,3 +21,6 @@ struct invertible_cumulative_sum{
     return f(S[r], inv(S[l]));
   }
 };
+/**
+ * @brief 可逆累積和
+*/
