@@ -278,6 +278,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: data_structure/sequence/invertible_dual_binary_indexed_tree.cpp
       title: data_structure/sequence/invertible_dual_binary_indexed_tree.cpp
+    - icon: ':warning:'
+      path: data_structure/sequence/sparse_table.cpp
+      title: data_structure/sequence/sparse_table.cpp
   - name: data_structure/unionfind
     pages:
     - icon: ':heavy_check_mark:'
