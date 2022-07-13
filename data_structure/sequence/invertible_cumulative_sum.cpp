@@ -22,5 +22,5 @@ struct invertible_cumulative_sum{
   }
 };
 /**
- * @brief 可逆累積和
+ * @brief Invertible Cumulative Sum (可逆累積和)
 */
