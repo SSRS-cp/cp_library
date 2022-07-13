@@ -12,6 +12,7 @@
 "test/library_checker/point_add_range_sum.test.cpp": "2022-07-13 19:27:04 +0900",
 "test/library_checker/point_add_range_sum_2.test.cpp": "2022-07-13 19:27:46 +0900",
 "test/library_checker/point_add_range_sum_3.test.cpp": "2022-07-13 20:36:28 +0900",
+"test/library_checker/point_set_range_composite.test.cpp": "2022-07-14 01:15:13 +0900",
 "test/library_checker/static_range_sum.test.cpp": "2022-07-13 17:04:39 +0900",
 "test/library_checker/static_range_sum_2.test.cpp": "2022-07-13 17:05:03 +0900",
 "test/library_checker/static_range_sum_3.test.cpp": "2022-07-13 19:25:02 +0900",
