@@ -16,7 +16,7 @@ struct sparse_table{
       }
     }
   }
-  int range_min(int L, int R){
+  int query(int L, int R){
     if (L == R){
       return E;
     }
