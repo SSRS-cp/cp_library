@@ -39,7 +39,7 @@ struct dual_invertible_binary_indexed_tree{
   vector<T> get(){
     vector<T> ans = BIT;
     for (int i = N - 1; i >= 1; i--){
-      BIT[i + (i & -i)] = f(BIT[i + (i & -i)], inv(BIT[i]));
+      ans[i + (i & -i)] = f(ans[i + (i & -i)], inv(ans[i]));
     }
     ans.erase(ans.begin());
     return ans;
