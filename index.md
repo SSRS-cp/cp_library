@@ -301,7 +301,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/aoj/dsl_5_a.test.cpp
       title: test/aoj/dsl_5_a.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/aoj/dsl_5_a_2.test.cpp
       title: test/aoj/dsl_5_a_2.test.cpp
   - name: test/library_checker
