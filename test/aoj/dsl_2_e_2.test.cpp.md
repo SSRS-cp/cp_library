@@ -50,7 +50,7 @@ data:
   isVerificationFile: true
   path: test/aoj/dsl_2_e_2.test.cpp
   requiredBy: []
-  timestamp: '2022-07-13 14:22:16+09:00'
+  timestamp: '2022-07-13 14:26:13+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/aoj/dsl_2_e_2.test.cpp
