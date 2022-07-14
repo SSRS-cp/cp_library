@@ -16,6 +16,7 @@
 "test/aoj/dsl_5_a.test.cpp": "2022-07-13 19:28:32 +0900",
 "test/aoj/dsl_5_a_2.test.cpp": "2022-07-13 19:29:34 +0900",
 "test/aoj/dsl_5_a_3.test.cpp": "2022-07-13 19:25:51 +0900",
+"test/library_checker/cartesian_tree.test.cpp": "2022-07-15 08:37:31 +0900",
 "test/library_checker/lowest_common_ancestor.test.cpp": "2022-07-15 08:15:48 +0900",
 "test/library_checker/point_add_range_sum.test.cpp": "2022-07-13 19:27:04 +0900",
 "test/library_checker/point_add_range_sum_2.test.cpp": "2022-07-13 19:27:46 +0900",
