@@ -42,4 +42,21 @@ struct heavy_light_decomposition{
       v = p[next[v]];
     }
   }
+  int dist(int u, int v){
+    int ans = 0;
+    while (true){
+      if (in[u] > in[v]){
+        swap(u, v);
+      }
+      if (next[u] == next[v]){
+        ans += in[v] - in[u];
+        return ans;
+      }
+      ans += in[v] - in[next[v]] + 1;
+      v = p[next[v]];
+    }
+  }
 };
+/**
+ * @brief 重軽分解
+*/
