@@ -3,7 +3,7 @@ struct sliding_window_aggregation{
   function<T(T, T)> f;
   T E;
   stack<pair<T, T>> fr, bk;
-  swag(function<T(T, T)> f, T E): f(f), E(E){
+  sliding_window_aggregation(function<T(T, T)> f, T E): f(f), E(E){
   }
   void push(T x){
     if (fr.empty()){
@@ -38,3 +38,6 @@ struct sliding_window_aggregation{
     return f(ans2, ans1);
   }
 };
+/**
+ * @brief Sliding Window Aggregation
+*/
