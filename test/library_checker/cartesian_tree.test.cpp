@@ -9,7 +9,7 @@ int main(){
   for (int i = 0; i < N; i++){
     cin >> a[i];
   }
-  vector<int> p = cartesian_tree(a);
+  vector<int> p = cartesian_tree_min(a);
   for (int i = 0; i < N; i++){
     if (p[i] == -1){
       cout << i;
