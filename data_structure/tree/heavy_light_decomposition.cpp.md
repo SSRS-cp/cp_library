@@ -4,6 +4,9 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
+    path: test/aoj/2667.test.cpp
+    title: test/aoj/2667.test.cpp
+  - icon: ':heavy_check_mark:'
     path: test/library_checker/lowest_common_ancestor.test.cpp
     title: test/library_checker/lowest_common_ancestor.test.cpp
   _isVerificationFailed: false
@@ -55,6 +58,7 @@ data:
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/library_checker/lowest_common_ancestor.test.cpp
+  - test/aoj/2667.test.cpp
 documentation_of: data_structure/tree/heavy_light_decomposition.cpp
 layout: document
 redirect_from:
