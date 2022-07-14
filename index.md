@@ -25,17 +25,8 @@ data:
       path: Data_Structures/Inversion_Number.cpp
       title: Data_Structures/Inversion_Number.cpp
     - icon: ':warning:'
-      path: Data_Structures/Lazy_Segment_Tree.cpp
-      title: Data_Structures/Lazy_Segment_Tree.cpp
-    - icon: ':warning:'
-      path: Data_Structures/Segment_Tree.cpp
-      title: Data_Structures/Segment_Tree.cpp
-    - icon: ':warning:'
       path: Data_Structures/Segment_Tree_Beats.cpp
       title: Data_Structures/Segment_Tree_Beats.cpp
-    - icon: ':warning:'
-      path: Data_Structures/Sliding_Window_Aggregation.cpp
-      title: Data_Structures/Sliding_Window_Aggregation.cpp
     - icon: ':warning:'
       path: Data_Structures/Treap.cpp
       title: Data_Structures/Treap.cpp
