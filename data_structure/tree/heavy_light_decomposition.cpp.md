@@ -10,6 +10,7 @@ data:
   _pathExtension: cpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
+    document_title: "\u91CD\u8EFD\u5206\u89E3"
     links: []
   bundledCode: "#line 1 \"data_structure/tree/heavy_light_decomposition.cpp\"\nstruct\
     \ heavy_light_decomposition{\n  vector<int> p, sz, in, next;\n  void dfs1(vector<vector<int>>\
@@ -23,7 +24,12 @@ data:
     \ dfs1(c, r);\n    in = vector<int>(N);\n    next = vector<int>(N, r);\n    int\
     \ t = 0;\n    dfs2(c, t, r);\n  }\n  int lca(int u, int v){\n    while (true){\n\
     \      if (in[u] > in[v]){\n        swap(u, v);\n      }\n      if (next[u] ==\
-    \ next[v]){\n        return u;\n      }\n      v = p[next[v]];\n    }\n  }\n};\n"
+    \ next[v]){\n        return u;\n      }\n      v = p[next[v]];\n    }\n  }\n \
+    \ int dist(int u, int v){\n    int ans = 0;\n    while (true){\n      if (in[u]\
+    \ > in[v]){\n        swap(u, v);\n      }\n      if (next[u] == next[v]){\n  \
+    \      ans += in[v] - in[u];\n        return ans;\n      }\n      ans += in[v]\
+    \ - in[next[v]] + 1;\n      v = p[next[v]];\n    }\n  }\n};\n/**\n * @brief \u91CD\
+    \u8EFD\u5206\u89E3\n*/\n"
   code: "struct heavy_light_decomposition{\n  vector<int> p, sz, in, next;\n  void\
     \ dfs1(vector<vector<int>> &c, int v){\n    sz[v] = 1;\n    for (int &w : c[v]){\n\
     \      dfs1(c, w);\n      sz[v] += sz[w];\n      if (sz[w] > sz[c[v][0]]){\n \
@@ -36,12 +42,16 @@ data:
     \ r);\n    int t = 0;\n    dfs2(c, t, r);\n  }\n  int lca(int u, int v){\n   \
     \ while (true){\n      if (in[u] > in[v]){\n        swap(u, v);\n      }\n   \
     \   if (next[u] == next[v]){\n        return u;\n      }\n      v = p[next[v]];\n\
-    \    }\n  }\n};\n"
+    \    }\n  }\n  int dist(int u, int v){\n    int ans = 0;\n    while (true){\n\
+    \      if (in[u] > in[v]){\n        swap(u, v);\n      }\n      if (next[u] ==\
+    \ next[v]){\n        ans += in[v] - in[u];\n        return ans;\n      }\n   \
+    \   ans += in[v] - in[next[v]] + 1;\n      v = p[next[v]];\n    }\n  }\n};\n/**\n\
+    \ * @brief \u91CD\u8EFD\u5206\u89E3\n*/\n"
   dependsOn: []
   isVerificationFile: false
   path: data_structure/tree/heavy_light_decomposition.cpp
   requiredBy: []
-  timestamp: '2022-07-15 08:05:36+09:00'
+  timestamp: '2022-07-15 08:15:48+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/library_checker/lowest_common_ancestor.test.cpp
@@ -50,5 +60,5 @@ layout: document
 redirect_from:
 - /library/data_structure/tree/heavy_light_decomposition.cpp
 - /library/data_structure/tree/heavy_light_decomposition.cpp.html
-title: data_structure/tree/heavy_light_decomposition.cpp
+title: "\u91CD\u8EFD\u5206\u89E3"
 ---

@@ -307,7 +307,7 @@ data:
     pages:
     - icon: ':heavy_check_mark:'
       path: data_structure/tree/heavy_light_decomposition.cpp
-      title: data_structure/tree/heavy_light_decomposition.cpp
+      title: "\u91CD\u8EFD\u5206\u89E3"
   - name: data_structure/unionfind
     pages:
     - icon: ':heavy_check_mark:'
@@ -324,6 +324,9 @@ data:
   verificationCategories:
   - name: test/aoj
     pages:
+    - icon: ':x:'
+      path: test/aoj/2667.test.cpp
+      title: test/aoj/2667.test.cpp
     - icon: ':heavy_check_mark:'
       path: test/aoj/dsl_1_a.test.cpp
       title: test/aoj/dsl_1_a.test.cpp
