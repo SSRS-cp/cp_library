@@ -3,15 +3,15 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/aoj/dsl_2_h.test.cpp
     title: test/aoj/dsl_2_h.test.cpp
   - icon: ':heavy_check_mark:'
     path: test/library_checker/range_affine_range_sum.test.cpp
     title: test/library_checker/range_affine_range_sum.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     document_title: "Lazy Segment Tree (\u9045\u5EF6\u30BB\u30B0\u30E1\u30F3\u30C8\
       \u6728)"
@@ -81,7 +81,7 @@ data:
   path: data_structure/sequence/lazy_segment_tree.cpp
   requiredBy: []
   timestamp: '2022-07-14 02:35:57+09:00'
-  verificationStatus: LIBRARY_SOME_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/library_checker/range_affine_range_sum.test.cpp
   - test/aoj/dsl_2_h.test.cpp
