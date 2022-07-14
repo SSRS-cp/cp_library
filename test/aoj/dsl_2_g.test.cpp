@@ -24,7 +24,7 @@ int main(){
     b.sum += (long long) a * b.cnt;
     return b;
   };
-  lazy_segment_tree<monoid, int> ST(n, op, mp, plus<int>(), monoid(), 0);
+  lazy_segment_tree<monoid, int> ST(A, op, mp, plus<int>(), monoid(), 0);
   for (int i = 0; i < q; i++){
     int c;
     cin >> c;
