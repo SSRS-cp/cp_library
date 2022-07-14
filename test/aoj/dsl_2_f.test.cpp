@@ -6,7 +6,6 @@ const int INF = 2147483647;
 int main(){
   int n, q;
   cin >> n >> q;
-  vector<int> a(n, 0);
   function<int(int, int)> op = [](int a, int b){
     return min(a, b);
   };
@@ -24,7 +23,7 @@ int main(){
       return b;
     }
   };
-  lazy_segment_tree<int, int> ST(a, op, mp, comp, INF, -1);
+  lazy_segment_tree<int, int> ST(n, op, mp, comp, INF, -1);
   for (int i = 0; i < q; i++){
     int c;
     cin >> c;
