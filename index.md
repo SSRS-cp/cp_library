@@ -249,6 +249,11 @@ data:
     - icon: ':warning:'
       path: String/Z-algorithm.cpp
       title: String/Z-algorithm.cpp
+  - name: data_structure/other
+    pages:
+    - icon: ':warning:'
+      path: data_structure/other/cartesian_tree_min.cpp
+      title: data_structure/other/cartesian_tree_min.cpp
   - name: data_structure/sequence
     pages:
     - icon: ':heavy_check_mark:'
