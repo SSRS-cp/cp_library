@@ -303,6 +303,11 @@ data:
     - icon: ':heavy_check_mark:'
       path: data_structure/sequence/xor_segment_tree.cpp
       title: "XOR Segment Tree (XOR \u30BB\u30B0\u30E1\u30F3\u30C8\u6728)"
+  - name: data_structure/tree
+    pages:
+    - icon: ':warning:'
+      path: data_structure/tree/heavy_light_decomposition.cpp
+      title: data_structure/tree/heavy_light_decomposition.cpp
   - name: data_structure/unionfind
     pages:
     - icon: ':heavy_check_mark:'
