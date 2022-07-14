@@ -294,7 +294,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: data_structure/sequence/segment_tree.cpp
       title: "Segment Tree (\u30BB\u30B0\u30E1\u30F3\u30C8\u6728)"
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: data_structure/sequence/segment_tree_beats.cpp
       title: data_structure/sequence/segment_tree_beats.cpp
     - icon: ':heavy_check_mark:'
@@ -387,6 +387,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/range_affine_range_sum.test.cpp
       title: test/library_checker/range_affine_range_sum.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/library_checker/range_chmin_chmax_add_range_sum.test.cpp
+      title: test/library_checker/range_chmin_chmax_add_range_sum.test.cpp
     - icon: ':heavy_check_mark:'
       path: test/library_checker/static_range_sum.test.cpp
       title: test/library_checker/static_range_sum.test.cpp
