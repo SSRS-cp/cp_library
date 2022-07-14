@@ -47,7 +47,7 @@ data:
     \u30B0\u30E1\u30F3\u30C8\u6728)\n*/\n#line 5 \"test/aoj/dsl_2_g.test.cpp\"\nstruct\
     \ monoid{\n  int cnt;\n  long long sum;\n  monoid(): cnt(0), sum(0){\n  }\n};\n\
     int main(){\n  int n, q;\n  cin >> n >> q;\n  vector<monoid> A(n);\n  for (int\
-    \ i = 0; i < n; i++){\n    A[i].cnt = 0;\n  }\n  function<monoid(monoid, monoid)>\
+    \ i = 0; i < n; i++){\n    A[i].cnt = 1;\n  }\n  function<monoid(monoid, monoid)>\
     \ op = [](monoid a, monoid b){\n    a.cnt += b.cnt;\n    a.sum += b.sum;\n   \
     \ return a;\n  };\n  function<monoid(int, monoid)> mp = [](int a, monoid b){\n\
     \    b.sum += (long long) a * b.cnt;\n    return b;\n  };\n  lazy_segment_tree<monoid,\
@@ -60,7 +60,7 @@ data:
     \n#include <bits/stdc++.h>\nusing namespace std;\n#include \"../../data_structure/sequence/lazy_segment_tree.cpp\"\
     \nstruct monoid{\n  int cnt;\n  long long sum;\n  monoid(): cnt(0), sum(0){\n\
     \  }\n};\nint main(){\n  int n, q;\n  cin >> n >> q;\n  vector<monoid> A(n);\n\
-    \  for (int i = 0; i < n; i++){\n    A[i].cnt = 0;\n  }\n  function<monoid(monoid,\
+    \  for (int i = 0; i < n; i++){\n    A[i].cnt = 1;\n  }\n  function<monoid(monoid,\
     \ monoid)> op = [](monoid a, monoid b){\n    a.cnt += b.cnt;\n    a.sum += b.sum;\n\
     \    return a;\n  };\n  function<monoid(int, monoid)> mp = [](int a, monoid b){\n\
     \    b.sum += (long long) a * b.cnt;\n    return b;\n  };\n  lazy_segment_tree<monoid,\
@@ -74,7 +74,7 @@ data:
   isVerificationFile: true
   path: test/aoj/dsl_2_g.test.cpp
   requiredBy: []
-  timestamp: '2022-07-14 12:49:31+09:00'
+  timestamp: '2022-07-14 12:51:17+09:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/aoj/dsl_2_g.test.cpp
