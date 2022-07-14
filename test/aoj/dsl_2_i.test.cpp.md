@@ -55,8 +55,8 @@ data:
     \      return a;\n    } else {\n      return b;\n    }\n  };\n  lazy_segment_tree<monoid,\
     \ int> ST(A, op, mp, comp, monoid(), -1);\n  for (int i = 0; i < q; i++){\n  \
     \  int c;\n    cin >> c;\n    if (c == 0){\n      int s, t, x;\n      cin >> s\
-    \ >> t >> x;\n      s--;\n      ST.range_apply(s, t, x);\n    }\n    if (c ==\
-    \ 1){\n      int s, t;\n      cin >> s >> t;\n      s--;\n      cout << ST.range_fold(s,\
+    \ >> t >> x;\n      t++;\n      ST.range_apply(s, t, x);\n    }\n    if (c ==\
+    \ 1){\n      int s, t;\n      cin >> s >> t;\n      t++;\n      cout << ST.range_fold(s,\
     \ t).sum << endl;\n    }\n  }\n}\n"
   code: "#define PROBLEM \"https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_I\"\
     \n#include <bits/stdc++.h>\nusing namespace std;\n#include \"../../data_structure/sequence/lazy_segment_tree.cpp\"\
@@ -70,15 +70,15 @@ data:
     \      return a;\n    } else {\n      return b;\n    }\n  };\n  lazy_segment_tree<monoid,\
     \ int> ST(A, op, mp, comp, monoid(), -1);\n  for (int i = 0; i < q; i++){\n  \
     \  int c;\n    cin >> c;\n    if (c == 0){\n      int s, t, x;\n      cin >> s\
-    \ >> t >> x;\n      s--;\n      ST.range_apply(s, t, x);\n    }\n    if (c ==\
-    \ 1){\n      int s, t;\n      cin >> s >> t;\n      s--;\n      cout << ST.range_fold(s,\
+    \ >> t >> x;\n      t++;\n      ST.range_apply(s, t, x);\n    }\n    if (c ==\
+    \ 1){\n      int s, t;\n      cin >> s >> t;\n      t++;\n      cout << ST.range_fold(s,\
     \ t).sum << endl;\n    }\n  }\n}\n"
   dependsOn:
   - data_structure/sequence/lazy_segment_tree.cpp
   isVerificationFile: true
   path: test/aoj/dsl_2_i.test.cpp
   requiredBy: []
-  timestamp: '2022-07-14 12:57:56+09:00'
+  timestamp: '2022-07-14 13:00:37+09:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/aoj/dsl_2_i.test.cpp
