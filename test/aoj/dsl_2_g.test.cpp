@@ -13,7 +13,7 @@ int main(){
   cin >> n >> q;
   vector<monoid> A(n);
   for (int i = 0; i < n; i++){
-    A[i].cnt = 0;
+    A[i].cnt = 1;
   }
   function<monoid(monoid, monoid)> op = [](monoid a, monoid b){
     a.cnt += b.cnt;
