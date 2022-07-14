@@ -7,7 +7,7 @@ const long long MOD = 998244353;
 int main(){
   int Q;
   cin >> Q;
-  swag<linear> S(composite, linear());
+  sliding_window_aggregation<linear> S(composite, linear());
   for (int i = 0; i < Q; i++){
     int t;
     cin >> t;
