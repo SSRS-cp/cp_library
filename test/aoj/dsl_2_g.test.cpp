@@ -8,7 +8,7 @@ struct monoid{
   long long sum;
   monoid(): cnt(0), sum(0){
   }
-}
+};
 int main(){
   int n, q;
   cin >> n >> q;
@@ -24,7 +24,7 @@ int main(){
   function<monoid(int, monoid)> mp = [](int a, monoid b){
     b.sum += (long long) a * b.cnt;
     return b;
-  }
+  };
   lazy_segment_tree<monoid, int> ST(n, op, mp, plus<int>(), monoid(), 0);
   for (int i = 0; i < q; i++){
     int c;
