@@ -49,21 +49,21 @@ data:
     \ main(){\n  int n, q;\n  cin >> n >> q;\n  vector<int> a(n, 0);\n  function<int(int,\
     \ int)> op = [](int a, int b){\n    return min(a, b);\n  };\n  function<int(int,\
     \ int)> mp = [](int a, int b){\n    if (a == -1){\n      return b;\n    } else\
-    \ {\n      return a;\n    }\n  }\n  function<int(int, int)> comp = [](int a, int\
-    \ b){\n    if (b == -1){\n      return a;\n    } else {\n      return b;\n   \
-    \ }\n  }\n  lazy_segment_tree<int, int> ST(a, op, mp, comp, INF, -1);\n  for (int\
-    \ i = 0; i < q; i++){\n    int c;\n    cin >> c;\n    if (c == 0){\n      int\
-    \ s, t, x;\n      cin >> s >> t >> x;\n      t++;\n      ST.range_apply(s, t,\
-    \ x);\n    }\n    if (c == 1){\n      int s, t;\n      cin >> s >> t;\n      t++;\n\
-    \      cout << ST.range_fold(s, t) << endl;\n    }\n  }\n}\n"
+    \ {\n      return a;\n    }\n  };\n  function<int(int, int)> comp = [](int a,\
+    \ int b){\n    if (b == -1){\n      return a;\n    } else {\n      return b;\n\
+    \    }\n  };\n  lazy_segment_tree<int, int> ST(a, op, mp, comp, INF, -1);\n  for\
+    \ (int i = 0; i < q; i++){\n    int c;\n    cin >> c;\n    if (c == 0){\n    \
+    \  int s, t, x;\n      cin >> s >> t >> x;\n      t++;\n      ST.range_apply(s,\
+    \ t, x);\n    }\n    if (c == 1){\n      int s, t;\n      cin >> s >> t;\n   \
+    \   t++;\n      cout << ST.range_fold(s, t) << endl;\n    }\n  }\n}\n"
   code: "#define PROBLEM \"https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_F\"\
     \n#include <bits/stdc++.h>\nusing namespace std;\nconst int INF = 2147483647;\n\
     #include \"../../data_structure/sequence/lazy_segment_tree.cpp\"\nint main(){\n\
     \  int n, q;\n  cin >> n >> q;\n  vector<int> a(n, 0);\n  function<int(int, int)>\
     \ op = [](int a, int b){\n    return min(a, b);\n  };\n  function<int(int, int)>\
     \ mp = [](int a, int b){\n    if (a == -1){\n      return b;\n    } else {\n \
-    \     return a;\n    }\n  }\n  function<int(int, int)> comp = [](int a, int b){\n\
-    \    if (b == -1){\n      return a;\n    } else {\n      return b;\n    }\n  }\n\
+    \     return a;\n    }\n  };\n  function<int(int, int)> comp = [](int a, int b){\n\
+    \    if (b == -1){\n      return a;\n    } else {\n      return b;\n    }\n  };\n\
     \  lazy_segment_tree<int, int> ST(a, op, mp, comp, INF, -1);\n  for (int i = 0;\
     \ i < q; i++){\n    int c;\n    cin >> c;\n    if (c == 0){\n      int s, t, x;\n\
     \      cin >> s >> t >> x;\n      t++;\n      ST.range_apply(s, t, x);\n    }\n\
@@ -74,7 +74,7 @@ data:
   isVerificationFile: true
   path: test/aoj/dsl_2_f.test.cpp
   requiredBy: []
-  timestamp: '2022-07-14 10:15:39+09:00'
+  timestamp: '2022-07-14 10:18:22+09:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/aoj/dsl_2_f.test.cpp
