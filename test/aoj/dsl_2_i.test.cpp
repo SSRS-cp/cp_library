@@ -40,13 +40,13 @@ int main(){
     if (c == 0){
       int s, t, x;
       cin >> s >> t >> x;
-      s--;
+      t++;
       ST.range_apply(s, t, x);
     }
     if (c == 1){
       int s, t;
       cin >> s >> t;
-      s--;
+      t++;
       cout << ST.range_fold(s, t).sum << endl;
     }
   }
