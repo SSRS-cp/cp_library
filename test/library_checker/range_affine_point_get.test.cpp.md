@@ -5,7 +5,7 @@ data:
     path: data_structure/sequence/dual_segment_tree.cpp
     title: "Dual Segment Tree (\u53CC\u5BFE\u30BB\u30B0\u30E1\u30F3\u30C8\u6728\u3001\
       \u3073\u30FC\u3068\u6728)"
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: other/monoids/linear.cpp
     title: other/monoids/linear.cpp
   _extendedRequiredBy: []

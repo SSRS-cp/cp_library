@@ -7,7 +7,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: other/monoids/affine_sum.cpp
     title: other/monoids/affine_sum.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: other/monoids/linear.cpp
     title: other/monoids/linear.cpp
   _extendedRequiredBy: []

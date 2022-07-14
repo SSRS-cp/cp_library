@@ -254,7 +254,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: data_structure/other/cartesian_tree_min.cpp
       title: data_structure/other/cartesian_tree_min.cpp
-    - icon: ':warning:'
+    - icon: ':x:'
       path: data_structure/other/sliding_window_aggregation.cpp
       title: data_structure/other/sliding_window_aggregation.cpp
   - name: data_structure/sequence
@@ -326,7 +326,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: other/monoids/affine_sum.cpp
       title: other/monoids/affine_sum.cpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: other/monoids/linear.cpp
       title: other/monoids/linear.cpp
   verificationCategories:
@@ -403,6 +403,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/point_set_range_composite.test.cpp
       title: test/library_checker/point_set_range_composite.test.cpp
+    - icon: ':x:'
+      path: test/library_checker/queue_operate_all_composite.test.cpp
+      title: test/library_checker/queue_operate_all_composite.test.cpp
     - icon: ':heavy_check_mark:'
       path: test/library_checker/range_affine_point_get.test.cpp
       title: test/library_checker/range_affine_point_get.test.cpp

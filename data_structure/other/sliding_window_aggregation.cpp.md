@@ -2,10 +2,13 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _extendedVerifiedWith:
+  - icon: ':x:'
+    path: test/library_checker/queue_operate_all_composite.test.cpp
+    title: test/library_checker/queue_operate_all_composite.test.cpp
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links: []
   bundledCode: "#line 1 \"data_structure/other/sliding_window_aggregation.cpp\"\n\
@@ -36,8 +39,9 @@ data:
   path: data_structure/other/sliding_window_aggregation.cpp
   requiredBy: []
   timestamp: '2022-07-15 08:38:05+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_WA
+  verifiedWith:
+  - test/library_checker/queue_operate_all_composite.test.cpp
 documentation_of: data_structure/other/sliding_window_aggregation.cpp
 layout: document
 redirect_from:
