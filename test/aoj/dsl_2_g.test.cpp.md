@@ -1,14 +1,14 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: data_structure/sequence/lazy_segment_tree.cpp
     title: "Lazy Segment Tree (\u9045\u5EF6\u30BB\u30B0\u30E1\u30F3\u30C8\u6728)"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_G
@@ -51,7 +51,7 @@ data:
     \ op = [](monoid a, monoid b){\n    a.cnt += b.cnt;\n    a.sum += b.sum;\n   \
     \ return a;\n  };\n  function<monoid(int, monoid)> mp = [](int a, monoid b){\n\
     \    b.sum += (long long) a * b.cnt;\n    return b;\n  };\n  lazy_segment_tree<monoid,\
-    \ int> ST(n, op, mp, plus<int>(), monoid(), 0);\n  for (int i = 0; i < q; i++){\n\
+    \ int> ST(A, op, mp, plus<int>(), monoid(), 0);\n  for (int i = 0; i < q; i++){\n\
     \    int c;\n    cin >> c;\n    if (c == 0){\n      int s, t, x;\n      cin >>\
     \ s >> t >> x;\n      s--;\n      ST.range_apply(s, t, x);\n    }\n    if (c ==\
     \ 1){\n      int s, t;\n      cin >> s >> t;\n      s--;\n      cout << ST.range_fold(s,\
@@ -64,7 +64,7 @@ data:
     \ monoid)> op = [](monoid a, monoid b){\n    a.cnt += b.cnt;\n    a.sum += b.sum;\n\
     \    return a;\n  };\n  function<monoid(int, monoid)> mp = [](int a, monoid b){\n\
     \    b.sum += (long long) a * b.cnt;\n    return b;\n  };\n  lazy_segment_tree<monoid,\
-    \ int> ST(n, op, mp, plus<int>(), monoid(), 0);\n  for (int i = 0; i < q; i++){\n\
+    \ int> ST(A, op, mp, plus<int>(), monoid(), 0);\n  for (int i = 0; i < q; i++){\n\
     \    int c;\n    cin >> c;\n    if (c == 0){\n      int s, t, x;\n      cin >>\
     \ s >> t >> x;\n      s--;\n      ST.range_apply(s, t, x);\n    }\n    if (c ==\
     \ 1){\n      int s, t;\n      cin >> s >> t;\n      s--;\n      cout << ST.range_fold(s,\
@@ -74,8 +74,8 @@ data:
   isVerificationFile: true
   path: test/aoj/dsl_2_g.test.cpp
   requiredBy: []
-  timestamp: '2022-07-14 12:51:17+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2022-07-14 12:52:58+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/aoj/dsl_2_g.test.cpp
 layout: document
