@@ -1,7 +1,6 @@
-#define PROBLEM "https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_F"
+#define PROBLEM "https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_G"
 #include <bits/stdc++.h>
 using namespace std;
-const int INF = 2147483647;
 #include "../../data_structure/sequence/lazy_segment_tree.cpp"
 struct monoid{
   int cnt;
@@ -39,7 +38,7 @@ int main(){
       int s, t;
       cin >> s >> t;
       s--;
-      cout << ST.range_fold(s, t) << endl;
+      cout << ST.range_fold(s, t).sum << endl;
     }
   }
 }
