@@ -251,7 +251,7 @@ data:
       title: String/Z-algorithm.cpp
   - name: data_structure/other
     pages:
-    - icon: ':warning:'
+    - icon: ':x:'
       path: data_structure/other/cartesian_tree_min.cpp
       title: data_structure/other/cartesian_tree_min.cpp
   - name: data_structure/sequence
@@ -382,6 +382,9 @@ data:
       title: test/aoj/dsl_5_a_3.test.cpp
   - name: test/library_checker
     pages:
+    - icon: ':x:'
+      path: test/library_checker/cartesian_tree.test.cpp
+      title: test/library_checker/cartesian_tree.test.cpp
     - icon: ':heavy_check_mark:'
       path: test/library_checker/lowest_common_ancestor.test.cpp
       title: test/library_checker/lowest_common_ancestor.test.cpp

@@ -2,10 +2,13 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _extendedVerifiedWith:
+  - icon: ':x:'
+    path: test/library_checker/cartesian_tree.test.cpp
+    title: test/library_checker/cartesian_tree.test.cpp
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links: []
   bundledCode: "#line 1 \"data_structure/other/cartesian_tree_min.cpp\"\nvector<int>\
@@ -30,8 +33,9 @@ data:
   path: data_structure/other/cartesian_tree_min.cpp
   requiredBy: []
   timestamp: '2022-07-15 08:34:17+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_WA
+  verifiedWith:
+  - test/library_checker/cartesian_tree.test.cpp
 documentation_of: data_structure/other/cartesian_tree_min.cpp
 layout: document
 redirect_from:
