@@ -16,14 +16,14 @@ int main(){
     } else {
       return a;
     }
-  }
+  };
   function<int(int, int)> comp = [](int a, int b){
     if (b == -1){
       return a;
     } else {
       return b;
     }
-  }
+  };
   lazy_segment_tree<int, int> ST(a, op, mp, comp, INF, -1);
   for (int i = 0; i < q; i++){
     int c;
