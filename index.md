@@ -256,7 +256,7 @@ data:
       title: data_structure/other/cartesian_tree_min.cpp
     - icon: ':x:'
       path: data_structure/other/sliding_window_aggregation.cpp
-      title: data_structure/other/sliding_window_aggregation.cpp
+      title: Sliding Window Aggregation
   - name: data_structure/sequence
     pages:
     - icon: ':heavy_check_mark:'
