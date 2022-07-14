@@ -1,10 +1,10 @@
 #define PROBLEM "https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_I"
 #include <bits/stdc++.h>
 using namespace std;
+const int e = 100000;
 #include "../../data_structure/sequence/lazy_segment_tree.cpp"
 struct monoid{
-  int cnt;
-  long long sum;
+  int cnt, sum;
   monoid(): cnt(0), sum(0){
   }
 };
@@ -21,19 +21,19 @@ int main(){
     return a;
   };
   function<monoid(int, monoid)> mp = [](int a, monoid b){
-    if (a != -1){
-      b.sum = (long long) a * b.cnt;
+    if (a != e){
+      b.sum = a * b.cnt;
     }
     return b;
   };
   function<int(int, int)> comp = [](int a, int b){
-    if (b == -1){
+    if (b == e){
       return a;
     } else {
       return b;
     }
   };
-  lazy_segment_tree<monoid, int> ST(A, op, mp, comp, monoid(), -1);
+  lazy_segment_tree<monoid, int> ST(A, op, mp, comp, monoid(), e);
   for (int i = 0; i < q; i++){
     int c;
     cin >> c;
