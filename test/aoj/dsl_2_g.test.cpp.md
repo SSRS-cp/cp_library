@@ -6,16 +6,16 @@ data:
     title: "Lazy Segment Tree (\u9045\u5EF6\u30BB\u30B0\u30E1\u30F3\u30C8\u6728)"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
-    PROBLEM: https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_H
+    PROBLEM: https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_F
     links:
-    - https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_H
-  bundledCode: "#line 1 \"test/aoj/dsl_2_h.test.cpp\"\n#define PROBLEM \"https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_H\"\
-    \n#include <bits/stdc++.h>\nusing namespace std;\nconst int INF = 1000000000;\n\
+    - https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_F
+  bundledCode: "#line 1 \"test/aoj/dsl_2_g.test.cpp\"\n#define PROBLEM \"https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_F\"\
+    \n#include <bits/stdc++.h>\nusing namespace std;\nconst int INF = 2147483647;\n\
     #line 1 \"data_structure/sequence/lazy_segment_tree.cpp\"\ntemplate <typename\
     \ T, typename F>\nstruct lazy_segment_tree{\n  int N;\n  vector<T> ST;\n  vector<F>\
     \ lazy;\n  function<T(T, T)> op;\n  function<T(F, T)> mp;\n  function<F(F, F)>\
@@ -45,36 +45,44 @@ data:
     \ R, i * 2 + 1, l, m), range_fold(L, R, i * 2 + 2, m, r));\n    }\n  }\n  T range_fold(int\
     \ L, int R){\n    return range_fold(L, R, 0, 0, N);\n  }\n  T all(){\n    push(0);\n\
     \    return ST[0];\n  }\n};\n/**\n * @brief Lazy Segment Tree (\u9045\u5EF6\u30BB\
-    \u30B0\u30E1\u30F3\u30C8\u6728)\n*/\n#line 6 \"test/aoj/dsl_2_h.test.cpp\"\nint\
-    \ main(){\n  int n, q;\n  cin >> n >> q;\n  vector<int> a(n, 0);\n  function<int(int,\
-    \ int)> op = [](int a, int b){return min(a, b);};\n  lazy_segment_tree<int, int>\
-    \ ST(a, op, plus<int>(), plus<int>(), INF, 0);\n  for (int i = 0; i < q; i++){\n\
+    \u30B0\u30E1\u30F3\u30C8\u6728)\n*/\n#line 6 \"test/aoj/dsl_2_g.test.cpp\"\nstruct\
+    \ monoid{\n  int cnt;\n  long long sum;\n  monoid(): cnt(0), sum(0){\n  }\n}\n\
+    int main(){\n  int n, q;\n  cin >> n >> q;\n  vector<monoid> A(n);\n  for (int\
+    \ i = 0; i < n; i++){\n    A[i].cnt = 0;\n  }\n  function<monoid(monoid, monoid)>\
+    \ op = [](monoid a, monoid b){\n    a.cnt += b.cnt;\n    a.sum += b.sum;\n   \
+    \ return a;\n  };\n  function<monoid(int, monoid)> mp = [](int a, monoid b){\n\
+    \    b.sum += (long long) a * b.cnt;\n    return b;\n  }\n  lazy_segment_tree<monoid,\
+    \ int> ST(n, op, mp, plus<int>(), monoid(), 0);\n  for (int i = 0; i < q; i++){\n\
     \    int c;\n    cin >> c;\n    if (c == 0){\n      int s, t, x;\n      cin >>\
-    \ s >> t >> x;\n      t++;\n      ST.range_apply(s, t, x);\n    }\n    if (c ==\
-    \ 1){\n      int s, t;\n      cin >> s >> t;\n      t++;\n      cout << ST.range_fold(s,\
+    \ s >> t >> x;\n      s--;\n      ST.range_apply(s, t, x);\n    }\n    if (c ==\
+    \ 1){\n      int s, t;\n      cin >> s >> t;\n      s--;\n      cout << ST.range_fold(s,\
     \ t) << endl;\n    }\n  }\n}\n"
-  code: "#define PROBLEM \"https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_H\"\
-    \n#include <bits/stdc++.h>\nusing namespace std;\nconst int INF = 1000000000;\n\
-    #include \"../../data_structure/sequence/lazy_segment_tree.cpp\"\nint main(){\n\
-    \  int n, q;\n  cin >> n >> q;\n  vector<int> a(n, 0);\n  function<int(int, int)>\
-    \ op = [](int a, int b){return min(a, b);};\n  lazy_segment_tree<int, int> ST(a,\
-    \ op, plus<int>(), plus<int>(), INF, 0);\n  for (int i = 0; i < q; i++){\n   \
-    \ int c;\n    cin >> c;\n    if (c == 0){\n      int s, t, x;\n      cin >> s\
-    \ >> t >> x;\n      t++;\n      ST.range_apply(s, t, x);\n    }\n    if (c ==\
-    \ 1){\n      int s, t;\n      cin >> s >> t;\n      t++;\n      cout << ST.range_fold(s,\
+  code: "#define PROBLEM \"https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_F\"\
+    \n#include <bits/stdc++.h>\nusing namespace std;\nconst int INF = 2147483647;\n\
+    #include \"../../data_structure/sequence/lazy_segment_tree.cpp\"\nstruct monoid{\n\
+    \  int cnt;\n  long long sum;\n  monoid(): cnt(0), sum(0){\n  }\n}\nint main(){\n\
+    \  int n, q;\n  cin >> n >> q;\n  vector<monoid> A(n);\n  for (int i = 0; i <\
+    \ n; i++){\n    A[i].cnt = 0;\n  }\n  function<monoid(monoid, monoid)> op = [](monoid\
+    \ a, monoid b){\n    a.cnt += b.cnt;\n    a.sum += b.sum;\n    return a;\n  };\n\
+    \  function<monoid(int, monoid)> mp = [](int a, monoid b){\n    b.sum += (long\
+    \ long) a * b.cnt;\n    return b;\n  }\n  lazy_segment_tree<monoid, int> ST(n,\
+    \ op, mp, plus<int>(), monoid(), 0);\n  for (int i = 0; i < q; i++){\n    int\
+    \ c;\n    cin >> c;\n    if (c == 0){\n      int s, t, x;\n      cin >> s >> t\
+    \ >> x;\n      s--;\n      ST.range_apply(s, t, x);\n    }\n    if (c == 1){\n\
+    \      int s, t;\n      cin >> s >> t;\n      s--;\n      cout << ST.range_fold(s,\
     \ t) << endl;\n    }\n  }\n}\n"
   dependsOn:
   - data_structure/sequence/lazy_segment_tree.cpp
   isVerificationFile: true
-  path: test/aoj/dsl_2_h.test.cpp
+  path: test/aoj/dsl_2_g.test.cpp
   requiredBy: []
-  timestamp: '2022-07-14 10:01:56+09:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2022-07-14 12:45:28+09:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
-documentation_of: test/aoj/dsl_2_h.test.cpp
+documentation_of: test/aoj/dsl_2_g.test.cpp
 layout: document
 redirect_from:
-- /verify/test/aoj/dsl_2_h.test.cpp
-- /verify/test/aoj/dsl_2_h.test.cpp.html
-title: test/aoj/dsl_2_h.test.cpp
+- /verify/test/aoj/dsl_2_g.test.cpp
+- /verify/test/aoj/dsl_2_g.test.cpp.html
+title: test/aoj/dsl_2_g.test.cpp
 ---
