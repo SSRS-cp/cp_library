@@ -251,9 +251,12 @@ data:
       title: String/Z-algorithm.cpp
   - name: data_structure/other
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: data_structure/other/cartesian_tree_min.cpp
       title: data_structure/other/cartesian_tree_min.cpp
+    - icon: ':warning:'
+      path: data_structure/other/sliding_window_aggregation.cpp
+      title: data_structure/other/sliding_window_aggregation.cpp
   - name: data_structure/sequence
     pages:
     - icon: ':heavy_check_mark:'
@@ -382,7 +385,7 @@ data:
       title: test/aoj/dsl_5_a_3.test.cpp
   - name: test/library_checker
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/cartesian_tree.test.cpp
       title: test/library_checker/cartesian_tree.test.cpp
     - icon: ':heavy_check_mark:'

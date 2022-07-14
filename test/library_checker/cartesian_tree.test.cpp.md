@@ -1,14 +1,14 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: data_structure/other/cartesian_tree_min.cpp
     title: data_structure/other/cartesian_tree_min.cpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.yosupo.jp/problem/cartesian_tree
@@ -26,24 +26,24 @@ data:
     \  while (st.size() >= 2){\n    int x = st.top();\n    st.pop();\n    pr[x] =\
     \ st.top();\n  }\n  return pr;\n}\n#line 5 \"test/library_checker/cartesian_tree.test.cpp\"\
     \nint main(){\n  int N;\n  cin >> N;\n  vector<int> a(N);\n  for (int i = 0; i\
-    \ < N; i++){\n    cin >> a[i];\n  }\n  vector<int> p = cartesian_tree(a);\n  for\
-    \ (int i = 0; i < N; i++){\n    if (p[i] == -1){\n      cout << i;\n    } else\
-    \ {\n      cout << p[i];\n    }\n    if (i < N - 1){\n      cout << ' ';\n   \
-    \ }\n  }\n  cout << endl;\n}\n"
+    \ < N; i++){\n    cin >> a[i];\n  }\n  vector<int> p = cartesian_tree_min(a);\n\
+    \  for (int i = 0; i < N; i++){\n    if (p[i] == -1){\n      cout << i;\n    }\
+    \ else {\n      cout << p[i];\n    }\n    if (i < N - 1){\n      cout << ' ';\n\
+    \    }\n  }\n  cout << endl;\n}\n"
   code: "#define PROBLEM \"https://judge.yosupo.jp/problem/cartesian_tree\"\n#include\
     \ <bits/stdc++.h>\nusing namespace std;\n#include \"../../data_structure/other/cartesian_tree_min.cpp\"\
     \nint main(){\n  int N;\n  cin >> N;\n  vector<int> a(N);\n  for (int i = 0; i\
-    \ < N; i++){\n    cin >> a[i];\n  }\n  vector<int> p = cartesian_tree(a);\n  for\
-    \ (int i = 0; i < N; i++){\n    if (p[i] == -1){\n      cout << i;\n    } else\
-    \ {\n      cout << p[i];\n    }\n    if (i < N - 1){\n      cout << ' ';\n   \
-    \ }\n  }\n  cout << endl;\n}\n"
+    \ < N; i++){\n    cin >> a[i];\n  }\n  vector<int> p = cartesian_tree_min(a);\n\
+    \  for (int i = 0; i < N; i++){\n    if (p[i] == -1){\n      cout << i;\n    }\
+    \ else {\n      cout << p[i];\n    }\n    if (i < N - 1){\n      cout << ' ';\n\
+    \    }\n  }\n  cout << endl;\n}\n"
   dependsOn:
   - data_structure/other/cartesian_tree_min.cpp
   isVerificationFile: true
   path: test/library_checker/cartesian_tree.test.cpp
   requiredBy: []
-  timestamp: '2022-07-15 08:35:19+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2022-07-15 08:37:31+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/cartesian_tree.test.cpp
 layout: document
