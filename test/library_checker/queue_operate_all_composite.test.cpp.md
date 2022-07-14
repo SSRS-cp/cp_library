@@ -1,17 +1,17 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: data_structure/other/sliding_window_aggregation.cpp
     title: Sliding Window Aggregation
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: other/monoids/linear.cpp
     title: other/monoids/linear.cpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.yosupo.jp/problem/queue_operate_all_composite
@@ -36,15 +36,15 @@ data:
     \  linear(int a, int b): a(a), b(b){\n  }\n};\nlinear composite(linear A, linear\
     \ B){\n  return linear(A.a * B.a % MOD, (A.b * B.a + B.b) % MOD);\n}\nint value(linear\
     \ A, int x){\n  return (A.a * x + A.b) % MOD;\n}\n#line 7 \"test/library_checker/queue_operate_all_composite.test.cpp\"\
-    \nint main(){\n  int Q;\n  cin >> Q;\n  swag<linear> S(composite, linear());\n\
-    \  for (int i = 0; i < Q; i++){\n    int t;\n    cin >> t;\n    if (t == 0){\n\
-    \      int a, b;\n      cin >> a >> b;\n      S.push(linear(a, b));\n    }\n \
-    \   if (t == 1){\n      S.pop();\n    }\n    if (t == 2){\n      int x;\n    \
-    \  cin >> x;\n      cout << value(S.get(),x) << endl;\n    }\n  }\n}\n"
+    \nint main(){\n  int Q;\n  cin >> Q;\n  sliding_window_aggregation<linear> S(composite,\
+    \ linear());\n  for (int i = 0; i < Q; i++){\n    int t;\n    cin >> t;\n    if\
+    \ (t == 0){\n      int a, b;\n      cin >> a >> b;\n      S.push(linear(a, b));\n\
+    \    }\n    if (t == 1){\n      S.pop();\n    }\n    if (t == 2){\n      int x;\n\
+    \      cin >> x;\n      cout << value(S.get(),x) << endl;\n    }\n  }\n}\n"
   code: "#define PROBLEM \"https://judge.yosupo.jp/problem/queue_operate_all_composite\"\
     \n#include <bits/stdc++.h>\nusing namespace std;\nconst long long MOD = 998244353;\n\
     #include \"../../data_structure/other/sliding_window_aggregation.cpp\"\n#include\
-    \ \"../../other/monoids/linear.cpp\"\nint main(){\n  int Q;\n  cin >> Q;\n  swag<linear>\
+    \ \"../../other/monoids/linear.cpp\"\nint main(){\n  int Q;\n  cin >> Q;\n  sliding_window_aggregation<linear>\
     \ S(composite, linear());\n  for (int i = 0; i < Q; i++){\n    int t;\n    cin\
     \ >> t;\n    if (t == 0){\n      int a, b;\n      cin >> a >> b;\n      S.push(linear(a,\
     \ b));\n    }\n    if (t == 1){\n      S.pop();\n    }\n    if (t == 2){\n   \
@@ -56,8 +56,8 @@ data:
   isVerificationFile: true
   path: test/library_checker/queue_operate_all_composite.test.cpp
   requiredBy: []
-  timestamp: '2022-07-15 08:42:16+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2022-07-15 08:42:41+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/queue_operate_all_composite.test.cpp
 layout: document

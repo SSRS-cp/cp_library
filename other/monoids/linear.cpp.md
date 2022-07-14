@@ -6,7 +6,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/library_checker/point_set_range_composite.test.cpp
     title: test/library_checker/point_set_range_composite.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/library_checker/queue_operate_all_composite.test.cpp
     title: test/library_checker/queue_operate_all_composite.test.cpp
   - icon: ':heavy_check_mark:'
@@ -18,9 +18,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/yukicoder/yuki_1891.test.cpp
     title: test/yukicoder/yuki_1891.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 1 \"other/monoids/linear.cpp\"\nstruct linear{\n  long long\
@@ -37,7 +37,7 @@ data:
   path: other/monoids/linear.cpp
   requiredBy: []
   timestamp: '2022-07-14 01:12:04+09:00'
-  verificationStatus: LIBRARY_SOME_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/yukicoder/yuki_1891.test.cpp
   - test/library_checker/queue_operate_all_composite.test.cpp

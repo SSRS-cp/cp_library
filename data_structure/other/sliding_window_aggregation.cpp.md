@@ -3,12 +3,12 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/library_checker/queue_operate_all_composite.test.cpp
     title: test/library_checker/queue_operate_all_composite.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     document_title: Sliding Window Aggregation
     links: []
@@ -42,7 +42,7 @@ data:
   path: data_structure/other/sliding_window_aggregation.cpp
   requiredBy: []
   timestamp: '2022-07-15 08:42:16+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/library_checker/queue_operate_all_composite.test.cpp
 documentation_of: data_structure/other/sliding_window_aggregation.cpp
