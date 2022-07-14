@@ -294,6 +294,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: data_structure/sequence/segment_tree.cpp
       title: "Segment Tree (\u30BB\u30B0\u30E1\u30F3\u30C8\u6728)"
+    - icon: ':warning:'
+      path: data_structure/sequence/segment_tree_beats.cpp
+      title: data_structure/sequence/segment_tree_beats.cpp
     - icon: ':heavy_check_mark:'
       path: data_structure/sequence/sparse_table.cpp
       title: "Sparse Table (\u30B9\u30D1\u30FC\u30B9\u30C6\u30FC\u30D6\u30EB)"
