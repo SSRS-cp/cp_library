@@ -305,7 +305,7 @@ data:
       title: "XOR Segment Tree (XOR \u30BB\u30B0\u30E1\u30F3\u30C8\u6728)"
   - name: data_structure/tree
     pages:
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: data_structure/tree/heavy_light_decomposition.cpp
       title: data_structure/tree/heavy_light_decomposition.cpp
   - name: data_structure/unionfind
@@ -374,6 +374,9 @@ data:
       title: test/aoj/dsl_5_a_3.test.cpp
   - name: test/library_checker
     pages:
+    - icon: ':heavy_check_mark:'
+      path: test/library_checker/lowest_common_ancestor.test.cpp
+      title: test/library_checker/lowest_common_ancestor.test.cpp
     - icon: ':heavy_check_mark:'
       path: test/library_checker/point_add_range_sum.test.cpp
       title: test/library_checker/point_add_range_sum.test.cpp
