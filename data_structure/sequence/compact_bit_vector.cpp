@@ -1,7 +1,9 @@
-struct compact_bit_vector{
+struct bit_vector{
   vector<unsigned long long> A;
   vector<int> S;
-  compact_bit_vector(vector<bool> &a){
+  bit_vector(){
+  }
+  bit_vector(vector<bool> &a){
     int N = a.size();
     int M = (N + 64 - 1) >> 6;
     A = vector<unsigned long long>(M, 0);
