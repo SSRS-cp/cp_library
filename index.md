@@ -257,6 +257,9 @@ data:
       path: data_structure/sequence/commutative_dual_segment_tree.cpp
       title: "Commutative Dual Segment Tree (\u53EF\u63DB\u53CC\u5BFE\u30BB\u30B0\u30E1\
         \u30F3\u30C8\u6728\u3001\u3089\u3066\u6728)"
+    - icon: ':warning:'
+      path: data_structure/sequence/compact_bit_vector.cpp
+      title: data_structure/sequence/compact_bit_vector.cpp
     - icon: ':heavy_check_mark:'
       path: data_structure/sequence/cumulative_sum.cpp
       title: "Cumulative Sum (\u7D2F\u7A4D\u548C)"
