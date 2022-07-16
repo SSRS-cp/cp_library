@@ -4,6 +4,9 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
+    path: test/aoj/itp1_6_a.test.cpp
+    title: test/aoj/itp1_6_a.test.cpp
+  - icon: ':heavy_check_mark:'
     path: test/library_checker/static_range_frequency.test.cpp
     title: test/library_checker/static_range_frequency.test.cpp
   _isVerificationFailed: false
@@ -44,6 +47,7 @@ data:
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/library_checker/static_range_frequency.test.cpp
+  - test/aoj/itp1_6_a.test.cpp
 documentation_of: data_structure/sequence/compact_bit_vector.cpp
 layout: document
 redirect_from:
