@@ -2,16 +2,10 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
-    path: test/aoj/itp1_6_a.test.cpp
-    title: test/aoj/itp1_6_a.test.cpp
-  - icon: ':heavy_check_mark:'
-    path: test/library_checker/static_range_frequency.test.cpp
-    title: test/library_checker/static_range_frequency.test.cpp
+  _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':warning:'
   attributes:
     links: []
   bundledCode: "#line 1 \"data_structure/sequence/compact_bit_vector.cpp\"\nstruct\
@@ -44,10 +38,8 @@ data:
   path: data_structure/sequence/compact_bit_vector.cpp
   requiredBy: []
   timestamp: '2022-07-16 18:37:31+09:00'
-  verificationStatus: LIBRARY_ALL_AC
-  verifiedWith:
-  - test/library_checker/static_range_frequency.test.cpp
-  - test/aoj/itp1_6_a.test.cpp
+  verificationStatus: LIBRARY_NO_TESTS
+  verifiedWith: []
 documentation_of: data_structure/sequence/compact_bit_vector.cpp
 layout: document
 redirect_from:

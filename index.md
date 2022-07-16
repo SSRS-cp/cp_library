@@ -257,7 +257,7 @@ data:
       path: data_structure/sequence/commutative_dual_segment_tree.cpp
       title: "Commutative Dual Segment Tree (\u53EF\u63DB\u53CC\u5BFE\u30BB\u30B0\u30E1\
         \u30F3\u30C8\u6728\u3001\u3089\u3066\u6728)"
-    - icon: ':heavy_check_mark:'
+    - icon: ':warning:'
       path: data_structure/sequence/compact_bit_vector.cpp
       title: data_structure/sequence/compact_bit_vector.cpp
     - icon: ':heavy_check_mark:'
@@ -302,7 +302,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: data_structure/sequence/sparse_table.cpp
       title: "Sparse Table (\u30B9\u30D1\u30FC\u30B9\u30C6\u30FC\u30D6\u30EB)"
-    - icon: ':heavy_check_mark:'
+    - icon: ':warning:'
       path: data_structure/sequence/wavelet_matrix.cpp
       title: data_structure/sequence/wavelet_matrix.cpp
     - icon: ':heavy_check_mark:'
@@ -380,7 +380,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/aoj/dsl_5_a_3.test.cpp
       title: test/aoj/dsl_5_a_3.test.cpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/aoj/itp1_6_a.test.cpp
       title: test/aoj/itp1_6_a.test.cpp
   - name: test/library_checker
@@ -415,7 +415,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/range_chmin_chmax_add_range_sum.test.cpp
       title: test/library_checker/range_chmin_chmax_add_range_sum.test.cpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/library_checker/static_range_frequency.test.cpp
       title: test/library_checker/static_range_frequency.test.cpp
     - icon: ':heavy_check_mark:'
