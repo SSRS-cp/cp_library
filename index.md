@@ -245,7 +245,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: data_structure/other/cartesian_tree_min.hpp
       title: "\u30C7\u30AB\u30EB\u30C8\u6728"
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: data_structure/other/sliding_window_aggregation.hpp
       title: Sliding Window Aggregation
   - name: data_structure/sequence
@@ -275,11 +275,11 @@ data:
     - icon: ':heavy_check_mark:'
       path: data_structure/sequence/dual_invertible_binary_indexed_tree.hpp
       title: "\u53CC\u5BFE\u53EF\u9006 Binary Indexed Tree"
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: data_structure/sequence/dual_segment_tree.hpp
       title: "\u53CC\u5BFE\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (\u3073\u30FC\u3068\
         \u6728)"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: data_structure/sequence/dual_sparse_table.hpp
       title: "\u53CC\u5BFE\u30B9\u30D1\u30FC\u30B9\u30C6\u30FC\u30D6\u30EB"
     - icon: ':heavy_check_mark:'
@@ -303,7 +303,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: data_structure/sequence/wavelet_matrix.hpp
       title: "\u30A6\u30A7\u30FC\u30D6\u30EC\u30C3\u30C8\u884C\u5217"
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: data_structure/sequence/xor_segment_tree.hpp
       title: "XOR \u30BB\u30B0\u30E1\u30F3\u30C8\u6728"
   - name: data_structure/tree
@@ -318,12 +318,12 @@ data:
       title: UnionFind
   - name: other/monoids
     pages:
-    - icon: ':warning:'
-      path: other/monoids/affine_sum_.hpp
-      title: other/monoids/affine_sum_.hpp
-    - icon: ':warning:'
-      path: other/monoids/linear_.hpp
-      title: other/monoids/linear_.hpp
+    - icon: ':heavy_check_mark:'
+      path: other/monoids/affine_sum.hpp
+      title: other/monoids/affine_sum.hpp
+    - icon: ':heavy_check_mark:'
+      path: other/monoids/linear.hpp
+      title: other/monoids/linear.hpp
   verificationCategories:
   - name: test/aoj
     pages:
@@ -398,16 +398,16 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/point_add_range_sum_3.test.cpp
       title: test/library_checker/point_add_range_sum_3.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/point_set_range_composite.test.cpp
       title: test/library_checker/point_set_range_composite.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/queue_operate_all_composite.test.cpp
       title: test/library_checker/queue_operate_all_composite.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/range_affine_point_get.test.cpp
       title: test/library_checker/range_affine_point_get.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/range_affine_range_sum.test.cpp
       title: test/library_checker/range_affine_range_sum.test.cpp
     - icon: ':heavy_check_mark:'
@@ -439,10 +439,10 @@ data:
       title: test/library_checker/unionfind.test.cpp
   - name: test/yukicoder
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/yukicoder/yuki_1891.test.cpp
       title: test/yukicoder/yuki_1891.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/yukicoder/yuki_945.test.cpp
       title: test/yukicoder/yuki_945.test.cpp
 layout: toppage

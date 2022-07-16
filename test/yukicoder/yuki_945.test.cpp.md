@@ -1,14 +1,14 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: data_structure/sequence/dual_sparse_table.hpp
     title: "\u53CC\u5BFE\u30B9\u30D1\u30FC\u30B9\u30C6\u30FC\u30D6\u30EB"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://yukicoder.me/problems/no/945
@@ -39,7 +39,7 @@ data:
     \  }\n    if (T == 'C'){\n      ST.apply(L, R, make_pair(i, 2));\n    }\n  }\n\
     \  vector<pair<int, int>> A = ST.get();\n  vector<int> ans(3, 0);\n  for (int\
     \ i = 0; i < N; i++){\n    if (A[i].first != INF){\n      ans[A[i].second]++;\n\
-    \    }\n  }\n  cout << ans[0] << ' ' << ans[1] << ' ' << ans[2] << endl;\n\n"
+    \    }\n  }\n  cout << ans[0] << ' ' << ans[1] << ' ' << ans[2] << endl;\n}\n"
   code: "#define PROBLEM \"https://yukicoder.me/problems/no/945\"\n#include <bits/stdc++.h>\n\
     using namespace std;\nconst int INF = 1000000;\n#include \"../../data_structure/sequence/dual_sparse_table.hpp\"\
     \nint main(){\n  int N, M;\n  cin >> N >> M;\n  dual_sparse_table<pair<int, int>>\
@@ -50,14 +50,14 @@ data:
     \  }\n    if (T == 'C'){\n      ST.apply(L, R, make_pair(i, 2));\n    }\n  }\n\
     \  vector<pair<int, int>> A = ST.get();\n  vector<int> ans(3, 0);\n  for (int\
     \ i = 0; i < N; i++){\n    if (A[i].first != INF){\n      ans[A[i].second]++;\n\
-    \    }\n  }\n  cout << ans[0] << ' ' << ans[1] << ' ' << ans[2] << endl;\n\n"
+    \    }\n  }\n  cout << ans[0] << ' ' << ans[1] << ' ' << ans[2] << endl;\n}"
   dependsOn:
   - data_structure/sequence/dual_sparse_table.hpp
   isVerificationFile: true
   path: test/yukicoder/yuki_945.test.cpp
   requiredBy: []
-  timestamp: '2022-07-17 06:33:45+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2022-07-17 07:03:54+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/yukicoder/yuki_945.test.cpp
 layout: document

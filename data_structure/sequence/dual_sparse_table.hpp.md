@@ -3,12 +3,12 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/yukicoder/yuki_945.test.cpp
     title: test/yukicoder/yuki_945.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     document_title: "\u53CC\u5BFE\u30B9\u30D1\u30FC\u30B9\u30C6\u30FC\u30D6\u30EB"
     links: []
@@ -46,7 +46,7 @@ data:
   path: data_structure/sequence/dual_sparse_table.hpp
   requiredBy: []
   timestamp: '2022-07-17 06:33:45+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/yukicoder/yuki_945.test.cpp
 documentation_of: data_structure/sequence/dual_sparse_table.hpp
