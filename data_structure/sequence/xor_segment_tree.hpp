@@ -1,3 +1,7 @@
+#pragma once
+/**
+ * @brief XOR セグメント木
+*/
 template <typename T>
 struct xor_segment_tree{
   int N;
@@ -49,6 +53,3 @@ struct xor_segment_tree{
     return range_fold(L, R, x, 0, 0, N);
   }
 };
-/**
- * @brief XOR Segment Tree (XOR セグメント木)
-*/

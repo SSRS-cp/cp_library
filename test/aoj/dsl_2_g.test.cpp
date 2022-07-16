@@ -1,7 +1,7 @@
 #define PROBLEM "https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_G"
 #include <bits/stdc++.h>
 using namespace std;
-#include "../../data_structure/sequence/lazy_segment_tree.cpp"
+#include "../../data_structure/sequence/lazy_segment_tree.hpp"
 struct monoid{
   int cnt;
   long long sum;

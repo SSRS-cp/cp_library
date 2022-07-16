@@ -1,3 +1,7 @@
+#pragma once
+/**
+ * @brief 累積和
+*/
 template <typename T>
 struct cumulative_sum{
   vector<T> S;
@@ -17,6 +21,3 @@ struct cumulative_sum{
     return S[i];
   }
 };
-/**
- * @brief Cumulative Sum (累積和)
-*/

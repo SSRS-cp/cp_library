@@ -1,8 +1,7 @@
 #define PROBLEM "https://judge.yosupo.jp/problem/static_range_frequency"
 #include <bits/stdc++.h>
 using namespace std;
-#include "../../data_structure/sequence/compact_bit_vector.cpp"
-#include "../../data_structure/sequence/wavelet_matrix.cpp"
+#include "../../data_structure/sequence/wavelet_matrix.hpp"
 int main(){
   int N, Q;
   cin >> N >> Q;

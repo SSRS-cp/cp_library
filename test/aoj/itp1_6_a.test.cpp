@@ -1,8 +1,7 @@
 #define PROBLEM "https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ITP1_6_A"
 #include <bits/stdc++.h>
 using namespace std;
-#include "../../data_structure/sequence/compact_bit_vector.cpp"
-#include "../../data_structure/sequence/wavelet_matrix.cpp"
+#include "../../data_structure/sequence/wavelet_matrix.hpp"
 int main(){
   int n;
   cin >> n;

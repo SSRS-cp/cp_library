@@ -1,3 +1,7 @@
+#pragma once
+/**
+ * @brief ウェーブレット行列
+*/
 #include "compact_bit_vector.cpp"
 struct wavelet_matrix{
   int N, LOG;

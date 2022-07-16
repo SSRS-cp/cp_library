@@ -1,7 +1,7 @@
 #define PROBLEM "https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_B"
 #include <bits/stdc++.h>
 using namespace std;
-#include "../../data_structure/sequence/invertible_binary_indexed_tree.cpp"
+#include "../../data_structure/sequence/invertible_binary_indexed_tree.hpp"
 int main(){
   int n, q;
   cin >> n >> q;

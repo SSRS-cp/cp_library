@@ -1,9 +1,15 @@
+#pragma once
+/**
+ * @brief セグメント木 (うし木)
+*/
 template <typename T>
 struct segment_tree{
   int N;
   vector<T> ST;
   function<T(T, T)> f;
   T E;
+  segment_tree(){
+  }
   segment_tree(int n, function<T(T, T)> f, T E): f(f), E(E){
     N = 1;
     while (N < n){
@@ -53,6 +59,3 @@ struct segment_tree{
     return ST[0];
   }
 };
-/**
- * @brief Segment Tree (セグメント木)
-*/

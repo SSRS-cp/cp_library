@@ -2,7 +2,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 const int e = 100000;
-#include "../../data_structure/sequence/lazy_segment_tree.cpp"
+#include "../../data_structure/sequence/lazy_segment_tree.hpp"
 struct monoid{
   int cnt, sum;
   monoid(): cnt(0), sum(0){

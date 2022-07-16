@@ -2,7 +2,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 const int INF = 1000000000;
-#include "../../data_structure/sequence/disjoint_sparse_table.cpp"
+#include "../../data_structure/sequence/disjoint_sparse_table.hpp"
 int main(){
   int N, Q;
   cin >> N >> Q;

@@ -1,6 +1,9 @@
-
+#pragma once
+/**
+ * @brief 遅延セグメント木
+*/
 template <typename T, typename F>
-struct segment_tree_beats{
+struct lazy_segment_tree{
   int N;
   vector<T> ST;
   vector<F> lazy;
@@ -9,7 +12,18 @@ struct segment_tree_beats{
   function<F(F, F)> comp;
   T E;
   F id;
-  segment_tree_beats(vector<T> &A, function<T(T, T)> op, function<T(F, T)> mp, function<F(F, F)> comp, T E, F id): op(op), mp(mp), comp(comp), E(E), id(id){
+  lazy_segment_tree(int n, function<T(T, T)> op, function<T(F, T)> mp, function<F(F, F)> comp, T E, F id): op(op), mp(mp), comp(comp), E(E), id(id){
+    N = 1;
+    while (N < n){
+      N *= 2;
+    }
+    ST = vector<T>(N * 2 - 1, E);
+    for (int i = N - 2; i >= 0; i--){
+      ST[i] = op(ST[i * 2 + 1], ST[i * 2 + 2]);
+    }
+    lazy = vector<F>(N * 2 - 1, id);
+  }
+  lazy_segment_tree(vector<T> &A, function<T(T, T)> op, function<T(F, T)> mp, function<F(F, F)> comp, T E, F id): op(op), mp(mp), comp(comp), E(E), id(id){
     int n = A.size();
     N = 1;
     while (N < n){
@@ -20,24 +34,16 @@ struct segment_tree_beats{
       ST[N - 1 + i] = A[i];
     }
     for (int i = N - 2; i >= 0; i--){
-      update(i);
+      ST[i] = op(ST[i * 2 + 1], ST[i * 2 + 2]);
     }
     lazy = vector<F>(N * 2 - 1, id);
   }
-  void update(int i){
-    ST[i] = op(ST[i * 2 + 1], ST[i * 2 + 2]);
-  }
   void push(int i){
-    ST[i] = mp(lazy[i], ST[i]);
     if (i < N - 1){
-      lazy[i * 2 + 1] = comp(lazy[i], lazy[i * 2 + 1]);
-      lazy[i * 2 + 2] = comp(lazy[i], lazy[i * 2 + 2]);
-      if (ST[i].fail){
-        push(i * 2 + 1);
-        push(i * 2 + 2);
-        update(i);
-      }
+      lazy[i * 2 + 1] = comp(lazy[i * 2 + 1], lazy[i]);
+      lazy[i * 2 + 2] = comp(lazy[i * 2 + 2], lazy[i]);
     }
+    ST[i] = mp(lazy[i], ST[i]);
     lazy[i] = id;
   }
   void range_apply(int L, int R, F f, int i, int l, int r){
@@ -51,7 +57,7 @@ struct segment_tree_beats{
       int m = (l + r) / 2;
       range_apply(L, R, f, i * 2 + 1, l, m);
       range_apply(L, R, f, i * 2 + 2, m, r);
-      update(i);
+      ST[i] = op(ST[i * 2 + 1], ST[i * 2 + 2]);
     }
   }
   void range_apply(int L, int R, F f){
@@ -70,5 +76,9 @@ struct segment_tree_beats{
   }
   T range_fold(int L, int R){
     return range_fold(L, R, 0, 0, N);
+  }
+  T all(){
+    push(0);
+    return ST[0];
   }
 };

@@ -1,7 +1,7 @@
 #define PROBLEM "https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=2677"
 #include <bits/stdc++.h>
 using namespace std;
-#include "../../data_structure/tree/heavy_light_decomposition.cpp"
+#include "../../data_structure/tree/heavy_light_decomposition.hpp"
 int main(){
   int n;
   cin >> n;

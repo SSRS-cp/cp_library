@@ -1,3 +1,7 @@
+#pragma once
+/**
+ * @brief Binary Indexed Tree
+*/
 template <typename T>
 struct binary_indexed_tree{
   int N;
@@ -34,6 +38,3 @@ struct binary_indexed_tree{
     return ans;
   }
 };
-/**
- * @brief Binary Indexed Tree
-*/

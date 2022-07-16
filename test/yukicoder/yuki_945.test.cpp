@@ -2,7 +2,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 const int INF = 1000000;
-#include "../../data_structure/sequence/dual_sparse_table.cpp"
+#include "../../data_structure/sequence/dual_sparse_table.hpp"
 int main(){
   int N, M;
   cin >> N >> M;
@@ -30,4 +30,4 @@ int main(){
     }
   }
   cout << ans[0] << ' ' << ans[1] << ' ' << ans[2] << endl;
-}
+

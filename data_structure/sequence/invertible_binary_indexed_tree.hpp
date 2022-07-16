@@ -1,3 +1,7 @@
+#pragma once
+/**
+ * @brief 可逆 Binary Indexed Tree
+*/
 template <typename T>
 struct invertible_binary_indexed_tree{
   int N;
@@ -38,6 +42,3 @@ struct invertible_binary_indexed_tree{
     return f(sum(r), inv(sum(l)));
   }
 };
-/**
- * @brief Invertible Binary Indexed Tree (可逆 Binary Indexed Tree)
-*/

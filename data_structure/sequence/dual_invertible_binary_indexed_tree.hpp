@@ -1,3 +1,7 @@
+#pragma once
+/**
+ * @brief 双対可逆 Binary Indexed Tree
+*/
 template <typename T>
 struct dual_invertible_binary_indexed_tree{
   int N;
@@ -44,6 +48,3 @@ struct dual_invertible_binary_indexed_tree{
     return ans;
   }
 };
-/**
- * @brief Dual Invertible Binary Indexed Tree (双対可逆 Binary Indexed Tree)
-*/

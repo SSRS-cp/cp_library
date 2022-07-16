@@ -2,8 +2,8 @@
 #include <bits/stdc++.h>
 using namespace std;
 const long long MOD = 998244353;
-#include "../../data_structure/sequence/xor_segment_tree.cpp"
-#include "../../other/monoids/linear.cpp"
+#include "../../data_structure/sequence/xor_segment_tree.jpp"
+#include "../../other/monoids/linear.hpp"
 int main(){
   int N, Q;
   cin >> N >> Q;

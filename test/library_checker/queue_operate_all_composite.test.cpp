@@ -2,8 +2,8 @@
 #include <bits/stdc++.h>
 using namespace std;
 const long long MOD = 998244353;
-#include "../../data_structure/other/sliding_window_aggregation.cpp"
-#include "../../other/monoids/linear.cpp"
+#include "../../data_structure/other/sliding_window_aggregation.hpp"
+#include "../../other/monoids/linear.hpp"
 int main(){
   int Q;
   cin >> Q;

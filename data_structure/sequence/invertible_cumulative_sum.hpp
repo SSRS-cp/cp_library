@@ -1,3 +1,7 @@
+#pragma once
+/**
+ * @brief 可逆累積和
+*/
 template <typename T>
 struct invertible_cumulative_sum{
   vector<T> S;
@@ -21,6 +25,3 @@ struct invertible_cumulative_sum{
     return f(S[r], inv(S[l]));
   }
 };
-/**
- * @brief Invertible Cumulative Sum (可逆累積和)
-*/

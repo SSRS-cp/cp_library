@@ -1,3 +1,7 @@
+#pragma once
+/**
+ * @brief コンパクト Bit Vector
+*/
 struct bit_vector{
   vector<unsigned long long> A;
   vector<int> S;

@@ -1,3 +1,7 @@
+#pragma once
+/**
+ * @brief 双対 Binary Indexed Tree
+*/
 template <typename T>
 struct dual_binary_indexed_tree{
   int N;
@@ -39,6 +43,3 @@ struct dual_binary_indexed_tree{
     return ans;
   }
 };
-/**
- * @brief Dual Binary Indexed Tree (双対 Binary Indexed Tree)
-*/

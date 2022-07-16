@@ -1,7 +1,7 @@
 #define PROBLEM "https://judge.yosupo.jp/problem/range_chmin_chmax_add_range_sum"
 #include <bits/stdc++.h>
 using namespace std;
-#include "../../data_structure/sequence/segment_tree_beats.cpp"
+#include "../../data_structure/sequence/segment_tree_beats.hpp"
 const long long INF = 1000000000000000000;
 struct monoid{
   int sz, minc, maxc;

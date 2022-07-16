@@ -1,3 +1,7 @@
+#pragma once
+/**
+ * @brief デカルト木
+*/
 vector<int> cartesian_tree_min(vector<int> &A){
   int N = A.size();
   vector<int> pr(N, -1);

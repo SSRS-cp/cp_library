@@ -1,7 +1,7 @@
 #define PROBLEM "https://judge.yosupo.jp/problem/lca"
 #include <bits/stdc++.h>
 using namespace std;
-#include "../../data_structure/tree/heavy_light_decomposition.cpp"
+#include "../../data_structure/tree/heavy_light_decomposition.hpp"
 int main(){
   int N, Q;
   cin >> N >> Q;

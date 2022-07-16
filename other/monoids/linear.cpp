@@ -1,3 +1,4 @@
+#pragma once
 struct linear{
   long long a, b;
   linear(){

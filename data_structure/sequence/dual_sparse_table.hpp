@@ -1,3 +1,7 @@
+#pragma once
+/**
+ * @brief 双対スパーステーブル
+*/
 template <typename T>
 struct dual_sparse_table{
   vector<vector<T>> ST;
@@ -35,6 +39,3 @@ struct dual_sparse_table{
     return ST[0];
   }
 };
-/**
- * @brief Dual Sparse Table (双対スパーステーブル)
-*/

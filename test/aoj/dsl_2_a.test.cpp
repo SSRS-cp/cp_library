@@ -1,7 +1,7 @@
 #define PROBLEM "https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_A"
 #include <bits/stdc++.h>
 using namespace std;
-#include "../../data_structure/sequence/segment_tree.cpp"
+#include "../../data_structure/sequence/segment_tree.hpp"
 int main(){
   int n, q;
   cin >> n >> q;

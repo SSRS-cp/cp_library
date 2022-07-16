@@ -1,3 +1,7 @@
+#pragma once
+/**
+ * @brief 重軽分解
+*/
 struct heavy_light_decomposition{
   vector<int> p, sz, in, next;
   void dfs1(vector<vector<int>> &c, int v){
@@ -57,6 +61,3 @@ struct heavy_light_decomposition{
     }
   }
 };
-/**
- * @brief 重軽分解
-*/

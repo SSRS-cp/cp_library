@@ -1,3 +1,4 @@
+#pragma once
 struct affine_sum{
   int cnt;
   long long sum;

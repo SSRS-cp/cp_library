@@ -1,3 +1,7 @@
+#pragma once
+/**
+ * @brief Sliding Window Aggregation
+*/
 template <typename T>
 struct sliding_window_aggregation{
   function<T(T, T)> f;
@@ -38,6 +42,3 @@ struct sliding_window_aggregation{
     return f(ans2, ans1);
   }
 };
-/**
- * @brief Sliding Window Aggregation
-*/

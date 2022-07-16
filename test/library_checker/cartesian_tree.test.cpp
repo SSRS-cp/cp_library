@@ -1,7 +1,7 @@
 #define PROBLEM "https://judge.yosupo.jp/problem/cartesian_tree"
 #include <bits/stdc++.h>
 using namespace std;
-#include "../../data_structure/other/cartesian_tree_min.cpp"
+#include "../../data_structure/other/cartesian_tree_min.hpp"
 int main(){
   int N;
   cin >> N;

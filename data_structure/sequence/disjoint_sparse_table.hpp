@@ -1,3 +1,7 @@
+#pragma once
+/**
+ * @brief Disjoint Sparse Table
+*/
 template <typename T>
 struct disjoint_sparse_table{
   vector<T> A;
@@ -44,6 +48,3 @@ struct disjoint_sparse_table{
     }
   }
 };
-/**
- * @brief Disjoint Sparse Table
-*/

@@ -2,9 +2,9 @@
 #include <bits/stdc++.h>
 using namespace std;
 const long long MOD = 998244353;
-#include "../../data_structure/sequence/lazy_segment_tree.cpp"
-#include "../../other/monoids/linear.cpp"
-#include "../../other/monoids/affine_sum.cpp"
+#include "../../data_structure/sequence/lazy_segment_tree.hpp"
+#include "../../other/monoids/linear.hpp"
+#include "../../other/monoids/affine_sum.hpp"
 int main(){
   int N, Q;
   cin >> N >> Q;

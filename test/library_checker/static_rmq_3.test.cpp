@@ -2,7 +2,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 const int INF = 1000000000;
-#include "../../data_structure/sequence/segment_tree.cpp"
+#include "../../data_structure/sequence/segment_tree.hpp"
 int main(){
   int N, Q;
   cin >> N >> Q;

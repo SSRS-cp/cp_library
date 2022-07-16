@@ -1,3 +1,7 @@
+#pragma once
+/**
+ * @brief 双対 Disjoint Sparse Table
+*/
 template <typename T>
 struct dual_disjoint_sparse_table{
   vector<T> A;
@@ -52,6 +56,3 @@ struct dual_disjoint_sparse_table{
     return A;
   }
 };
-/**
- * @brief Dual Disjoint Sparse Table (双対 Disjoint Sparse Table)
-*/
