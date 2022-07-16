@@ -260,7 +260,7 @@ data:
     - icon: ':x:'
       path: data_structure/sequence/compact_bit_vector.cpp
       title: data_structure/sequence/compact_bit_vector.cpp
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: data_structure/sequence/cumulative_sum.hpp
       title: "Cumulative Sum (\u7D2F\u7A4D\u548C)"
     - icon: ':heavy_check_mark:'
@@ -418,7 +418,7 @@ data:
     - icon: ':x:'
       path: test/library_checker/static_range_frequency.test.cpp
       title: test/library_checker/static_range_frequency.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/static_range_sum.test.cpp
       title: test/library_checker/static_range_sum.test.cpp
     - icon: ':heavy_check_mark:'
