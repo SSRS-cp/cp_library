@@ -2,7 +2,7 @@
 /**
  * @brief ウェーブレット行列
 */
-#include "compact_bit_vector.cpp"
+#include "compact_bit_vector.hpp"
 struct wavelet_matrix{
   int N, LOG;
   vector<bit_vector> D;
