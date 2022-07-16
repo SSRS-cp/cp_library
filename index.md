@@ -257,7 +257,7 @@ data:
       path: data_structure/sequence/commutative_dual_segment_tree.hpp
       title: "\u53EF\u63DB\u53CC\u5BFE\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (\u3089\
         \u3066\u6728)"
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: data_structure/sequence/compact_bit_vector.hpp
       title: "\u30B3\u30F3\u30D1\u30AF\u30C8 Bit Vector"
     - icon: ':heavy_check_mark:'
@@ -291,7 +291,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: data_structure/sequence/lazy_segment_tree.hpp
       title: "\u9045\u5EF6\u30BB\u30B0\u30E1\u30F3\u30C8\u6728"
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: data_structure/sequence/segment_tree.hpp
       title: "\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (\u3046\u3057\u6728)"
     - icon: ':heavy_check_mark:'
@@ -300,7 +300,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: data_structure/sequence/sparse_table.hpp
       title: "\u30B9\u30D1\u30FC\u30B9\u30C6\u30FC\u30D6\u30EB"
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: data_structure/sequence/wavelet_matrix.hpp
       title: "\u30A6\u30A7\u30FC\u30D6\u30EC\u30C3\u30C8\u884C\u5217"
     - icon: ':warning:'
@@ -313,17 +313,17 @@ data:
       title: "\u91CD\u8EFD\u5206\u89E3"
   - name: data_structure/unionfind
     pages:
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: data_structure/unionfind/unionfind.hpp
       title: UnionFind
   - name: other/monoids
     pages:
     - icon: ':warning:'
-      path: other/monoids/affine_sum.cpp
-      title: other/monoids/affine_sum.cpp
+      path: other/monoids/affine_sum_.hpp
+      title: other/monoids/affine_sum_.hpp
     - icon: ':warning:'
-      path: other/monoids/linear.cpp
-      title: other/monoids/linear.cpp
+      path: other/monoids/linear_.hpp
+      title: other/monoids/linear_.hpp
   verificationCategories:
   - name: test/aoj
     pages:
@@ -378,7 +378,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/aoj/dsl_5_a_3.test.cpp
       title: test/aoj/dsl_5_a_3.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/aoj/itp1_6_a.test.cpp
       title: test/aoj/itp1_6_a.test.cpp
   - name: test/library_checker
@@ -413,7 +413,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/range_chmin_chmax_add_range_sum.test.cpp
       title: test/library_checker/range_chmin_chmax_add_range_sum.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/static_range_frequency.test.cpp
       title: test/library_checker/static_range_frequency.test.cpp
     - icon: ':heavy_check_mark:'
@@ -431,10 +431,10 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/static_rmq_2.test.cpp
       title: test/library_checker/static_rmq_2.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/static_rmq_3.test.cpp
       title: test/library_checker/static_rmq_3.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/unionfind.test.cpp
       title: test/library_checker/unionfind.test.cpp
   - name: test/yukicoder

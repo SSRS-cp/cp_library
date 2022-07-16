@@ -1,11 +1,20 @@
 ---
 data:
   _extendedDependsOn: []
-  _extendedRequiredBy: []
-  _extendedVerifiedWith: []
+  _extendedRequiredBy:
+  - icon: ':heavy_check_mark:'
+    path: data_structure/sequence/wavelet_matrix.hpp
+    title: "\u30A6\u30A7\u30FC\u30D6\u30EC\u30C3\u30C8\u884C\u5217"
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: test/aoj/itp1_6_a.test.cpp
+    title: test/aoj/itp1_6_a.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/library_checker/static_range_frequency.test.cpp
+    title: test/library_checker/static_range_frequency.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     document_title: "\u30B3\u30F3\u30D1\u30AF\u30C8 Bit Vector"
     links: []
@@ -38,10 +47,13 @@ data:
   dependsOn: []
   isVerificationFile: false
   path: data_structure/sequence/compact_bit_vector.hpp
-  requiredBy: []
+  requiredBy:
+  - data_structure/sequence/wavelet_matrix.hpp
   timestamp: '2022-07-17 06:33:45+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - test/library_checker/static_range_frequency.test.cpp
+  - test/aoj/itp1_6_a.test.cpp
 documentation_of: data_structure/sequence/compact_bit_vector.hpp
 layout: document
 redirect_from:
