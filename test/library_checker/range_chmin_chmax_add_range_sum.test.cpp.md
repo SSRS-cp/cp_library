@@ -2,8 +2,8 @@
 data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
-    path: data_structure/sequence/segment_tree_beats.cpp
-    title: data_structure/sequence/segment_tree_beats.cpp
+    path: data_structure/sequence/segment_tree_beats.hpp
+    title: Segment Tre Beats
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -16,29 +16,29 @@ data:
     - https://judge.yosupo.jp/problem/range_chmin_chmax_add_range_sum
   bundledCode: "#line 1 \"test/library_checker/range_chmin_chmax_add_range_sum.test.cpp\"\
     \n#define PROBLEM \"https://judge.yosupo.jp/problem/range_chmin_chmax_add_range_sum\"\
-    \n#include <bits/stdc++.h>\nusing namespace std;\n#line 1 \"data_structure/sequence/segment_tree_beats.cpp\"\
-    \n\ntemplate <typename T, typename F>\nstruct segment_tree_beats{\n  int N;\n\
-    \  vector<T> ST;\n  vector<F> lazy;\n  function<T(T, T)> op;\n  function<T(F,\
-    \ T)> mp;\n  function<F(F, F)> comp;\n  T E;\n  F id;\n  segment_tree_beats(vector<T>\
-    \ &A, function<T(T, T)> op, function<T(F, T)> mp, function<F(F, F)> comp, T E,\
-    \ F id): op(op), mp(mp), comp(comp), E(E), id(id){\n    int n = A.size();\n  \
-    \  N = 1;\n    while (N < n){\n      N *= 2;\n    }\n    ST = vector<T>(N * 2\
-    \ - 1, E);\n    for (int i = 0; i < n; i++){\n      ST[N - 1 + i] = A[i];\n  \
-    \  }\n    for (int i = N - 2; i >= 0; i--){\n      update(i);\n    }\n    lazy\
-    \ = vector<F>(N * 2 - 1, id);\n  }\n  void update(int i){\n    ST[i] = op(ST[i\
-    \ * 2 + 1], ST[i * 2 + 2]);\n  }\n  void push(int i){\n    ST[i] = mp(lazy[i],\
-    \ ST[i]);\n    if (i < N - 1){\n      lazy[i * 2 + 1] = comp(lazy[i], lazy[i *\
-    \ 2 + 1]);\n      lazy[i * 2 + 2] = comp(lazy[i], lazy[i * 2 + 2]);\n      if\
-    \ (ST[i].fail){\n        push(i * 2 + 1);\n        push(i * 2 + 2);\n        update(i);\n\
-    \      }\n    }\n    lazy[i] = id;\n  }\n  void range_apply(int L, int R, F f,\
-    \ int i, int l, int r){\n    push(i);\n    if (r <= L || R <= l){\n      return;\n\
-    \    } else if (L <= l && r <= R){\n      lazy[i] = f;\n      push(i);\n    }\
-    \ else {\n      int m = (l + r) / 2;\n      range_apply(L, R, f, i * 2 + 1, l,\
-    \ m);\n      range_apply(L, R, f, i * 2 + 2, m, r);\n      update(i);\n    }\n\
-    \  }\n  void range_apply(int L, int R, F f){\n    range_apply(L, R, f, 0, 0, N);\n\
-    \  }\n  T range_fold(int L, int R, int i, int l, int r){\n    push(i);\n    if\
-    \ (r <= L || R <= l){\n      return E;\n    } else if (L <= l && r <= R){\n  \
-    \    return ST[i];\n    } else {\n      int m = (l + r) / 2;\n      return op(range_fold(L,\
+    \n#include <bits/stdc++.h>\nusing namespace std;\n#line 2 \"data_structure/sequence/segment_tree_beats.hpp\"\
+    \n/**\n * @brief Segment Tre Beats\n*/\ntemplate <typename T, typename F>\nstruct\
+    \ segment_tree_beats{\n  int N;\n  vector<T> ST;\n  vector<F> lazy;\n  function<T(T,\
+    \ T)> op;\n  function<T(F, T)> mp;\n  function<F(F, F)> comp;\n  T E;\n  F id;\n\
+    \  segment_tree_beats(vector<T> &A, function<T(T, T)> op, function<T(F, T)> mp,\
+    \ function<F(F, F)> comp, T E, F id): op(op), mp(mp), comp(comp), E(E), id(id){\n\
+    \    int n = A.size();\n    N = 1;\n    while (N < n){\n      N *= 2;\n    }\n\
+    \    ST = vector<T>(N * 2 - 1, E);\n    for (int i = 0; i < n; i++){\n      ST[N\
+    \ - 1 + i] = A[i];\n    }\n    for (int i = N - 2; i >= 0; i--){\n      update(i);\n\
+    \    }\n    lazy = vector<F>(N * 2 - 1, id);\n  }\n  void update(int i){\n   \
+    \ ST[i] = op(ST[i * 2 + 1], ST[i * 2 + 2]);\n  }\n  void push(int i){\n    ST[i]\
+    \ = mp(lazy[i], ST[i]);\n    if (i < N - 1){\n      lazy[i * 2 + 1] = comp(lazy[i],\
+    \ lazy[i * 2 + 1]);\n      lazy[i * 2 + 2] = comp(lazy[i], lazy[i * 2 + 2]);\n\
+    \      if (ST[i].fail){\n        push(i * 2 + 1);\n        push(i * 2 + 2);\n\
+    \        update(i);\n      }\n    }\n    lazy[i] = id;\n  }\n  void range_apply(int\
+    \ L, int R, F f, int i, int l, int r){\n    push(i);\n    if (r <= L || R <= l){\n\
+    \      return;\n    } else if (L <= l && r <= R){\n      lazy[i] = f;\n      push(i);\n\
+    \    } else {\n      int m = (l + r) / 2;\n      range_apply(L, R, f, i * 2 +\
+    \ 1, l, m);\n      range_apply(L, R, f, i * 2 + 2, m, r);\n      update(i);\n\
+    \    }\n  }\n  void range_apply(int L, int R, F f){\n    range_apply(L, R, f,\
+    \ 0, 0, N);\n  }\n  T range_fold(int L, int R, int i, int l, int r){\n    push(i);\n\
+    \    if (r <= L || R <= l){\n      return E;\n    } else if (L <= l && r <= R){\n\
+    \      return ST[i];\n    } else {\n      int m = (l + r) / 2;\n      return op(range_fold(L,\
     \ R, i * 2 + 1, l, m), range_fold(L, R, i * 2 + 2, m, r));\n    }\n  }\n  T range_fold(int\
     \ L, int R){\n    return range_fold(L, R, 0, 0, N);\n  }\n};\n#line 5 \"test/library_checker/range_chmin_chmax_add_range_sum.test.cpp\"\
     \nconst long long INF = 1000000000000000000;\nstruct monoid{\n  int sz, minc,\
@@ -83,7 +83,7 @@ data:
     \ r, func(-INF, INF, b));\n    }\n    if (t == 3){\n      int l, r;\n      cin\
     \ >> l >> r;\n      cout << ST.range_fold(l, r).sum << endl;\n    }\n  }\n}\n"
   code: "#define PROBLEM \"https://judge.yosupo.jp/problem/range_chmin_chmax_add_range_sum\"\
-    \n#include <bits/stdc++.h>\nusing namespace std;\n#include \"../../data_structure/sequence/segment_tree_beats.cpp\"\
+    \n#include <bits/stdc++.h>\nusing namespace std;\n#include \"../../data_structure/sequence/segment_tree_beats.hpp\"\
     \nconst long long INF = 1000000000000000000;\nstruct monoid{\n  int sz, minc,\
     \ maxc;\n  long long min1, min2, max1, max2, sum;\n  bool fail;\n  monoid(): sz(0),\
     \ minc(0), maxc(0), min1(INF), min2(INF), max1(-INF), max2(-INF), sum(0), fail(false){\n\
@@ -124,13 +124,13 @@ data:
     \ >> r >> b;\n      ST.range_apply(l, r, func(b, INF, 0));\n    }\n    if (t ==\
     \ 2){\n      int l, r;\n      long long b;\n      cin >> l >> r >> b;\n      ST.range_apply(l,\
     \ r, func(-INF, INF, b));\n    }\n    if (t == 3){\n      int l, r;\n      cin\
-    \ >> l >> r;\n      cout << ST.range_fold(l, r).sum << endl;\n    }\n  }\n}\n"
+    \ >> l >> r;\n      cout << ST.range_fold(l, r).sum << endl;\n    }\n  }\n}"
   dependsOn:
-  - data_structure/sequence/segment_tree_beats.cpp
+  - data_structure/sequence/segment_tree_beats.hpp
   isVerificationFile: true
   path: test/library_checker/range_chmin_chmax_add_range_sum.test.cpp
   requiredBy: []
-  timestamp: '2022-07-15 07:37:54+09:00'
+  timestamp: '2022-07-17 06:33:45+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/range_chmin_chmax_add_range_sum.test.cpp

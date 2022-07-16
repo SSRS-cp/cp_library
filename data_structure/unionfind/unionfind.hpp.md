@@ -6,16 +6,16 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/aoj/dsl_1_a.test.cpp
     title: test/aoj/dsl_1_a.test.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: test/library_checker/unionfind.test.cpp
     title: test/library_checker/unionfind.test.cpp
-  _isVerificationFailed: false
-  _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _isVerificationFailed: true
+  _pathExtension: hpp
+  _verificationStatusIcon: ':question:'
   attributes:
     document_title: UnionFind
     links: []
-  bundledCode: "#line 2 \"data_structure/unionfind/unionfind.cpp\"\n/**\n * @brief\
+  bundledCode: "#line 2 \"data_structure/unionfind/unionfind.hpp\"\n/**\n * @brief\
     \ UnionFind\n*/\nstruct unionfind{\n  vector<int> p;\n  unionfind(int N){\n  \
     \  p = vector<int>(N, -1);\n  }\n  int root(int x){\n    if (p[x] < 0){\n    \
     \  return x;\n    } else {\n      p[x] = root(p[x]);\n      return p[x];\n   \
@@ -32,17 +32,17 @@ data:
     \   p[y] += p[x];\n      p[x] = y;\n    }\n  }\n};"
   dependsOn: []
   isVerificationFile: false
-  path: data_structure/unionfind/unionfind.cpp
+  path: data_structure/unionfind/unionfind.hpp
   requiredBy: []
-  timestamp: '2022-07-17 06:21:49+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  timestamp: '2022-07-17 06:33:45+09:00'
+  verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
   - test/library_checker/unionfind.test.cpp
   - test/aoj/dsl_1_a.test.cpp
-documentation_of: data_structure/unionfind/unionfind.cpp
+documentation_of: data_structure/unionfind/unionfind.hpp
 layout: document
 redirect_from:
-- /library/data_structure/unionfind/unionfind.cpp
-- /library/data_structure/unionfind/unionfind.cpp.html
+- /library/data_structure/unionfind/unionfind.hpp
+- /library/data_structure/unionfind/unionfind.hpp.html
 title: UnionFind
 ---

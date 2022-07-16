@@ -1,14 +1,14 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: data_structure/unionfind/unionfind.cpp
+  - icon: ':question:'
+    path: data_structure/unionfind/unionfind.hpp
     title: UnionFind
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.yosupo.jp/problem/unionfind
@@ -16,7 +16,7 @@ data:
     - https://judge.yosupo.jp/problem/unionfind
   bundledCode: "#line 1 \"test/library_checker/unionfind.test.cpp\"\n#define PROBLEM\
     \ \"https://judge.yosupo.jp/problem/unionfind\"\n#include <bits/stdc++.h>\nusing\
-    \ namespace std;\n#line 2 \"data_structure/unionfind/unionfind.cpp\"\n/**\n *\
+    \ namespace std;\n#line 2 \"data_structure/unionfind/unionfind.hpp\"\n/**\n *\
     \ @brief UnionFind\n*/\nstruct unionfind{\n  vector<int> p;\n  unionfind(int N){\n\
     \    p = vector<int>(N, -1);\n  }\n  int root(int x){\n    if (p[x] < 0){\n  \
     \    return x;\n    } else {\n      p[x] = root(p[x]);\n      return p[x];\n \
@@ -30,19 +30,19 @@ data:
     \       cout << 1 << endl;\n      } else {\n        cout << 0 << endl;\n     \
     \ }\n    }\n  }\n}\n"
   code: "#define PROBLEM \"https://judge.yosupo.jp/problem/unionfind\"\n#include <bits/stdc++.h>\n\
-    using namespace std;\n#include \"../../data_structure/unionfind/unionfind.cpp\"\
+    using namespace std;\n#include \"../../data_structure/unionfind/unionfind.hpp\"\
     \nint main(){\n  int N, Q;\n  cin >> N >> Q;\n  unionfind UF(N);\n  for (int i\
     \ = 0; i < Q; i++){\n    int t, u, v;\n    cin >> t >> u >> v;\n    if (t == 0){\n\
     \      UF.unite(u, v);\n    }\n    if (t == 1){\n      if (UF.same(u, v)){\n \
     \       cout << 1 << endl;\n      } else {\n        cout << 0 << endl;\n     \
-    \ }\n    }\n  }\n}\n"
+    \ }\n    }\n  }\n}"
   dependsOn:
-  - data_structure/unionfind/unionfind.cpp
+  - data_structure/unionfind/unionfind.hpp
   isVerificationFile: true
   path: test/library_checker/unionfind.test.cpp
   requiredBy: []
-  timestamp: '2022-07-17 06:21:49+09:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2022-07-17 06:33:45+09:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/library_checker/unionfind.test.cpp
 layout: document
