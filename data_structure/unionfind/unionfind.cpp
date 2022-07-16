@@ -1,3 +1,7 @@
+#pragma once
+/**
+ * @brief UnionFind
+*/
 struct unionfind{
   vector<int> p;
   unionfind(int N){
@@ -26,6 +30,3 @@ struct unionfind{
     }
   }
 };
-/**
- * @brief UnionFind
-*/
