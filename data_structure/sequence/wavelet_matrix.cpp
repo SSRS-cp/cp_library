@@ -1,3 +1,4 @@
+#include "bit_vector.cpp"
 struct wavelet_matrix{
   int N, LOG;
   vector<bit_vector> D;
