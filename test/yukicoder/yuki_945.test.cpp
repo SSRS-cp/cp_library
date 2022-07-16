@@ -30,4 +30,4 @@ int main(){
     }
   }
   cout << ans[0] << ' ' << ans[1] << ' ' << ans[2] << endl;
-
+}
