@@ -2,17 +2,14 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
-    path: test/library_checker/static_range_sum.test.cpp
-    title: test/library_checker/static_range_sum.test.cpp
+  _extendedVerifiedWith: []
   _isVerificationFailed: false
-  _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _pathExtension: hpp
+  _verificationStatusIcon: ':warning:'
   attributes:
     document_title: "Cumulative Sum (\u7D2F\u7A4D\u548C)"
     links: []
-  bundledCode: "#line 1 \"data_structure/sequence/cumulative_sum.cpp\"\ntemplate <typename\
+  bundledCode: "#line 1 \"data_structure/sequence/cumulative_sum.hpp\"\ntemplate <typename\
     \ T>\nstruct cumulative_sum{\n  vector<T> S;\n  function<T(T, T)> f;\n  T E;\n\
     \  cumulative_sum(){\n  }\n  cumulative_sum(vector<T> A, function<T(T, T)> f,\
     \ T E): f(f), E(E){\n    int N = A.size();\n    S = vector<T>(N + 1);\n    S[0]\
@@ -27,16 +24,15 @@ data:
     \ Sum (\u7D2F\u7A4D\u548C)\n*/\n"
   dependsOn: []
   isVerificationFile: false
-  path: data_structure/sequence/cumulative_sum.cpp
+  path: data_structure/sequence/cumulative_sum.hpp
   requiredBy: []
-  timestamp: '2022-07-13 17:04:39+09:00'
-  verificationStatus: LIBRARY_ALL_AC
-  verifiedWith:
-  - test/library_checker/static_range_sum.test.cpp
-documentation_of: data_structure/sequence/cumulative_sum.cpp
+  timestamp: '2022-07-17 03:30:44+09:00'
+  verificationStatus: LIBRARY_NO_TESTS
+  verifiedWith: []
+documentation_of: data_structure/sequence/cumulative_sum.hpp
 layout: document
 redirect_from:
-- /library/data_structure/sequence/cumulative_sum.cpp
-- /library/data_structure/sequence/cumulative_sum.cpp.html
+- /library/data_structure/sequence/cumulative_sum.hpp
+- /library/data_structure/sequence/cumulative_sum.hpp.html
 title: "Cumulative Sum (\u7D2F\u7A4D\u548C)"
 ---
