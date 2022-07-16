@@ -19,17 +19,17 @@ struct bit_vector{
       S[i + 1] = S[i] + __builtin_popcountll(A[i]);
     }
   }
-  int rank(int k, int d){
-    int ans;
+  int operator [](int k){
+    return A[k >> 6] >> (k & 63) & 1;
+  }
+  int rank0(int k){
+    return k - rank1(k);
+  }
+  int rank1(int k){
     if ((k & 63) == 0){
-      ans = S[k >> 6];
+      return S[k >> 6];
     } else {
-      ans = S[k >> 6] + __builtin_popcountll(A[k >> 6] << (64 - k + (k >> 6 << 6)));
-    }
-    if (d == 0){
-      return k - ans;
-    } else {
-      return ans;
+      return S[k >> 6] + __builtin_popcountll(A[k >> 6] << (64 - k + (k >> 6 << 6)));
     }
   }
 };
