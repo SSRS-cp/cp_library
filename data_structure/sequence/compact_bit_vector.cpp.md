@@ -1,11 +1,26 @@
 ---
 data:
   _extendedDependsOn: []
-  _extendedRequiredBy: []
-  _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _extendedRequiredBy:
+  - icon: ':x:'
+    path: data_structure/sequence/wavelet_matrix.cpp
+    title: data_structure/sequence/wavelet_matrix.cpp
+  _extendedVerifiedWith:
+  - icon: ':x:'
+    path: test/aoj/itp1_6_a.test.cpp
+    title: test/aoj/itp1_6_a.test.cpp
+  - icon: ':x:'
+    path: test/aoj/itp1_6_a.test.cpp
+    title: test/aoj/itp1_6_a.test.cpp
+  - icon: ':x:'
+    path: test/library_checker/static_range_frequency.test.cpp
+    title: test/library_checker/static_range_frequency.test.cpp
+  - icon: ':x:'
+    path: test/library_checker/static_range_frequency.test.cpp
+    title: test/library_checker/static_range_frequency.test.cpp
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links: []
   bundledCode: "#line 1 \"data_structure/sequence/compact_bit_vector.cpp\"\nstruct\
@@ -36,10 +51,15 @@ data:
   dependsOn: []
   isVerificationFile: false
   path: data_structure/sequence/compact_bit_vector.cpp
-  requiredBy: []
+  requiredBy:
+  - data_structure/sequence/wavelet_matrix.cpp
   timestamp: '2022-07-16 18:37:31+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_WA
+  verifiedWith:
+  - test/library_checker/static_range_frequency.test.cpp
+  - test/library_checker/static_range_frequency.test.cpp
+  - test/aoj/itp1_6_a.test.cpp
+  - test/aoj/itp1_6_a.test.cpp
 documentation_of: data_structure/sequence/compact_bit_vector.cpp
 layout: document
 redirect_from:
