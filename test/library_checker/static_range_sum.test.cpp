@@ -1,7 +1,7 @@
 #define PROBLEM "https://judge.yosupo.jp/problem/static_range_sum"
 #include <bits/stdc++.h>
 using namespace std;
-#include "../../data_structure/sequence/cumulative_sum.cpp"
+#include "../../data_structure/sequence/cumulative_sum.hpp"
 int main(){
   int N, Q;
   cin >> N >> Q;
