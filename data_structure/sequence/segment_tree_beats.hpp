@@ -1,6 +1,6 @@
 #pragma once
 /**
- * @brief Segment Tre Beats
+ * @brief Segment Tree Beats
 */
 template <typename T, typename F>
 struct segment_tree_beats{
