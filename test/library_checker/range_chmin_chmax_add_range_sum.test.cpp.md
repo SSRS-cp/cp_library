@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: data_structure/sequence/segment_tree_beats.hpp
-    title: Segment Tre Beats
+    title: Segment Tree Beats
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -17,7 +17,7 @@ data:
   bundledCode: "#line 1 \"test/library_checker/range_chmin_chmax_add_range_sum.test.cpp\"\
     \n#define PROBLEM \"https://judge.yosupo.jp/problem/range_chmin_chmax_add_range_sum\"\
     \n#include <bits/stdc++.h>\nusing namespace std;\n#line 2 \"data_structure/sequence/segment_tree_beats.hpp\"\
-    \n/**\n * @brief Segment Tre Beats\n*/\ntemplate <typename T, typename F>\nstruct\
+    \n/**\n * @brief Segment Tree Beats\n*/\ntemplate <typename T, typename F>\nstruct\
     \ segment_tree_beats{\n  int N;\n  vector<T> ST;\n  vector<F> lazy;\n  function<T(T,\
     \ T)> op;\n  function<T(F, T)> mp;\n  function<F(F, F)> comp;\n  T E;\n  F id;\n\
     \  segment_tree_beats(vector<T> &A, function<T(T, T)> op, function<T(F, T)> mp,\
@@ -130,7 +130,7 @@ data:
   isVerificationFile: true
   path: test/library_checker/range_chmin_chmax_add_range_sum.test.cpp
   requiredBy: []
-  timestamp: '2022-07-17 06:33:45+09:00'
+  timestamp: '2022-07-17 14:51:39+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/range_chmin_chmax_add_range_sum.test.cpp
