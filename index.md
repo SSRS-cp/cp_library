@@ -79,10 +79,10 @@ data:
       title: UnionFind
   - name: graph
     pages:
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: graph/biconnected_components.hpp
       title: "\u4E8C\u91CD\u9802\u70B9\u9023\u7D50\u6210\u5206\u5206\u89E3"
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: graph/block_cut_tree.hpp
       title: Block Cut Tree
     - icon: ':heavy_check_mark:'
@@ -382,15 +382,15 @@ data:
       title: test/aoj/dsl/dsl_5_a_3.test.cpp
   - name: test/aoj/grl
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/aoj/grl/grl_3_a.test.cpp
       title: test/aoj/grl/grl_3_a.test.cpp
     - icon: ':heavy_check_mark:'
       path: test/aoj/grl/grl_3_b.test.cpp
       title: test/aoj/grl/grl_3_b.test.cpp
     - icon: ':heavy_check_mark:'
-      path: test/aoj/grl/gsl_3_c.test.cpp
-      title: test/aoj/grl/gsl_3_c.test.cpp
+      path: test/aoj/grl/grl_3_c.test.cpp
+      title: test/aoj/grl/grl_3_c.test.cpp
   - name: test/aoj/itp
     pages:
     - icon: ':heavy_check_mark:'

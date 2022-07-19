@@ -2,19 +2,19 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: graph/block_cut_tree.hpp
     title: Block Cut Tree
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/aoj/grl/grl_3_a.test.cpp
     title: test/aoj/grl/grl_3_a.test.cpp
   - icon: ':heavy_check_mark:'
     path: test/library_checker/graph/biconnected_components.test.cpp
     title: test/library_checker/graph/biconnected_components.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     document_title: "\u4E8C\u91CD\u9802\u70B9\u9023\u7D50\u6210\u5206\u5206\u89E3"
     links: []
@@ -66,7 +66,7 @@ data:
   requiredBy:
   - graph/block_cut_tree.hpp
   timestamp: '2022-07-20 01:24:27+09:00'
-  verificationStatus: LIBRARY_SOME_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/aoj/grl/grl_3_a.test.cpp
   - test/library_checker/graph/biconnected_components.test.cpp

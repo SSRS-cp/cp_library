@@ -1,10 +1,10 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: graph/biconnected_components.hpp
     title: "\u4E8C\u91CD\u9802\u70B9\u9023\u7D50\u6210\u5206\u5206\u89E3"
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: graph/block_cut_tree.hpp
     title: Block Cut Tree
   _extendedRequiredBy: []
@@ -50,19 +50,19 @@ data:
     \      }\n    }\n    biconnected_components B(E2);\n    art = vector<bool>(N,\
     \ false);\n    int cnt = 0;\n    for (int i = 0; i < N; i++){\n      for (auto\
     \ P : E2[i]){\n        if (B[P.first] != B[E2[i][0].first]){\n          art[i]\
-    \ = true;\n        }\n      }\n      if (E2[i].empty()){\n        art[i] = true;\n\
-    \      }\n      if (art[i]){\n        cnt++;\n      }\n    }\n    V = cnt + B.cnt;\n\
+    \ = true;\n        }\n      }\n      if (art[i]){\n        cnt++;\n      }\n \
+    \     if (E[i].empty()){\n        cnt++;\n      }\n    }\n    V = cnt + B.cnt;\n\
     \    cut = vector<bool>(V, false);\n    G.resize(V);\n    node.resize(V);\n  \
     \  int cnt2 = 0;\n    vector<bool> used(B.cnt, false);\n    for (int i = 0; i\
-    \ < N; i++){\n      if (art[i]){\n        if (!E2[i].empty()){\n          cut[cnt2]\
-    \ = true;\n        }\n        node[cnt2].push_back(i);\n        for (auto P :\
-    \ E2[i]){\n          int b = B[P.first];\n          if (!used[b]){\n         \
-    \   used[b] = true;\n            G[cnt + b].push_back(cnt2);\n            G[cnt2].push_back(cnt\
-    \ + b);\n            node[cnt + b].push_back(i);\n          }\n        }\n   \
-    \     for (auto P : E2[i]){\n          int b = B[P.first];\n          used[b]\
-    \ = false;\n        }\n        cnt2++;\n      } else if (!E2[i].empty()){\n  \
-    \      int b = B[E2[i][0].first];\n        node[cnt + b].push_back(i);\n     \
-    \ }\n    }\n  }\n};\n#line 5 \"test/library_checker/graph/biconnected_components.test.cpp\"\
+    \ < N; i++){\n      if (art[i]){\n        cut[cnt2] = true;\n        node[cnt2].push_back(i);\n\
+    \        for (auto P : E2[i]){\n          int b = B[P.first];\n          if (!used[b]){\n\
+    \            used[b] = true;\n            G[cnt + b].push_back(cnt2);\n      \
+    \      G[cnt2].push_back(cnt + b);\n            node[cnt + b].push_back(i);\n\
+    \          }\n        }\n        for (auto P : E2[i]){\n          int b = B[P.first];\n\
+    \          used[b] = false;\n        }\n        cnt2++;\n      } else if (!E2[i].empty()){\n\
+    \        int b = B[E2[i][0].first];\n        node[cnt + b].push_back(i);\n   \
+    \   } else {\n        node[cnt2].push_back(i);\n        cnt2++;\n      }\n   \
+    \ }\n  }\n};\n#line 5 \"test/library_checker/graph/biconnected_components.test.cpp\"\
     \nint main(){\n  int N, M;\n  cin >> N >> M;\n  vector<vector<int>> E(N);\n  for\
     \ (int i = 0; i < M; i++){\n    int s, t;\n    cin >> s >> t;\n    E[s].push_back(t);\n\
     \    E[t].push_back(s);\n  }\n  block_cut_tree G(E);\n  int V = G.V;\n  vector<vector<int>>\
@@ -85,7 +85,7 @@ data:
   isVerificationFile: true
   path: test/library_checker/graph/biconnected_components.test.cpp
   requiredBy: []
-  timestamp: '2022-07-20 01:24:27+09:00'
+  timestamp: '2022-07-20 01:33:22+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/graph/biconnected_components.test.cpp
