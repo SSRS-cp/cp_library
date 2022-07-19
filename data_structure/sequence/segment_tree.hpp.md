@@ -15,12 +15,12 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/library_checker/data_structure/point_set_range_composite.test.cpp
     title: test/library_checker/data_structure/point_set_range_composite.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/library_checker/data_structure/static_rmq_3.test.cpp
     title: test/library_checker/data_structure/static_rmq_3.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     document_title: "\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (\u3046\u3057\u6728)"
     links: []
@@ -64,7 +64,7 @@ data:
   path: data_structure/sequence/segment_tree.hpp
   requiredBy: []
   timestamp: '2022-07-17 06:33:45+09:00'
-  verificationStatus: LIBRARY_SOME_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/aoj/dsl/dsl_2_b_3.test.cpp
   - test/aoj/dsl/dsl_2_a.test.cpp

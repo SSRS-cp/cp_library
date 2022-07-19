@@ -3,7 +3,7 @@ data:
   libraryCategories:
   - name: data_structure/other
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: data_structure/other/cartesian_tree_min.hpp
       title: "\u30C7\u30AB\u30EB\u30C8\u6728"
     - icon: ':heavy_check_mark:'
@@ -18,13 +18,13 @@ data:
       path: data_structure/sequence/commutative_dual_segment_tree.hpp
       title: "\u53EF\u63DB\u53CC\u5BFE\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (\u3089\
         \u3066\u6728)"
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: data_structure/sequence/compact_bit_vector.hpp
       title: "\u30B3\u30F3\u30D1\u30AF\u30C8 Bit Vector"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: data_structure/sequence/cumulative_sum.hpp
       title: "\u7D2F\u7A4D\u548C"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: data_structure/sequence/disjoint_sparse_table.hpp
       title: Disjoint Sparse Table
     - icon: ':heavy_check_mark:'
@@ -46,22 +46,22 @@ data:
     - icon: ':heavy_check_mark:'
       path: data_structure/sequence/invertible_binary_indexed_tree.hpp
       title: "\u53EF\u9006 Binary Indexed Tree"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: data_structure/sequence/invertible_cumulative_sum.hpp
       title: "\u53EF\u9006\u7D2F\u7A4D\u548C"
     - icon: ':heavy_check_mark:'
       path: data_structure/sequence/lazy_segment_tree.hpp
       title: "\u9045\u5EF6\u30BB\u30B0\u30E1\u30F3\u30C8\u6728"
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: data_structure/sequence/segment_tree.hpp
       title: "\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (\u3046\u3057\u6728)"
     - icon: ':heavy_check_mark:'
       path: data_structure/sequence/segment_tree_beats.hpp
       title: Segment Tree Beats
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: data_structure/sequence/sparse_table.hpp
       title: "\u30B9\u30D1\u30FC\u30B9\u30C6\u30FC\u30D6\u30EB"
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: data_structure/sequence/wavelet_matrix.hpp
       title: "\u30A6\u30A7\u30FC\u30D6\u30EC\u30C3\u30C8\u884C\u5217"
     - icon: ':heavy_check_mark:'
@@ -69,19 +69,22 @@ data:
       title: "XOR \u30BB\u30B0\u30E1\u30F3\u30C8\u6728"
   - name: data_structure/tree
     pages:
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: data_structure/tree/heavy_light_decomposition.hpp
       title: "\u91CD\u8EFD\u5206\u89E3"
   - name: data_structure/unionfind
     pages:
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: data_structure/unionfind/unionfind.hpp
       title: UnionFind
   - name: graph
     pages:
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: graph/strongly_connected_components.hpp
       title: "\u5F37\u9023\u7D50\u6210\u5206\u5206\u89E3"
+    - icon: ':heavy_check_mark:'
+      path: graph/two_edge_connected_components.hpp
+      title: "\u4E8C\u8FBA\u9023\u7D50\u6210\u5206\u5206\u89E3"
   - name: old_Data_Structures
     pages:
     - icon: ':warning:'
@@ -383,8 +386,11 @@ data:
   - name: test/aoj/grl
     pages:
     - icon: ':heavy_check_mark:'
-      path: test/aoj/grl/gsl_3_c.test.cpp
-      title: test/aoj/grl/gsl_3_c.test.cpp
+      path: test/aoj/grl/grl_3_b.test.cpp
+      title: test/aoj/grl/grl_3_b.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/grl/grl_3_c.test.cpp
+      title: test/aoj/grl/grl_3_c.test.cpp
   - name: test/aoj/itp
     pages:
     - icon: ':heavy_check_mark:'
@@ -421,44 +427,47 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/range_chmin_chmax_add_range_sum.test.cpp
       title: test/library_checker/data_structure/range_chmin_chmax_add_range_sum.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/range_kth_smallest.test.cpp
       title: test/library_checker/data_structure/range_kth_smallest.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/static_range_frequency.test.cpp
       title: test/library_checker/data_structure/static_range_frequency.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/static_range_sum.test.cpp
       title: test/library_checker/data_structure/static_range_sum.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/static_range_sum_2.test.cpp
       title: test/library_checker/data_structure/static_range_sum_2.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/static_range_sum_3.test.cpp
       title: test/library_checker/data_structure/static_range_sum_3.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/static_rmq.test.cpp
       title: test/library_checker/data_structure/static_rmq.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/static_rmq_2.test.cpp
       title: test/library_checker/data_structure/static_rmq_2.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/static_rmq_3.test.cpp
       title: test/library_checker/data_structure/static_rmq_3.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/unionfind.test.cpp
       title: test/library_checker/data_structure/unionfind.test.cpp
   - name: test/library_checker/graph
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/graph/strongly_connected_components.test.cpp
       title: test/library_checker/graph/strongly_connected_components.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/library_checker/graph/two_edge_connected_components.test.cpp
+      title: test/library_checker/graph/two_edge_connected_components.test.cpp
   - name: test/library_checker/tree
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/tree/cartesian_tree.test.cpp
       title: test/library_checker/tree/cartesian_tree.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/tree/lowest_common_ancestor.test.cpp
       title: test/library_checker/tree/lowest_common_ancestor.test.cpp
   - name: test/yukicoder

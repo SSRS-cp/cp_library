@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: data_structure/sequence/compact_bit_vector.hpp
     title: "\u30B3\u30F3\u30D1\u30AF\u30C8 Bit Vector"
   _extendedRequiredBy: []
@@ -9,15 +9,15 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/aoj/itp/itp1_6_a.test.cpp
     title: test/aoj/itp/itp1_6_a.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/library_checker/data_structure/range_kth_smallest.test.cpp
     title: test/library_checker/data_structure/range_kth_smallest.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/library_checker/data_structure/static_range_frequency.test.cpp
     title: test/library_checker/data_structure/static_range_frequency.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     document_title: "\u30A6\u30A7\u30FC\u30D6\u30EC\u30C3\u30C8\u884C\u5217"
     links: []
@@ -91,7 +91,7 @@ data:
   path: data_structure/sequence/wavelet_matrix.hpp
   requiredBy: []
   timestamp: '2022-07-19 22:00:44+09:00'
-  verificationStatus: LIBRARY_SOME_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/aoj/itp/itp1_6_a.test.cpp
   - test/library_checker/data_structure/static_range_frequency.test.cpp

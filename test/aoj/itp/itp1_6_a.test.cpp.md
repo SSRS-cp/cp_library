@@ -1,10 +1,10 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: data_structure/sequence/compact_bit_vector.hpp
     title: "\u30B3\u30F3\u30D1\u30AF\u30C8 Bit Vector"
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: data_structure/sequence/wavelet_matrix.hpp
     title: "\u30A6\u30A7\u30FC\u30D6\u30EC\u30C3\u30C8\u884C\u5217"
   _extendedRequiredBy: []

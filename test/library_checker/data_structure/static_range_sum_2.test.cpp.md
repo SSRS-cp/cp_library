@@ -1,14 +1,14 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: data_structure/sequence/invertible_cumulative_sum.hpp
     title: "\u53EF\u9006\u7D2F\u7A4D\u548C"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.yosupo.jp/problem/static_range_sum
@@ -43,7 +43,7 @@ data:
   path: test/library_checker/data_structure/static_range_sum_2.test.cpp
   requiredBy: []
   timestamp: '2022-07-19 22:43:05+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/data_structure/static_range_sum_2.test.cpp
 layout: document

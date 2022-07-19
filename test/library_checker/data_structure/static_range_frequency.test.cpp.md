@@ -1,17 +1,17 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: data_structure/sequence/compact_bit_vector.hpp
     title: "\u30B3\u30F3\u30D1\u30AF\u30C8 Bit Vector"
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: data_structure/sequence/wavelet_matrix.hpp
     title: "\u30A6\u30A7\u30FC\u30D6\u30EC\u30C3\u30C8\u884C\u5217"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.yosupo.jp/problem/static_range_frequency
@@ -75,7 +75,7 @@ data:
   path: test/library_checker/data_structure/static_range_frequency.test.cpp
   requiredBy: []
   timestamp: '2022-07-19 22:43:05+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/data_structure/static_range_frequency.test.cpp
 layout: document
