@@ -1,4 +1,4 @@
-#define PROBLEM "https://judge.yosupo.jp/problem/static_range_frequency"
+#define PROBLEM "https://judge.yosupo.jp/problem/range_kth_smallest"
 #include <bits/stdc++.h>
 using namespace std;
 #include "../../data_structure/sequence/wavelet_matrix.hpp"
