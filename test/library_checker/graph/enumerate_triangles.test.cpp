@@ -1,7 +1,7 @@
 #define PROBLEM "https://judge.yosupo.jp/problem/enumerate_triangles"
 #include <bits/stdc++.h>
 using namespace std;
-#include "../../../enumerate_triangles.hpp"
+#include "../../../graph/enumerate_triangles.hpp"
 int main(){
   int N, M;
   cin >> N >> M;
