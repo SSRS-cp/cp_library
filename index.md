@@ -323,6 +323,9 @@ data:
   - name: string
     pages:
     - icon: ':heavy_check_mark:'
+      path: string/manacher.hpp
+      title: "\u6700\u9577\u56DE\u6587 (Manacher's Algorithm)"
+    - icon: ':heavy_check_mark:'
       path: string/z_algorithm.hpp
       title: Z Algorithm
   verificationCategories:
@@ -466,6 +469,9 @@ data:
       title: test/library_checker/graph/two_edge_connected_components.test.cpp
   - name: test/library_checker/string
     pages:
+    - icon: ':heavy_check_mark:'
+      path: test/library_checker/string/enumerate_palindromes.test.cpp
+      title: test/library_checker/string/enumerate_palindromes.test.cpp
     - icon: ':heavy_check_mark:'
       path: test/library_checker/string/z_algorithm.test.cpp
       title: test/library_checker/string/z_algorithm.test.cpp
