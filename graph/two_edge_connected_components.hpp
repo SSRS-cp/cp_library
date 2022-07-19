@@ -1,6 +1,6 @@
 #pragma once
 /**
- * @brief 二辺連結成分分解
+ * @brief 二重辺連結成分分解
 */
 struct two_edge_connected_components{
   vector<int> tcc;
