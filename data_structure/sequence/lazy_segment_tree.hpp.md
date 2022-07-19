@@ -4,20 +4,20 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: test/aoj/dsl_2_f.test.cpp
-    title: test/aoj/dsl_2_f.test.cpp
+    path: test/aoj/dsl/dsl_2_f.test.cpp
+    title: test/aoj/dsl/dsl_2_f.test.cpp
   - icon: ':heavy_check_mark:'
-    path: test/aoj/dsl_2_g.test.cpp
-    title: test/aoj/dsl_2_g.test.cpp
+    path: test/aoj/dsl/dsl_2_g.test.cpp
+    title: test/aoj/dsl/dsl_2_g.test.cpp
   - icon: ':heavy_check_mark:'
-    path: test/aoj/dsl_2_h.test.cpp
-    title: test/aoj/dsl_2_h.test.cpp
+    path: test/aoj/dsl/dsl_2_h.test.cpp
+    title: test/aoj/dsl/dsl_2_h.test.cpp
   - icon: ':heavy_check_mark:'
-    path: test/aoj/dsl_2_i.test.cpp
-    title: test/aoj/dsl_2_i.test.cpp
+    path: test/aoj/dsl/dsl_2_i.test.cpp
+    title: test/aoj/dsl/dsl_2_i.test.cpp
   - icon: ':heavy_check_mark:'
-    path: test/library_checker/range_affine_range_sum.test.cpp
-    title: test/library_checker/range_affine_range_sum.test.cpp
+    path: test/library_checker/data_structure/range_affine_range_sum.test.cpp
+    title: test/library_checker/data_structure/range_affine_range_sum.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -90,11 +90,11 @@ data:
   timestamp: '2022-07-17 06:33:45+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/aoj/dsl_2_f.test.cpp
-  - test/aoj/dsl_2_h.test.cpp
-  - test/aoj/dsl_2_i.test.cpp
-  - test/aoj/dsl_2_g.test.cpp
-  - test/library_checker/range_affine_range_sum.test.cpp
+  - test/aoj/dsl/dsl_2_f.test.cpp
+  - test/aoj/dsl/dsl_2_h.test.cpp
+  - test/aoj/dsl/dsl_2_i.test.cpp
+  - test/aoj/dsl/dsl_2_g.test.cpp
+  - test/library_checker/data_structure/range_affine_range_sum.test.cpp
 documentation_of: data_structure/sequence/lazy_segment_tree.hpp
 layout: document
 redirect_from:

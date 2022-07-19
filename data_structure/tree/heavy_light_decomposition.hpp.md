@@ -4,14 +4,14 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: test/aoj/2667.test.cpp
-    title: test/aoj/2667.test.cpp
-  - icon: ':heavy_check_mark:'
-    path: test/library_checker/lowest_common_ancestor.test.cpp
-    title: test/library_checker/lowest_common_ancestor.test.cpp
-  _isVerificationFailed: false
+    path: test/aoj/other/2667.test.cpp
+    title: test/aoj/other/2667.test.cpp
+  - icon: ':x:'
+    path: test/library_checker/tree/lowest_common_ancestor.test.cpp
+    title: test/library_checker/tree/lowest_common_ancestor.test.cpp
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':question:'
   attributes:
     document_title: "\u91CD\u8EFD\u5206\u89E3"
     links: []
@@ -55,10 +55,10 @@ data:
   path: data_structure/tree/heavy_light_decomposition.hpp
   requiredBy: []
   timestamp: '2022-07-17 06:33:45+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
-  - test/aoj/2667.test.cpp
-  - test/library_checker/lowest_common_ancestor.test.cpp
+  - test/aoj/other/2667.test.cpp
+  - test/library_checker/tree/lowest_common_ancestor.test.cpp
 documentation_of: data_structure/tree/heavy_light_decomposition.hpp
 layout: document
 redirect_from:

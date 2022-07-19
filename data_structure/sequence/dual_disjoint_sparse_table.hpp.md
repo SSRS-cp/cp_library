@@ -4,8 +4,8 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: test/aoj/dsl_5_a_3.test.cpp
-    title: test/aoj/dsl_5_a_3.test.cpp
+    path: test/aoj/dsl/dsl_5_a_3.test.cpp
+    title: test/aoj/dsl/dsl_5_a_3.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -58,7 +58,7 @@ data:
   timestamp: '2022-07-17 06:33:45+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/aoj/dsl_5_a_3.test.cpp
+  - test/aoj/dsl/dsl_5_a_3.test.cpp
 documentation_of: data_structure/sequence/dual_disjoint_sparse_table.hpp
 layout: document
 redirect_from:

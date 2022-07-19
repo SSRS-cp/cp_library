@@ -3,12 +3,12 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
-    path: test/library_checker/static_range_sum_2.test.cpp
-    title: test/library_checker/static_range_sum_2.test.cpp
-  _isVerificationFailed: false
+  - icon: ':x:'
+    path: test/library_checker/data_structure/static_range_sum_2.test.cpp
+    title: test/library_checker/data_structure/static_range_sum_2.test.cpp
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     document_title: "\u53EF\u9006\u7D2F\u7A4D\u548C"
     links: []
@@ -34,9 +34,9 @@ data:
   path: data_structure/sequence/invertible_cumulative_sum.hpp
   requiredBy: []
   timestamp: '2022-07-17 06:33:45+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
-  - test/library_checker/static_range_sum_2.test.cpp
+  - test/library_checker/data_structure/static_range_sum_2.test.cpp
 documentation_of: data_structure/sequence/invertible_cumulative_sum.hpp
 layout: document
 redirect_from:

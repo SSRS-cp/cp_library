@@ -4,11 +4,11 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: test/aoj/dsl_2_b.test.cpp
-    title: test/aoj/dsl_2_b.test.cpp
+    path: test/aoj/dsl/dsl_2_b.test.cpp
+    title: test/aoj/dsl/dsl_2_b.test.cpp
   - icon: ':heavy_check_mark:'
-    path: test/library_checker/point_add_range_sum.test.cpp
-    title: test/library_checker/point_add_range_sum.test.cpp
+    path: test/library_checker/data_structure/point_add_range_sum.test.cpp
+    title: test/library_checker/data_structure/point_add_range_sum.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -45,8 +45,8 @@ data:
   timestamp: '2022-07-17 06:33:45+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/aoj/dsl_2_b.test.cpp
-  - test/library_checker/point_add_range_sum.test.cpp
+  - test/aoj/dsl/dsl_2_b.test.cpp
+  - test/library_checker/data_structure/point_add_range_sum.test.cpp
 documentation_of: data_structure/sequence/binary_indexed_tree.hpp
 layout: document
 redirect_from:

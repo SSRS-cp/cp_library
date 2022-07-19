@@ -4,14 +4,14 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: test/aoj/dsl_1_a.test.cpp
-    title: test/aoj/dsl_1_a.test.cpp
-  - icon: ':heavy_check_mark:'
-    path: test/library_checker/unionfind.test.cpp
-    title: test/library_checker/unionfind.test.cpp
-  _isVerificationFailed: false
+    path: test/aoj/dsl/dsl_1_a.test.cpp
+    title: test/aoj/dsl/dsl_1_a.test.cpp
+  - icon: ':x:'
+    path: test/library_checker/data_structure/unionfind.test.cpp
+    title: test/library_checker/data_structure/unionfind.test.cpp
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':question:'
   attributes:
     document_title: UnionFind
     links: []
@@ -35,10 +35,10 @@ data:
   path: data_structure/unionfind/unionfind.hpp
   requiredBy: []
   timestamp: '2022-07-17 06:33:45+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
-  - test/aoj/dsl_1_a.test.cpp
-  - test/library_checker/unionfind.test.cpp
+  - test/aoj/dsl/dsl_1_a.test.cpp
+  - test/library_checker/data_structure/unionfind.test.cpp
 documentation_of: data_structure/unionfind/unionfind.hpp
 layout: document
 redirect_from:

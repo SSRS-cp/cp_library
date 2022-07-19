@@ -4,8 +4,8 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: test/library_checker/range_affine_point_get.test.cpp
-    title: test/library_checker/range_affine_point_get.test.cpp
+    path: test/library_checker/data_structure/range_affine_point_get.test.cpp
+    title: test/library_checker/data_structure/range_affine_point_get.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -59,7 +59,7 @@ data:
   timestamp: '2022-07-17 06:33:45+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/library_checker/range_affine_point_get.test.cpp
+  - test/library_checker/data_structure/range_affine_point_get.test.cpp
 documentation_of: data_structure/sequence/dual_segment_tree.hpp
 layout: document
 redirect_from:

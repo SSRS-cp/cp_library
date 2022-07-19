@@ -4,8 +4,8 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: test/library_checker/queue_operate_all_composite.test.cpp
-    title: test/library_checker/queue_operate_all_composite.test.cpp
+    path: test/library_checker/data_structure/queue_operate_all_composite.test.cpp
+    title: test/library_checker/data_structure/queue_operate_all_composite.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -43,7 +43,7 @@ data:
   timestamp: '2022-07-17 06:33:45+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/library_checker/queue_operate_all_composite.test.cpp
+  - test/library_checker/data_structure/queue_operate_all_composite.test.cpp
 documentation_of: data_structure/other/sliding_window_aggregation.hpp
 layout: document
 redirect_from:

@@ -4,8 +4,8 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: test/library_checker/range_chmin_chmax_add_range_sum.test.cpp
-    title: test/library_checker/range_chmin_chmax_add_range_sum.test.cpp
+    path: test/library_checker/data_structure/range_chmin_chmax_add_range_sum.test.cpp
+    title: test/library_checker/data_structure/range_chmin_chmax_add_range_sum.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -69,7 +69,7 @@ data:
   timestamp: '2022-07-17 14:51:39+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/library_checker/range_chmin_chmax_add_range_sum.test.cpp
+  - test/library_checker/data_structure/range_chmin_chmax_add_range_sum.test.cpp
 documentation_of: data_structure/sequence/segment_tree_beats.hpp
 layout: document
 redirect_from:

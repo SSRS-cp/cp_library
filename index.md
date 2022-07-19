@@ -3,7 +3,7 @@ data:
   libraryCategories:
   - name: data_structure/other
     pages:
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: data_structure/other/cartesian_tree_min.hpp
       title: "\u30C7\u30AB\u30EB\u30C8\u6728"
     - icon: ':heavy_check_mark:'
@@ -18,13 +18,13 @@ data:
       path: data_structure/sequence/commutative_dual_segment_tree.hpp
       title: "\u53EF\u63DB\u53CC\u5BFE\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (\u3089\
         \u3066\u6728)"
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: data_structure/sequence/compact_bit_vector.hpp
       title: "\u30B3\u30F3\u30D1\u30AF\u30C8 Bit Vector"
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: data_structure/sequence/cumulative_sum.hpp
       title: "\u7D2F\u7A4D\u548C"
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: data_structure/sequence/disjoint_sparse_table.hpp
       title: Disjoint Sparse Table
     - icon: ':heavy_check_mark:'
@@ -46,22 +46,22 @@ data:
     - icon: ':heavy_check_mark:'
       path: data_structure/sequence/invertible_binary_indexed_tree.hpp
       title: "\u53EF\u9006 Binary Indexed Tree"
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: data_structure/sequence/invertible_cumulative_sum.hpp
       title: "\u53EF\u9006\u7D2F\u7A4D\u548C"
     - icon: ':heavy_check_mark:'
       path: data_structure/sequence/lazy_segment_tree.hpp
       title: "\u9045\u5EF6\u30BB\u30B0\u30E1\u30F3\u30C8\u6728"
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: data_structure/sequence/segment_tree.hpp
       title: "\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (\u3046\u3057\u6728)"
     - icon: ':heavy_check_mark:'
       path: data_structure/sequence/segment_tree_beats.hpp
       title: Segment Tree Beats
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: data_structure/sequence/sparse_table.hpp
       title: "\u30B9\u30D1\u30FC\u30B9\u30C6\u30FC\u30D6\u30EB"
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: data_structure/sequence/wavelet_matrix.hpp
       title: "\u30A6\u30A7\u30FC\u30D6\u30EC\u30C3\u30C8\u884C\u5217"
     - icon: ':heavy_check_mark:'
@@ -69,14 +69,19 @@ data:
       title: "XOR \u30BB\u30B0\u30E1\u30F3\u30C8\u6728"
   - name: data_structure/tree
     pages:
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: data_structure/tree/heavy_light_decomposition.hpp
       title: "\u91CD\u8EFD\u5206\u89E3"
   - name: data_structure/unionfind
     pages:
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: data_structure/unionfind/unionfind.hpp
       title: UnionFind
+  - name: graph
+    pages:
+    - icon: ':question:'
+      path: graph/strongly_connected_components.hpp
+      title: "\u5F37\u9023\u7D50\u6210\u5206\u5206\u89E3"
   - name: old_Data_Structures
     pages:
     - icon: ':warning:'
@@ -325,121 +330,137 @@ data:
       path: other/monoids/linear.hpp
       title: other/monoids/linear.hpp
   verificationCategories:
-  - name: test/aoj
+  - name: test/aoj/dsl
     pages:
     - icon: ':heavy_check_mark:'
-      path: test/aoj/2667.test.cpp
-      title: test/aoj/2667.test.cpp
+      path: test/aoj/dsl/dsl_1_a.test.cpp
+      title: test/aoj/dsl/dsl_1_a.test.cpp
     - icon: ':heavy_check_mark:'
-      path: test/aoj/dsl_1_a.test.cpp
-      title: test/aoj/dsl_1_a.test.cpp
+      path: test/aoj/dsl/dsl_2_a.test.cpp
+      title: test/aoj/dsl/dsl_2_a.test.cpp
     - icon: ':heavy_check_mark:'
-      path: test/aoj/dsl_2_a.test.cpp
-      title: test/aoj/dsl_2_a.test.cpp
+      path: test/aoj/dsl/dsl_2_b.test.cpp
+      title: test/aoj/dsl/dsl_2_b.test.cpp
     - icon: ':heavy_check_mark:'
-      path: test/aoj/dsl_2_b.test.cpp
-      title: test/aoj/dsl_2_b.test.cpp
+      path: test/aoj/dsl/dsl_2_b_2.test.cpp
+      title: test/aoj/dsl/dsl_2_b_2.test.cpp
     - icon: ':heavy_check_mark:'
-      path: test/aoj/dsl_2_b_2.test.cpp
-      title: test/aoj/dsl_2_b_2.test.cpp
+      path: test/aoj/dsl/dsl_2_b_3.test.cpp
+      title: test/aoj/dsl/dsl_2_b_3.test.cpp
     - icon: ':heavy_check_mark:'
-      path: test/aoj/dsl_2_b_3.test.cpp
-      title: test/aoj/dsl_2_b_3.test.cpp
+      path: test/aoj/dsl/dsl_2_d.test.cpp
+      title: test/aoj/dsl/dsl_2_d.test.cpp
     - icon: ':heavy_check_mark:'
-      path: test/aoj/dsl_2_d.test.cpp
-      title: test/aoj/dsl_2_d.test.cpp
+      path: test/aoj/dsl/dsl_2_e.test.cpp
+      title: test/aoj/dsl/dsl_2_e.test.cpp
     - icon: ':heavy_check_mark:'
-      path: test/aoj/dsl_2_e.test.cpp
-      title: test/aoj/dsl_2_e.test.cpp
+      path: test/aoj/dsl/dsl_2_e_2.test.cpp
+      title: test/aoj/dsl/dsl_2_e_2.test.cpp
     - icon: ':heavy_check_mark:'
-      path: test/aoj/dsl_2_e_2.test.cpp
-      title: test/aoj/dsl_2_e_2.test.cpp
+      path: test/aoj/dsl/dsl_2_e_3.test.cpp
+      title: test/aoj/dsl/dsl_2_e_3.test.cpp
     - icon: ':heavy_check_mark:'
-      path: test/aoj/dsl_2_e_3.test.cpp
-      title: test/aoj/dsl_2_e_3.test.cpp
+      path: test/aoj/dsl/dsl_2_f.test.cpp
+      title: test/aoj/dsl/dsl_2_f.test.cpp
     - icon: ':heavy_check_mark:'
-      path: test/aoj/dsl_2_f.test.cpp
-      title: test/aoj/dsl_2_f.test.cpp
+      path: test/aoj/dsl/dsl_2_g.test.cpp
+      title: test/aoj/dsl/dsl_2_g.test.cpp
     - icon: ':heavy_check_mark:'
-      path: test/aoj/dsl_2_g.test.cpp
-      title: test/aoj/dsl_2_g.test.cpp
+      path: test/aoj/dsl/dsl_2_h.test.cpp
+      title: test/aoj/dsl/dsl_2_h.test.cpp
     - icon: ':heavy_check_mark:'
-      path: test/aoj/dsl_2_h.test.cpp
-      title: test/aoj/dsl_2_h.test.cpp
+      path: test/aoj/dsl/dsl_2_i.test.cpp
+      title: test/aoj/dsl/dsl_2_i.test.cpp
     - icon: ':heavy_check_mark:'
-      path: test/aoj/dsl_2_i.test.cpp
-      title: test/aoj/dsl_2_i.test.cpp
+      path: test/aoj/dsl/dsl_5_a.test.cpp
+      title: test/aoj/dsl/dsl_5_a.test.cpp
     - icon: ':heavy_check_mark:'
-      path: test/aoj/dsl_5_a.test.cpp
-      title: test/aoj/dsl_5_a.test.cpp
+      path: test/aoj/dsl/dsl_5_a_2.test.cpp
+      title: test/aoj/dsl/dsl_5_a_2.test.cpp
     - icon: ':heavy_check_mark:'
-      path: test/aoj/dsl_5_a_2.test.cpp
-      title: test/aoj/dsl_5_a_2.test.cpp
-    - icon: ':heavy_check_mark:'
-      path: test/aoj/dsl_5_a_3.test.cpp
-      title: test/aoj/dsl_5_a_3.test.cpp
-    - icon: ':heavy_check_mark:'
-      path: test/aoj/itp1_6_a.test.cpp
-      title: test/aoj/itp1_6_a.test.cpp
-  - name: test/library_checker
+      path: test/aoj/dsl/dsl_5_a_3.test.cpp
+      title: test/aoj/dsl/dsl_5_a_3.test.cpp
+  - name: test/aoj/grl
     pages:
     - icon: ':heavy_check_mark:'
-      path: test/library_checker/cartesian_tree.test.cpp
-      title: test/library_checker/cartesian_tree.test.cpp
+      path: test/aoj/grl/gsl_3_c.test.cpp
+      title: test/aoj/grl/gsl_3_c.test.cpp
+  - name: test/aoj/itp
+    pages:
     - icon: ':heavy_check_mark:'
-      path: test/library_checker/lowest_common_ancestor.test.cpp
-      title: test/library_checker/lowest_common_ancestor.test.cpp
+      path: test/aoj/itp/itp1_6_a.test.cpp
+      title: test/aoj/itp/itp1_6_a.test.cpp
+  - name: test/aoj/other
+    pages:
     - icon: ':heavy_check_mark:'
-      path: test/library_checker/point_add_range_sum.test.cpp
-      title: test/library_checker/point_add_range_sum.test.cpp
+      path: test/aoj/other/2667.test.cpp
+      title: test/aoj/other/2667.test.cpp
+  - name: test/library_checker/data_structure
+    pages:
     - icon: ':heavy_check_mark:'
-      path: test/library_checker/point_add_range_sum_2.test.cpp
-      title: test/library_checker/point_add_range_sum_2.test.cpp
+      path: test/library_checker/data_structure/point_add_range_sum.test.cpp
+      title: test/library_checker/data_structure/point_add_range_sum.test.cpp
     - icon: ':heavy_check_mark:'
-      path: test/library_checker/point_add_range_sum_3.test.cpp
-      title: test/library_checker/point_add_range_sum_3.test.cpp
+      path: test/library_checker/data_structure/point_add_range_sum_2.test.cpp
+      title: test/library_checker/data_structure/point_add_range_sum_2.test.cpp
     - icon: ':heavy_check_mark:'
-      path: test/library_checker/point_set_range_composite.test.cpp
-      title: test/library_checker/point_set_range_composite.test.cpp
+      path: test/library_checker/data_structure/point_add_range_sum_3.test.cpp
+      title: test/library_checker/data_structure/point_add_range_sum_3.test.cpp
     - icon: ':heavy_check_mark:'
-      path: test/library_checker/queue_operate_all_composite.test.cpp
-      title: test/library_checker/queue_operate_all_composite.test.cpp
+      path: test/library_checker/data_structure/point_set_range_composite.test.cpp
+      title: test/library_checker/data_structure/point_set_range_composite.test.cpp
     - icon: ':heavy_check_mark:'
-      path: test/library_checker/range_affine_point_get.test.cpp
-      title: test/library_checker/range_affine_point_get.test.cpp
+      path: test/library_checker/data_structure/queue_operate_all_composite.test.cpp
+      title: test/library_checker/data_structure/queue_operate_all_composite.test.cpp
     - icon: ':heavy_check_mark:'
-      path: test/library_checker/range_affine_range_sum.test.cpp
-      title: test/library_checker/range_affine_range_sum.test.cpp
+      path: test/library_checker/data_structure/range_affine_point_get.test.cpp
+      title: test/library_checker/data_structure/range_affine_point_get.test.cpp
     - icon: ':heavy_check_mark:'
-      path: test/library_checker/range_chmin_chmax_add_range_sum.test.cpp
-      title: test/library_checker/range_chmin_chmax_add_range_sum.test.cpp
+      path: test/library_checker/data_structure/range_affine_range_sum.test.cpp
+      title: test/library_checker/data_structure/range_affine_range_sum.test.cpp
     - icon: ':heavy_check_mark:'
-      path: test/library_checker/range_kth_smallest.test.cpp
-      title: test/library_checker/range_kth_smallest.test.cpp
-    - icon: ':heavy_check_mark:'
-      path: test/library_checker/static_range_frequency.test.cpp
-      title: test/library_checker/static_range_frequency.test.cpp
-    - icon: ':heavy_check_mark:'
-      path: test/library_checker/static_range_sum.test.cpp
-      title: test/library_checker/static_range_sum.test.cpp
-    - icon: ':heavy_check_mark:'
-      path: test/library_checker/static_range_sum_2.test.cpp
-      title: test/library_checker/static_range_sum_2.test.cpp
-    - icon: ':heavy_check_mark:'
-      path: test/library_checker/static_range_sum_3.test.cpp
-      title: test/library_checker/static_range_sum_3.test.cpp
-    - icon: ':heavy_check_mark:'
-      path: test/library_checker/static_rmq.test.cpp
-      title: test/library_checker/static_rmq.test.cpp
-    - icon: ':heavy_check_mark:'
-      path: test/library_checker/static_rmq_2.test.cpp
-      title: test/library_checker/static_rmq_2.test.cpp
-    - icon: ':heavy_check_mark:'
-      path: test/library_checker/static_rmq_3.test.cpp
-      title: test/library_checker/static_rmq_3.test.cpp
-    - icon: ':heavy_check_mark:'
-      path: test/library_checker/unionfind.test.cpp
-      title: test/library_checker/unionfind.test.cpp
+      path: test/library_checker/data_structure/range_chmin_chmax_add_range_sum.test.cpp
+      title: test/library_checker/data_structure/range_chmin_chmax_add_range_sum.test.cpp
+    - icon: ':x:'
+      path: test/library_checker/data_structure/range_kth_smallest.test.cpp
+      title: test/library_checker/data_structure/range_kth_smallest.test.cpp
+    - icon: ':x:'
+      path: test/library_checker/data_structure/static_range_frequency.test.cpp
+      title: test/library_checker/data_structure/static_range_frequency.test.cpp
+    - icon: ':x:'
+      path: test/library_checker/data_structure/static_range_sum.test.cpp
+      title: test/library_checker/data_structure/static_range_sum.test.cpp
+    - icon: ':x:'
+      path: test/library_checker/data_structure/static_range_sum_2.test.cpp
+      title: test/library_checker/data_structure/static_range_sum_2.test.cpp
+    - icon: ':x:'
+      path: test/library_checker/data_structure/static_range_sum_3.test.cpp
+      title: test/library_checker/data_structure/static_range_sum_3.test.cpp
+    - icon: ':x:'
+      path: test/library_checker/data_structure/static_rmq.test.cpp
+      title: test/library_checker/data_structure/static_rmq.test.cpp
+    - icon: ':x:'
+      path: test/library_checker/data_structure/static_rmq_2.test.cpp
+      title: test/library_checker/data_structure/static_rmq_2.test.cpp
+    - icon: ':x:'
+      path: test/library_checker/data_structure/static_rmq_3.test.cpp
+      title: test/library_checker/data_structure/static_rmq_3.test.cpp
+    - icon: ':x:'
+      path: test/library_checker/data_structure/unionfind.test.cpp
+      title: test/library_checker/data_structure/unionfind.test.cpp
+  - name: test/library_checker/graph
+    pages:
+    - icon: ':x:'
+      path: test/library_checker/graph/strongly_connected_components.test.cpp
+      title: test/library_checker/graph/strongly_connected_components.test.cpp
+  - name: test/library_checker/tree
+    pages:
+    - icon: ':x:'
+      path: test/library_checker/tree/cartesian_tree.test.cpp
+      title: test/library_checker/tree/cartesian_tree.test.cpp
+    - icon: ':x:'
+      path: test/library_checker/tree/lowest_common_ancestor.test.cpp
+      title: test/library_checker/tree/lowest_common_ancestor.test.cpp
   - name: test/yukicoder
     pages:
     - icon: ':heavy_check_mark:'
