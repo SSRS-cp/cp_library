@@ -1,7 +1,7 @@
-#define PROBLEM "https://judge.yosupo.jp/problem/scc"
+#define PROBLEM "https://judge.yosupo.jp/problem/two_edge_connected_components"
 #include <bits/stdc++.h>
 using namespace std;
-#include "../../../graph/strongly_connected_components.hpp"
+#include "../../../graph/two_edge_connected_components.hpp"
 int main(){
   int N, M;
   cin >> N >> M;
@@ -10,8 +10,9 @@ int main(){
     int a, b;
     cin >> a >> b;
     E[a].push_back(b);
+    E[b].push_back(a);
   }
-  strongly_connected_components G(E);
+  two_edge_connected_components G(E);
   int K = G.cnt;
   vector<vector<int>> v(K);
   for (int i = 0; i < N; i++){

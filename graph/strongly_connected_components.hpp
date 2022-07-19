@@ -3,8 +3,8 @@
  * @brief 強連結成分分解
 */
 struct strongly_connected_components{
-  int cnt = 0;
   vector<int> scc;
+  int cnt = 0;
   void dfs1(vector<vector<int>> &E, vector<int> &t, vector<bool> &used, int v){
     for (int w : E[v]){
       if (!used[w]){
@@ -52,8 +52,5 @@ struct strongly_connected_components{
   }
   int operator [](int k){
     return scc[k];
-  }
-  int size(){
-    return cnt;
   }
 };
