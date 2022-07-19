@@ -66,4 +66,20 @@ struct wavelet_matrix{
     }
     return r - l;
   }
+  int quantile(int l, int r, int k){
+    int ans = 0;
+    for (int i = 0; i < LOG; i++){
+      int cnt0 = D[i].rank0(r) - D[i].rank0(l);
+      if (k < cnt0){
+        l = D[i].rank0(l);
+        r = D[i].rank0(r);
+      } else {
+        ans += 1 << (LOG - 1 - i);
+        k -= cnt0;
+        l = cnt[i] + D[i].rank1(l);
+        r = cnt[i] + D[i].rank1(r);
+      }
+    }
+    return ans;
+  }
 };
