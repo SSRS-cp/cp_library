@@ -1,3 +1,7 @@
+#pragma once
+/**
+ * @brief Z Algorithm
+*/
 vector<int> z_algorithm(string S){
   int N = S.size();
   vector<int> ans(N);
