@@ -85,7 +85,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: graph/block_cut_tree.hpp
       title: Block Cut Tree
-    - icon: ':warning:'
+    - icon: ':x:'
       path: graph/enumerate_triangles.hpp
       title: "\u4E09\u89D2\u5F62\u5217\u6319"
     - icon: ':heavy_check_mark:'
