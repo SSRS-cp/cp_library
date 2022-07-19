@@ -31,10 +31,10 @@ struct block_cut_tree{
           art[i] = true;
         }
       }
-      if (E2[i].empty()){
-        art[i] = true;
-      }
       if (art[i]){
+        cnt++;
+      }
+      if (E[i].empty()){
         cnt++;
       }
     }
@@ -46,9 +46,7 @@ struct block_cut_tree{
     vector<bool> used(B.cnt, false);
     for (int i = 0; i < N; i++){
       if (art[i]){
-        if (!E2[i].empty()){
-          cut[cnt2] = true;
-        }
+        cut[cnt2] = true;
         node[cnt2].push_back(i);
         for (auto P : E2[i]){
           int b = B[P.first];
@@ -67,6 +65,9 @@ struct block_cut_tree{
       } else if (!E2[i].empty()){
         int b = B[E2[i][0].first];
         node[cnt + b].push_back(i);
+      } else {
+        node[cnt2].push_back(i);
+        cnt2++;
       }
     }
   }
