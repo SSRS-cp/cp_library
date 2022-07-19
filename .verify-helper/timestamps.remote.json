@@ -43,6 +43,7 @@
 "test/library_checker/graph/two_edge_connected_components.test.cpp": "2022-07-20 01:24:27 +0900",
 "test/library_checker/tree/cartesian_tree.test.cpp": "2022-07-19 22:43:05 +0900",
 "test/library_checker/tree/lowest_common_ancestor.test.cpp": "2022-07-19 22:43:05 +0900",
+"test/yukicoder/yuki_1326.test.cpp": "2022-07-20 02:04:32 +0900",
 "test/yukicoder/yuki_1891.test.cpp": "2022-07-17 07:03:54 +0900",
 "test/yukicoder/yuki_945.test.cpp": "2022-07-17 07:03:54 +0900"
 }
