@@ -38,6 +38,7 @@
 "test/library_checker/data_structure/static_rmq_3.test.cpp": "2022-07-19 22:43:05 +0900",
 "test/library_checker/data_structure/unionfind.test.cpp": "2022-07-19 22:43:05 +0900",
 "test/library_checker/graph/biconnected_components.test.cpp": "2022-07-20 01:33:22 +0900",
+"test/library_checker/graph/enumerate_triangles.test.cpp": "2022-07-20 01:50:04 +0900",
 "test/library_checker/graph/strongly_connected_components.test.cpp": "2022-07-20 00:19:01 +0900",
 "test/library_checker/graph/two_edge_connected_components.test.cpp": "2022-07-20 01:24:27 +0900",
 "test/library_checker/tree/cartesian_tree.test.cpp": "2022-07-19 22:43:05 +0900",
