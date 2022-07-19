@@ -85,6 +85,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: graph/block_cut_tree.hpp
       title: Block Cut Tree
+    - icon: ':warning:'
+      path: graph/enumerate_triangles.hpp
+      title: "\u4E09\u89D2\u5F62\u5217\u6319"
     - icon: ':heavy_check_mark:'
       path: graph/strongly_connected_components.hpp
       title: "\u5F37\u9023\u7D50\u6210\u5206\u5206\u89E3"
@@ -154,23 +157,14 @@ data:
       path: old_Graph/All_Pairs_Shortest_Path_(Warshall_Floyd).cpp
       title: old_Graph/All_Pairs_Shortest_Path_(Warshall_Floyd).cpp
     - icon: ':warning:'
-      path: old_Graph/Biconnected_Components.cpp
-      title: old_Graph/Biconnected_Components.cpp
-    - icon: ':warning:'
       path: old_Graph/Bipartite_Matching.cpp
       title: old_Graph/Bipartite_Matching.cpp
-    - icon: ':warning:'
-      path: old_Graph/Block_Cut_Tree.cpp
-      title: old_Graph/Block_Cut_Tree.cpp
     - icon: ':warning:'
       path: old_Graph/Convert_to_Rooted_Tree.cpp
       title: old_Graph/Convert_to_Rooted_Tree.cpp
     - icon: ':warning:'
       path: old_Graph/Detect_Cycle.cpp
       title: old_Graph/Detect_Cycle.cpp
-    - icon: ':warning:'
-      path: old_Graph/Enumerate_Triangles.cpp
-      title: old_Graph/Enumerate_Triangles.cpp
     - icon: ':warning:'
       path: old_Graph/Lowest_Common_Ancestor.cpp
       title: old_Graph/Lowest_Common_Ancestor.cpp
@@ -459,6 +453,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/graph/biconnected_components.test.cpp
       title: test/library_checker/graph/biconnected_components.test.cpp
+    - icon: ':x:'
+      path: test/library_checker/graph/enumerate_triangles.test.cpp
+      title: test/library_checker/graph/enumerate_triangles.test.cpp
     - icon: ':heavy_check_mark:'
       path: test/library_checker/graph/strongly_connected_components.test.cpp
       title: test/library_checker/graph/strongly_connected_components.test.cpp
