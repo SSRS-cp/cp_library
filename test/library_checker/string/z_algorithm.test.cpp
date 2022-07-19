@@ -1,3 +1,4 @@
+#define PROBLEM "https://judge.yosupo.jp/problem/zalgorithm"
 #include <bits/stdc++.h>
 using namespace std;
 #include "../../../string/z_algorithm.hpp"
