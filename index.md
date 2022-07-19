@@ -79,12 +79,18 @@ data:
       title: UnionFind
   - name: graph
     pages:
+    - icon: ':question:'
+      path: graph/biconnected_components.hpp
+      title: "\u4E8C\u91CD\u9802\u70B9\u9023\u7D50\u6210\u5206\u5206\u89E3"
+    - icon: ':question:'
+      path: graph/block_cut_tree.hpp
+      title: Block Cut Tree
     - icon: ':heavy_check_mark:'
       path: graph/strongly_connected_components.hpp
       title: "\u5F37\u9023\u7D50\u6210\u5206\u5206\u89E3"
     - icon: ':heavy_check_mark:'
       path: graph/two_edge_connected_components.hpp
-      title: "\u4E8C\u8FBA\u9023\u7D50\u6210\u5206\u5206\u89E3"
+      title: "\u4E8C\u91CD\u8FBA\u9023\u7D50\u6210\u5206\u5206\u89E3"
   - name: old_Data_Structures
     pages:
     - icon: ':warning:'
@@ -202,9 +208,6 @@ data:
       path: old_Graph/Single_Source_Shortest_Path_(Dijkstra).cpp
       title: old_Graph/Single_Source_Shortest_Path_(Dijkstra).cpp
     - icon: ':warning:'
-      path: old_Graph/Strongly_Connected_Component_Decomposition.cpp
-      title: old_Graph/Strongly_Connected_Component_Decomposition.cpp
-    - icon: ':warning:'
       path: old_Graph/Topological_Sort.cpp
       title: old_Graph/Topological_Sort.cpp
     - icon: ':warning:'
@@ -213,12 +216,6 @@ data:
     - icon: ':warning:'
       path: old_Graph/Tree_Height.cpp
       title: old_Graph/Tree_Height.cpp
-    - icon: ':warning:'
-      path: old_Graph/Two_Edge_Connected_Components.cpp
-      title: old_Graph/Two_Edge_Connected_Components.cpp
-    - icon: ':warning:'
-      path: old_Graph/Two_Edge_Connected_Components_SC.cpp
-      title: old_Graph/Two_Edge_Connected_Components_SC.cpp
   - name: old_Math
     pages:
     - icon: ':warning:'
@@ -385,12 +382,15 @@ data:
       title: test/aoj/dsl/dsl_5_a_3.test.cpp
   - name: test/aoj/grl
     pages:
+    - icon: ':x:'
+      path: test/aoj/grl/grl_3_a.test.cpp
+      title: test/aoj/grl/grl_3_a.test.cpp
     - icon: ':heavy_check_mark:'
       path: test/aoj/grl/grl_3_b.test.cpp
       title: test/aoj/grl/grl_3_b.test.cpp
     - icon: ':heavy_check_mark:'
-      path: test/aoj/grl/grl_3_c.test.cpp
-      title: test/aoj/grl/grl_3_c.test.cpp
+      path: test/aoj/grl/gsl_3_c.test.cpp
+      title: test/aoj/grl/gsl_3_c.test.cpp
   - name: test/aoj/itp
     pages:
     - icon: ':heavy_check_mark:'
@@ -456,6 +456,9 @@ data:
       title: test/library_checker/data_structure/unionfind.test.cpp
   - name: test/library_checker/graph
     pages:
+    - icon: ':heavy_check_mark:'
+      path: test/library_checker/graph/biconnected_components.test.cpp
+      title: test/library_checker/graph/biconnected_components.test.cpp
     - icon: ':heavy_check_mark:'
       path: test/library_checker/graph/strongly_connected_components.test.cpp
       title: test/library_checker/graph/strongly_connected_components.test.cpp

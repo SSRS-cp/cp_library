@@ -13,10 +13,10 @@ data:
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    document_title: "\u4E8C\u8FBA\u9023\u7D50\u6210\u5206\u5206\u89E3"
+    document_title: "\u4E8C\u91CD\u8FBA\u9023\u7D50\u6210\u5206\u5206\u89E3"
     links: []
   bundledCode: "#line 2 \"graph/two_edge_connected_components.hpp\"\n/**\n * @brief\
-    \ \u4E8C\u8FBA\u9023\u7D50\u6210\u5206\u5206\u89E3\n*/\nstruct two_edge_connected_components{\n\
+    \ \u4E8C\u91CD\u8FBA\u9023\u7D50\u6210\u5206\u5206\u89E3\n*/\nstruct two_edge_connected_components{\n\
     \  vector<int> tcc;\n  int cnt = 0;\n  two_edge_connected_components(vector<vector<int>>\
     \ &E){\n    int N = E.size();\n    vector<int> p(N, -1);\n    vector<int> d(N,\
     \ -1);\n    vector<int> imos(N, 0);\n    for (int i = 0; i < N; i++){\n      if\
@@ -35,12 +35,12 @@ data:
     \ {\n          tcc[w] = cnt;\n          cnt++;\n        }\n        dfs2(E, p,\
     \ imos, w);\n      }\n    }\n  }\n  int operator [](int v){\n    return tcc[v];\n\
     \  }\n};\n"
-  code: "#pragma once\n/**\n * @brief \u4E8C\u8FBA\u9023\u7D50\u6210\u5206\u5206\u89E3\
-    \n*/\nstruct two_edge_connected_components{\n  vector<int> tcc;\n  int cnt = 0;\n\
-    \  two_edge_connected_components(vector<vector<int>> &E){\n    int N = E.size();\n\
-    \    vector<int> p(N, -1);\n    vector<int> d(N, -1);\n    vector<int> imos(N,\
-    \ 0);\n    for (int i = 0; i < N; i++){\n      if (p[i] == -1){\n        d[i]\
-    \ = 0;\n        dfs1(E, p, d, imos, i);\n      }\n    }\n    tcc = vector<int>(N,\
+  code: "#pragma once\n/**\n * @brief \u4E8C\u91CD\u8FBA\u9023\u7D50\u6210\u5206\u5206\
+    \u89E3\n*/\nstruct two_edge_connected_components{\n  vector<int> tcc;\n  int cnt\
+    \ = 0;\n  two_edge_connected_components(vector<vector<int>> &E){\n    int N =\
+    \ E.size();\n    vector<int> p(N, -1);\n    vector<int> d(N, -1);\n    vector<int>\
+    \ imos(N, 0);\n    for (int i = 0; i < N; i++){\n      if (p[i] == -1){\n    \
+    \    d[i] = 0;\n        dfs1(E, p, d, imos, i);\n      }\n    }\n    tcc = vector<int>(N,\
     \ -1);\n    for (int i = 0; i < N; i++){\n      if (tcc[i] == -1){\n        tcc[i]\
     \ = cnt;\n        cnt++;\n        dfs2(E, p, imos, i);\n      }\n    }\n  }\n\
     \  void dfs1(vector<vector<int>> &E, vector<int> &p, vector<int> &d, vector<int>\
@@ -58,7 +58,7 @@ data:
   isVerificationFile: false
   path: graph/two_edge_connected_components.hpp
   requiredBy: []
-  timestamp: '2022-07-20 00:19:01+09:00'
+  timestamp: '2022-07-20 01:24:27+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/aoj/grl/grl_3_b.test.cpp
@@ -68,5 +68,5 @@ layout: document
 redirect_from:
 - /library/graph/two_edge_connected_components.hpp
 - /library/graph/two_edge_connected_components.hpp.html
-title: "\u4E8C\u8FBA\u9023\u7D50\u6210\u5206\u5206\u89E3"
+title: "\u4E8C\u91CD\u8FBA\u9023\u7D50\u6210\u5206\u5206\u89E3"
 ---

@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: graph/two_edge_connected_components.hpp
-    title: "\u4E8C\u8FBA\u9023\u7D50\u6210\u5206\u5206\u89E3"
+    title: "\u4E8C\u91CD\u8FBA\u9023\u7D50\u6210\u5206\u5206\u89E3"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -16,8 +16,8 @@ data:
     - https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_3_B
   bundledCode: "#line 1 \"test/aoj/grl/grl_3_b.test.cpp\"\n#define PROBLEM \"https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_3_B\"\
     \n#include <bits/stdc++.h>\nusing namespace std;\n#line 2 \"graph/two_edge_connected_components.hpp\"\
-    \n/**\n * @brief \u4E8C\u8FBA\u9023\u7D50\u6210\u5206\u5206\u89E3\n*/\nstruct\
-    \ two_edge_connected_components{\n  vector<int> tcc;\n  int cnt = 0;\n  two_edge_connected_components(vector<vector<int>>\
+    \n/**\n * @brief \u4E8C\u91CD\u8FBA\u9023\u7D50\u6210\u5206\u5206\u89E3\n*/\n\
+    struct two_edge_connected_components{\n  vector<int> tcc;\n  int cnt = 0;\n  two_edge_connected_components(vector<vector<int>>\
     \ &E){\n    int N = E.size();\n    vector<int> p(N, -1);\n    vector<int> d(N,\
     \ -1);\n    vector<int> imos(N, 0);\n    for (int i = 0; i < N; i++){\n      if\
     \ (p[i] == -1){\n        d[i] = 0;\n        dfs1(E, p, d, imos, i);\n      }\n\
@@ -57,7 +57,7 @@ data:
   isVerificationFile: true
   path: test/aoj/grl/grl_3_b.test.cpp
   requiredBy: []
-  timestamp: '2022-07-20 00:19:01+09:00'
+  timestamp: '2022-07-20 01:24:27+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/aoj/grl/grl_3_b.test.cpp

@@ -14,7 +14,7 @@ data:
     PROBLEM: https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_3_C
     links:
     - https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_3_C
-  bundledCode: "#line 1 \"test/aoj/grl/grl_3_c.test.cpp\"\n#define PROBLEM \"https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_3_C\"\
+  bundledCode: "#line 1 \"test/aoj/grl/gsl_3_c.test.cpp\"\n#define PROBLEM \"https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_3_C\"\
     \n#include <bits/stdc++.h>\nusing namespace std;\n#line 2 \"graph/strongly_connected_components.hpp\"\
     \n/**\n * @brief \u5F37\u9023\u7D50\u6210\u5206\u5206\u89E3\n*/\nstruct strongly_connected_components{\n\
     \  vector<int> scc;\n  int cnt = 0;\n  void dfs1(vector<vector<int>> &E, vector<int>\
@@ -31,7 +31,7 @@ data:
     \    vector<bool> used2(N, false);\n    scc = vector<int>(N);\n    for (int i\
     \ = 0; i < N; i++){\n      if (!used2[t[i]]){\n        used2[t[i]] = true;\n \
     \       dfs2(E2, used2, t[i]);\n        cnt++;\n      }\n    }\n  }\n  int operator\
-    \ [](int k){\n    return scc[k];\n  }\n};\n#line 5 \"test/aoj/grl/grl_3_c.test.cpp\"\
+    \ [](int k){\n    return scc[k];\n  }\n};\n#line 5 \"test/aoj/grl/gsl_3_c.test.cpp\"\
     \nint main(){\n  int N, M;\n  cin >> N >> M;\n  vector<vector<int>> E(N);\n  for\
     \ (int i = 0; i < M; i++){\n    int s, t;\n    cin >> s >> t;\n    E[s].push_back(t);\n\
     \  }\n  strongly_connected_components G(E);\n  int Q;\n  cin >> Q;\n  for (int\
@@ -49,15 +49,15 @@ data:
   dependsOn:
   - graph/strongly_connected_components.hpp
   isVerificationFile: true
-  path: test/aoj/grl/grl_3_c.test.cpp
+  path: test/aoj/grl/gsl_3_c.test.cpp
   requiredBy: []
-  timestamp: '2022-07-20 00:19:01+09:00'
+  timestamp: '2022-07-20 01:24:27+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: test/aoj/grl/grl_3_c.test.cpp
+documentation_of: test/aoj/grl/gsl_3_c.test.cpp
 layout: document
 redirect_from:
-- /verify/test/aoj/grl/grl_3_c.test.cpp
-- /verify/test/aoj/grl/grl_3_c.test.cpp.html
-title: test/aoj/grl/grl_3_c.test.cpp
+- /verify/test/aoj/grl/gsl_3_c.test.cpp
+- /verify/test/aoj/grl/gsl_3_c.test.cpp.html
+title: test/aoj/grl/gsl_3_c.test.cpp
 ---
