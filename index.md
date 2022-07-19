@@ -322,7 +322,7 @@ data:
       title: other/monoids/linear.hpp
   - name: string
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: string/z_algorithm.hpp
       title: Z Algorithm
   verificationCategories:
@@ -466,7 +466,7 @@ data:
       title: test/library_checker/graph/two_edge_connected_components.test.cpp
   - name: test/library_checker/string
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/string/z_algorithm.test.cpp
       title: test/library_checker/string/z_algorithm.test.cpp
   - name: test/library_checker/tree
