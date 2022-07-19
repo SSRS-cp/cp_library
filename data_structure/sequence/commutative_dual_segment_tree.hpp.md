@@ -54,8 +54,8 @@ data:
   timestamp: '2022-07-17 06:33:45+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/aoj/dsl_2_d.test.cpp
   - test/aoj/dsl_2_e_3.test.cpp
+  - test/aoj/dsl_2_d.test.cpp
 documentation_of: data_structure/sequence/commutative_dual_segment_tree.hpp
 layout: document
 redirect_from:

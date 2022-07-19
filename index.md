@@ -414,6 +414,9 @@ data:
       path: test/library_checker/range_chmin_chmax_add_range_sum.test.cpp
       title: test/library_checker/range_chmin_chmax_add_range_sum.test.cpp
     - icon: ':heavy_check_mark:'
+      path: test/library_checker/range_kth_smallest.test.cpp
+      title: test/library_checker/range_kth_smallest.test.cpp
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/static_range_frequency.test.cpp
       title: test/library_checker/static_range_frequency.test.cpp
     - icon: ':heavy_check_mark:'

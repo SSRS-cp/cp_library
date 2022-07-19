@@ -51,7 +51,12 @@ data:
     \ (int i = 0; i < LOG; i++){\n      if ((c >> (LOG - 1 - i) & 1) == 0){\n    \
     \    l = D[i].rank0(l);\n        r = D[i].rank0(r);\n      } else {\n        l\
     \ = cnt[i] + D[i].rank1(l);\n        r = cnt[i] + D[i].rank1(r);\n      }\n  \
-    \  }\n    return r - l;\n  }\n};\n#line 5 \"test/aoj/itp1_6_a.test.cpp\"\nint\
+    \  }\n    return r - l;\n  }\n  int quantile(int l, int r, int k){\n    int ans\
+    \ = 0;\n    for (int i = 0; i < LOG; i++){\n      int cnt0 = D[i].rank0(r) - D[i].rank0(l);\n\
+    \      if (k < cnt0){\n        l = D[i].rank0(l);\n        r = D[i].rank0(r);\n\
+    \      } else {\n        ans += 1 << (LOG - 1 - i);\n        k -= cnt0;\n    \
+    \    l = cnt[i] + D[i].rank1(l);\n        r = cnt[i] + D[i].rank1(r);\n      }\n\
+    \    }\n    return ans;\n  }\n};\n#line 5 \"test/aoj/itp1_6_a.test.cpp\"\nint\
     \ main(){\n  int n;\n  cin >> n;\n  vector<int> a(n);\n  for (int i = 0; i < n;\
     \ i++){\n    cin >> a[i];\n  }\n  wavelet_matrix WM(a);\n  for (int i = n - 1;\
     \ i >= 0; i--){\n    cout << WM[i];\n    if (i > 0){\n      cout << ' ';\n   \
@@ -68,7 +73,7 @@ data:
   isVerificationFile: true
   path: test/aoj/itp1_6_a.test.cpp
   requiredBy: []
-  timestamp: '2022-07-17 06:46:40+09:00'
+  timestamp: '2022-07-19 22:00:44+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/aoj/itp1_6_a.test.cpp

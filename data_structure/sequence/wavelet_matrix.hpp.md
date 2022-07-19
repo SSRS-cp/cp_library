@@ -10,6 +10,9 @@ data:
     path: test/aoj/itp1_6_a.test.cpp
     title: test/aoj/itp1_6_a.test.cpp
   - icon: ':heavy_check_mark:'
+    path: test/library_checker/range_kth_smallest.test.cpp
+    title: test/library_checker/range_kth_smallest.test.cpp
+  - icon: ':heavy_check_mark:'
     path: test/library_checker/static_range_frequency.test.cpp
     title: test/library_checker/static_range_frequency.test.cpp
   _isVerificationFailed: false
@@ -50,7 +53,12 @@ data:
     \ (int i = 0; i < LOG; i++){\n      if ((c >> (LOG - 1 - i) & 1) == 0){\n    \
     \    l = D[i].rank0(l);\n        r = D[i].rank0(r);\n      } else {\n        l\
     \ = cnt[i] + D[i].rank1(l);\n        r = cnt[i] + D[i].rank1(r);\n      }\n  \
-    \  }\n    return r - l;\n  }\n};\n"
+    \  }\n    return r - l;\n  }\n  int quantile(int l, int r, int k){\n    int ans\
+    \ = 0;\n    for (int i = 0; i < LOG; i++){\n      int cnt0 = D[i].rank0(r) - D[i].rank0(l);\n\
+    \      if (k < cnt0){\n        l = D[i].rank0(l);\n        r = D[i].rank0(r);\n\
+    \      } else {\n        ans += 1 << (LOG - 1 - i);\n        k -= cnt0;\n    \
+    \    l = cnt[i] + D[i].rank1(l);\n        r = cnt[i] + D[i].rank1(r);\n      }\n\
+    \    }\n    return ans;\n  }\n};\n"
   code: "#pragma once\n/**\n * @brief \u30A6\u30A7\u30FC\u30D6\u30EC\u30C3\u30C8\u884C\
     \u5217\n*/\n#include \"compact_bit_vector.hpp\"\nstruct wavelet_matrix{\n  int\
     \ N, LOG;\n  vector<bit_vector> D;\n  vector<int> cnt, T;\n  wavelet_matrix(){\n\
@@ -71,17 +79,23 @@ data:
     \ (int i = 0; i < LOG; i++){\n      if ((c >> (LOG - 1 - i) & 1) == 0){\n    \
     \    l = D[i].rank0(l);\n        r = D[i].rank0(r);\n      } else {\n        l\
     \ = cnt[i] + D[i].rank1(l);\n        r = cnt[i] + D[i].rank1(r);\n      }\n  \
-    \  }\n    return r - l;\n  }\n};"
+    \  }\n    return r - l;\n  }\n  int quantile(int l, int r, int k){\n    int ans\
+    \ = 0;\n    for (int i = 0; i < LOG; i++){\n      int cnt0 = D[i].rank0(r) - D[i].rank0(l);\n\
+    \      if (k < cnt0){\n        l = D[i].rank0(l);\n        r = D[i].rank0(r);\n\
+    \      } else {\n        ans += 1 << (LOG - 1 - i);\n        k -= cnt0;\n    \
+    \    l = cnt[i] + D[i].rank1(l);\n        r = cnt[i] + D[i].rank1(r);\n      }\n\
+    \    }\n    return ans;\n  }\n};"
   dependsOn:
   - data_structure/sequence/compact_bit_vector.hpp
   isVerificationFile: false
   path: data_structure/sequence/wavelet_matrix.hpp
   requiredBy: []
-  timestamp: '2022-07-17 06:46:40+09:00'
+  timestamp: '2022-07-19 22:00:44+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/library_checker/static_range_frequency.test.cpp
   - test/aoj/itp1_6_a.test.cpp
+  - test/library_checker/static_range_frequency.test.cpp
+  - test/library_checker/range_kth_smallest.test.cpp
 documentation_of: data_structure/sequence/wavelet_matrix.hpp
 layout: document
 redirect_from:

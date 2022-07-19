@@ -66,11 +66,11 @@ data:
   timestamp: '2022-07-17 06:33:45+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/library_checker/point_set_range_composite.test.cpp
-  - test/library_checker/point_add_range_sum_3.test.cpp
-  - test/library_checker/static_rmq_3.test.cpp
-  - test/aoj/dsl_2_a.test.cpp
   - test/aoj/dsl_2_b_3.test.cpp
+  - test/aoj/dsl_2_a.test.cpp
+  - test/library_checker/static_rmq_3.test.cpp
+  - test/library_checker/point_add_range_sum_3.test.cpp
+  - test/library_checker/point_set_range_composite.test.cpp
 documentation_of: data_structure/sequence/segment_tree.hpp
 layout: document
 redirect_from:

@@ -10,6 +10,9 @@ data:
     path: test/aoj/itp1_6_a.test.cpp
     title: test/aoj/itp1_6_a.test.cpp
   - icon: ':heavy_check_mark:'
+    path: test/library_checker/range_kth_smallest.test.cpp
+    title: test/library_checker/range_kth_smallest.test.cpp
+  - icon: ':heavy_check_mark:'
     path: test/library_checker/static_range_frequency.test.cpp
     title: test/library_checker/static_range_frequency.test.cpp
   _isVerificationFailed: false
@@ -52,8 +55,9 @@ data:
   timestamp: '2022-07-17 06:33:45+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/library_checker/static_range_frequency.test.cpp
   - test/aoj/itp1_6_a.test.cpp
+  - test/library_checker/static_range_frequency.test.cpp
+  - test/library_checker/range_kth_smallest.test.cpp
 documentation_of: data_structure/sequence/compact_bit_vector.hpp
 layout: document
 redirect_from:

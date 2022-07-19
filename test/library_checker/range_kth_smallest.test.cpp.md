@@ -14,16 +14,16 @@ data:
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
-    PROBLEM: https://judge.yosupo.jp/problem/static_range_frequency
+    PROBLEM: https://judge.yosupo.jp/problem/range_kth_smallest
     links:
-    - https://judge.yosupo.jp/problem/static_range_frequency
-  bundledCode: "#line 1 \"test/library_checker/static_range_frequency.test.cpp\"\n\
-    #define PROBLEM \"https://judge.yosupo.jp/problem/static_range_frequency\"\n#include\
-    \ <bits/stdc++.h>\nusing namespace std;\n#line 2 \"data_structure/sequence/wavelet_matrix.hpp\"\
-    \n/**\n * @brief \u30A6\u30A7\u30FC\u30D6\u30EC\u30C3\u30C8\u884C\u5217\n*/\n\
-    #line 2 \"data_structure/sequence/compact_bit_vector.hpp\"\n/**\n * @brief \u30B3\
-    \u30F3\u30D1\u30AF\u30C8 Bit Vector\n*/\nstruct bit_vector{\n  vector<unsigned\
-    \ long long> A;\n  vector<int> S;\n  bit_vector(){\n  }\n  bit_vector(vector<bool>\
+    - https://judge.yosupo.jp/problem/range_kth_smallest
+  bundledCode: "#line 1 \"test/library_checker/range_kth_smallest.test.cpp\"\n#define\
+    \ PROBLEM \"https://judge.yosupo.jp/problem/range_kth_smallest\"\n#include <bits/stdc++.h>\n\
+    using namespace std;\n#line 2 \"data_structure/sequence/wavelet_matrix.hpp\"\n\
+    /**\n * @brief \u30A6\u30A7\u30FC\u30D6\u30EC\u30C3\u30C8\u884C\u5217\n*/\n#line\
+    \ 2 \"data_structure/sequence/compact_bit_vector.hpp\"\n/**\n * @brief \u30B3\u30F3\
+    \u30D1\u30AF\u30C8 Bit Vector\n*/\nstruct bit_vector{\n  vector<unsigned long\
+    \ long> A;\n  vector<int> S;\n  bit_vector(){\n  }\n  bit_vector(vector<bool>\
     \ &a){\n    int N = a.size();\n    int M = (N + 64 - 1) >> 6;\n    A = vector<unsigned\
     \ long long>(M, 0);\n    for (int i = 0; i < M; i++){\n      for (int j = i <<\
     \ 6; j < min((i + 1) << 6, N); j++){\n        if (a[j]){\n          A[i] |= (unsigned\
@@ -57,30 +57,30 @@ data:
     \      if (k < cnt0){\n        l = D[i].rank0(l);\n        r = D[i].rank0(r);\n\
     \      } else {\n        ans += 1 << (LOG - 1 - i);\n        k -= cnt0;\n    \
     \    l = cnt[i] + D[i].rank1(l);\n        r = cnt[i] + D[i].rank1(r);\n      }\n\
-    \    }\n    return ans;\n  }\n};\n#line 5 \"test/library_checker/static_range_frequency.test.cpp\"\
+    \    }\n    return ans;\n  }\n};\n#line 5 \"test/library_checker/range_kth_smallest.test.cpp\"\
     \nint main(){\n  int N, Q;\n  cin >> N >> Q;\n  vector<int> a(N);\n  for (int\
     \ i = 0; i < N; i++){\n    cin >> a[i];\n  }\n  wavelet_matrix WM(a);\n  for (int\
-    \ i = 0; i < Q; i++){\n    int l, r, x;\n    cin >> l >> r >> x;\n    cout <<\
-    \ WM.rank(l, r, x) << endl;\n  }\n}\n"
-  code: "#define PROBLEM \"https://judge.yosupo.jp/problem/static_range_frequency\"\
-    \n#include <bits/stdc++.h>\nusing namespace std;\n#include \"../../data_structure/sequence/wavelet_matrix.hpp\"\
+    \ i = 0; i < Q; i++){\n    int l, r, k;\n    cin >> l >> r >> k;\n    cout <<\
+    \ WM.quantile(l, r, k) << endl;\n  }\n}\n"
+  code: "#define PROBLEM \"https://judge.yosupo.jp/problem/range_kth_smallest\"\n\
+    #include <bits/stdc++.h>\nusing namespace std;\n#include \"../../data_structure/sequence/wavelet_matrix.hpp\"\
     \nint main(){\n  int N, Q;\n  cin >> N >> Q;\n  vector<int> a(N);\n  for (int\
     \ i = 0; i < N; i++){\n    cin >> a[i];\n  }\n  wavelet_matrix WM(a);\n  for (int\
-    \ i = 0; i < Q; i++){\n    int l, r, x;\n    cin >> l >> r >> x;\n    cout <<\
-    \ WM.rank(l, r, x) << endl;\n  }\n}"
+    \ i = 0; i < Q; i++){\n    int l, r, k;\n    cin >> l >> r >> k;\n    cout <<\
+    \ WM.quantile(l, r, k) << endl;\n  }\n}"
   dependsOn:
   - data_structure/sequence/wavelet_matrix.hpp
   - data_structure/sequence/compact_bit_vector.hpp
   isVerificationFile: true
-  path: test/library_checker/static_range_frequency.test.cpp
+  path: test/library_checker/range_kth_smallest.test.cpp
   requiredBy: []
-  timestamp: '2022-07-19 22:00:44+09:00'
+  timestamp: '2022-07-19 22:01:21+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: test/library_checker/static_range_frequency.test.cpp
+documentation_of: test/library_checker/range_kth_smallest.test.cpp
 layout: document
 redirect_from:
-- /verify/test/library_checker/static_range_frequency.test.cpp
-- /verify/test/library_checker/static_range_frequency.test.cpp.html
-title: test/library_checker/static_range_frequency.test.cpp
+- /verify/test/library_checker/range_kth_smallest.test.cpp
+- /verify/test/library_checker/range_kth_smallest.test.cpp.html
+title: test/library_checker/range_kth_smallest.test.cpp
 ---
