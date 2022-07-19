@@ -41,6 +41,7 @@
 "test/library_checker/graph/enumerate_triangles.test.cpp": "2022-07-20 01:50:04 +0900",
 "test/library_checker/graph/strongly_connected_components.test.cpp": "2022-07-20 00:19:01 +0900",
 "test/library_checker/graph/two_edge_connected_components.test.cpp": "2022-07-20 01:24:27 +0900",
+"test/library_checker/string/enumerate_palindromes.test.cpp": "2022-07-20 02:28:02 +0900",
 "test/library_checker/string/z_algorithm.test.cpp": "2022-07-20 02:21:26 +0900",
 "test/library_checker/tree/cartesian_tree.test.cpp": "2022-07-19 22:43:05 +0900",
 "test/library_checker/tree/lowest_common_ancestor.test.cpp": "2022-07-19 22:43:05 +0900",
