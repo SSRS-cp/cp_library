@@ -312,9 +312,6 @@ data:
     - icon: ':warning:'
       path: old_String/Suffix_Array.cpp
       title: old_String/Suffix_Array.cpp
-    - icon: ':warning:'
-      path: old_String/Z-algorithm.cpp
-      title: old_String/Z-algorithm.cpp
   - name: other/monoids
     pages:
     - icon: ':heavy_check_mark:'
@@ -323,6 +320,11 @@ data:
     - icon: ':heavy_check_mark:'
       path: other/monoids/linear.hpp
       title: other/monoids/linear.hpp
+  - name: string
+    pages:
+    - icon: ':x:'
+      path: string/z_algorithm.hpp
+      title: Z Algorithm
   verificationCategories:
   - name: test/aoj/dsl
     pages:
@@ -462,6 +464,11 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/graph/two_edge_connected_components.test.cpp
       title: test/library_checker/graph/two_edge_connected_components.test.cpp
+  - name: test/library_checker/string
+    pages:
+    - icon: ':x:'
+      path: test/library_checker/string/z_algorithm.test.cpp
+      title: test/library_checker/string/z_algorithm.test.cpp
   - name: test/library_checker/tree
     pages:
     - icon: ':heavy_check_mark:'
