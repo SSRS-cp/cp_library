@@ -473,6 +473,9 @@ data:
   - name: test/yukicoder
     pages:
     - icon: ':heavy_check_mark:'
+      path: test/yukicoder/yuki_1326.test.cpp
+      title: test/yukicoder/yuki_1326.test.cpp
+    - icon: ':heavy_check_mark:'
       path: test/yukicoder/yuki_1891.test.cpp
       title: test/yukicoder/yuki_1891.test.cpp
     - icon: ':heavy_check_mark:'
