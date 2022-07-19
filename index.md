@@ -85,7 +85,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: graph/block_cut_tree.hpp
       title: Block Cut Tree
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: graph/enumerate_triangles.hpp
       title: "\u4E09\u89D2\u5F62\u5217\u6319"
     - icon: ':heavy_check_mark:'
@@ -453,7 +453,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/graph/biconnected_components.test.cpp
       title: test/library_checker/graph/biconnected_components.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/graph/enumerate_triangles.test.cpp
       title: test/library_checker/graph/enumerate_triangles.test.cpp
     - icon: ':heavy_check_mark:'
