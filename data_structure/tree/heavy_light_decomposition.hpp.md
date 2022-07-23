@@ -12,6 +12,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/yukicoder/yuki_1326.test.cpp
     title: test/yukicoder/yuki_1326.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/yukicoder/yuki_1326_2.test.cpp
+    title: test/yukicoder/yuki_1326_2.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -62,6 +65,7 @@ data:
   verifiedWith:
   - test/aoj/other/2667.test.cpp
   - test/library_checker/tree/lowest_common_ancestor.test.cpp
+  - test/yukicoder/yuki_1326_2.test.cpp
   - test/yukicoder/yuki_1326.test.cpp
 documentation_of: data_structure/tree/heavy_light_decomposition.hpp
 layout: document

@@ -89,6 +89,9 @@ data:
       path: graph/enumerate_triangles.hpp
       title: "\u4E09\u89D2\u5F62\u5217\u6319"
     - icon: ':heavy_check_mark:'
+      path: graph/extended_block_cut_tree.hpp
+      title: "\u62E1\u5F35 Block Cut Tree"
+    - icon: ':heavy_check_mark:'
       path: graph/strongly_connected_components.hpp
       title: "\u5F37\u9023\u7D50\u6210\u5206\u5206\u89E3"
     - icon: ':heavy_check_mark:'
@@ -385,6 +388,9 @@ data:
       path: test/aoj/grl/grl_3_a.test.cpp
       title: test/aoj/grl/grl_3_a.test.cpp
     - icon: ':heavy_check_mark:'
+      path: test/aoj/grl/grl_3_a_2.test.cpp
+      title: test/aoj/grl/grl_3_a_2.test.cpp
+    - icon: ':heavy_check_mark:'
       path: test/aoj/grl/grl_3_b.test.cpp
       title: test/aoj/grl/grl_3_b.test.cpp
     - icon: ':heavy_check_mark:'
@@ -459,6 +465,9 @@ data:
       path: test/library_checker/graph/biconnected_components.test.cpp
       title: test/library_checker/graph/biconnected_components.test.cpp
     - icon: ':heavy_check_mark:'
+      path: test/library_checker/graph/biconnected_components_2.test.cpp
+      title: test/library_checker/graph/biconnected_components_2.test.cpp
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/graph/enumerate_triangles.test.cpp
       title: test/library_checker/graph/enumerate_triangles.test.cpp
     - icon: ':heavy_check_mark:'
@@ -488,6 +497,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/yukicoder/yuki_1326.test.cpp
       title: test/yukicoder/yuki_1326.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/yukicoder/yuki_1326_2.test.cpp
+      title: test/yukicoder/yuki_1326_2.test.cpp
     - icon: ':heavy_check_mark:'
       path: test/yukicoder/yuki_1891.test.cpp
       title: test/yukicoder/yuki_1891.test.cpp
