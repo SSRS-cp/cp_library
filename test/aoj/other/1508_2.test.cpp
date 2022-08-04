@@ -35,7 +35,7 @@ int main(){
       ST.merge(l, A.second);
     }
     if (x == 2){
-      ST.update(y, z);
+      ST.set(y, z);
     }
   }
 }

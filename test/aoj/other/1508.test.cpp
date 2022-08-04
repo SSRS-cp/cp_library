@@ -28,7 +28,7 @@ int main(){
       cout << ST.query(y, z) << endl;
     }
     if (x == 2){
-      ST.update(y, z);
+      ST.set(y, z);
     }
   }
 }

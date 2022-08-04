@@ -223,17 +223,17 @@ struct splay_tree{
     erase(v);
     return root;
   }
-  void update(node* v, T x){
+  void set(node* v, T x){
     v->val = x;
     update(v);
   }
-  void update(node* v, int k, int x){
+  void set(node* v, int k, int x){
     node* w = get(v, k);
-    update(w, x);
+    set(w, x);
   }
-  void update(int k, int x){
+  void set(int k, int x){
     node* v = get(k);
-    update(v, x);
+    set(v, x);
   }
   T query(node* v, int l, int r){
     int sz = size(v->ch[0]);
