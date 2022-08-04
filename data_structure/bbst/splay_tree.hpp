@@ -131,7 +131,7 @@ struct splay_tree{
     return get(root, k);
   }
   T operator [](int k){
-    return get(root, k)->x;
+    return get(root, k)->val;
   }
   node* insert(node* r, int k, node* v){
     if (k == size(r)){
@@ -226,6 +226,10 @@ struct splay_tree{
   void update(node* v, T x){
     v->val = x;
     update(v);
+  }
+  void update(node* v, int k, int x){
+    node* w = get(v, k);
+    update(w, x);
   }
   void update(int k, int x){
     node* v = get(k);
