@@ -156,6 +156,10 @@ struct splay_tree{
     root = v;
     return v;
   }
+  node* insert(node *r, int k){
+    node* v = new node;
+    return insert(r, k, v);
+  }
   node* insert(node *r, int k, T x){
     node* v = new node(x);
     return insert(r, k, v);
