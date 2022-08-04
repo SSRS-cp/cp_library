@@ -6,12 +6,12 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/aoj/other/1508.test.cpp
     title: test/aoj/other/1508.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/aoj/other/1508_2.test.cpp
     title: test/aoj/other/1508_2.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     document_title: "\u30B9\u30D7\u30EC\u30FC\u6728 (\u4E00\u70B9\u66F4\u65B0\u30FB\
       \u533A\u9593\u53D6\u5F97)"
@@ -57,32 +57,33 @@ data:
     \ k);\n      v->ch[0] = u->ch[0];\n      v->ch[1] = u;\n      if (u->ch[0] !=\
     \ nullptr){\n        u->ch[0]->p = v;\n      }\n      u->ch[0] = nullptr;\n  \
     \    u->p = v;\n      update(u);\n      update(v);\n    }\n    root = v;\n   \
-    \ return v;\n  }\n  node* insert(node *r, int k, T x){\n    node* v = new node(x);\n\
-    \    return insert(r, k, v);\n  }\n  node* insert(int k, T x){\n    return insert(root,\
-    \ k, x);\n  }\n  void erase(node* v){\n    node* l = v->ch[0];\n    node* r =\
-    \ v->ch[1];\n    delete v;\n    if (l == nullptr && r == nullptr){\n      root\
-    \ = nullptr;\n    } else if (l == nullptr){\n      root = r;\n      r->p = nullptr;\
-    \    \n    } else if (r == nullptr){\n      root = l;\n      l->p = nullptr;\n\
-    \    } else {\n      r->p = nullptr;\n      root = r;\n      r = get(0);\n   \
-    \   r->ch[0] = l;\n      l->p = r;\n      update(r);\n    }\n  }\n  void erase(node\
-    \ *v, int k){\n    erase(get(v, k));\n  }\n  void erase(int k){\n    erase(get(k));\n\
-    \  }\n  pair<node*, node*> split(node* v, int k){\n    node* x = insert(v, k);\n\
-    \    node* l = x->ch[0];\n    node* r = x->ch[1];\n    if (l != nullptr){\n  \
-    \    l->p = nullptr;\n    }\n    if (r != nullptr){\n      r->p = nullptr;\n \
-    \   }\n    delete x;\n    return make_pair(l, r);\n  }\n  pair<node*, node*> split(int\
-    \ k){\n    return split(root, k);\n  }\n  node* merge(node* l, node* r){\n   \
-    \ node* v = new node;\n    v->ch[0] = l;\n    v->ch[1] = r;\n    if (l != nullptr){\n\
-    \      l->p = v;\n    }\n    if (r != nullptr){\n      r->p = v;\n    }\n    erase(v);\n\
-    \    return root;\n  }\n  void update(node* v, T x){\n    v->val = x;\n    update(v);\n\
-    \  }\n  void update(int k, int x){\n    node* v = get(k);\n    update(v, x);\n\
-    \  }\n  T query(node* v, int l, int r){\n    int sz = size(v->ch[0]);\n    T ans\
-    \ = E;\n    if (l == 0 && r >= sz){\n      ans = sum(v->ch[0]);\n    } else if\
-    \ (l < sz){\n      ans = query(v->ch[0], l, min(r, sz));\n    }\n    if (l <=\
-    \ sz && r > sz){\n      ans = f(ans, v->val);\n    }\n    if (l <= sz + 1 && r\
-    \ == v->sz){\n      ans = f(ans, sum(v->ch[1]));\n    } else if (r > sz + 1){\n\
-    \      ans = f(ans, query(v->ch[1], max(l - sz - 1, 0), r - sz - 1));\n    }\n\
-    \    return ans;\n  }\n  T query(int l, int r){\n    return query(root, l, r);\n\
-    \  }\n};\n"
+    \ return v;\n  }\n  node* insert(node *r, int k){\n    node* v = new node;\n \
+    \   return insert(r, k, v);\n  }\n  node* insert(node *r, int k, T x){\n    node*\
+    \ v = new node(x);\n    return insert(r, k, v);\n  }\n  node* insert(int k, T\
+    \ x){\n    return insert(root, k, x);\n  }\n  void erase(node* v){\n    node*\
+    \ l = v->ch[0];\n    node* r = v->ch[1];\n    delete v;\n    if (l == nullptr\
+    \ && r == nullptr){\n      root = nullptr;\n    } else if (l == nullptr){\n  \
+    \    root = r;\n      r->p = nullptr;    \n    } else if (r == nullptr){\n   \
+    \   root = l;\n      l->p = nullptr;\n    } else {\n      r->p = nullptr;\n  \
+    \    root = r;\n      r = get(0);\n      r->ch[0] = l;\n      l->p = r;\n    \
+    \  update(r);\n    }\n  }\n  void erase(node *v, int k){\n    erase(get(v, k));\n\
+    \  }\n  void erase(int k){\n    erase(get(k));\n  }\n  pair<node*, node*> split(node*\
+    \ v, int k){\n    node* x = insert(v, k);\n    node* l = x->ch[0];\n    node*\
+    \ r = x->ch[1];\n    if (l != nullptr){\n      l->p = nullptr;\n    }\n    if\
+    \ (r != nullptr){\n      r->p = nullptr;\n    }\n    delete x;\n    return make_pair(l,\
+    \ r);\n  }\n  pair<node*, node*> split(int k){\n    return split(root, k);\n \
+    \ }\n  node* merge(node* l, node* r){\n    node* v = new node;\n    v->ch[0] =\
+    \ l;\n    v->ch[1] = r;\n    if (l != nullptr){\n      l->p = v;\n    }\n    if\
+    \ (r != nullptr){\n      r->p = v;\n    }\n    erase(v);\n    return root;\n \
+    \ }\n  void update(node* v, T x){\n    v->val = x;\n    update(v);\n  }\n  void\
+    \ update(int k, int x){\n    node* v = get(k);\n    update(v, x);\n  }\n  T query(node*\
+    \ v, int l, int r){\n    int sz = size(v->ch[0]);\n    T ans = E;\n    if (l ==\
+    \ 0 && r >= sz){\n      ans = sum(v->ch[0]);\n    } else if (l < sz){\n      ans\
+    \ = query(v->ch[0], l, min(r, sz));\n    }\n    if (l <= sz && r > sz){\n    \
+    \  ans = f(ans, v->val);\n    }\n    if (l <= sz + 1 && r == v->sz){\n      ans\
+    \ = f(ans, sum(v->ch[1]));\n    } else if (r > sz + 1){\n      ans = f(ans, query(v->ch[1],\
+    \ max(l - sz - 1, 0), r - sz - 1));\n    }\n    return ans;\n  }\n  T query(int\
+    \ l, int r){\n    return query(root, l, r);\n  }\n};\n"
   code: "#pragma once\n/**\n * @brief \u30B9\u30D7\u30EC\u30FC\u6728 (\u4E00\u70B9\
     \u66F4\u65B0\u30FB\u533A\u9593\u53D6\u5F97)\n*/\ntemplate <typename T>\nstruct\
     \ splay_tree{\n  struct node{\n    node* p;\n    array<node*, 2> ch;\n    int\
@@ -124,38 +125,39 @@ data:
     \ k);\n      v->ch[0] = u->ch[0];\n      v->ch[1] = u;\n      if (u->ch[0] !=\
     \ nullptr){\n        u->ch[0]->p = v;\n      }\n      u->ch[0] = nullptr;\n  \
     \    u->p = v;\n      update(u);\n      update(v);\n    }\n    root = v;\n   \
-    \ return v;\n  }\n  node* insert(node *r, int k, T x){\n    node* v = new node(x);\n\
-    \    return insert(r, k, v);\n  }\n  node* insert(int k, T x){\n    return insert(root,\
-    \ k, x);\n  }\n  void erase(node* v){\n    node* l = v->ch[0];\n    node* r =\
-    \ v->ch[1];\n    delete v;\n    if (l == nullptr && r == nullptr){\n      root\
-    \ = nullptr;\n    } else if (l == nullptr){\n      root = r;\n      r->p = nullptr;\
-    \    \n    } else if (r == nullptr){\n      root = l;\n      l->p = nullptr;\n\
-    \    } else {\n      r->p = nullptr;\n      root = r;\n      r = get(0);\n   \
-    \   r->ch[0] = l;\n      l->p = r;\n      update(r);\n    }\n  }\n  void erase(node\
-    \ *v, int k){\n    erase(get(v, k));\n  }\n  void erase(int k){\n    erase(get(k));\n\
-    \  }\n  pair<node*, node*> split(node* v, int k){\n    node* x = insert(v, k);\n\
-    \    node* l = x->ch[0];\n    node* r = x->ch[1];\n    if (l != nullptr){\n  \
-    \    l->p = nullptr;\n    }\n    if (r != nullptr){\n      r->p = nullptr;\n \
-    \   }\n    delete x;\n    return make_pair(l, r);\n  }\n  pair<node*, node*> split(int\
-    \ k){\n    return split(root, k);\n  }\n  node* merge(node* l, node* r){\n   \
-    \ node* v = new node;\n    v->ch[0] = l;\n    v->ch[1] = r;\n    if (l != nullptr){\n\
-    \      l->p = v;\n    }\n    if (r != nullptr){\n      r->p = v;\n    }\n    erase(v);\n\
-    \    return root;\n  }\n  void update(node* v, T x){\n    v->val = x;\n    update(v);\n\
-    \  }\n  void update(int k, int x){\n    node* v = get(k);\n    update(v, x);\n\
-    \  }\n  T query(node* v, int l, int r){\n    int sz = size(v->ch[0]);\n    T ans\
-    \ = E;\n    if (l == 0 && r >= sz){\n      ans = sum(v->ch[0]);\n    } else if\
-    \ (l < sz){\n      ans = query(v->ch[0], l, min(r, sz));\n    }\n    if (l <=\
-    \ sz && r > sz){\n      ans = f(ans, v->val);\n    }\n    if (l <= sz + 1 && r\
-    \ == v->sz){\n      ans = f(ans, sum(v->ch[1]));\n    } else if (r > sz + 1){\n\
-    \      ans = f(ans, query(v->ch[1], max(l - sz - 1, 0), r - sz - 1));\n    }\n\
-    \    return ans;\n  }\n  T query(int l, int r){\n    return query(root, l, r);\n\
-    \  }\n};"
+    \ return v;\n  }\n  node* insert(node *r, int k){\n    node* v = new node;\n \
+    \   return insert(r, k, v);\n  }\n  node* insert(node *r, int k, T x){\n    node*\
+    \ v = new node(x);\n    return insert(r, k, v);\n  }\n  node* insert(int k, T\
+    \ x){\n    return insert(root, k, x);\n  }\n  void erase(node* v){\n    node*\
+    \ l = v->ch[0];\n    node* r = v->ch[1];\n    delete v;\n    if (l == nullptr\
+    \ && r == nullptr){\n      root = nullptr;\n    } else if (l == nullptr){\n  \
+    \    root = r;\n      r->p = nullptr;    \n    } else if (r == nullptr){\n   \
+    \   root = l;\n      l->p = nullptr;\n    } else {\n      r->p = nullptr;\n  \
+    \    root = r;\n      r = get(0);\n      r->ch[0] = l;\n      l->p = r;\n    \
+    \  update(r);\n    }\n  }\n  void erase(node *v, int k){\n    erase(get(v, k));\n\
+    \  }\n  void erase(int k){\n    erase(get(k));\n  }\n  pair<node*, node*> split(node*\
+    \ v, int k){\n    node* x = insert(v, k);\n    node* l = x->ch[0];\n    node*\
+    \ r = x->ch[1];\n    if (l != nullptr){\n      l->p = nullptr;\n    }\n    if\
+    \ (r != nullptr){\n      r->p = nullptr;\n    }\n    delete x;\n    return make_pair(l,\
+    \ r);\n  }\n  pair<node*, node*> split(int k){\n    return split(root, k);\n \
+    \ }\n  node* merge(node* l, node* r){\n    node* v = new node;\n    v->ch[0] =\
+    \ l;\n    v->ch[1] = r;\n    if (l != nullptr){\n      l->p = v;\n    }\n    if\
+    \ (r != nullptr){\n      r->p = v;\n    }\n    erase(v);\n    return root;\n \
+    \ }\n  void update(node* v, T x){\n    v->val = x;\n    update(v);\n  }\n  void\
+    \ update(int k, int x){\n    node* v = get(k);\n    update(v, x);\n  }\n  T query(node*\
+    \ v, int l, int r){\n    int sz = size(v->ch[0]);\n    T ans = E;\n    if (l ==\
+    \ 0 && r >= sz){\n      ans = sum(v->ch[0]);\n    } else if (l < sz){\n      ans\
+    \ = query(v->ch[0], l, min(r, sz));\n    }\n    if (l <= sz && r > sz){\n    \
+    \  ans = f(ans, v->val);\n    }\n    if (l <= sz + 1 && r == v->sz){\n      ans\
+    \ = f(ans, sum(v->ch[1]));\n    } else if (r > sz + 1){\n      ans = f(ans, query(v->ch[1],\
+    \ max(l - sz - 1, 0), r - sz - 1));\n    }\n    return ans;\n  }\n  T query(int\
+    \ l, int r){\n    return query(root, l, r);\n  }\n};"
   dependsOn: []
   isVerificationFile: false
   path: data_structure/bbst/splay_tree.hpp
   requiredBy: []
-  timestamp: '2022-08-05 04:24:02+09:00'
-  verificationStatus: LIBRARY_SOME_WA
+  timestamp: '2022-08-05 04:29:10+09:00'
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/aoj/other/1508_2.test.cpp
   - test/aoj/other/1508.test.cpp

@@ -3,7 +3,7 @@ data:
   libraryCategories:
   - name: data_structure/bbst
     pages:
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: data_structure/bbst/splay_tree.hpp
       title: "\u30B9\u30D7\u30EC\u30FC\u6728 (\u4E00\u70B9\u66F4\u65B0\u30FB\u533A\
         \u9593\u53D6\u5F97)"
@@ -412,7 +412,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/aoj/other/1508.test.cpp
       title: test/aoj/other/1508.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/aoj/other/1508_2.test.cpp
       title: test/aoj/other/1508_2.test.cpp
     - icon: ':heavy_check_mark:'
