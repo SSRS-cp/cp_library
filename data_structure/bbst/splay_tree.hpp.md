@@ -51,9 +51,9 @@ data:
     \      } else if (k == s){\n        splay(v);\n        return v;\n      } else\
     \ {\n        k -= s + 1;\n        v = v->ch[1];\n      }\n    }\n  }\n  node*\
     \ get(int k){\n    return get(root, k);\n  }\n  T operator [](int k){\n    return\
-    \ get(root, k)->x;\n  }\n  node* insert(node* r, int k, node* v){\n    if (k ==\
-    \ size(r)){\n      v->ch[0] = r;\n      if (r != nullptr){\n        r->p = v;\n\
-    \      }\n      r = v;\n      update(v);\n    } else {\n      node* u = get(r,\
+    \ get(root, k)->val;\n  }\n  node* insert(node* r, int k, node* v){\n    if (k\
+    \ == size(r)){\n      v->ch[0] = r;\n      if (r != nullptr){\n        r->p =\
+    \ v;\n      }\n      r = v;\n      update(v);\n    } else {\n      node* u = get(r,\
     \ k);\n      v->ch[0] = u->ch[0];\n      v->ch[1] = u;\n      if (u->ch[0] !=\
     \ nullptr){\n        u->ch[0]->p = v;\n      }\n      u->ch[0] = nullptr;\n  \
     \    u->p = v;\n      update(u);\n      update(v);\n    }\n    root = v;\n   \
@@ -75,13 +75,14 @@ data:
     \ }\n  node* merge(node* l, node* r){\n    node* v = new node;\n    v->ch[0] =\
     \ l;\n    v->ch[1] = r;\n    if (l != nullptr){\n      l->p = v;\n    }\n    if\
     \ (r != nullptr){\n      r->p = v;\n    }\n    erase(v);\n    return root;\n \
-    \ }\n  void update(node* v, T x){\n    v->val = x;\n    update(v);\n  }\n  void\
-    \ update(int k, int x){\n    node* v = get(k);\n    update(v, x);\n  }\n  T query(node*\
-    \ v, int l, int r){\n    int sz = size(v->ch[0]);\n    T ans = E;\n    if (l ==\
-    \ 0 && r >= sz){\n      ans = sum(v->ch[0]);\n    } else if (l < sz){\n      ans\
-    \ = query(v->ch[0], l, min(r, sz));\n    }\n    if (l <= sz && r > sz){\n    \
-    \  ans = f(ans, v->val);\n    }\n    if (l <= sz + 1 && r == v->sz){\n      ans\
-    \ = f(ans, sum(v->ch[1]));\n    } else if (r > sz + 1){\n      ans = f(ans, query(v->ch[1],\
+    \ }\n  void set(node* v, T x){\n    v->val = x;\n    update(v);\n  }\n  void set(node*\
+    \ v, int k, int x){\n    node* w = get(v, k);\n    set(w, x);\n  }\n  void set(int\
+    \ k, int x){\n    node* v = get(k);\n    set(v, x);\n  }\n  T query(node* v, int\
+    \ l, int r){\n    int sz = size(v->ch[0]);\n    T ans = E;\n    if (l == 0 &&\
+    \ r >= sz){\n      ans = sum(v->ch[0]);\n    } else if (l < sz){\n      ans =\
+    \ query(v->ch[0], l, min(r, sz));\n    }\n    if (l <= sz && r > sz){\n      ans\
+    \ = f(ans, v->val);\n    }\n    if (l <= sz + 1 && r == v->sz){\n      ans = f(ans,\
+    \ sum(v->ch[1]));\n    } else if (r > sz + 1){\n      ans = f(ans, query(v->ch[1],\
     \ max(l - sz - 1, 0), r - sz - 1));\n    }\n    return ans;\n  }\n  T query(int\
     \ l, int r){\n    return query(root, l, r);\n  }\n};\n"
   code: "#pragma once\n/**\n * @brief \u30B9\u30D7\u30EC\u30FC\u6728 (\u4E00\u70B9\
@@ -119,9 +120,9 @@ data:
     \      } else if (k == s){\n        splay(v);\n        return v;\n      } else\
     \ {\n        k -= s + 1;\n        v = v->ch[1];\n      }\n    }\n  }\n  node*\
     \ get(int k){\n    return get(root, k);\n  }\n  T operator [](int k){\n    return\
-    \ get(root, k)->x;\n  }\n  node* insert(node* r, int k, node* v){\n    if (k ==\
-    \ size(r)){\n      v->ch[0] = r;\n      if (r != nullptr){\n        r->p = v;\n\
-    \      }\n      r = v;\n      update(v);\n    } else {\n      node* u = get(r,\
+    \ get(root, k)->val;\n  }\n  node* insert(node* r, int k, node* v){\n    if (k\
+    \ == size(r)){\n      v->ch[0] = r;\n      if (r != nullptr){\n        r->p =\
+    \ v;\n      }\n      r = v;\n      update(v);\n    } else {\n      node* u = get(r,\
     \ k);\n      v->ch[0] = u->ch[0];\n      v->ch[1] = u;\n      if (u->ch[0] !=\
     \ nullptr){\n        u->ch[0]->p = v;\n      }\n      u->ch[0] = nullptr;\n  \
     \    u->p = v;\n      update(u);\n      update(v);\n    }\n    root = v;\n   \
@@ -143,20 +144,21 @@ data:
     \ }\n  node* merge(node* l, node* r){\n    node* v = new node;\n    v->ch[0] =\
     \ l;\n    v->ch[1] = r;\n    if (l != nullptr){\n      l->p = v;\n    }\n    if\
     \ (r != nullptr){\n      r->p = v;\n    }\n    erase(v);\n    return root;\n \
-    \ }\n  void update(node* v, T x){\n    v->val = x;\n    update(v);\n  }\n  void\
-    \ update(int k, int x){\n    node* v = get(k);\n    update(v, x);\n  }\n  T query(node*\
-    \ v, int l, int r){\n    int sz = size(v->ch[0]);\n    T ans = E;\n    if (l ==\
-    \ 0 && r >= sz){\n      ans = sum(v->ch[0]);\n    } else if (l < sz){\n      ans\
-    \ = query(v->ch[0], l, min(r, sz));\n    }\n    if (l <= sz && r > sz){\n    \
-    \  ans = f(ans, v->val);\n    }\n    if (l <= sz + 1 && r == v->sz){\n      ans\
-    \ = f(ans, sum(v->ch[1]));\n    } else if (r > sz + 1){\n      ans = f(ans, query(v->ch[1],\
+    \ }\n  void set(node* v, T x){\n    v->val = x;\n    update(v);\n  }\n  void set(node*\
+    \ v, int k, int x){\n    node* w = get(v, k);\n    set(w, x);\n  }\n  void set(int\
+    \ k, int x){\n    node* v = get(k);\n    set(v, x);\n  }\n  T query(node* v, int\
+    \ l, int r){\n    int sz = size(v->ch[0]);\n    T ans = E;\n    if (l == 0 &&\
+    \ r >= sz){\n      ans = sum(v->ch[0]);\n    } else if (l < sz){\n      ans =\
+    \ query(v->ch[0], l, min(r, sz));\n    }\n    if (l <= sz && r > sz){\n      ans\
+    \ = f(ans, v->val);\n    }\n    if (l <= sz + 1 && r == v->sz){\n      ans = f(ans,\
+    \ sum(v->ch[1]));\n    } else if (r > sz + 1){\n      ans = f(ans, query(v->ch[1],\
     \ max(l - sz - 1, 0), r - sz - 1));\n    }\n    return ans;\n  }\n  T query(int\
     \ l, int r){\n    return query(root, l, r);\n  }\n};"
   dependsOn: []
   isVerificationFile: false
   path: data_structure/bbst/splay_tree.hpp
   requiredBy: []
-  timestamp: '2022-08-05 04:29:10+09:00'
+  timestamp: '2022-08-05 04:50:39+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/aoj/other/1508_2.test.cpp
