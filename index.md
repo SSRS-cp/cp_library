@@ -329,6 +329,11 @@ data:
     - icon: ':heavy_check_mark:'
       path: other/monoids/linear.hpp
       title: other/monoids/linear.hpp
+  - name: other
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: other/poker_hands.hpp
+      title: "\u30DD\u30FC\u30AB\u30FC\u5F79\u5224\u5B9A"
   - name: string
     pages:
     - icon: ':heavy_check_mark:'
@@ -415,6 +420,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/aoj/other/1508_2.test.cpp
       title: test/aoj/other/1508_2.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/other/2535.test.cpp
+      title: test/aoj/other/2535.test.cpp
     - icon: ':heavy_check_mark:'
       path: test/aoj/other/2667.test.cpp
       title: test/aoj/other/2667.test.cpp
