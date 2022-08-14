@@ -26,7 +26,7 @@ documentation_of: other/poker_hands.hpp
 ``poker_hand`` の要素と役の対応は以下のようである。
 
 |``poker_hand`` の要素|役|
-|:-:|:-:|
+|-|-|
 |``HIGH_CARD``|ハイカード|
 |``ONE_PAIR``|ワンペア|
 |``TWO_PAIR``|ツーペア|

@@ -1,3 +1,4 @@
+#pragma once
 struct card{
   char suit;
   int rank;
