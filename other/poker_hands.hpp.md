@@ -11,7 +11,7 @@ data:
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
-  bundledCode: "#line 1 \"other/poker_hands.hpp\"\nstruct card{\n  char suit;\n  int\
+  bundledCode: "#line 2 \"other/poker_hands.hpp\"\nstruct card{\n  char suit;\n  int\
     \ rank;\n  card(){\n  }\n  bool operator <(card C){\n    return rank < C.rank\
     \ || rank == C.rank && suit < C.suit;\n  }\n};\nistream& operator >>(istream&\
     \ is, card& C){\n  string S;\n  is >> S;\n  C.suit = S[0];\n  if (S[1] == 'A'){\n\
@@ -51,37 +51,37 @@ data:
     \ C[0].rank};\n  } else if (C[3].rank == C[4].rank){\n    return {ONE_PAIR, C[3].rank,\
     \ C[2].rank, C[1].rank, C[0].rank};\n  } else {\n    return {HIGH_CARD, C[4].rank,\
     \ C[3].rank, C[2].rank, C[1].rank, C[0].rank};\n  }\n}\n"
-  code: "struct card{\n  char suit;\n  int rank;\n  card(){\n  }\n  bool operator\
-    \ <(card C){\n    return rank < C.rank || rank == C.rank && suit < C.suit;\n \
-    \ }\n};\nistream& operator >>(istream& is, card& C){\n  string S;\n  is >> S;\n\
-    \  C.suit = S[0];\n  if (S[1] == 'A'){\n    C.rank = 14;\n  } else if (S[1] ==\
-    \ 'K'){\n    C.rank = 13;\n  } else if (S[1] == 'Q'){\n    C.rank = 12;\n  } else\
-    \ if (S[1] == 'J'){\n    C.rank = 11;\n  } else if (S[1] == 'T'){\n    C.rank\
-    \ = 10;\n  } else {\n    C.rank = S[1] - '0';\n  }\n  return is;\n}\nenum poker_hand{HIGH_CARD,\
-    \ ONE_PAIR, TWO_PAIR, THREE_OF_A_KIND, STRAIGHT, FLUSH, FULL_HOUSE, FOUR_OF_A_KIND,\
-    \ STRAIGHT_FLUSH, ROYAL_STRAIGHT_FLUSH};\nvector<int> hand(array<card, 5> C){\n\
-    \  sort(C.begin(), C.end());\n  bool is_flush = true;\n  for (int i = 1; i < 5;\
-    \ i++){\n    if (C[i].suit != C[0].suit){\n      is_flush = false;\n    }\n  }\n\
-    \  if (is_flush && C[4].rank == 14 && C[0].rank == 10){\n    return {ROYAL_STRAIGHT_FLUSH};\n\
-    \  } else if (is_flush && C[4].rank - C[0].rank == 4){\n    return {STRAIGHT_FLUSH,\
-    \ C[4].rank};\n  } else if (is_flush && C[3].rank == 5 && C[4].rank == 14){\n\
-    \    return {STRAIGHT_FLUSH, 5};\n  } else if (C[0].rank == C[3].rank){\n    return\
-    \ {FOUR_OF_A_KIND, C[0].rank, C[4].rank};\n  } else if (C[1].rank == C[4].rank){\n\
-    \    return {FOUR_OF_A_KIND, C[1].rank, C[0].rank};\n  } else if (C[0].rank ==\
-    \ C[2].rank && C[3].rank == C[4].rank){\n    return {FULL_HOUSE, C[0].rank, C[3].rank};\n\
-    \  } else if (C[2].rank == C[4].rank && C[0].rank == C[1].rank){\n    return {FULL_HOUSE,\
-    \ C[2].rank, C[0].rank};\n  } else if (is_flush){\n    return {FLUSH, C[4].rank,\
-    \ C[3].rank, C[2].rank, C[1].rank, C[0].rank};\n  } else if (C[1].rank - C[0].rank\
-    \ == 1 && C[2].rank - C[1].rank == 1 && C[3].rank - C[2].rank == 1 && C[4].rank\
-    \ - C[3].rank == 1){\n    return {STRAIGHT, C[4].rank};\n  } else if (C[0].rank\
-    \ == 2 && C[1].rank == 3 && C[2].rank == 4 && C[3].rank == 5 && C[4].rank == 14){\n\
-    \    return {STRAIGHT, 5};\n  } else if (C[0].rank == C[2].rank){\n    return\
-    \ {THREE_OF_A_KIND, C[0].rank, C[4].rank, C[3].rank};\n  } else if (C[1].rank\
-    \ == C[3].rank){\n    return {THREE_OF_A_KIND, C[1].rank, C[4].rank, C[0].rank};\n\
-    \  } else if (C[2].rank == C[4].rank){\n    return {THREE_OF_A_KIND, C[2].rank,\
-    \ C[1].rank, C[0].rank};\n  } else if (C[0].rank == C[1].rank && C[2].rank ==\
-    \ C[3].rank){\n    return {TWO_PAIR, C[2].rank, C[0].rank, C[4].rank};\n  } else\
-    \ if (C[0].rank == C[1].rank && C[3].rank == C[4].rank){\n    return {TWO_PAIR,\
+  code: "#pragma once\nstruct card{\n  char suit;\n  int rank;\n  card(){\n  }\n \
+    \ bool operator <(card C){\n    return rank < C.rank || rank == C.rank && suit\
+    \ < C.suit;\n  }\n};\nistream& operator >>(istream& is, card& C){\n  string S;\n\
+    \  is >> S;\n  C.suit = S[0];\n  if (S[1] == 'A'){\n    C.rank = 14;\n  } else\
+    \ if (S[1] == 'K'){\n    C.rank = 13;\n  } else if (S[1] == 'Q'){\n    C.rank\
+    \ = 12;\n  } else if (S[1] == 'J'){\n    C.rank = 11;\n  } else if (S[1] == 'T'){\n\
+    \    C.rank = 10;\n  } else {\n    C.rank = S[1] - '0';\n  }\n  return is;\n}\n\
+    enum poker_hand{HIGH_CARD, ONE_PAIR, TWO_PAIR, THREE_OF_A_KIND, STRAIGHT, FLUSH,\
+    \ FULL_HOUSE, FOUR_OF_A_KIND, STRAIGHT_FLUSH, ROYAL_STRAIGHT_FLUSH};\nvector<int>\
+    \ hand(array<card, 5> C){\n  sort(C.begin(), C.end());\n  bool is_flush = true;\n\
+    \  for (int i = 1; i < 5; i++){\n    if (C[i].suit != C[0].suit){\n      is_flush\
+    \ = false;\n    }\n  }\n  if (is_flush && C[4].rank == 14 && C[0].rank == 10){\n\
+    \    return {ROYAL_STRAIGHT_FLUSH};\n  } else if (is_flush && C[4].rank - C[0].rank\
+    \ == 4){\n    return {STRAIGHT_FLUSH, C[4].rank};\n  } else if (is_flush && C[3].rank\
+    \ == 5 && C[4].rank == 14){\n    return {STRAIGHT_FLUSH, 5};\n  } else if (C[0].rank\
+    \ == C[3].rank){\n    return {FOUR_OF_A_KIND, C[0].rank, C[4].rank};\n  } else\
+    \ if (C[1].rank == C[4].rank){\n    return {FOUR_OF_A_KIND, C[1].rank, C[0].rank};\n\
+    \  } else if (C[0].rank == C[2].rank && C[3].rank == C[4].rank){\n    return {FULL_HOUSE,\
+    \ C[0].rank, C[3].rank};\n  } else if (C[2].rank == C[4].rank && C[0].rank ==\
+    \ C[1].rank){\n    return {FULL_HOUSE, C[2].rank, C[0].rank};\n  } else if (is_flush){\n\
+    \    return {FLUSH, C[4].rank, C[3].rank, C[2].rank, C[1].rank, C[0].rank};\n\
+    \  } else if (C[1].rank - C[0].rank == 1 && C[2].rank - C[1].rank == 1 && C[3].rank\
+    \ - C[2].rank == 1 && C[4].rank - C[3].rank == 1){\n    return {STRAIGHT, C[4].rank};\n\
+    \  } else if (C[0].rank == 2 && C[1].rank == 3 && C[2].rank == 4 && C[3].rank\
+    \ == 5 && C[4].rank == 14){\n    return {STRAIGHT, 5};\n  } else if (C[0].rank\
+    \ == C[2].rank){\n    return {THREE_OF_A_KIND, C[0].rank, C[4].rank, C[3].rank};\n\
+    \  } else if (C[1].rank == C[3].rank){\n    return {THREE_OF_A_KIND, C[1].rank,\
+    \ C[4].rank, C[0].rank};\n  } else if (C[2].rank == C[4].rank){\n    return {THREE_OF_A_KIND,\
+    \ C[2].rank, C[1].rank, C[0].rank};\n  } else if (C[0].rank == C[1].rank && C[2].rank\
+    \ == C[3].rank){\n    return {TWO_PAIR, C[2].rank, C[0].rank, C[4].rank};\n  }\
+    \ else if (C[0].rank == C[1].rank && C[3].rank == C[4].rank){\n    return {TWO_PAIR,\
     \ C[3].rank, C[0].rank, C[2].rank};\n  } else if (C[1].rank == C[2].rank && C[3].rank\
     \ == C[4].rank){\n    return {TWO_PAIR, C[3].rank, C[1].rank, C[0].rank};\n  }\
     \ else if (C[0].rank == C[1].rank){\n    return {ONE_PAIR, C[0].rank, C[4].rank,\
@@ -95,7 +95,7 @@ data:
   isVerificationFile: false
   path: other/poker_hands.hpp
   requiredBy: []
-  timestamp: '2022-08-15 03:24:43+09:00'
+  timestamp: '2022-08-15 03:29:29+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/aoj/other/2535.test.cpp
@@ -127,7 +127,7 @@ title: "\u30DD\u30FC\u30AB\u30FC\u5F79\u5224\u5B9A"
 ``poker_hand`` の要素と役の対応は以下のようである。
 
 |``poker_hand`` の要素|役|
-|:-:|:-:|
+|-|-|
 |``HIGH_CARD``|ハイカード|
 |``ONE_PAIR``|ワンペア|
 |``TWO_PAIR``|ツーペア|
