@@ -49,8 +49,8 @@ data:
   timestamp: '2022-07-17 06:33:45+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/aoj/dsl/dsl_5_a.test.cpp
   - test/aoj/dsl/dsl_2_e.test.cpp
+  - test/aoj/dsl/dsl_5_a.test.cpp
 documentation_of: data_structure/sequence/dual_binary_indexed_tree.hpp
 layout: document
 redirect_from:

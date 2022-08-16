@@ -424,8 +424,8 @@ data:
       path: test/aoj/other/2535.test.cpp
       title: test/aoj/other/2535.test.cpp
     - icon: ':heavy_check_mark:'
-      path: test/aoj/other/2667.test.cpp
-      title: test/aoj/other/2667.test.cpp
+      path: test/aoj/other/2677.test.cpp
+      title: test/aoj/other/2677.test.cpp
   - name: test/library_checker/data_structure
     pages:
     - icon: ':heavy_check_mark:'
