@@ -103,7 +103,8 @@ documentation_of: other/poker_hands.hpp
 layout: document
 title: "\u30DD\u30FC\u30AB\u30FC\u5F79\u5224\u5B9A"
 ---
-## 概要
+
+# ポーカー役判定
 ポーカーの役を判定する。
 
 ## ``struct card``
