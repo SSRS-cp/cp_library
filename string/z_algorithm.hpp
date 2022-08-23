@@ -2,7 +2,7 @@
 /**
  * @brief Z Algorithm
 */
-vector<int> z_algorithm(string S){
+vector<int> z_algorithm(const string &S){
   int N = S.size();
   vector<int> ans(N);
   for (int i = 1, j = 0; i < N; i++){

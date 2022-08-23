@@ -1,5 +1,5 @@
 #pragma once
-vector<int> manacher(string &S){
+vector<int> manacher(const string &S){
   int N = S.size();
   vector<int> ans(N, 0);
   int i = 0, j = 0;
