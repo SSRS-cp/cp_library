@@ -11,23 +11,23 @@ data:
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
-  bundledCode: "#line 2 \"string/manacher.hpp\"\nvector<int> manacher(string &S){\n\
-    \  int N = S.size();\n  vector<int> ans(N, 0);\n  int i = 0, j = 0;\n  while (i\
-    \ < N){\n    while (i >= j && i + j < N && S[i - j] == S[i + j]){\n      j++;\n\
-    \    }\n    ans[i] = j;\n    int k = 1;\n    while (i >= k && i + k < N && k +\
-    \ ans[i - k] < j){\n      ans[i + k] = ans[i - k];\n      k++;\n    }\n    i +=\
-    \ k;\n    j -= k;\n  }\n  return ans;\n}\n"
-  code: "#pragma once\nvector<int> manacher(string &S){\n  int N = S.size();\n  vector<int>\
-    \ ans(N, 0);\n  int i = 0, j = 0;\n  while (i < N){\n    while (i >= j && i +\
-    \ j < N && S[i - j] == S[i + j]){\n      j++;\n    }\n    ans[i] = j;\n    int\
-    \ k = 1;\n    while (i >= k && i + k < N && k + ans[i - k] < j){\n      ans[i\
-    \ + k] = ans[i - k];\n      k++;\n    }\n    i += k;\n    j -= k;\n  }\n  return\
-    \ ans;\n}"
+  bundledCode: "#line 2 \"string/manacher.hpp\"\nvector<int> manacher(const string\
+    \ &S){\n  int N = S.size();\n  vector<int> ans(N, 0);\n  int i = 0, j = 0;\n \
+    \ while (i < N){\n    while (i >= j && i + j < N && S[i - j] == S[i + j]){\n \
+    \     j++;\n    }\n    ans[i] = j;\n    int k = 1;\n    while (i >= k && i + k\
+    \ < N && k + ans[i - k] < j){\n      ans[i + k] = ans[i - k];\n      k++;\n  \
+    \  }\n    i += k;\n    j -= k;\n  }\n  return ans;\n}\n"
+  code: "#pragma once\nvector<int> manacher(const string &S){\n  int N = S.size();\n\
+    \  vector<int> ans(N, 0);\n  int i = 0, j = 0;\n  while (i < N){\n    while (i\
+    \ >= j && i + j < N && S[i - j] == S[i + j]){\n      j++;\n    }\n    ans[i] =\
+    \ j;\n    int k = 1;\n    while (i >= k && i + k < N && k + ans[i - k] < j){\n\
+    \      ans[i + k] = ans[i - k];\n      k++;\n    }\n    i += k;\n    j -= k;\n\
+    \  }\n  return ans;\n}"
   dependsOn: []
   isVerificationFile: false
   path: string/manacher.hpp
   requiredBy: []
-  timestamp: '2022-08-24 00:37:04+09:00'
+  timestamp: '2022-08-24 05:13:31+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/library_checker/string/enumerate_palindromes.test.cpp

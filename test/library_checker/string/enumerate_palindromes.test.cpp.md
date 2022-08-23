@@ -17,7 +17,7 @@ data:
   bundledCode: "#line 1 \"test/library_checker/string/enumerate_palindromes.test.cpp\"\
     \n#define PROBLEM \"https://judge.yosupo.jp/problem/enumerate_palindromes\"\n\
     #include <bits/stdc++.h>\nusing namespace std;\n#line 2 \"string/manacher.hpp\"\
-    \nvector<int> manacher(string &S){\n  int N = S.size();\n  vector<int> ans(N,\
+    \nvector<int> manacher(const string &S){\n  int N = S.size();\n  vector<int> ans(N,\
     \ 0);\n  int i = 0, j = 0;\n  while (i < N){\n    while (i >= j && i + j < N &&\
     \ S[i - j] == S[i + j]){\n      j++;\n    }\n    ans[i] = j;\n    int k = 1;\n\
     \    while (i >= k && i + k < N && k + ans[i - k] < j){\n      ans[i + k] = ans[i\
@@ -39,7 +39,7 @@ data:
   isVerificationFile: true
   path: test/library_checker/string/enumerate_palindromes.test.cpp
   requiredBy: []
-  timestamp: '2022-08-24 00:37:04+09:00'
+  timestamp: '2022-08-24 05:13:31+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/string/enumerate_palindromes.test.cpp
