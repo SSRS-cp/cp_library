@@ -313,9 +313,6 @@ data:
       path: old_String/LCP_Array.cpp
       title: old_String/LCP_Array.cpp
     - icon: ':warning:'
-      path: old_String/Manacher.cpp
-      title: old_String/Manacher.cpp
-    - icon: ':warning:'
       path: old_String/Rolling_Hash.cpp
       title: old_String/Rolling_Hash.cpp
     - icon: ':warning:'
