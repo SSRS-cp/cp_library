@@ -1,6 +1,6 @@
 ---
 title: UnionFind
-documentation_of: data-structure/unionfind/unionfind.hpp
+documentation_of: data_structure/unionfind/unionfind.hpp
 ---
 
 # UnionFind
