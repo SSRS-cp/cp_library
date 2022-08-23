@@ -1,8 +1,4 @@
 #pragma once
-/**
- * @brief UnionFind
- * @docs docs/data-structure/unionfind.md
-*/
 struct unionfind{
   vector<int> p;
   unionfind(int N){

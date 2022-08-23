@@ -1,5 +1,9 @@
+---
+title: UnionFind
+documentation_of: data-structure/unionfind/unionfind.hpp
+---
+
 # UnionFind
-## 概要
 集合を扱うデータ構造。
 
 ## 操作

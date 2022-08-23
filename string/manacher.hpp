@@ -1,7 +1,4 @@
 #pragma once
-/**
- * @brief 最長回文 (Manacher's Algorithm)
-*/
 vector<int> manacher(string &S){
   int N = S.size();
   vector<int> ans(N, 0);

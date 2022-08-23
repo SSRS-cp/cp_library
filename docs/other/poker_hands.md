@@ -2,7 +2,8 @@
 title: ポーカー役判定
 documentation_of: other/poker_hands.hpp
 ---
-## 概要
+
+# ポーカー役判定
 ポーカーの役を判定する。
 
 ## ``struct card``
