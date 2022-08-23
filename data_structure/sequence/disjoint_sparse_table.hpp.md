@@ -7,8 +7,8 @@ data:
     path: test/library_checker/data_structure/static_range_sum_3.test.cpp
     title: test/library_checker/data_structure/static_range_sum_3.test.cpp
   - icon: ':heavy_check_mark:'
-    path: test/library_checker/data_structure/static_rmq.test.cpp
-    title: test/library_checker/data_structure/static_rmq.test.cpp
+    path: test/library_checker/data_structure/staticrmq.test.cpp
+    title: test/library_checker/data_structure/staticrmq.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -58,7 +58,7 @@ data:
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/library_checker/data_structure/static_range_sum_3.test.cpp
-  - test/library_checker/data_structure/static_rmq.test.cpp
+  - test/library_checker/data_structure/staticrmq.test.cpp
 documentation_of: data_structure/sequence/disjoint_sparse_table.hpp
 layout: document
 redirect_from:

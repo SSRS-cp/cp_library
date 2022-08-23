@@ -14,10 +14,10 @@ data:
     PROBLEM: https://judge.yosupo.jp/problem/scc
     links:
     - https://judge.yosupo.jp/problem/scc
-  bundledCode: "#line 1 \"test/library_checker/graph/strongly_connected_components.test.cpp\"\
-    \n#define PROBLEM \"https://judge.yosupo.jp/problem/scc\"\n#include <bits/stdc++.h>\n\
-    using namespace std;\n#line 2 \"graph/strongly_connected_components.hpp\"\n/**\n\
-    \ * @brief \u5F37\u9023\u7D50\u6210\u5206\u5206\u89E3\n*/\nstruct strongly_connected_components{\n\
+  bundledCode: "#line 1 \"test/library_checker/graph/scc.test.cpp\"\n#define PROBLEM\
+    \ \"https://judge.yosupo.jp/problem/scc\"\n#include <bits/stdc++.h>\nusing namespace\
+    \ std;\n#line 2 \"graph/strongly_connected_components.hpp\"\n/**\n * @brief \u5F37\
+    \u9023\u7D50\u6210\u5206\u5206\u89E3\n*/\nstruct strongly_connected_components{\n\
     \  vector<int> scc;\n  int cnt = 0;\n  void dfs1(vector<vector<int>> &E, vector<int>\
     \ &t, vector<bool> &used, int v){\n    for (int w : E[v]){\n      if (!used[w]){\n\
     \        used[w] = true;\n        dfs1(E, t, used, w);\n      }\n    }\n    t.push_back(v);\n\
@@ -32,7 +32,7 @@ data:
     \    vector<bool> used2(N, false);\n    scc = vector<int>(N);\n    for (int i\
     \ = 0; i < N; i++){\n      if (!used2[t[i]]){\n        used2[t[i]] = true;\n \
     \       dfs2(E2, used2, t[i]);\n        cnt++;\n      }\n    }\n  }\n  int operator\
-    \ [](int k){\n    return scc[k];\n  }\n};\n#line 5 \"test/library_checker/graph/strongly_connected_components.test.cpp\"\
+    \ [](int k){\n    return scc[k];\n  }\n};\n#line 5 \"test/library_checker/graph/scc.test.cpp\"\
     \nint main(){\n  int N, M;\n  cin >> N >> M;\n  vector<vector<int>> E(N);\n  for\
     \ (int i = 0; i < M; i++){\n    int a, b;\n    cin >> a >> b;\n    E[a].push_back(b);\n\
     \  }\n  strongly_connected_components G(E);\n  int K = G.cnt;\n  vector<vector<int>>\
@@ -52,15 +52,15 @@ data:
   dependsOn:
   - graph/strongly_connected_components.hpp
   isVerificationFile: true
-  path: test/library_checker/graph/strongly_connected_components.test.cpp
+  path: test/library_checker/graph/scc.test.cpp
   requiredBy: []
-  timestamp: '2022-07-20 00:19:01+09:00'
+  timestamp: '2022-08-24 04:05:14+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: test/library_checker/graph/strongly_connected_components.test.cpp
+documentation_of: test/library_checker/graph/scc.test.cpp
 layout: document
 redirect_from:
-- /verify/test/library_checker/graph/strongly_connected_components.test.cpp
-- /verify/test/library_checker/graph/strongly_connected_components.test.cpp.html
-title: test/library_checker/graph/strongly_connected_components.test.cpp
+- /verify/test/library_checker/graph/scc.test.cpp
+- /verify/test/library_checker/graph/scc.test.cpp.html
+title: test/library_checker/graph/scc.test.cpp
 ---

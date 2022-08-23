@@ -14,7 +14,7 @@ data:
     PROBLEM: https://judge.yosupo.jp/problem/staticrmq
     links:
     - https://judge.yosupo.jp/problem/staticrmq
-  bundledCode: "#line 1 \"test/library_checker/data_structure/static_rmq_2.test.cpp\"\
+  bundledCode: "#line 1 \"test/library_checker/data_structure/staticrmq_2.test.cpp\"\
     \n#define PROBLEM \"https://judge.yosupo.jp/problem/staticrmq\"\n#include <bits/stdc++.h>\n\
     using namespace std;\nconst int INF = 1000000000;\n#line 2 \"data_structure/sequence/sparse_table.hpp\"\
     \n/**\n * @brief \u30B9\u30D1\u30FC\u30B9\u30C6\u30FC\u30D6\u30EB\n*/\ntemplate\
@@ -28,7 +28,7 @@ data:
     \ for (int j = 0; j < N - (1 << i); j++){\n        ST[i + 1][j] = f(ST[i][j],\
     \ ST[i][j + (1 << i)]);\n      }\n    }\n  }\n  int query(int L, int R){\n   \
     \ if (L == R){\n      return E;\n    }\n    int d = 31 - __builtin_clz(R - L);\n\
-    \    return f(ST[d][L], ST[d][R - (1 << d)]);\n  }\n};\n#line 6 \"test/library_checker/data_structure/static_rmq_2.test.cpp\"\
+    \    return f(ST[d][L], ST[d][R - (1 << d)]);\n  }\n};\n#line 6 \"test/library_checker/data_structure/staticrmq_2.test.cpp\"\
     \nint main(){\n  int N, Q;\n  cin >> N >> Q;\n  vector<int> a(N);\n  for (int\
     \ i = 0; i < N; i++){\n    cin >> a[i];\n  }\n  sparse_table<int> ST(a, [](int\
     \ a, int b){return min(a, b);}, INF);\n  for (int i = 0; i < Q; i++){\n    int\
@@ -42,15 +42,15 @@ data:
   dependsOn:
   - data_structure/sequence/sparse_table.hpp
   isVerificationFile: true
-  path: test/library_checker/data_structure/static_rmq_2.test.cpp
+  path: test/library_checker/data_structure/staticrmq_2.test.cpp
   requiredBy: []
-  timestamp: '2022-07-19 22:43:05+09:00'
+  timestamp: '2022-08-24 04:05:14+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: test/library_checker/data_structure/static_rmq_2.test.cpp
+documentation_of: test/library_checker/data_structure/staticrmq_2.test.cpp
 layout: document
 redirect_from:
-- /verify/test/library_checker/data_structure/static_rmq_2.test.cpp
-- /verify/test/library_checker/data_structure/static_rmq_2.test.cpp.html
-title: test/library_checker/data_structure/static_rmq_2.test.cpp
+- /verify/test/library_checker/data_structure/staticrmq_2.test.cpp
+- /verify/test/library_checker/data_structure/staticrmq_2.test.cpp.html
+title: test/library_checker/data_structure/staticrmq_2.test.cpp
 ---

@@ -16,8 +16,8 @@ data:
     path: test/library_checker/data_structure/point_set_range_composite.test.cpp
     title: test/library_checker/data_structure/point_set_range_composite.test.cpp
   - icon: ':heavy_check_mark:'
-    path: test/library_checker/data_structure/static_rmq_3.test.cpp
-    title: test/library_checker/data_structure/static_rmq_3.test.cpp
+    path: test/library_checker/data_structure/staticrmq_3.test.cpp
+    title: test/library_checker/data_structure/staticrmq_3.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -67,8 +67,8 @@ data:
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/library_checker/data_structure/point_add_range_sum_3.test.cpp
+  - test/library_checker/data_structure/staticrmq_3.test.cpp
   - test/library_checker/data_structure/point_set_range_composite.test.cpp
-  - test/library_checker/data_structure/static_rmq_3.test.cpp
   - test/aoj/dsl/dsl_2_a.test.cpp
   - test/aoj/dsl/dsl_2_b_3.test.cpp
 documentation_of: data_structure/sequence/segment_tree.hpp

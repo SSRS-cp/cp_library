@@ -14,7 +14,7 @@ data:
     PROBLEM: https://judge.yosupo.jp/problem/staticrmq
     links:
     - https://judge.yosupo.jp/problem/staticrmq
-  bundledCode: "#line 1 \"test/library_checker/data_structure/static_rmq_3.test.cpp\"\
+  bundledCode: "#line 1 \"test/library_checker/data_structure/staticrmq_3.test.cpp\"\
     \n#define PROBLEM \"https://judge.yosupo.jp/problem/staticrmq\"\n#include <bits/stdc++.h>\n\
     using namespace std;\nconst int INF = 1000000000;\n#line 2 \"data_structure/sequence/segment_tree.hpp\"\
     \n/**\n * @brief \u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (\u3046\u3057\u6728)\n*/\n\
@@ -33,7 +33,7 @@ data:
     \    } else if (L <= l && r <= R){\n      return ST[i];\n    } else {\n      int\
     \ m = (l + r) / 2;\n      return f(query(L, R, i * 2 + 1, l, m), query(L, R, i\
     \ * 2 + 2, m, r));\n    }\n  }\n  T query(int L, int R){\n    return query(L,\
-    \ R, 0, 0, N);\n  }\n  T all(){\n    return ST[0];\n  }\n};\n#line 6 \"test/library_checker/data_structure/static_rmq_3.test.cpp\"\
+    \ R, 0, 0, N);\n  }\n  T all(){\n    return ST[0];\n  }\n};\n#line 6 \"test/library_checker/data_structure/staticrmq_3.test.cpp\"\
     \nint main(){\n  int N, Q;\n  cin >> N >> Q;\n  vector<int> a(N);\n  for (int\
     \ i = 0; i < N; i++){\n    cin >> a[i];\n  }\n  segment_tree<int> ST(a, [](int\
     \ x, int y){return min(x, y);}, INF);\n  for (int i = 0; i < Q; i++){\n    int\
@@ -47,15 +47,15 @@ data:
   dependsOn:
   - data_structure/sequence/segment_tree.hpp
   isVerificationFile: true
-  path: test/library_checker/data_structure/static_rmq_3.test.cpp
+  path: test/library_checker/data_structure/staticrmq_3.test.cpp
   requiredBy: []
-  timestamp: '2022-07-19 22:43:05+09:00'
+  timestamp: '2022-08-24 04:05:14+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: test/library_checker/data_structure/static_rmq_3.test.cpp
+documentation_of: test/library_checker/data_structure/staticrmq_3.test.cpp
 layout: document
 redirect_from:
-- /verify/test/library_checker/data_structure/static_rmq_3.test.cpp
-- /verify/test/library_checker/data_structure/static_rmq_3.test.cpp.html
-title: test/library_checker/data_structure/static_rmq_3.test.cpp
+- /verify/test/library_checker/data_structure/staticrmq_3.test.cpp
+- /verify/test/library_checker/data_structure/staticrmq_3.test.cpp.html
+title: test/library_checker/data_structure/staticrmq_3.test.cpp
 ---

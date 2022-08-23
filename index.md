@@ -315,9 +315,6 @@ data:
     - icon: ':warning:'
       path: old_String/Rolling_Hash.cpp
       title: old_String/Rolling_Hash.cpp
-    - icon: ':warning:'
-      path: old_String/Suffix_Array.cpp
-      title: old_String/Suffix_Array.cpp
   - name: other/monoids
     pages:
     - icon: ':heavy_check_mark:'
@@ -468,14 +465,14 @@ data:
       path: test/library_checker/data_structure/static_range_sum_3.test.cpp
       title: test/library_checker/data_structure/static_range_sum_3.test.cpp
     - icon: ':heavy_check_mark:'
-      path: test/library_checker/data_structure/static_rmq.test.cpp
-      title: test/library_checker/data_structure/static_rmq.test.cpp
+      path: test/library_checker/data_structure/staticrmq.test.cpp
+      title: test/library_checker/data_structure/staticrmq.test.cpp
     - icon: ':heavy_check_mark:'
-      path: test/library_checker/data_structure/static_rmq_2.test.cpp
-      title: test/library_checker/data_structure/static_rmq_2.test.cpp
+      path: test/library_checker/data_structure/staticrmq_2.test.cpp
+      title: test/library_checker/data_structure/staticrmq_2.test.cpp
     - icon: ':heavy_check_mark:'
-      path: test/library_checker/data_structure/static_rmq_3.test.cpp
-      title: test/library_checker/data_structure/static_rmq_3.test.cpp
+      path: test/library_checker/data_structure/staticrmq_3.test.cpp
+      title: test/library_checker/data_structure/staticrmq_3.test.cpp
     - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/unionfind.test.cpp
       title: test/library_checker/data_structure/unionfind.test.cpp
@@ -491,8 +488,8 @@ data:
       path: test/library_checker/graph/enumerate_triangles.test.cpp
       title: test/library_checker/graph/enumerate_triangles.test.cpp
     - icon: ':heavy_check_mark:'
-      path: test/library_checker/graph/strongly_connected_components.test.cpp
-      title: test/library_checker/graph/strongly_connected_components.test.cpp
+      path: test/library_checker/graph/scc.test.cpp
+      title: test/library_checker/graph/scc.test.cpp
     - icon: ':heavy_check_mark:'
       path: test/library_checker/graph/two_edge_connected_components.test.cpp
       title: test/library_checker/graph/two_edge_connected_components.test.cpp
@@ -505,16 +502,16 @@ data:
       path: test/library_checker/string/suffixarray.test.cpp
       title: test/library_checker/string/suffixarray.test.cpp
     - icon: ':heavy_check_mark:'
-      path: test/library_checker/string/z_algorithm.test.cpp
-      title: test/library_checker/string/z_algorithm.test.cpp
+      path: test/library_checker/string/zalgorithm.test.cpp
+      title: test/library_checker/string/zalgorithm.test.cpp
   - name: test/library_checker/tree
     pages:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/tree/cartesian_tree.test.cpp
       title: test/library_checker/tree/cartesian_tree.test.cpp
     - icon: ':heavy_check_mark:'
-      path: test/library_checker/tree/lowest_common_ancestor.test.cpp
-      title: test/library_checker/tree/lowest_common_ancestor.test.cpp
+      path: test/library_checker/tree/lca.test.cpp
+      title: test/library_checker/tree/lca.test.cpp
   - name: test/yukicoder
     pages:
     - icon: ':heavy_check_mark:'

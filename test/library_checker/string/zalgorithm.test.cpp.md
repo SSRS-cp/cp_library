@@ -14,7 +14,7 @@ data:
     PROBLEM: https://judge.yosupo.jp/problem/zalgorithm
     links:
     - https://judge.yosupo.jp/problem/zalgorithm
-  bundledCode: "#line 1 \"test/library_checker/string/z_algorithm.test.cpp\"\n#define\
+  bundledCode: "#line 1 \"test/library_checker/string/zalgorithm.test.cpp\"\n#define\
     \ PROBLEM \"https://judge.yosupo.jp/problem/zalgorithm\"\n#include <bits/stdc++.h>\n\
     using namespace std;\n#line 2 \"string/z_algorithm.hpp\"\n/**\n * @brief Z Algorithm\n\
     */\nvector<int> z_algorithm(string S){\n  int N = S.size();\n  vector<int> ans(N);\n\
@@ -22,7 +22,7 @@ data:
     \      ans[i] = ans[i - j];\n    } else {\n      int k = max(0, j + ans[j] - i);\n\
     \      while (i + k < N && S[k] == S[i + k]){\n        k++;\n      }\n      ans[i]\
     \ = k;\n      j = i;\n    }\n  }\n  ans[0] = N;\n  return ans;\n}\n#line 5 \"\
-    test/library_checker/string/z_algorithm.test.cpp\"\nint main(){\n  string S;\n\
+    test/library_checker/string/zalgorithm.test.cpp\"\nint main(){\n  string S;\n\
     \  cin >> S;\n  int N = S.size();\n  vector<int> ans = z_algorithm(S);\n  for\
     \ (int i = 0; i < N; i++){\n    cout << ans[i];\n    if (i < N - 1){\n      cout\
     \ << ' ';\n    }\n  }\n  cout << endl;\n}\n"
@@ -34,15 +34,15 @@ data:
   dependsOn:
   - string/z_algorithm.hpp
   isVerificationFile: true
-  path: test/library_checker/string/z_algorithm.test.cpp
+  path: test/library_checker/string/zalgorithm.test.cpp
   requiredBy: []
-  timestamp: '2022-07-20 02:21:26+09:00'
+  timestamp: '2022-08-24 04:05:14+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: test/library_checker/string/z_algorithm.test.cpp
+documentation_of: test/library_checker/string/zalgorithm.test.cpp
 layout: document
 redirect_from:
-- /verify/test/library_checker/string/z_algorithm.test.cpp
-- /verify/test/library_checker/string/z_algorithm.test.cpp.html
-title: test/library_checker/string/z_algorithm.test.cpp
+- /verify/test/library_checker/string/zalgorithm.test.cpp
+- /verify/test/library_checker/string/zalgorithm.test.cpp.html
+title: test/library_checker/string/zalgorithm.test.cpp
 ---

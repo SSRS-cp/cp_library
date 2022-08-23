@@ -4,8 +4,8 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: test/library_checker/data_structure/static_rmq_2.test.cpp
-    title: test/library_checker/data_structure/static_rmq_2.test.cpp
+    path: test/library_checker/data_structure/staticrmq_2.test.cpp
+    title: test/library_checker/data_structure/staticrmq_2.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -45,7 +45,7 @@ data:
   timestamp: '2022-07-17 06:33:45+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/library_checker/data_structure/static_rmq_2.test.cpp
+  - test/library_checker/data_structure/staticrmq_2.test.cpp
 documentation_of: data_structure/sequence/sparse_table.hpp
 layout: document
 redirect_from:
