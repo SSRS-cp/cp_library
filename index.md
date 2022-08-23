@@ -82,7 +82,7 @@ data:
     pages:
     - icon: ':heavy_check_mark:'
       path: data_structure/unionfind/unionfind.hpp
-      title: data_structure/unionfind/unionfind.hpp
+      title: UnionFind
   - name: graph
     pages:
     - icon: ':heavy_check_mark:'
