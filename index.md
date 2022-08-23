@@ -337,6 +337,9 @@ data:
       path: string/manacher.hpp
       title: "\u6700\u9577\u56DE\u6587 (Manacher's Algorithm)"
     - icon: ':heavy_check_mark:'
+      path: string/suffix_array.hpp
+      title: "\u63A5\u5C3E\u8F9E\u914D\u5217 (SA-IS)"
+    - icon: ':heavy_check_mark:'
       path: string/z_algorithm.hpp
       title: Z Algorithm
   verificationCategories:
@@ -498,6 +501,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/string/enumerate_palindromes.test.cpp
       title: test/library_checker/string/enumerate_palindromes.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/library_checker/string/suffixarray.test.cpp
+      title: test/library_checker/string/suffixarray.test.cpp
     - icon: ':heavy_check_mark:'
       path: test/library_checker/string/z_algorithm.test.cpp
       title: test/library_checker/string/z_algorithm.test.cpp
