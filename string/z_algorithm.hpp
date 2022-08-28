@@ -1,22 +1,28 @@
 #pragma once
-/**
- * @brief Z Algorithm
-*/
-vector<int> z_algorithm(const string &S){
-  int N = S.size();
-  vector<int> ans(N);
+template <typename T>
+vector<int> z_algorithm(const vector<T> &A){
+  int N = A.size();
+  vector<int> Z(N, 0);
   for (int i = 1, j = 0; i < N; i++){
-    if (i + ans[i - j] < j + ans[j]){
-      ans[i] = ans[i - j];
+    if (i + Z[i - j] < j + Z[j]){
+      Z[i] = Z[i - j];
     } else {
-      int k = max(0, j + ans[j] - i);
-      while (i + k < N && S[k] == S[i + k]){
+      int k = max(0, j + Z[j] - i);
+      while (i + k < N && A[k] == A[i + k]){
         k++;
       }
-      ans[i] = k;
+      Z[i] = k;
       j = i;
     }
   }
-  ans[0] = N;
-  return ans;
+  Z[0] = N;
+  return Z;
+}
+vector<int> z_algorithm(const string &S){
+  int N = S.size();
+  vector<int> A(N);
+  for (int i = 0; i < N; i++){
+    A[i] = S[i];
+  }
+  return z_algorithm(A);
 }
