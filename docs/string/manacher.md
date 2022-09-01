@@ -4,12 +4,12 @@ documentation_of: string/manacher.hpp
 ---
 
 # Manacher's Algorithm
-文字列が与えられたとき、各文字を中心とする回文の半径の最大値を求める。
+列が与えられたとき、各文字を中心とする回文の半径の最大値を求める。
 
-## ``vector<int> manacher(string &S)``
-長さ $N$ の文字列 $S$ を引数に取り、長さ $N$ の配列を返す。
+## ``vector<int> manacher(const T &A)``
+長さ $N$ の列 $A$ を引数に取り、長さ $N$ の配列を返す。
 
-返り値の $i$ 番目の要素は、$S[i-k+1,i+k-1]$ が回文であるような $k$ の最大値である。
+返り値の $i$ 番目の要素は、$A[i-k+1,i+k-1]$ が回文であるような $k$ の最大値である。
 
 時間計算量は $O(N)$ である。
 

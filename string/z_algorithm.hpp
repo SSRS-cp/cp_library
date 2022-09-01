@@ -1,6 +1,6 @@
 #pragma once
 template <typename T>
-vector<int> z_algorithm(const vector<T> &A){
+vector<int> z_algorithm(const T &A){
   int N = A.size();
   vector<int> Z(N, 0);
   for (int i = 1, j = 0; i < N; i++){
@@ -17,12 +17,4 @@ vector<int> z_algorithm(const vector<T> &A){
   }
   Z[0] = N;
   return Z;
-}
-vector<int> z_algorithm(const string &S){
-  int N = S.size();
-  vector<int> A(N);
-  for (int i = 0; i < N; i++){
-    A[i] = S[i];
-  }
-  return z_algorithm(A);
 }

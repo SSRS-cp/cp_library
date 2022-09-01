@@ -9,7 +9,7 @@ documentation_of: string/suffix_array.hpp
 ## ``vector<int> suffix_array(const vector<int> &A, int mx)``
 各要素が $0$ 以上 $\text{mx}$ 未満の数列 $A$ が与えられたとき、$A$ の接尾辞配列を返す。
 
-長さ $N$ の数列 $A$ の接尾辞配列とは、$\{0, 1, \dots, N-1\}$ の順列 $P$ であって、任意の $0 \leq i < N-1$ に対し $A[P_i,N) < A[P_{i+1},N)$ が成り立つようなものである。
+長さ $N$ の数列 $A$ の接尾辞配列とは、$\{0, 1, \dots, N-1\}$ の順列 $P$ であって、任意の $i \ (0 \leq i < N-1)$ に対し $A[P_i,N) < A[P_{i+1},N)$ が成り立つようなものである。
 
 時間計算量は $O(N + \text{mx})$ である。
 
