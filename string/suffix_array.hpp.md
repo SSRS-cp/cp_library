@@ -1,8 +1,14 @@
 ---
 data:
   _extendedDependsOn: []
-  _extendedRequiredBy: []
+  _extendedRequiredBy:
+  - icon: ':heavy_check_mark:'
+    path: string/lcp_array.hpp
+    title: "\u9AD8\u3055\u914D\u5217 (LCP Array)"
   _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: test/library_checker/string/number_of_substrings.test.cpp
+    title: test/library_checker/string/number_of_substrings.test.cpp
   - icon: ':heavy_check_mark:'
     path: test/library_checker/string/suffixarray.test.cpp
     title: test/library_checker/string/suffixarray.test.cpp
@@ -90,11 +96,13 @@ data:
   dependsOn: []
   isVerificationFile: false
   path: string/suffix_array.hpp
-  requiredBy: []
+  requiredBy:
+  - string/lcp_array.hpp
   timestamp: '2022-08-24 03:58:55+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/library_checker/string/suffixarray.test.cpp
+  - test/library_checker/string/number_of_substrings.test.cpp
 documentation_of: string/suffix_array.hpp
 layout: document
 title: "\u63A5\u5C3E\u8F9E\u914D\u5217 (SA-IS)"
@@ -106,7 +114,7 @@ title: "\u63A5\u5C3E\u8F9E\u914D\u5217 (SA-IS)"
 ## ``vector<int> suffix_array(const vector<int> &A, int mx)``
 各要素が $0$ 以上 $\text{mx}$ 未満の数列 $A$ が与えられたとき、$A$ の接尾辞配列を返す。
 
-長さ $N$ の数列 $A$ の接尾辞配列とは、$\{0, 1, \dots, N-1\}$ の順列 $P$ であって、任意の $0 \leq i < N-1$ に対し $A[P_i,N) < A[P_{i+1},N)$ が成り立つようなものである。
+長さ $N$ の数列 $A$ の接尾辞配列とは、$\{0, 1, \dots, N-1\}$ の順列 $P$ であって、任意の $i \ (0 \leq i < N-1)$ に対し $A[P_i,N) < A[P_{i+1},N)$ が成り立つようなものである。
 
 時間計算量は $O(N + \text{mx})$ である。
 
