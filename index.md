@@ -13,6 +13,9 @@ data:
       path: data_structure/other/cartesian_tree_min.hpp
       title: "\u30C7\u30AB\u30EB\u30C8\u6728"
     - icon: ':heavy_check_mark:'
+      path: data_structure/other/li_chao_tree.hpp
+      title: Li Chao Tree
+    - icon: ':heavy_check_mark:'
       path: data_structure/other/sliding_window_aggregation.hpp
       title: Sliding Window Aggregation
   - name: data_structure/sequence
@@ -429,6 +432,9 @@ data:
   - name: test/library_checker/data_structure
     pages:
     - icon: ':heavy_check_mark:'
+      path: test/library_checker/data_structure/line_add_get_min.test.cpp
+      title: test/library_checker/data_structure/line_add_get_min.test.cpp
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/point_add_range_sum.test.cpp
       title: test/library_checker/data_structure/point_add_range_sum.test.cpp
     - icon: ':heavy_check_mark:'
@@ -455,6 +461,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/range_kth_smallest.test.cpp
       title: test/library_checker/data_structure/range_kth_smallest.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/library_checker/data_structure/segment_add_get_min.test.cpp
+      title: test/library_checker/data_structure/segment_add_get_min.test.cpp
     - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/static_range_frequency.test.cpp
       title: test/library_checker/data_structure/static_range_frequency.test.cpp
