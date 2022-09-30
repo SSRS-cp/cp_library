@@ -63,10 +63,10 @@ data:
   timestamp: '2022-07-17 06:33:45+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
+  - test/aoj/other/2677.test.cpp
   - test/yukicoder/yuki_1326.test.cpp
   - test/yukicoder/yuki_1326_2.test.cpp
   - test/library_checker/tree/lca.test.cpp
-  - test/aoj/other/2677.test.cpp
 documentation_of: data_structure/tree/heavy_light_decomposition.hpp
 layout: document
 redirect_from:

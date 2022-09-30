@@ -76,9 +76,9 @@ data:
   timestamp: '2022-07-24 02:46:13+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
+  - test/aoj/grl/grl_3_a_2.test.cpp
   - test/yukicoder/yuki_1326_2.test.cpp
   - test/library_checker/graph/biconnected_components_2.test.cpp
-  - test/aoj/grl/grl_3_a_2.test.cpp
 documentation_of: graph/extended_block_cut_tree.hpp
 layout: document
 redirect_from:

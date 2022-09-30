@@ -56,8 +56,8 @@ data:
   timestamp: '2022-07-20 00:19:01+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/library_checker/graph/scc.test.cpp
   - test/aoj/grl/grl_3_c.test.cpp
+  - test/library_checker/graph/scc.test.cpp
 documentation_of: graph/strongly_connected_components.hpp
 layout: document
 redirect_from:

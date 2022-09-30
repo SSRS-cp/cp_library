@@ -71,9 +71,9 @@ data:
   timestamp: '2022-07-20 01:24:27+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
+  - test/aoj/grl/grl_3_a.test.cpp
   - test/yukicoder/yuki_1326.test.cpp
   - test/library_checker/graph/biconnected_components.test.cpp
-  - test/aoj/grl/grl_3_a.test.cpp
 documentation_of: graph/biconnected_components.hpp
 layout: document
 redirect_from:

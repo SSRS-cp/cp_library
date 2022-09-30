@@ -161,8 +161,8 @@ data:
   timestamp: '2022-08-05 04:50:39+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/aoj/other/1508.test.cpp
   - test/aoj/other/1508_2.test.cpp
+  - test/aoj/other/1508.test.cpp
 documentation_of: data_structure/bbst/splay_tree.hpp
 layout: document
 redirect_from:
