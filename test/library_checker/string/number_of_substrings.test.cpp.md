@@ -4,7 +4,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: string/lcp_array.hpp
     title: "\u9AD8\u3055\u914D\u5217 (LCP Array)"
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: string/suffix_array.hpp
     title: "\u63A5\u5C3E\u8F9E\u914D\u5217 (SA-IS)"
   _extendedRequiredBy: []

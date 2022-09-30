@@ -339,7 +339,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: string/manacher.hpp
       title: "\u6700\u9577\u56DE\u6587 (Manacher's Algorithm)"
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: string/suffix_array.hpp
       title: "\u63A5\u5C3E\u8F9E\u914D\u5217 (SA-IS)"
     - icon: ':heavy_check_mark:'
@@ -513,7 +513,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/string/number_of_substrings.test.cpp
       title: test/library_checker/string/number_of_substrings.test.cpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/library_checker/string/suffixarray.test.cpp
       title: test/library_checker/string/suffixarray.test.cpp
     - icon: ':heavy_check_mark:'
