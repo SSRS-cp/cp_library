@@ -4,6 +4,12 @@ documentation_of: string/suffix_array.hpp
 ---
 
 # Suffix Array
+
+<span style="font-size:200%; color: red; ">バグが発見されています。使用しないでください。</span>
+
+文字列 `cabcab` の接尾辞配列を求めようとすると配列外参照をします。原因を調査中です。
+
+
 数列の接尾辞配列を求める。
 
 ## ``vector<int> suffix_array(const vector<int> &A, int mx)``
